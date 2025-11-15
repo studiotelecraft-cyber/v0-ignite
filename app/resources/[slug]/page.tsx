@@ -643,20 +643,7 @@ export default function BlogPostPage() {
       <article className="py-12 px-6 bg-white">
         <div className="container mx-auto max-w-3xl">
           <div
-            className="article-content
-              prose prose-lg max-w-none
-              prose-headings:font-serif prose-headings:text-gray-900 prose-headings:font-bold
-              prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:leading-tight
-              prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-8 prose-p:text-lg
-              prose-p:font-sans
-              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-gray-900 prose-strong:font-semibold
-              prose-ul:my-8 prose-ul:space-y-4
-              prose-ol:my-8 prose-ol:space-y-4
-              prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
-              first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:text-blue-600 
-              first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:mt-1"
+            className="article-content prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:leading-tight prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-8 prose-p:text-lg prose-p:font-sans prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-strong:font-semibold prose-ul:my-8 prose-ul:space-y-4 prose-ol:my-8 prose-ol:space-y-4 prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:text-blue-600 first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:mt-1"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
