@@ -420,7 +420,7 @@ export default function Home() {
         id="home"
         className="min-h-screen flex items-center justify-center px-6 relative"
         style={{
-          backgroundImage: `url('/images/change-20color-20to-20be-20dark-20blue-2c-20light-20blue.jpg')`,
+          backgroundImage: `url('/images/Hompage_HeroIMG_001.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -568,7 +568,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
                       <img
-                        src="/images/design-mode/A%20complex%2C%20glowing%20network%20of%20interconnected%20data%20streams%20for%20social%20media%20%28facebook%2C%20instagram%2C%20youtube%2C%20google%20map%20logo%29%20%20symbolizing%20the%20seamless%20flow%20of%20information%20in%20a%20marketing%20automation%20system%2C%20wit%281%29(1).jpg"
+                        src="/images/design-mode/MarketingIMG_001.jpgMarketingIMG_001.jpg"
                         alt="Marketing Automation"
                         className="w-full h-full object-cover"
                       />
