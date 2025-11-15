@@ -317,7 +317,7 @@ export default function MarketingPage() {
                 {t.hero.subtitle}
               </p>
               <Button 
-                onClick={scrollToContact}
+                onClick={() => setScheduleModalOpen(true)}
                 className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl cursor-pointer"
               >
                 {lang === "en" ? "Contact Us" : "ติดต่อเรา"} <ArrowRight className="ml-2 w-4 h-4" />
@@ -509,68 +509,77 @@ export default function MarketingPage() {
           <p>© 2025 IGNITE IDEA. All rights reserved.</p>
         </div>
       </footer>
-    </div>
 
-    {/* Schedule Modal */}
-    <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
-      <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
-        <div className="grid md:grid-cols-2 gap-0">
-          <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-            <img 
-              src="/images/design-mode/A%20single%20person%20confidently%20presenting%20during%20a%20Zoom%20call%2C%20with%20another%20person%20participants%20on%20the%20screen%20looking%20engaged%20and%20happy.%20Everyone%20is%20Thai.jpg"
-              alt="Video Conference"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+      {/* Schedule Modal */}
+      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+        <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <img 
+                src="/images/design-mode/A%20single%20person%20confidently%20presenting%20during%20a%20Zoom%20call%2C%20with%20another%20person%20participants%20on%20the%20screen%20looking%20engaged%20and%20happy.%20Everyone%20is%20Thai.jpg"
+                alt="Video Conference"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
 
-          <div className="md:col-span-1 p-8 overflow-y-auto max-h-[90vh]">
-            <DialogHeader>
-              <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                {t.scheduleModal.title}
-              </DialogTitle>
-              <DialogDescription className="text-gray-700 leading-relaxed">
-                {t.scheduleModal.subtitle}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="space-y-4 mt-6">
-              <div className="space-y-2">
-                <Label htmlFor="project" className="text-gray-900 font-semibold">
-                  {t.scheduleModal.projectLabel}
-                </Label>
-                <Textarea
-                  id="project"
-                  placeholder={t.scheduleModal.projectPlaceholder}
-                  className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                  rows={3}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-gray-900 font-semibold">
-                  {t.scheduleModal.nameLabel}
-                </Label>
-                <Input
-                  id="name"
-                  type="text"
-                  className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-gray-900 font-semibold">
-                  {t.scheduleModal.emailLabel}
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                />
-              </div>
-              <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                {t.scheduleModal.submit}
-              </Button>
+            <div className="md:col-span-1 p-8 overflow-y-auto max-h-[90vh]">
+              <DialogHeader className="space-y-3 mb-6">
+                <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  {t.scheduleModal.title}
+                </DialogTitle>
+                <DialogDescription className="text-lg text-gray-600">
+                  {t.scheduleModal.subtitle}
+                </DialogDescription>
+              </DialogHeader>
+
+              <form className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="project" className="text-base font-semibold text-gray-700">
+                    {t.scheduleModal.projectLabel}
+                  </Label>
+                  <Textarea
+                    id="project"
+                    placeholder={t.scheduleModal.projectPlaceholder}
+                    className="min-h-[120px] resize-none bg-white/70 border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 text-gray-900 placeholder:text-gray-400"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-base font-semibold text-gray-700">
+                      {t.scheduleModal.nameLabel}
+                    </Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      className="bg-white/70 border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 text-gray-900"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-base font-semibold text-gray-700">
+                      {t.scheduleModal.emailLabel}
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      className="bg-white/70 border-2 border-blue-200 focus:border-blue-400 focus:ring-blue-400 text-gray-900"
+                    />
+                  </div>
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 border-0"
+                >
+                  {t.scheduleModal.submit}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </form>
             </div>
           </div>
-        </div>
-      </DialogContent>
-    </Dialog>
+        </DialogContent>
+      </Dialog>
+    </div>
   )
 }
