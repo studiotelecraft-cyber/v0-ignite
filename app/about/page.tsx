@@ -97,7 +97,7 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "เกี่ยวกับ IGNITE IDEA",
+      title: "IGNITE IDEA",
       subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ชัดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
     },
     mission: {
@@ -304,7 +304,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
         <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
-         <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h2>
+         <h3 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h3>
 
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
           <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto">{t.hero.subtitle}</p>

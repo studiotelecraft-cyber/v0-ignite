@@ -40,6 +40,10 @@ const translations = {
         desc: "Comprehensive Data Management systems enable real-time analytics, visualization tools, and automated reporting to transform raw data into actionable business intelligence for strategic decision-making.",
       },
     },
+    detailsSection: {
+      title: "How Data Management Can Help Your Organization",
+      content: "With our Data Management services, we can help you improve your data quality by ensuring it is accurate, complete, and up-to-date. This can help you make better decisions, improve customer relationships, and reduce the risk of errors and fraud.\n\nBeyond improving data quality, our data management services can also help you make more informed and efficient decisions. By providing you with accurate and reliable information, we can help you identify trends, patterns, and insights that can help you improve business performance, increase efficiency, and enhance customer satisfaction.\n\nFinally, our data management services can help you comply with relevant regulations and industry standards, as well as protect your data from security threats. By implementing robust security measures and using the latest technology, we can help you keep your data safe.\n\nOverall, our data management services provide businesses with the tools and expertise necessary to unlock the power of data. With better data quality, better decision-making, and enhanced security, our data management services can help businesses transform their operations and achieve their goals."
+    },
     detailsTitle: "Transform raw data into strategic business intelligence",
     details: {
       p1: "Data Management systems help organizations collect, store, organize, and analyze data effectively. Modern data management solutions provide centralized platforms for data governance, quality control, and seamless integration across all business systems.",
@@ -83,7 +87,7 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการ",
-      resources: "ทรัพยากร",
+      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -96,16 +100,20 @@ const translations = {
       title: "Data Management สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
       benefit1: {
         title: "ปรับปรุงคุณภาพข้อมูล",
-        desc: "ระบบการจัดการข้อมูลช่วยให้องค์กรจัดระเบียบและรวมศูนย์ข้อมูลจากหลายแหล่งที่มา ให้มาตรฐาน และเป็นข้อมูลที่เชื่อถือได้ รวมถึงช่วยปรับปรุงการเข้าถึงข้อมูลในทุกแผนก",
+        desc: "การจัดการข้อมูลสามารถช่วยให้ธุรกิจปรับปรุงคุณภาพข้อมูลของตนได้ด้วยการรับรองว่าถูกต้อง สมบูรณ์ และเป็นปัจจุบัน สิ่งนี้สามารถช่วยให้ธุรกิจตัดสินใจได้ดีขึ้น ปรับปรุงความสัมพันธ์กับลูกค้า และลดความเสี่ยงของข้อผิดพลาดและการฉ้อโกง",
       },
       benefit2: {
-        title: "การด้อดีสเตมที่เด็ด",
-        desc: "ด้วยการจัดการข้อมูลที่ดีมีคุณภาพและมีความปลอดภัยที่ดีกับข้อมูลในองค์กร มีความปลอดภัยและสามารถป้องกันข้อมูลที่สำคัญได้ด้วยความคงการเข้ารหัสและนโยบาย RLS จึงเป็นระบบที่สามารถทำให้องค์กรมั่นใจได้ในเรื่องความปลอดภัย",
+        title: "การตัดสินใจที่ดีขึ้น",
+        desc: "ด้วยการจัดการข้อมูลที่ถูกต้องและเชื่อถือได้ให้กับธุรกิจ บริการจัดการข้อมูลสามารถช่วยให้ผู้บริหาร และผู้มีอำนาจตัดสินใจทำการตัดสินใจได้อย่างมีประสิทธิภาพมากขึ้น สิ่งนี้สามารถนำไปสู่การปรับปรุงประสิทธิภาพทางธุรกิจ ประสิทธิภาพที่เพิ่มขึ้น และความพึงพอใจของลูกค้าที่ดีขึ้น",
       },
       benefit3: {
-        title: "การปรับปัดีกะแนนเพื่อให้ก้านละวาม",
-        desc: "ปรับปรุงการจัดการข้อมูลที่ดีมีคุณภาพในองค์กร มีความปลอดภัยและสามารถวิเคราะห์ข้อมูลได้จริง แล้วนำมาซึ่ง ROI และพัฒนาจากการตัดสินใจจากข้อมูลเชิงลึกได้เป็นอย่างดี นำมาซึ่งความสามารถในการทำธุรกิจทำได้อย่างแม่นยำ เพื่อ การ เพิ่มผลประโยชน์สูงสุด",
+        title: "การปฏิบัติตามข้อกำหนดและความปลอดภัย",
+        desc: "บริการจัดการข้อมูลสามารถช่วยให้ธุรกิจมั่นใจได้ว่าข้อมูลองค์กรของคุณเป็นไปตามข้อบังคับและมาตรฐานอุตสาหกรรมที่เกี่ยวข้อง นอกจากนี้ บริการจัดการข้อมูลยังช่วยให้ธุรกิจปกป้องข้อมูลของตนจากภัยคุกคามด้านความปลอดภัย เช่น การแฮ็กและการละเมิดข้อมูล ได้อีกด้วย",
       },
+    },
+    detailsSection: {
+      title: "Data Management สามารถช่วยองค์กรของคุณอย่างไร",
+      content: "ด้วยบริการจัดการข้อมูล (Data Management) ของเรา เราสามารถช่วยคุณปรับปรุงคุณภาพข้อมูลของคุณโดยรับรองว่าถูกต้อง สมบูรณ์ และเป็นปัจจุบัน สิ่งนี้สามารถช่วยให้คุณตัดสินใจได้ดีขึ้น ปรับปรุงความสัมพันธ์กับลูกค้า และลดความเสี่ยงของข้อผิดพลาดและการฉ้อโกง\n\nนอกเหนือจากการปรับปรุงคุณภาพข้อมูลแล้ว บริการจัดการข้อมูลของเรายังสามารถช่วยให้คุณตัดสินใจได้อย่างมีข้อมูลและมีประสิทธิภาพมากขึ้น ด้วยการให้ข้อมูลที่ถูกต้องและเชื่อถือได้แก่คุณ เราสามารถช่วยคุณระบุแนวโน้ม รูปแบบ และข้อมูลเชิงลึกที่สามารถช่วยคุณปรับปรุงประสิทธิภาพของธุรกิจ เพิ่มประสิทธิภาพ และเพิ่มความพึงพอใจของลูกค้า\n\nประการสุดท้าย บริการจัดการข้อมูลของเราสามารถช่วยให้คุณปฏิบัติตามกฎระเบียบที่เกี่ยวข้องและมาตรฐานอุตสาหกรรม ตลอดจนปกป้องข้อมูลของคุณจากภัยคุกคามด้านความปลอดภัย ด้วยการใช้มาตรการรักษาความปลอดภัยที่แข็งแกร่งและใช้เทคโนโลยีล่าสุด เราสามารถช่วยคุณรักษาข้อมูลของคุณให้ปลอดภัย\n\nโดยรวมแล้ว บริการจัดการข้อมูลของเราช่วยให้ธุรกิจมีเครื่องมือและความเชี่ยวชาญที่จำเป็นในการปลดล็อกพลังของข้อมูล ด้วยคุณภาพของข้อมูลที่ดีขึ้น การตัดสินใจที่ดีขึ้น และการรักษาความปลอดภัยที่เพิ่มขึ้น บริการจัดการข้อมูลของเราสามารถช่วยให้ธุรกิจเปลี่ยนรูปแบบการดำเนินงานและบรรลุเป้าหมายได้"
     },
     detailsTitle: "เปลี่ยนข้อมูลดิบให้กลายเป็นข้อมูลเชิงลึกทางธุรกิจ",
     details: {
@@ -320,10 +328,7 @@ export default function DataManagementPage() {
 
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path
-              d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              fill="white"
-            />
+            
           </svg>
         </div>
       </section>
@@ -349,6 +354,24 @@ export default function DataManagementPage() {
               <div className="bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-blue-400 hover:shadow-xl transition-all duration-300">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.benefits.benefit3.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{t.benefits.benefit3.desc}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-6 bg-gradient-to-br from-white via-gray-50 to-blue-50">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12 text-balance">
+              {t.detailsSection.title}
+            </h2>
+            
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
+              <div className="prose prose-lg max-w-none">
+                {t.detailsSection.content.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 leading-relaxed mb-6 last:mb-0 text-lg">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
