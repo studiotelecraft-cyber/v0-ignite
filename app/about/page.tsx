@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin } from 'lucide-react'
+import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 const translations = {
   en: {
@@ -25,8 +26,8 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "About IGNITE IDEA",
-      subtitle: "Empowering Businesses Through Technology and Innovation",
+      title: "IGNITE IDEA",
+      subtitle: "We are CRM experts who enhance the performance of your Sales, Customer Service, and Marketing teams through secure, user-friendly systems with measurable results that boost sales and customer satisfaction.",
     },
     mission: {
       title: "Our Mission",
@@ -91,17 +92,17 @@ const translations = {
         marketing: "โซลูชันการตลาดอัตโนมัติ",
         dataManagement: "โซลูชันการจัดการข้อมูล",
       },
-      resources: "ทรัพยากร",
+      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
       title: "เกี่ยวกับ IGNITE IDEA",
-      subtitle: "เสริมพลังธุรกิจด้วยเทคโนโลยีและนวัตกรรม",
+      subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ชัดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
     },
     mission: {
       title: "พันธกิจของเรา",
-      description: "เราเสริมพลังให้ธุรกิจปลดล็อกศักยภาพสูงสุด ด้วยการส่งมอบโซลูชัน CRM และระบบอัตโนมัติที่ออกแบบเฉพาะ เพื่อขับเคลื่อนการเติบโต สร้างความสัมพันธ์กับลูกค้า และปรับปรุงการดำเนินงาน",
+      description: "เราเสริมพลังให้ธุรกิจปลดล็อกศักยภาพสูงสุด ด้วยการส่งมอบโซลูชัน CRM และระบบอัตโนมัติที่ออกแบบเฉพาะ เพื่อขับเคลื่อนการเติบโตร การสร้างความสัมพันธ์กับลูกค้า และปรับปรุงการดำเนินงาน",
     },
     vision: {
       title: "วิสัยทัศน์ของเรา",
@@ -158,26 +159,38 @@ export default function AboutPage() {
   const [lang, setLang] = useState<"en" | "th">("en")
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 
   const t = translations[lang]
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/10 border-white/10'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-gray-900">IGNITE IDEA</div>
+              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.home}
               </Link>
               <div
@@ -185,13 +198,16 @@ export default function AboutPage() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
+                <Link
+                  href="/service/crm"
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                >
                   {t.nav.service}
                   <ChevronDown className="w-4 h-4" />
-                </button>
+                </Link>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-0 pt-2">
-                    <div className="w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2">
+                    <div className="w-80 bg-white/95 rounded-lg shadow-xl border border-gray-200 py-2">
                       <Link
                         href="/service/crm"
                         className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
@@ -220,10 +236,10 @@ export default function AboutPage() {
                   </div>
                 )}
               </div>
-              <Link href="/resources" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
               </Link>
-              <Link href="/about" className="text-blue-600 font-semibold">
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
               </Link>
             </div>
@@ -275,12 +291,10 @@ export default function AboutPage() {
         </div>
       </nav>
 
-      {/* Floating Chat Button */}
-      <FloatingChatButton onClick={() => window.location.href = '/#contact-us'} />
+      <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
 
-      {/* Hero Section */}
       <section 
-        className="pt-32 pb-20 px-6 relative overflow-hidden"
+        className="h-screen relative overflow-hidden flex items-center justify-center"
         style={{
           backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/backgroud-GSKMeJj5qu8IPDsAN8der8S4Nnq985.jpg')`,
           backgroundSize: "cover",
@@ -288,78 +302,209 @@ export default function AboutPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-blue-950/60 to-purple-950/70" />
-        <div className="container mx-auto max-w-5xl text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">{t.hero.title}</h1>
-          <p className="text-2xl text-blue-100/90">{t.hero.subtitle}</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
+        <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
+         <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h2>
+
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
+          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto">{t.hero.subtitle}</p>
+          
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-white/70" />
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100">
-              <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.mission.title}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{t.mission.description}</p>
-            </div>
-
-            <div className="p-10 rounded-3xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-100">
-              <div className="w-16 h-16 rounded-2xl bg-cyan-600 flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.vision.title}</h2>
-              <p className="text-gray-700 text-lg leading-relaxed">{t.vision.description}</p>
-            </div>
+      <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
+              {t.values.title}
+            </h2>
+            <div className="h-2 w-40 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 mx-auto rounded-full" />
           </div>
-        </div>
-      </section>
+          
+          <div className="relative max-w-6xl mx-auto h-[900px] md:h-[700px]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-pulse" />
+                <img 
+                  src="/images/1.png"
+                  alt="IGNITE IDEA AI Assistant"
+                  className="relative z-10 w-144 h-144 drop-shadow-2xl animate-float"
+                />
+              </div>
+            </div>
 
-      {/* Core Values */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">{t.values.title}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
             {Object.entries(t.values)
               .filter(([key]) => key.startsWith("value"))
-              .map(([_, value], index) => (
-                <div key={index} className="p-8 rounded-2xl bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                  <h3 className="text-2xl font-bold text-blue-600 mb-3">{value.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{value.desc}</p>
-                </div>
-              ))}
+              .map(([_, value], index) => {
+                const icons = [
+                  <Lightbulb className="w-8 h-8" />,
+                  <TrendingUp className="w-8 h-8" />,
+                  <Award className="w-8 h-8" />,
+                  <Heart className="w-8 h-8" />
+                ]
+                const gradients = [
+                  "from-blue-500 to-cyan-500",
+                  "from-purple-500 to-pink-500",
+                  "from-orange-500 to-yellow-500",
+                  "from-green-500 to-teal-500"
+                ]
+                
+                const angle = (index * 90 - 45) * (Math.PI / 180)
+                const radius = 320
+                const top = 50 + Math.sin(angle) * radius / 9
+                const left = 50 + Math.cos(angle) * radius / 9
+                
+                return (
+                  <div 
+                    key={index}
+                    className="absolute w-144 group"
+                    style={{
+                      top: `${top}%`,
+                      left: `${left}%`,
+                      transform: 'translate(-50%, -50%)',
+                      animationDelay: `${index * 0.1}s`
+                    }}
+                  >
+                    <div className="relative p-8 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 px-8 mx-36 ml-[111px]">
+                      <div className={`absolute inset-0 bg-gradient-to-br mx-36 ${gradients[index]} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`} />
+                      <div className="text-center">
+                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg mx-auto mb-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                          {icons[index]}
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
+                          {value.title}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">{value.desc}</p>
+                      </div>
+                      
+                      <div 
+                        className="absolute w-0.5 bg-gradient-to-b from-transparent via-blue-300/50 to-transparent opacity-20 group-hover:opacity-40 transition-opacity"
+                        style={{
+                          height: '80px',
+                          top: '50%',
+                          left: '50%',
+                          transform: `rotate(${-angle * 180 / Math.PI + 90}deg) translateX(-50%)`,
+                          transformOrigin: 'top center'
+                        }}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">{t.team.title}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(t.team)
-              .filter(([key]) => key.startsWith("reason"))
-              .map(([_, reason], index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-6 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100"
-                >
-                  <div className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
-                  <p className="text-gray-800 font-medium leading-relaxed">{reason}</p>
-                </div>
-              ))}
+      
+
+      <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="text-center mb-8">
+            <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto mb-6">
+              <Shield className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+              {lang === "en" ? "Your Privacy Matters" : "ความเป็นส่วนตัวของคุณสำคัญ"}
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
+              {lang === "en" 
+                ? "We are committed to protecting your personal data and maintaining transparency in how we handle your information." 
+                : "เรามุ่งมั่นในการปกป้องข้อมูลส่วนบุคคลของคุณและรักษาความโปร่งใสในการจัดการข้อมูลของคุณ"}
+            </p>
+            <Link href="/privacy-policy">
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-10 py-6 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold"
+              >
+                {lang === "en" ? "Read Privacy Policy" : "อ่านนโยบายความเป็นส่วนตัว"} →
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <Lock className="w-10 h-10 text-white mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">
+                {lang === "en" ? "Data Security" : "ความปลอดภัยของข้อมูล"}
+              </h3>
+              <p className="text-white/80 text-sm">
+                {lang === "en" 
+                  ? "Your data is protected with industry-leading security standards" 
+                  : "ข้อมูลของคุณได้รับการปกป้องด้วยมาตรฐานความปลอดภัยชั้นนำ"}
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <Eye className="w-10 h-10 text-white mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">
+                {lang === "en" ? "Full Transparency" : "ความโปร่งใสเต็มรูปแบบ"}
+              </h3>
+              <p className="text-white/80 text-sm">
+                {lang === "en" 
+                  ? "Clear information about how we collect and use your data" 
+                  : "ข้อมูลที่ชัดเจนเกี่ยวกับวิธีที่เราเก็บรวบรวมและใช้ข้อมูลของคุณ"}
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+              <Users className="w-10 h-10 text-white mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">
+                {lang === "en" ? "Your Rights" : "สิทธิของคุณ"}
+              </h3>
+              <p className="text-white/80 text-sm">
+                {lang === "en" 
+                  ? "Full control over your personal information and how it's used" 
+                  : "ควบคุมข้อมูลส่วนบุคคลของคุณอย่างเต็มที่"}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Us Section */}
+      <section 
+        className="py-24 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/Hompage_HeroIMG_001.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-purple-950/50 to-black/50" />
+        <div className="container mx-auto max-w-5xl text-center relative z-10">
+          <h2 
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            style={{
+              textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.4), 0 0 80px rgba(59, 130, 246, 0.2)'
+            }}
+          >
+            {lang === "en" ? "Let's Ignite Your Ideas" : "มาจุดประกายไอเดียของคุณ"}
+          </h2>
+          <p 
+            className="text-2xl md:text-3xl text-blue-100 leading-relaxed max-w-3xl mx-auto"
+            style={{
+              textShadow: '0 0 15px rgba(147, 197, 253, 0.7), 0 0 30px rgba(147, 197, 253, 0.5), 0 0 45px rgba(147, 197, 253, 0.3)'
+            }}
+          >
+            {lang === "en" 
+              ? "Your business has unlimited potential. Let's unlock it together." 
+              : "ธุรกิจของคุณมีศักยภาพไร้ขีดจำกัด มาปลดล็อกมันไปด้วยกัน"}
+          </p>
+        </div>
+      </section>
+
       <section id="contact-us" className="relative py-24 px-6 overflow-hidden">
-        {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-500" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-16">
@@ -368,9 +513,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8">
-            {/* Left Side - Contact Information (2 columns) */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Contact Cards */}
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -418,7 +561,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Services & Partners */}
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
@@ -466,7 +608,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Side - Booking Form (3 columns) */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl border border-gray-200 h-full">
                 <div className="mb-8">
@@ -535,7 +676,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-cyan-600">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t.cta.title}</h2>
@@ -548,12 +688,104 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-6 border-t border-gray-200">
         <div className="container mx-auto text-center text-gray-600">
           <p>© 2025 IGNITE IDEA. All rights reserved.</p>
         </div>
       </footer>
+
+      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+        <DialogContent className="sm:max-w-5xl backdrop-blur-xl bg-white border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <img 
+                src="/images/design-mode/BookConsultIMG_001.jpg"
+                alt="Consultation"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div className="md:col-span-1 p-8 overflow-y-auto max-h-[90vh]">
+              <DialogHeader>
+                <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                  {lang === "en" ? "Book a Free 30-Minute Strategy Call" : "รับสิทธิ์ปรึกษาฟรี 30 นาที"}
+                </DialogTitle>
+                <DialogDescription className="text-xl text-gray-700 leading-relaxed">
+                  {lang === "en" 
+                    ? "Discuss your challenges and discover practical solutions that work" 
+                    : "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง"}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-6 mt-6">
+                <div className="space-y-2">
+                  <Label htmlFor="project" className="text-gray-900 font-semibold text-lg">
+                    {lang === "en" ? "Describe your project need" : "อธิบายความต้องการโครงการของคุณ"}
+                  </Label>
+                  <Textarea
+                    id="project"
+                    placeholder={lang === "en" ? "Describe your project need here..." : "อธิบายความต้องการโครงการของคุณที่นี่..."}
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
+                    rows={3}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-gray-900 font-semibold text-lg">
+                    {lang === "en" ? "Your name" : "ชื่อของคุณ"}
+                  </Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 h-14 text-lg"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-gray-900 font-semibold text-lg">
+                    {lang === "en" ? "Company Email" : "อีเมลบริษัท"}
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 h-14 text-lg"
+                  />
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold text-xl py-7 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  {lang === "en" ? "Submit" : "ส่ง"}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
+
+<style jsx>{`
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+`}</style>

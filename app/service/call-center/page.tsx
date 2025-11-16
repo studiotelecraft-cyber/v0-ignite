@@ -9,6 +9,7 @@ import { Phone, Mail, MapPin, Globe, ChevronDown, Menu, X, ArrowRight } from 'lu
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 const translations = {
   en: {
@@ -75,6 +76,15 @@ const translations = {
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
     },
+    scheduleModal: {
+      title: "Book a Free 30-Minute Strategy Call",
+      subtitle: "Discuss your challenges and discover practical solutions that work",
+      projectLabel: "Describe your project need",
+      projectPlaceholder: "Describe your project need here...",
+      nameLabel: "Your name",
+      emailLabel: "Company Email",
+      submit: "Submit",
+    },
   },
   th: {
     nav: {
@@ -86,7 +96,7 @@ const translations = {
         marketing: "โซลูชันการตลาดอัตโนมัติ",
         dataManagement: "โซลูชันการจัดการข้อมูล",
       },
-      resources: "ทรัพยากร",
+      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -139,11 +149,21 @@ const translations = {
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
     },
+    scheduleModal: {
+      title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
+      projectLabel: "อธิบายความต้องการโครงการของคุณ",
+      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      nameLabel: "ชื่อของคุณ",
+      emailLabel: "อีเมลบริษัท",
+      submit: "ส่ง",
+    },
   },
 }
 
 export default function CallCenterPage() {
   const [lang, setLang] = useState<"en" | "th">("en")
+  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -163,7 +183,7 @@ export default function CallCenterPage() {
   return (
     <div className="min-h-screen">
       {/* Floating Chat Button */}
-      <FloatingChatButton onClick={scrollToContact} />
+      <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
@@ -291,7 +311,7 @@ export default function CallCenterPage() {
       </nav>
 
       {/* Floating Call Button */}
-      <FloatingCallButton onClick={scrollToContact} text={t.nav.schedule} />
+      <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
@@ -309,7 +329,7 @@ export default function CallCenterPage() {
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight text-balance">{t.hero.title}</h1>
               <p className="text-xl text-white/90 leading-relaxed">{t.hero.subtitle}</p>
-              <Button onClick={scrollToContact} size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 shadow-lg">
+              <Button onClick={() => setScheduleModalOpen(true)} size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 shadow-lg">
                 {lang === "en" ? "Contact Us" : "ติดต่อเรา"} <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -518,6 +538,70 @@ export default function CallCenterPage() {
           </div>
         </div>
       </section>
+
+      {/* Consultation Dialog */}
+      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+        <DialogContent className="sm:max-w-5xl bg-white border-2 border-gray-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Left Side - Image */}
+            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <img 
+                src="/images/design-mode/BookConsultIMG_001.jpg"
+                alt="Video Conference"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Right Side - Form */}
+            <div className="md:col-span-1 p-12 overflow-y-auto max-h-[90vh]">
+              <DialogHeader>
+                <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
+                  {t.scheduleModal.title}
+                </DialogTitle>
+                <DialogDescription className="text-xl text-gray-700 leading-relaxed">
+                  {t.scheduleModal.subtitle}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-6 mt-8">
+                <div className="space-y-3">
+                  <Label htmlFor="project" className="text-lg text-gray-900 font-semibold">
+                    {t.scheduleModal.projectLabel}
+                  </Label>
+                  <Textarea
+                    id="project"
+                    placeholder={t.scheduleModal.projectPlaceholder}
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
+                    rows={4}
+                  />
+                </div>
+                <div className="space-y-3">
+                  <Label htmlFor="name" className="text-lg text-gray-900 font-semibold">
+                    {t.scheduleModal.nameLabel}
+                  </Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg h-14"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <Label htmlFor="email" className="text-lg text-gray-900 font-semibold">
+                    {t.scheduleModal.emailLabel}
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg h-14"
+                  />
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl font-bold py-7 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  {t.scheduleModal.submit}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-gray-200 bg-white">

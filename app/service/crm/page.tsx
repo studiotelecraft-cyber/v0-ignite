@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Globe, ArrowRight, Check, Phone, Mail, MapPin, ChevronDown, Menu, X } from 'lucide-react'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Globe, ArrowRight, Check, Phone, Mail, MapPin, ChevronDown, Menu, X, TrendingUp, Target, Zap } from 'lucide-react'
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
@@ -25,6 +26,22 @@ const translations = {
         "Better Customer Relationships Start Here CRM isn't just software—it's your secret weapon for business growth. We help you organize customer data, spot opportunities, and turn insights into action that drives real results.",
       cta: "Talk to Us",
     },
+    scheduleModal: {
+      title: "Book a Free 30-Minute Strategy Call",
+      subtitle: "Discuss your challenges and discover practical solutions that work",
+      projectLabel: "Describe your project need",
+      projectPlaceholder: "Describe your project need here...",
+      nameLabel: "Your name",
+      emailLabel: "Company Email",
+      submit: "Submit",
+    },
+    stats: {
+      title: "Sales Increases",
+      stat1: "Increased sales success rate",
+      stat2: "Increased sales team efficiency",
+      stat3: "Increased deal closure speed",
+      stat4: "Increased revenue forecast accuracy",
+    },
     benefits: {
       title: "How Can CRM Help Your Organization?",
       card1: {
@@ -39,6 +56,10 @@ const translations = {
         title: "Work From Anywhere with Multi-Device Access",
         desc: "Never be tied to your desk again. Our CRM gives you full access to customer data on desktop, mobile, and tablet—so you can work efficiently from anywhere, anytime.",
       },
+    },
+    partner: {
+      title: "Technology Partner",
+      subtitle: "Powered by industry-leading CRM platform",
     },
     details: {
       intro:
@@ -78,7 +99,7 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการ",
-      resources: "ทรัพยากร",
+      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -87,6 +108,22 @@ const translations = {
       subtitle:
         "สร้างความสัมพันธ์ที่ดีกับลูกค้า เริ่มต้นที่นี่ CRM ไม่ใช่แค่ซอฟต์แวร์ธรรมดา—แต่เป็นกุญแจสำคัญที่จะพาธุรกิจคุณเติบโต เราช่วยจัดการข้อมูลลูกค้าให้เป็นระบบ ค้นหาโอกาสทางธุรกิจ และเปลี่ยนข้อมูลให้กลายเป็นผลลัพธ์ที่จับต้องได้",
       cta: "นัดคุยกับเรา",
+    },
+    scheduleModal: {
+      title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
+      subtitle: "พูดคุยเกี่ยวกับความท้าทายของคุณและค้นพบโซลูชันที่เหมาะสม",
+      projectLabel: "อธิบายความต้องการโปรเจค",
+      projectPlaceholder: "อธิบายความต้องการโปรเจคที่นี่...",
+      nameLabel: "ชื่อของคุณ",
+      emailLabel: "อีเมลบริษัท",
+      submit: "ส่ง",
+    },
+    stats: {
+      title: "Sales Increases",
+      stat1: "เพิ่มอัตราการขายได้สำเร็จ",
+      stat2: "เพิ่มประสิทธิภาพให้แก่เซลล์",
+      stat3: "เพิ่มความเร็วในการปิดการขาย",
+      stat4: "เพิ่มความแม่นยำในการคาดการณ์รายได้",
     },
     benefits: {
       title: "CRM สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
@@ -102,6 +139,10 @@ const translations = {
         title: "เข้าถึงได้ผ่านทุกอุปกรณ์",
         desc: "ด้วยระบบ CRM ที่เราให้บริการ คุณสามารถมั่นใจได้ว่าสามารถเข้าถึงข้อมูลได้ผ่านทั้งคอมพิวเตอร์ มือถือ และ แท็บเล็ต เพื่อให้การทำงานเป็นไปได้อย่างราบรื่น",
       },
+    },
+    partner: {
+      title: "Technology Partner",
+      subtitle: "Powered by industry-leading CRM platform",
     },
     details: {
       intro:
@@ -127,7 +168,7 @@ const translations = {
     },
     booking: {
       title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการรวารบบ CRM ของคุณ",
+      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรารบบ CRM ของคุณ",
       firstName: "ชื่อ - นามสกุล",
       email: "อีเมล์",
       organization: "ชื่อองกร์กร",
@@ -142,11 +183,20 @@ export default function CRMPage() {
   const [lang, setLang] = useState<"en" | "th">("en")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 
   const t = translations[lang]
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToContact = () => {
@@ -158,22 +208,23 @@ export default function CRMPage() {
 
   return (
     <div className="min-h-screen">
-      <FloatingChatButton onClick={scrollToContact} />
-      <FloatingCallButton onClick={scrollToContact} text={t.nav.schedule} />
+      <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
+      <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/10 border-white/10'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
               <div className="text-xl font-bold text-white">IGNITE IDEA</div>
             </Link>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/#home" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.home}
               </Link>
               <div
@@ -182,7 +233,7 @@ export default function CRMPage() {
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
                 <Link
-                  href="/service"
+                  href="/service/crm"
                   className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {t.nav.service}
@@ -219,15 +270,14 @@ export default function CRMPage() {
                   </div>
                 )}
               </div>
-              <a href="#resources" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
-              </a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors">
+              </Link>
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
-              </a>
+              </Link>
             </div>
 
-            {/* Right Section - Language Toggle and Hamburger */}
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm rounded-full p-1">
                 <button
@@ -309,47 +359,43 @@ export default function CRMPage() {
                     </div>
                   )}
                 </div>
-                <a
-                  href="#resources"
+                <Link
+                  href="/resources"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2"
                 >
                   {t.nav.resources}
-                </a>
-                <a
-                  href="#about"
+                </Link>
+                <Link
+                  href="/about"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2"
                 >
                   {t.nav.about}
-                </a>
+                </Link>
               </div>
             </div>
           )}
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-[600px] flex items-center">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/images/design-mode/Massive%20translucent%20sphere%20containing%20swirling%20galaxies%20of%20customer%20data%20points%2C%20each%20point%20representing%20an%20individual%20customer%20glowing%20like%20stars%2C%20display%20customer%20in%20card%2C%20business%20professional%20standing%20b%20%286%29.jpg"
+            src="/images/design-mode/SalesSolutionIMG_001.jpg"
             alt="CRM Data Visualization"
             className="w-full h-full object-cover"
           />
-          {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight text-balance drop-shadow-lg">{t.hero.title}</h1>
               <p className="text-xl text-white leading-relaxed text-pretty drop-shadow-md">{t.hero.subtitle}</p>
               <Button 
-                onClick={scrollToContact}
+                onClick={() => setScheduleModalOpen(true)}
                 className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl cursor-pointer"
               >
                 {lang === "en" ? "Contact Us" : "ติดต่อเรา"} <ArrowRight className="ml-2 w-4 h-4" />
@@ -358,7 +404,6 @@ export default function CRMPage() {
           </div>
         </div>
 
-        {/* Wave Divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
             <path
@@ -369,45 +414,147 @@ export default function CRMPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16 text-balance">
+      <section className="py-20 px-6 white bg-card">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
             {t.benefits.title}
           </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full mb-16" />
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                <Check className="w-6 h-6 text-blue-600" />
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card1.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{t.benefits.card1.desc}</p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card1.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{t.benefits.card1.desc}</p>
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-100 to-transparent rounded-tl-full opacity-50" />
             </div>
 
-            {/* Card 2 */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center">
-                <Check className="w-6 h-6 text-cyan-600" />
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card2.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{t.benefits.card2.desc}</p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card2.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{t.benefits.card2.desc}</p>
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-cyan-100 to-transparent rounded-tl-full opacity-50" />
             </div>
 
-            {/* Card 3 */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-                <Check className="w-6 h-6 text-teal-600" />
+            <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg shadow-teal-500/30">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card3.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{t.benefits.card3.desc}</p>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">{t.benefits.card3.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{t.benefits.card3.desc}</p>
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-teal-100 to-transparent rounded-tl-full opacity-50" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Details Section */}
+      <section className="py-20 px-6 bg-primary-foreground">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
+            {t.stats.title}
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="items-center justify-center group-hover:scale-180 transition-transform">
+                  <img 
+                    src="/images/design-mode/coins.png"
+                    alt="Coins"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-blue-600 mb-2">35%</div>
+                  <h4 className="text-gray-900 font-bold leading-relaxed">{t.stats.stat1}</h4>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="items-center justify-center group-hover:scale-180 transition-transform">
+                  <img 
+                    src="/images/design-mode/costumer.png"
+                    alt="Customer"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-cyan-600 mb-2">32%</div>
+                  <h4 className="text-gray-900 font-bold leading-relaxed">{t.stats.stat2}</h4>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="items-center justify-center group-hover:scale-180 transition-transform">
+                  <img 
+                    src="/images/design-mode/clock.png"
+                    alt="Clock"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-purple-600 mb-2">34%</div>
+                  <h4 className="text-gray-900 font-bold leading-relaxed">{t.stats.stat3}</h4>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="items-center justify-center group-hover:scale-180 transition-transform">
+                  <img 
+                    src="/images/design-mode/target.png"
+                    alt="Target"
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-orange-600 mb-2">45%</div>
+                  <h4 className="text-gray-900 font-bold leading-relaxed">{t.stats.stat4}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {t.partner.title}
+          </h2>
+          <p className="text-xl text-gray-600 mb-12">{t.partner.subtitle}</p>
+          
+          <div className="flex justify-center items-center py-12">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <img 
+                src="/images/design-mode/Group-1597881657.png.webp"
+                alt="Salesforce" 
+                className="relative h-42 md:h-50 object-contain drop-shadow-2xl transform group-hover:scale-144 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-white">
@@ -419,7 +566,6 @@ export default function CRMPage() {
         </div>
       </section>
 
-      {/* Contact Us Section */}
       <section id="contact-us" className="py-20 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
@@ -428,9 +574,7 @@ export default function CRMPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left Side - Contact Information */}
             <div className="space-y-8">
-              {/* Contact Details Cards */}
               <div className="grid gap-6">
                 <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300">
                   <div className="flex items-start gap-4">
@@ -480,7 +624,6 @@ export default function CRMPage() {
                 </div>
               </div>
 
-              {/* Services */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
                 <ul className="space-y-3">
@@ -511,7 +654,6 @@ export default function CRMPage() {
                 </ul>
               </div>
 
-              {/* Partners */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.partners}</h3>
                 <div className="flex items-center gap-8 flex-wrap">
@@ -529,7 +671,6 @@ export default function CRMPage() {
               </div>
             </div>
 
-            {/* Right Side - Booking Form */}
             <div className="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-400 p-10 md:p-12 rounded-3xl shadow-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{t.booking.title}</h2>
               <p className="text-white/90 mb-8 leading-relaxed">{t.booking.subtitle}</p>
@@ -568,12 +709,74 @@ export default function CRMPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-6 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto text-center text-gray-600">
           <p>© 2025 IGNITE IDEA. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* Schedule Modal */}
+      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+        <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <img 
+                src="/images/design-mode/BookConsultIMG_001.jpg"
+                alt="Video Conference"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* Right Side - Form */}
+            <div className="md:col-span-1 p-8 overflow-y-auto max-h-[90vh]">
+              <DialogHeader>
+                <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                  {t.scheduleModal.title}
+                </DialogTitle>
+                <DialogDescription className="text-gray-700 leading-relaxed">
+                  {t.scheduleModal.subtitle}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-4 mt-6">
+                <div className="space-y-2">
+                  <Label htmlFor="project" className="text-gray-900 font-semibold">
+                    {t.scheduleModal.projectLabel}
+                  </Label>
+                  <Textarea
+                    id="project"
+                    placeholder={t.scheduleModal.projectPlaceholder}
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                    rows={3}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-gray-900 font-semibold">
+                    {t.scheduleModal.nameLabel}
+                  </Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-gray-900 font-semibold">
+                    {t.scheduleModal.emailLabel}
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                  />
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  {t.scheduleModal.submit}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Globe, ArrowRight } from "lucide-react"
+import { Globe, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
 const translations = {
@@ -121,22 +121,35 @@ const translations = {
 export default function ServicePage() {
   const [lang, setLang] = useState<"en" | "th">("en")
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const t = translations[lang]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b shadow-sm transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/90 border-gray-200'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-gray-900">IGNITE IDEA</div>
+              <div className={`text-xl font-bold transition-colors ${isScrolled ? 'text-white' : 'text-gray-900'}`}>IGNITE IDEA</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/#home" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/" className={`transition-colors ${isScrolled ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-blue-600'}`}>
                 {t.nav.home}
               </Link>
               <div
@@ -144,7 +157,7 @@ export default function ServicePage() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link href="/service" className="text-blue-600 font-semibold flex items-center gap-1">
+                <Link href="/service/crm" className={`flex items-center gap-1 font-semibold transition-colors ${isScrolled ? 'text-white' : 'text-blue-600'}`}>
                   {t.nav.service}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -177,10 +190,10 @@ export default function ServicePage() {
                   </div>
                 )}
               </div>
-              <Link href="/#resources" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/resources" className={`transition-colors ${isScrolled ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-blue-600'}`}>
                 {t.nav.resources}
               </Link>
-              <Link href="/#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/about" className={`transition-colors ${isScrolled ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-blue-600'}`}>
                 {t.nav.about}
               </Link>
             </div>
@@ -199,7 +212,6 @@ export default function ServicePage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">{t.hero.title}</h1>
@@ -207,7 +219,6 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* CRM Services Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{t.services.crm.title}</h2>
@@ -233,7 +244,6 @@ export default function ServicePage() {
             <p className="text-lg text-gray-700 leading-relaxed">{t.services.crm.benefits}</p>
           </div>
 
-          {/* Stats */}
           <div className="grid md:grid-cols-4 gap-6 mb-12">
             {t.services.crm.stats.map((stat, index) => (
               <div
@@ -255,7 +265,6 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-6 border-t border-gray-200 bg-gray-50">
         <div className="container mx-auto text-center text-gray-600">
           <p>© 2025 IGNITE IDEA. All rights reserved.</p>

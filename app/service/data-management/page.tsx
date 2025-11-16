@@ -485,17 +485,19 @@ export default function DataManagementPage() {
         </footer>
       </div>
 
+       {/* Schedule Modal */}
       <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
         <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
               <img 
-                src="/images/design-mode/A%20single%20person%20confidently%20presenting%20during%20a%20Zoom%20call%2C%20with%20another%20person%20participants%20on%20the%20screen%20looking%20engaged%20and%20happy.%20Everyone%20is%20Thai.jpg"
+                src="/images/design-mode/BookConsultIMG_001.jpg"
                 alt="Video Conference"
                 className="w-full h-full object-cover object-center"
               />
             </div>
 
+            {/* Right Side - Form */}
             <div className="md:col-span-1 p-8 overflow-y-auto max-h-[90vh]">
               <DialogHeader>
                 <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">

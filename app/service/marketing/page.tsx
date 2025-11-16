@@ -298,7 +298,7 @@ export default function MarketingPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/images/design-mode/A%20complex%2C%20glowing%20network%20of%20interconnected%20data%20streams%20for%20social%20media%20%28facebook%2C%20instagram%2C%20youtube%2C%20google%20map%20logo%29%20%20symbolizing%20the%20seamless%20flow%20of%20information%20in%20a%20marketing%20automation%20system%2C%20wit%20%281%29.jpg"
+            src="/images/design-mode/MarketingIMG_001.jpg"
             alt="Marketing Automation Network"
             className="w-full h-full object-cover"
           />

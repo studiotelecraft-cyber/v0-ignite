@@ -8,10 +8,16 @@ interface FloatingChatButtonProps {
 
 export function FloatingChatButton({ onClick }: FloatingChatButtonProps) {
   const [isHovered, setIsHovered] = useState(false)
+  const [showNotification, setShowNotification] = useState(true)
+
+  const handleClick = () => {
+    setShowNotification(false)
+    onClick?.()
+  }
 
   return (
     <button
-      onClick={onClick}
+      onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="fixed bottom-8 right-8 z-50 group"
@@ -30,6 +36,12 @@ export function FloatingChatButton({ onClick }: FloatingChatButtonProps) {
         
         {/* Pulse animation ring */}
         <div className="absolute inset-0 rounded-full bg-blue-500/20 animate-ping" />
+        
+        {showNotification && (
+          <div className="absolute -top-1 -right-1 w-7 h-7 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg border-2 border-white animate-bounce">
+            1
+          </div>
+        )}
       </div>
     </button>
   )

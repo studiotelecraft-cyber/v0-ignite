@@ -127,7 +127,7 @@ const translations = {
         marketing: "โซลูชันการตลาดอัตโนมัติ",
         dataManagement: "โซลูชันการจัดการข้อมูล",
       },
-      resources: "ทรัพยากร",
+      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -230,11 +230,19 @@ export default function Home() {
   const [caseStudyModalOpen, setCaseStudyModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const t = translations[lang]
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToContact = () => {
@@ -249,7 +257,11 @@ export default function Home() {
       <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/10 border-white/10'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -531,7 +543,7 @@ export default function Home() {
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
-                      <img src="/images/salesservice.png" alt="Sales Solution" className="w-full h-full object-cover" />
+                      <img src="/images/design-mode/SalesSolutionIMG_001.jpg" alt="Sales Solution" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-10 flex flex-col justify-center">
                       <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.sales.title}</h3>
@@ -568,7 +580,7 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
                       <img
-                        src="/images/design-mode/MarketingIMG_001.jpgMarketingIMG_001.jpg"
+                        src="/images/design-mode/MarketingIMG_001.jpg"
                         alt="Marketing Automation"
                         className="w-full h-full object-cover"
                       />
@@ -820,7 +832,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-0">
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
               <img 
-                src="/images/design-mode/A%20single%20person%20confidently%20presenting%20during%20a%20Zoom%20call%2C%20with%20another%20person%20participants%20on%20the%20screen%20looking%20engaged%20and%20happy.%20Everyone%20is%20Thai.jpg"
+                src="/images/design-mode/BookConsultIMG_001.jpg"
                 alt="Video Conference"
                 className="w-full h-full object-cover object-center"
               />
