@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -8,26 +8,22 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "IGNITE - Modern CRM Sales Platform",
+  title: "Ignite Idea - ปลดล็อกศักยภาพองค์กรด้วยนวัตกรรมแห่งอนาคต",
   description:
-    "Optimize your CRM system with expert guidance for sharp decision-making and accelerate your business growth.",
+    "Where Vision Meets Futuristic Solutions",
   generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/images/ignite-logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/images/ignite-logo.png",
         media: "(prefers-color-scheme: dark)",
       },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
     ],
-    apple: "/apple-icon.png",
+    apple: "/images/ignite-logo.png",
   },
 }
 
