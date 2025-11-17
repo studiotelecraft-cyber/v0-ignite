@@ -152,11 +152,19 @@ export default function MarketingPage() {
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const t = translations[lang]
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToContact = () => {
@@ -171,7 +179,11 @@ export default function MarketingPage() {
       <FloatingChatButton onClick={scrollToContact} />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/10 border-white/10'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
@@ -189,7 +201,7 @@ export default function MarketingPage() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link href="/service" className="text-white/90 hover:text-white transition-colors flex items-center gap-1">
+                <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors flex items-center gap-1">
                   {t.nav.service}
                   <ChevronDown className="w-4 h-4" />
                 </Link>
@@ -212,12 +224,12 @@ export default function MarketingPage() {
                   </div>
                 )}
               </div>
-              <a href="#resources" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
-              </a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors">
+              </Link>
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
-              </a>
+              </Link>
             </div>
 
             {/* Right Section */}
@@ -282,12 +294,12 @@ export default function MarketingPage() {
                     </div>
                   )}
                 </div>
-                <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.resources}
-                </a>
-                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                </Link>
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.about}
-                </a>
+                </Link>
               </div>
             </div>
           )}

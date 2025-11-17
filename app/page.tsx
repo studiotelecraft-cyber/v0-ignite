@@ -281,7 +281,7 @@ export default function Home() {
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
                 <Link
-                  href="/service"
+                  href="/service/crm"
                   className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {t.nav.service}

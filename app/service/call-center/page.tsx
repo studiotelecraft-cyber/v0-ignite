@@ -166,11 +166,19 @@ export default function CallCenterPage() {
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const t = translations[lang]
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const scrollToContact = () => {
@@ -186,7 +194,11 @@ export default function CallCenterPage() {
       <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isScrolled 
+          ? 'bg-blue-900/90 border-blue-800/10' 
+          : 'bg-white/10 border-white/10'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
@@ -204,7 +216,7 @@ export default function CallCenterPage() {
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
                 <Link
-                  href="/service"
+                  href="/service/crm"
                   className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {t.nav.service}
