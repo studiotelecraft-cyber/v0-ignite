@@ -891,32 +891,58 @@ export default function Home() {
 
       {/* Case Study Modal */}
       <Dialog open={caseStudyModalOpen} onOpenChange={setCaseStudyModalOpen}>
-        <DialogContent className="sm:max-w-md backdrop-blur-xl bg-slate-900/95 border-white/10 text-white">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">{t.caseStudyModal.title}</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="cs-name" className="text-white">
-                {t.caseStudyModal.nameLabel}
-              </Label>
-              <Input
-                id="cs-name"
-                type="text"
-                className="backdrop-blur-md bg-white/5 border-white/10 text-white placeholder:text-white/40"
+        <DialogContent className="sm:max-w-5xl backdrop-blur-xl bg-white border-2 border-gray-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Left Side - Image */}
+            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+              <img 
+                src="/images/CaseStudy_IMG001.jpg"
+                alt="Case Study Download"
+                className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="cs-email" className="text-white">
-                {t.caseStudyModal.emailLabel}
-              </Label>
-              <Input
-                id="cs-email"
-                type="email"
-                className="backdrop-blur-md bg-white/5 border-white/10 text-white placeholder:text-white/40"
-              />
+
+            {/* Right Side - Form */}
+            <div className="md:col-span-1 p-12 flex flex-col justify-center">
+              <DialogHeader className="mb-8">
+                <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
+                  {t.caseStudyModal.title}
+                </DialogTitle>
+                <DialogDescription className="text-xl text-gray-600 leading-relaxed">
+                  {lang === "en" 
+                    ? "Get insights from real success stories and learn how companies transformed their business" 
+                    : "รับข้อมูลเชิงลึกจากเรื่องราวความสำเร็จจริงและเรียนรู้ว่าบริษัทต่างๆ เปลี่ยนแปลงธุรกิจของพวกเขาอย่างไร"
+                  }
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="cs-name" className="text-gray-900 font-semibold text-lg">
+                    {t.caseStudyModal.nameLabel}
+                  </Label>
+                  <Input
+                    id="cs-name"
+                    type="text"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 h-12 text-base"
+                    placeholder={lang === "en" ? "Your full name" : "ชื่อ-นามสกุลของคุณ"}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="cs-email" className="text-gray-900 font-semibold text-lg">
+                    {t.caseStudyModal.emailLabel}
+                  </Label>
+                  <Input
+                    id="cs-email"
+                    type="email"
+                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 h-12 text-base"
+                    placeholder={lang === "en" ? "your.email@company.com" : "อีเมลบริษัทของคุณ"}
+                  />
+                </div>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  {t.caseStudyModal.download}
+                </Button>
+              </div>
             </div>
-            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">{t.caseStudyModal.download}</Button>
           </div>
         </DialogContent>
       </Dialog>
