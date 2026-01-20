@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Users, Headphones, Zap, BarChart3, Phone, Mail, MapPin, ChevronDown, Menu, X } from 'lucide-react'
+import { Users, Headphones, Zap, BarChart3, Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
@@ -236,19 +236,19 @@ export default function Home() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-us')
+    const contactSection = document.getElementById("contact-us")
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" })
     }
   }
 
@@ -257,11 +257,11 @@ export default function Home() {
       <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
-        isScrolled 
-          ? 'bg-blue-900/90 border-blue-800/10' 
-          : 'bg-white/10 border-white/10'
-      }`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+          isScrolled ? "bg-blue-900/90 border-blue-800/10" : "bg-white/10 border-white/10"
+        }`}
+      >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -373,7 +373,9 @@ export default function Home() {
                     className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 transition-colors py-2"
                   >
                     {t.nav.service}
-                    <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? "rotate-180" : ""}`}
+                    />
                   </button>
                   {serviceDropdownOpen && (
                     <div className="ml-4 mt-2 space-y-2">
@@ -428,16 +430,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <section
-        id="home"
-        className="min-h-screen flex items-center justify-center px-6 relative"
-        style={{
-          backgroundImage: `url('/images/Hompage_HeroIMG_001.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_banner_vdo-OF6xmWTIQaMIBwMfqtZo78dnPBTDA8.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/50 to-blue-950/60" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -471,7 +467,9 @@ export default function Home() {
         <section id="service" className="py-20 px-6 overflow-hidden">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{lang === "en" ? "What we do" : "สิ่งที่เราทำ"}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                {lang === "en" ? "What we do" : "สิ่งที่เราทำ"}
+              </h2>
               <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
             </div>
 
@@ -543,7 +541,11 @@ export default function Home() {
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
-                      <img src="/images/design-mode/SalesSolutionIMG_001.jpg" alt="Sales Solution" className="w-full h-full object-cover" />
+                      <img
+                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
+                        alt="Sales Solution"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="p-10 flex flex-col justify-center">
                       <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.sales.title}</h3>
@@ -642,8 +644,8 @@ export default function Home() {
         <section id="contact-us" className="relative py-24 px-6 overflow-hidden">
           {/* Gradient Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-500" />
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTI8L2g+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
-          
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjctNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTI8L2g+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
+
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">{t.contact.title}</h2>
@@ -706,25 +708,37 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-white mb-6">{t.contact.services}</h3>
                   <ul className="space-y-3">
                     <li>
-                      <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                      <Link
+                        href="/service/crm"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                         {t.contact.crm}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                      <Link
+                        href="/service/call-center"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                         {t.contact.callCenter}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service/marketing" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                      <Link
+                        href="/service/marketing"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                         {t.contact.marketing}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service/data-management" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                      <Link
+                        href="/service/data-management"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                         {t.contact.dataManagement}
                       </Link>
@@ -734,15 +748,15 @@ export default function Home() {
                   <div className="mt-8 pt-8 border-t border-white/20">
                     <h3 className="text-2xl font-bold text-white mb-6">{t.contact.partners}</h3>
                     <div className="flex items-center gap-8 flex-wrap">
-                      <img 
-                        src="/images/design-mode/Group-1597881657.png.webp" 
-                        alt="Salesforce" 
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity" 
+                      <img
+                        src="/images/design-mode/Group-1597881657.png.webp"
+                        alt="Salesforce"
+                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
                       />
-                      <img 
-                        src="/images/design-mode/Microsoft_logo_%282012%29.svg.png" 
-                        alt="Microsoft" 
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity" 
+                      <img
+                        src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
+                        alt="Microsoft"
+                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
                       />
                     </div>
                   </div>
@@ -831,7 +845,7 @@ export default function Home() {
         <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-              <img 
+              <img
                 src="/images/design-mode/BookConsultIMG_001.jpg"
                 alt="Video Conference"
                 className="w-full h-full object-cover object-center"
@@ -895,7 +909,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-0">
             {/* Left Side - Image */}
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-              <img 
+              <img
                 src="/images/CaseStudy_IMG001.jpg"
                 alt="Case Study Download"
                 className="w-full h-full object-cover object-center"
@@ -909,10 +923,9 @@ export default function Home() {
                   {t.caseStudyModal.title}
                 </DialogTitle>
                 <DialogDescription className="text-xl text-gray-600 leading-relaxed">
-                  {lang === "en" 
-                    ? "Get insights from real success stories and learn how companies transformed their business" 
-                    : "รับข้อมูลเชิงลึกจากเรื่องราวความสำเร็จจริงและเรียนรู้ว่าบริษัทต่างๆ เปลี่ยนแปลงธุรกิจของพวกเขาอย่างไร"
-                  }
+                  {lang === "en"
+                    ? "Get insights from real success stories and learn how companies transformed their business"
+                    : "รับข้อมูลเชิงลึกจากเรื่องราวความสำเร็จจริงและเรียนรู้ว่าบริษัทต่างๆ เปลี่ยนแปลงธุรกิจของพวกเขาอย่างไร"}
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-6">
