@@ -14,6 +14,7 @@ const translations = {
       callCenter: "Customer Service Solution (Call Center)",
       marketing: "Marketing Automation Solution",
       dataManagement: "Data Management Solution",
+      leadToCash: "Lead to Cash (Order) Management",
     },
     resources: "Resources",
     about: "About",
@@ -27,6 +28,7 @@ const translations = {
       callCenter: "โซลูชันบริการลูกค้า (Call Center)",
       marketing: "โซลูชันการตลาดอัตโนมัติ",
       dataManagement: "โซลูชันการจัดการข้อมูล",
+      leadToCash: "การจัดการจากโอกาสถึงเงินสด (คำสั่งซื้อ)",
     },
     resources: "คลังทรัพยากร",
     about: "เกี่ยวกับเรา",
@@ -144,6 +146,12 @@ export function Navbar() {
                       className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                     >
                       {t.serviceSubmenu.dataManagement}
+                    </Link>
+                    <Link
+                      href="/service/lead-to-cash"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      {t.serviceSubmenu.leadToCash}
                     </Link>
                   </div>
                 </div>
