@@ -20,140 +20,14 @@ const translations = {
         group1: {
           title: "Customer Experience & Sales Execution",
           items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
-            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
             { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
           ],
         },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
-          ],
-        },
       },
-      resources: "Resources",
-      about: "About",
-      schedule: "Schedule a call",
-    },
-    hero: {
-      title: "CRM Services",
-      subtitle:
-        "Better Customer Relationships Start Here CRM isn't just software—it's your secret weapon for business growth. We help you organize customer data, spot opportunities, and turn insights into action that drives real results.",
-      cta: "Talk to Us",
-    },
-    scheduleModal: {
-      title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your challenges and discover practical solutions that work",
-      projectLabel: "Describe your project need",
-      projectPlaceholder: "Describe your project need here...",
-      nameLabel: "Your name",
-      emailLabel: "Company Email",
-      submit: "Submit",
-    },
-    stats: {
-      title: "Sales Increases",
-      stat1: "Increased sales success rate",
-      stat2: "Increased sales team efficiency",
-      stat3: "Increased deal closure speed",
-      stat4: "Increased revenue forecast accuracy",
-    },
-    benefits: {
-      title: "How Can CRM Help Your Organization?",
-      card1: {
-        title: "Centralize Customer and Lead Contact Data",
-        desc: "Never lose valuable customer information again when sales staff are unavailable or leave the company. With CRM, all contact data is stored centrally in the system. You can also set permissions to view, manage, and transfer customers and leads seamlessly.",
-      },
-      card2: {
-        title: "Know Exactly Where Your Revenue Is Coming From",
-        desc: "Not all leads become customers—so how do you forecast monthly, quarterly, or yearly revenue accurately? CRM tracks every opportunity in your pipeline, giving you real-time insights into which deals will close and when.",
-      },
-      card3: {
-        title: "Work From Anywhere with Multi-Device Access",
-        desc: "Never be tied to your desk again. Our CRM gives you full access to customer data on desktop, mobile, and tablet—so you can work efficiently from anywhere, anytime.",
-      },
-    },
-    partner: {
-      title: "Technology Partner",
-      subtitle: "Powered by industry-leading CRM platform",
-    },
-    details: {
-      intro:
-        "We provide comprehensive CRM services that help you work smarter, keep customers happier, and hit your business goals. Our team partners with you to create a custom CRM strategy that fits your needs and delivers real results.",
-      heading: "What You'll Achieve with Our CRM Services",
-      body:
-        "Streamline your operations, boost customer satisfaction, and grow your business. Whether you want to increase sales, strengthen customer loyalty, or improve efficiency—we've got you covered.",
-      outro:
-        "Want to see how CRM can transform your business? Get in touch today for a free consultation.",
-    },
-    contact: {
-      title: "Contact Us",
-      phone: "+662-231-8088",
-      email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
-    },
-    booking: {
-      title: "Request a Consultation",
-      subtitle:
-        "Our expert CRM team is ready to listen to your needs and help you implement CRM solutions for your business.",
-      firstName: "First Name - Last Name",
-      email: "Email",
-      organization: "Organization Name",
-      message: "Message",
-      captcha: "13 + 15 =",
-      submit: "Book Consultation",
-    },
-  },
-  th: {
-    nav: {
-      home: "หน้าแรก",
-      service: "บริการ",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
-            { name: "Field Sales Execution", href: "/service/crm" },
-            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
-          ],
-        },
-      },
-      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -335,20 +209,12 @@ export default function CRMPage() {
                               </svg>
                             </div>
                             <h3 className="font-bold text-sm text-blue-500 leading-tight">
-                              {t.nav.serviceGroups.group2.title}
+                              {/* Placeholder for Group 2 title */}
                             </h3>
                           </div>
                           <div className="border-b-2 border-blue-400 mb-4"></div>
                           <div className="space-y-3">
-                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
+                            {/* Placeholder for Group 2 items */}
                           </div>
                         </div>
                         {/* Group 3 - Supply Chain & Operations */}
@@ -361,20 +227,12 @@ export default function CRMPage() {
                               </svg>
                             </div>
                             <h3 className="font-bold text-sm text-green-500 leading-tight">
-                              {t.nav.serviceGroups.group3.title}
+                              {/* Placeholder for Group 3 title */}
                             </h3>
                           </div>
                           <div className="border-b-2 border-green-400 mb-4"></div>
                           <div className="space-y-3">
-                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
+                            {/* Placeholder for Group 3 items */}
                           </div>
                         </div>
                       </div>
@@ -398,7 +256,7 @@ export default function CRMPage() {
                 )}
               </div>
               <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
-                {t.nav.resources}
+                {/* Placeholder for Resources */}
               </Link>
               <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
@@ -491,7 +349,7 @@ export default function CRMPage() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2"
                 >
-                  {t.nav.resources}
+                  {/* Placeholder for Resources */}
                 </Link>
                 <Link
                   href="/about"
@@ -825,7 +683,7 @@ export default function CRMPage() {
                   <Input className="bg-white border-0 text-gray-900 max-w-[120px] h-12 rounded-xl shadow-sm" />
                 </div>
                 <Button className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.booking.submit} →
+                  {t.booking.submit}
                 </Button>
               </form>
             </div>

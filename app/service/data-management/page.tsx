@@ -20,8 +20,8 @@ const translations = {
         group1: {
           title: "Customer Experience & Sales Execution",
           items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
-            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
             { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
@@ -118,8 +118,8 @@ const translations = {
         group1: {
           title: "Customer Experience & Sales Execution",
           items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
-            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
             { name: "Contractual Sales for Manufacturing", href: "/service/crm" },

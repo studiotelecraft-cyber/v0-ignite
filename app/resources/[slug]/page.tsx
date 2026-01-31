@@ -18,8 +18,8 @@ const translations = {
         group1: {
           title: "Customer Experience & Sales Execution",
           items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/crm" },
-            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
             { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
@@ -54,8 +54,8 @@ const translations = {
         group1: {
           title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
           items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
+            { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+            { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
