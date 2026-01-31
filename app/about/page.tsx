@@ -21,7 +21,7 @@ const translations = {
           items: [
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],

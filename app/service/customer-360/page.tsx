@@ -48,43 +48,41 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Lead to Cash (Order) Management",
-      subtitle:
-        "Connects sales, pricing, contracts, orders, billing, and payments into one seamless flow. Reduces manual handoffs between Sales, Finance, and Operations.",
+      title: "Customer 360 Data Consolidation",
+      subtitle: "Creates a single source of truth for customer data. Breaks data silos across Sales, Service, Marketing, and Commerce.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Lead to Cash Help Your Organization?",
+    benefitsTitle: "How Can Customer 360 Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Connects sales, pricing, contracts, orders, billing, and payments into one seamless flow",
-        desc: "Lead to Cash integrates your entire revenue management process, eliminating data silos and creating a unified customer journey. From initial quote to final payment, all information flows seamlessly across departments, ensuring consistency and reducing errors.",
+        title: "Creates a single source of truth for customer data",
+        desc: "Consolidate customer information from all touchpoints into a unified, trusted customer profile. Eliminate duplicate records and data inconsistencies that plague multi-system environments. Enable every team member to access the same accurate, real-time customer information.",
       },
       benefit2: {
-        title: "Reduces manual handoffs between Sales, Finance, and Operations",
-        desc: "Automation eliminates the need for manual data entry and transfers between teams. Sales processes flow directly into billing systems, Finance has real-time visibility into orders and revenue recognition, and Operations receives accurate fulfillment data instantly.",
+        title: "Breaks data silos across Sales, Service, Marketing, and Commerce",
+        desc: "Seamlessly connect data between Salesforce clouds and external systems to enable cross-functional visibility. Marketing teams see service interactions, sales teams understand customer sentiment, and service representatives know the full customer history. Break down organizational silos and improve collaboration.",
       },
       benefit3: {
-        title: "Speeds up revenue recognition and minimizes billing errors",
-        desc: "With automated order-to-cash processes, revenue recognition happens faster and more accurately. Your finance team spends less time chasing down orders and correcting billing issues, allowing them to focus on strategic financial planning.",
+        title: "Enables personalization and better decision-making",
+        desc: "Use comprehensive customer intelligence to deliver personalized experiences at every interaction. Data-driven insights empower better business decisions with complete understanding of customer behavior, preferences, and lifetime value. Enhance customer satisfaction and drive competitive advantage through smarter engagement.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Lead to Cash is an end-to-end business process that encompasses the complete customer lifecycle from lead generation through final payment. It combines Salesforce CPQ, Order Management, and Billing capabilities to create a unified revenue management system. The solution connects lead qualification, opportunity management, quoting, order fulfillment, invoicing, and payment collection within a single platform, replacing fragmented systems and manual processes.",
+      description: "Customer 360 Data Consolidation (powered by Salesforce Data Cloud and Customer 360 Data Manager) solves the challenge of fragmented customer data across different systems. It uses the Customer 360 Data Model to standardize data structures, create unified customer profiles, and enable seamless data exchange between Salesforce clouds (Sales, Service, Marketing, Commerce) and external systems. The solution employs data streams, identity resolution, and data lake objects to create a comprehensive, real-time view of each customer.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "B2B companies",
-        "Subscription or contract-based businesses",
-        "Organizations struggling with order errors or delayed billing",
+        "Enterprises with fragmented customer data",
+        "Organizations focused on personalization & analytics",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Lead to Cash transforms revenue management by creating a unified system that connects all stages of the customer lifecycle. From sales qualification to quote generation, order management, billing, and payment collection, every step is optimized and automated within a single platform.",
+        "Customer 360 Data Consolidation transforms how enterprises manage customer information by creating a unified, intelligent platform that breaks down data silos and enables seamless integration across all business functions. The solution provides a single source of truth for customer data, eliminating the complexity and inefficiency of managing fragmented customer records across multiple disconnected systems.",
       paragraph2:
-        "By integrating Salesforce CPQ, Order Management, and Billing capabilities, Lead to Cash eliminates fragmented systems and manual processes. Your sales team works faster with accurate quotes, your operations team fulfills orders without delays, and your finance team recognizes revenue accurately and promptly.",
+        "By leveraging advanced data management capabilities including identity resolution, data standardization, and real-time synchronization, Customer 360 enables organizations to gain deeper customer insights and deliver more personalized experiences. Sales teams can see complete customer histories, service teams can provide contextual support, and marketing teams can create targeted campaigns based on unified customer profiles. This integrated approach improves operational efficiency, enhances customer satisfaction, and unlocks new opportunities for revenue growth and customer loyalty.",
     },
     contact: {
       title: "Contact Us",
@@ -100,18 +98,18 @@ const translations = {
       partners: "Our product partner",
     },
     booking: {
-      title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน Lead to Cash ของเราพร้อมให้บริการในการรับฟังปัญหาในการรวาระบบของคุณ",
-      firstName: "ชื่อ - นามสกุล",
-      email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
-      message: "ข้อความ",
+      title: "Book a Consultation",
+      subtitle: "Our Customer 360 experts are ready to help unify your customer data",
+      firstName: "Full Name",
+      email: "Email",
+      organization: "Organization",
+      message: "Message",
       captcha: "13 + 15 =",
-      submit: "นัดที่ปรึกษา",
+      submit: "Book Consultation",
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your challenges and discover practical solutions that work",
+      subtitle: "Discuss your data consolidation challenges and discover practical solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -129,9 +127,9 @@ const translations = {
           items: [
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
+            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
+            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
           ],
         },
         group2: {
@@ -155,71 +153,70 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "Lead to Cash (Order) Management",
-      subtitle: "เชื่อมต่อการขาย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงินเข้าเป็นการไหลที่ราบรื่นเดียว ลดการส่งต่อด้วยตนเองระหว่างฝ่ายขาย การเงิน และการดำเนินงาน",
+      title: "การรวมข้อมูลลูกค้า 360 องศา",
+      subtitle: "สร้างแหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า ทำลายสิ่งกีดขวางข้อมูลทั่วการขาย บริการ การตลาด และการค้า",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "Lead to Cash สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การรวมข้อมูลลูกค้า 360 องศาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
-        title: "เชื่อมต่อการขาย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงิน",
-        desc: "Lead to Cash รวมกระบวนการจัดการรายได้ทั้งหมดของคุณ ลบข้อมูลไซโล และสร้างการเดินทางลูกค้าที่เป็นเอกโปรตีน ตั้งแต่ใบเสนอราคาเบื้องต้นจนถึงการชำระเงินครั้งสุดท้าย ข้อมูลทั้งหมดไหลราบรื่นในทั่วทั้งแผนก เพื่อให้มีความสอดคล้องและลดข้อผิดพลาด",
+        title: "สร้างแหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า",
+        desc: "รวมข้อมูลลูกค้าจากทุกจุดสัมผัสเข้ากับโปรไฟล์ลูกค้าแบบรวมที่เชื่อถือได้ ลบบันทึกที่ซ้ำซ้อนและความไม่สอดคล้องของข้อมูลที่สำนักเหล่านี้เผชิญในสภาพแวดล้อมแบบมัลติระบบ เปิดใช้งานให้สมาชิกทีมทุกคนเข้าถึงข้อมูลลูกค้าแบบเดียวกันที่ถูกต้องและเป็นปัจจุบัน",
       },
       benefit2: {
-        title: "ลดการส่งต่อด้วยตนเองระหว่างฝ่ายขาย การเงิน และการดำเนินงาน",
-        desc: "การทำอัตโนมัติกำจัดความจำเป็นในการป้อนข้อมูลด้วยตนเองและการโอนระหว่างทีม กระบวนการขายไหลโดยตรงเข้าระบบการเรียกเก็บเงิน การเงินจึงมีมองเห็น คำสั่งซื้อและการรับรู้รายได้แบบเรียลไทม์ และการดำเนินงานได้รับข้อมูลการตอบสนองที่แม่นยำทันที",
+        title: "ทำลายสิ่งกีดขวางข้อมูลทั่วการขาย บริการ การตลาด และการค้า",
+        desc: "เชื่อมต่อข้อมูลระหว่าง Salesforce Clouds และระบบภายนอกได้อย่างราบรื่นเพื่อเปิดใช้งานการมองเห็นข้ามฟังก์ชัน ทีมการตลาดเห็นการมีปฏิสัมพันธ์ด้านการบริการ ทีมการขายเข้าใจความรู้สึกของลูกค้า และตัวแทนด้านการบริการรู้จักประวัติลูกค้าแบบเต็ม ทำลายสิ่งกีดขวางของมนุษย์และปรับปรุงการทำงานร่วมกัน",
       },
       benefit3: {
-        title: "เพิ่มความเร็วในการรับรู้รายได้และลดข้อผิดพลาดในการเรียกเก็บเงิน",
-        desc: "ด้วยกระบวนการจากคำสั่งซื้อไปยังเงินสดอัตโนมัติ การรับรู้รายได้เกิดขึ้นเร็วขึ้นและแม่นยำยิ่งขึ้น ทีมการเงินของคุณใช้เวลาน้อยลงในการตามหาคำสั่งซื้อและการแก้ไขปัญหาการเรียกเก็บเงิน ซึ่งช่วยให้พวกเขาสามารถเน้นไปที่การวางแผนทางการเงินด้านกลยุทธ์",
+        title: "เปิดใช้งานการปรับแต่งและการตัดสินใจที่ดีขึ้น",
+        desc: "ใช้ข่าวกรองลูกค้าที่ครอบคลุมเพื่อให้บริการการสัมผัสที่ปรับแต่งเองได้ในทุกการโต้ตอบ ข้อมูลเชิงลึกที่ขับเคลื่อนด้วยข้อมูลช่วยให้สามารถตัดสินใจทางธุรกิจได้ดีขึ้นด้วยความเข้าใจที่สมบูรณ์เกี่ยวกับพฤติกรรมของลูกค้า ความต้องการ และมูลค่าตลอดอายุของลูกค้า ปรับปรุงความพึงพอใจของลูกค้าและขับเคลื่อนข้อได้เปรียบในการแข่งขันผ่านการมีส่วนร่วมที่ฉลาดขึ้น",
       },
     },
     summary: {
       title: "สรุป",
-      description: "Lead to Cash เป็นกระบวนการทางธุรกิจแบบครบวงจรที่ครอบคลุมวงจรชีวิตลูกค้าที่สมบูรณ์ตั้งแต่การสร้างลีดไปจนถึงการชำระเงินครั้งสุดท้าย โดยรวมความสามารถของ Salesforce CPQ การจัดการคำสั่งซื้อ และการเรียกเก็บเงิน เพื่อสร้างระบบการจัดการรายได้ที่เป็นเอกภาพ",
+      description: "การรวมข้อมูลลูกค้า 360 องศา (ขับเคลื่อนโดย Salesforce Data Cloud และ Customer 360 Data Manager) แก้ไขปัญหาของข้อมูลลูกค้าที่แตกกระจายในระบบต่างๆ ใช้ Customer 360 Data Model เพื่อทำให้โครงสร้างข้อมูลเป็นมาตรฐาน สร้างโปรไฟล์ลูกค้าแบบรวม และเปิดใช้งานการแลกเปลี่ยนข้อมูลได้อย่างราบรื่นระหว่าง Salesforce Clouds (Sales, Service, Marketing, Commerce) และระบบภายนอก วิธีแก้ปัญหาใช้ data streams, identity resolution และ data lake objects เพื่อสร้างมุมมองที่ครอบคลุมและแบบเรียลไทม์ของลูกค้าแต่ละรายคน",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "บริษัท B2B",
-        "ธุรกิจตามการสมัครสมาชิกหรือสัญญา",
-        "องค์กรที่มีปัญหาขาดแคลนคำสั่งซื้อหรือการเรียกเก็บเงินที่ล่าช้า",
+        "วิสาหกิจที่มีข้อมูลลูกค้าแตกกระจาย",
+        "องค์กรที่มุ่งเน้นไปที่การปรับแต่งและการวิเคราะห์",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Lead to Cash เปลี่ยนแปลงการจัดการรายได้โดยการสร้างระบบเอกภาพที่เชื่อมต่อขั้นตอนทั้งหมดของวงจรชีวิตลูกค้า ตั้งแต่การคัดกรองการขายจนถึงการสร้างใบเสนอราคา การจัดการคำสั่งซื้อ การเรียกเก็บเงิน และการเก็บเงิน ทุกขั้นตอนได้รับการปรับให้เหมาะสมและทำอัตโนมัติภายในแพลตฟอร์มเดียว",
+        "การรวมข้อมูลลูกค้า 360 องศาแปลงวิธีการจัดการข้อมูลลูกค้าของวิสาหกิจโดยสร้างแพลตฟอร์มที่ชาญฉลาดและเป็นแบบรวมที่ทำลายสิ่งกีดขวางข้อมูลและเปิดใช้งานการบูรณาการที่ราบรื่นในทุกฟังก์ชันทางธุรกิจ วิธีแก้ปัญหาให้แหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า ช่วยขจัดความซับซ้อนและความไม่มีประสิทธิภาพของการจัดการบันทึกลูกค้าที่แตกกระจายในระบบที่ไม่เชื่อมต่อหลายระบบ",
       paragraph2:
-        "ด้วยการรวม Salesforce CPQ ความสามารถในการจัดการคำสั่งซื้อ และการเรียกเก็บเงิน Lead to Cash จึงกำจัดระบบที่แตกแยกและกระบวนการด้วยตนเอง ทีมขายของคุณจึงทำงานได้เร็วขึ้นด้วยใบเสนอราคาที่แม่นยำ ทีมดำเนินงานของคุณตอบสนองคำสั่งซื้อได้โดยไม่ล่าช้า และทีมการเงินของคุณรับรู้รายได้ได้อย่างแม่นยำและทันท่วงที",
+        "ด้วยการใช้ประโยชน์จากความสามารถด้านการจัดการข้อมูลขั้นสูง รวมถึง identity resolution, data standardization และการซิงโครไนซ์แบบเรียลไทม์ Customer 360 ช่วยให้องค์กรสามารถรับข้อมูลเชิงลึกของลูกค้าที่ลึกซึ้งยิ่งขึ้นและให้บริการที่ปรับแต่งเองได้มากขึ้น ทีมการขายสามารถเห็นประวัติลูกค้าแบบเต็ม ทีมการบริการสามารถให้การสนับสนุนที่มีความเหมาะสม และทีมการตลาดสามารถสร้างแคมเปญที่มีเป้าหมายตามโปรไฟล์ลูกค้าแบบรวม วิธีการแบบบูรณาการนี้ปรับปรุงประสิทธิภาพการปฏิบัติงาน ปรับปรุงความพึงพอใจของลูกค้า และปลดล็อกโอกาสใหม่สำหรับการเติบโตของรายได้และความจงรักภักดีของลูกค้า",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "+662-231-8088",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      callCenter: "ระบบศูนย์สายด่วน",
+      marketing: "ระบบการตลาดอัตโนมัติ",
+      dataManagement: "การจัดการข้อมูล",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
-      title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน Lead to Cash ของเราพร้อมให้บริการในการรับฟังปัญหาในการรวาระบบของคุณ",
-      firstName: "ชื่อ - นามสกุล",
-      email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
+      title: "จองการปรึกษา",
+      subtitle: "ผู้เชี่ยวชาญด้านลูกค้า 360 ของเราพร้อมที่จะช่วยรวมข้อมูลลูกค้าของคุณ",
+      firstName: "ชื่อเต็ม",
+      email: "อีเมล",
+      organization: "องค์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
-      submit: "นัดที่ปรึกษา",
+      submit: "จองการปรึกษา",
     },
     scheduleModal: {
-      title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
-      projectLabel: "อธิบายความต้องการโครงการของคุณ",
-      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
+      subtitle: "อภิปรายความท้าทายในการรวมข้อมูลของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      projectLabel: "อธิบายความต้องการของโครงการ",
+      projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
@@ -227,49 +224,32 @@ const translations = {
   },
 }
 
-export default function LeadToCashPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
-  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
+export default function Customer360Page() {
+  const [lang, setLang] = useState("en")
+  const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  const t = translations[lang]
+  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    setT(lang === "en" ? translations.en : translations.th)
+  }, [lang])
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-us')
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
+    document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
-    <div className="min-h-screen">
-      {/* Floating Chat Button */}
-      <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
+    <div className="min-h-screen bg-white">
+      <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
+      <FloatingChatButton />
 
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
-        isScrolled 
-          ? 'bg-blue-900/90 border-blue-800/10' 
-          : 'bg-white/10 border-white/10'
-      }`}>
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-lg">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold text-white hover:text-blue-100 transition-colors">
+              Ignite Idea
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
@@ -392,12 +372,12 @@ export default function LeadToCashPage() {
                   </div>
                 )}
               </div>
-              <a href="#resources" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
-              </a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors">
+              </Link>
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4">
@@ -445,12 +425,12 @@ export default function LeadToCashPage() {
                     <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                 </div>
-                <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.resources}
-                </a>
-                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                </Link>
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.about}
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -533,7 +513,7 @@ export default function LeadToCashPage() {
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-balance">{t.bestFor.title}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {t.bestFor.items.map((item, idx) => (
               <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100">
                 <p className="text-lg font-semibold text-gray-900">{item}</p>
@@ -645,7 +625,7 @@ export default function LeadToCashPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Lead to Cash implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Lead to Cash"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Customer 360 implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Customer 360"}</p>
               
               <div className="space-y-5">
                 <div>
