@@ -16,6 +16,33 @@ const translations = {
     nav: {
       home: "Home",
       service: "Service",
+      serviceGroups: {
+        group1: {
+          title: "Customer Experience & Sales Execution",
+          items: [
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
+            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+          ],
+        },
+        group2: {
+          title: "Strategic Planning & Intelligence",
+          items: [
+            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+          ],
+        },
+        group3: {
+          title: "Supply Chain & Operations",
+          items: [
+            { name: "Demand & Supply Planning", href: "/service/data-management" },
+            { name: "Production Planning", href: "/service/data-management" },
+          ],
+        },
+      },
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -87,6 +114,33 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการ",
+      serviceGroups: {
+        group1: {
+          title: "Customer Experience & Sales Execution",
+          items: [
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash" },
+            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+          ],
+        },
+        group2: {
+          title: "Strategic Planning & Intelligence",
+          items: [
+            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+          ],
+        },
+        group3: {
+          title: "Supply Chain & Operations",
+          items: [
+            { name: "Demand & Supply Planning", href: "/service/data-management" },
+            { name: "Production Planning", href: "/service/data-management" },
+          ],
+        },
+      },
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
