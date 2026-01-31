@@ -32,15 +32,11 @@ const translations = {
           items: [
             { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
             { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
-          ],
         },
       },
       resources: "Resources",
@@ -130,7 +126,7 @@ const translations = {
           items: [
             { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
             { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {

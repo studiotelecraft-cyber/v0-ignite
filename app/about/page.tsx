@@ -31,7 +31,7 @@ const translations = {
           items: [
             { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
             { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
@@ -123,7 +123,7 @@ const translations = {
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
@@ -534,7 +534,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="dataSecurity">
               <Lock className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Data Security" : "ความปลอดภัยของข้อมูล"}
@@ -546,7 +546,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="fullTransparency">
               <Eye className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Full Transparency" : "ความโปร่งใสเต็มรูปแบบ"}
@@ -558,7 +558,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="yourRights">
               <Users className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Your Rights" : "สิทธิของคุณ"}

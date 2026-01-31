@@ -28,11 +28,10 @@ const translations = {
           ],
         },
         group2: {
-          title: "Strategic Planning & Intelligence",
+          title: "Financial & Strategy",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Financial Planning & Analysis", href: "/service/financial-planning-analysis" },
+            { name: "CRM", href: "/service/crm" },
           ],
         },
         group3: {
@@ -127,7 +126,7 @@ const translations = {
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
