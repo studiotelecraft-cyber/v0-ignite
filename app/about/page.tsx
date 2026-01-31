@@ -14,12 +14,33 @@ const translations = {
   en: {
     nav: {
       home: "Home",
-      service: "Service",
-      serviceSubmenu: {
-        crm: "Sales Solution (CRM)",
-        callCenter: "Customer Service Solution (Call Center)",
-        marketing: "Marketing Automation Solution",
-        dataManagement: "Data Management Solution",
+      service: "Our Services",
+      serviceGroups: {
+        group1: {
+          title: "Customer Experience & Sales Execution",
+          items: [
+            { name: "Lead to Cash (Order) Management", href: "/service/crm" },
+            { name: "Field Sales Execution", href: "/service/crm" },
+            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+          ],
+        },
+        group2: {
+          title: "Strategic Planning & Intelligence",
+          items: [
+            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+          ],
+        },
+        group3: {
+          title: "Supply Chain & Operations",
+          items: [
+            { name: "Demand & Supply Planning", href: "/service/data-management" },
+            { name: "Production Planning", href: "/service/data-management" },
+          ],
+        },
       },
       resources: "Resources",
       about: "About",
@@ -85,12 +106,33 @@ const translations = {
   th: {
     nav: {
       home: "หน้าแรก",
-      service: "บริการ",
-      serviceSubmenu: {
-        crm: "โซลูชันการขาย (CRM)",
-        callCenter: "โซลูชันบริการลูกค้า (Call Center)",
-        marketing: "โซลูชันการตลาดอัตโนมัติ",
-        dataManagement: "โซลูชันการจัดการข้อมูล",
+      service: "บริการของเรา",
+      serviceGroups: {
+        group1: {
+          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
+          items: [
+            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
+            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
+            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
+          ],
+        },
+        group2: {
+          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
+          items: [
+            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
+            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+          ],
+        },
+        group3: {
+          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
+          items: [
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนการผลิต", href: "/service/data-management" },
+          ],
+        },
       },
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
@@ -206,32 +248,61 @@ export default function AboutPage() {
                   <ChevronDown className="w-4 h-4" />
                 </Link>
                 {serviceDropdownOpen && (
-                  <div className="absolute top-full left-0 pt-2">
-                    <div className="w-80 bg-white/95 rounded-lg shadow-xl border border-gray-200 py-2">
-                      <Link
-                        href="/service/crm"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {t.nav.serviceSubmenu.crm}
-                      </Link>
-                      <Link
-                        href="/service/call-center"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {t.nav.serviceSubmenu.callCenter}
-                      </Link>
-                      <Link
-                        href="/service/marketing"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {t.nav.serviceSubmenu.marketing}
-                      </Link>
-                      <Link
-                        href="/service/data-management"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {t.nav.serviceSubmenu.dataManagement}
-                      </Link>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                    <div className="w-[700px] backdrop-blur-xl bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                      <div className="grid grid-cols-3 gap-8">
+                        {/* Group 1 */}
+                        <div>
+                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                            {t.nav.serviceGroups.group1.title}
+                          </h3>
+                          <div className="space-y-1">
+                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
+                              <Link
+                                key={idx}
+                                href={item.href}
+                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        {/* Group 2 */}
+                        <div>
+                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                            {t.nav.serviceGroups.group2.title}
+                          </h3>
+                          <div className="space-y-1">
+                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
+                              <Link
+                                key={idx}
+                                href={item.href}
+                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        {/* Group 3 */}
+                        <div>
+                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                            {t.nav.serviceGroups.group3.title}
+                          </h3>
+                          <div className="space-y-1">
+                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
+                              <Link
+                                key={idx}
+                                href={item.href}
+                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -296,7 +367,7 @@ export default function AboutPage() {
       <section 
         className="h-screen relative overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/backgroud-GSKMeJj5qu8IPDsAN8der8S4Nnq985.jpg')`,
+          backgroundImage: `url('/images/backgroud.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -324,24 +395,13 @@ export default function AboutPage() {
             <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
               {t.values.title}
             </h2>
-            <div className="h-2 w-40 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 mx-auto rounded-full" />
+            <div className="h-2 w-40 bg-white/80 mx-auto rounded-full" />
           </div>
           
           <div className="relative max-w-6xl mx-auto h-[900px] md:h-[700px]">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-pulse" />
-                <img 
-                  src="/images/1.png"
-                  alt="IGNITE IDEA AI Assistant"
-                  className="relative z-10 w-144 h-144 drop-shadow-2xl animate-float"
-                />
-              </div>
-            </div>
-
             {Object.entries(t.values)
               .filter(([key]) => key.startsWith("value"))
-              .map(([_, value], index) => {
+              .map(([key, value], index) => {
                 const icons = [
                   <Lightbulb className="w-8 h-8" />,
                   <TrendingUp className="w-8 h-8" />,
@@ -362,7 +422,7 @@ export default function AboutPage() {
                 
                 return (
                   <div 
-                    key={index}
+                    key={key}
                     className="absolute w-144 group"
                     style={{
                       top: `${top}%`,
@@ -567,25 +627,25 @@ export default function AboutPage() {
                   <li>
                     <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceSubmenu.crm}
+                      {t.nav.serviceGroups.group1.items[0].name}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceSubmenu.callCenter}
+                      {t.nav.serviceGroups.group1.items[3].name}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/marketing" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceSubmenu.marketing}
+                      {t.nav.serviceGroups.group1.items[2].name}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/data-management" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceSubmenu.dataManagement}
+                      {t.nav.serviceGroups.group1.items[1].name}
                     </Link>
                   </li>
                 </ul>

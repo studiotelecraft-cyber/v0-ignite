@@ -8,12 +8,33 @@ import { usePathname } from 'next/navigation'
 const translations = {
   en: {
     home: "Home",
-    service: "Service",
-    serviceSubmenu: {
-      crm: "Sales Solution (CRM)",
-      callCenter: "Customer Service Solution (Call Center)",
-      marketing: "Marketing Automation Solution",
-      dataManagement: "Data Management Solution",
+    service: "Our Services",
+    serviceGroups: {
+      group1: {
+        title: "Customer Experience & Sales Execution",
+        items: [
+          { name: "Lead to Cash (Order) Management", href: "/service/crm" },
+          { name: "Field Sales Execution", href: "/service/crm" },
+          { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+          { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+          { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+        ],
+      },
+      group2: {
+        title: "Strategic Planning & Intelligence",
+        items: [
+          { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
+          { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+          { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+        ],
+      },
+      group3: {
+        title: "Supply Chain & Operations",
+        items: [
+          { name: "Demand & Supply Planning", href: "/service/data-management" },
+          { name: "Production Planning", href: "/service/data-management" },
+        ],
+      },
     },
     resources: "Resources",
     about: "About",
@@ -21,12 +42,33 @@ const translations = {
   },
   th: {
     home: "หน้าแรก",
-    service: "บริการ",
-    serviceSubmenu: {
-      crm: "โซลูชันการขาย (CRM)",
-      callCenter: "โซลูชันบริการลูกค้า (Call Center)",
-      marketing: "โซลูชันการตลาดอัตโนมัติ",
-      dataManagement: "โซลูชันการจัดการข้อมูล",
+    service: "บริการของเรา",
+    serviceGroups: {
+      group1: {
+        title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
+        items: [
+          { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
+          { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
+          { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
+          { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+          { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
+        ],
+      },
+      group2: {
+        title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
+        items: [
+          { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
+          { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
+          { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+        ],
+      },
+      group3: {
+        title: "ห่วงโซ่อุปทานและการดำเนินงาน",
+        items: [
+          { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+          { name: "การวางแผนการผลิต", href: "/service/data-management" },
+        ],
+      },
     },
     resources: "คลังทรัพยากร",
     about: "เกี่ยวกับเรา",
@@ -119,32 +161,61 @@ export function Navbar() {
                 <ChevronDown className="w-4 h-4" />
               </Link>
               {serviceDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2">
-                  <div className="w-80 backdrop-blur-xl bg-white/95 rounded-lg shadow-xl border border-gray-200 py-2">
-                    <Link
-                      href="/service/crm"
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {t.serviceSubmenu.crm}
-                    </Link>
-                    <Link
-                      href="/service/call-center"
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {t.serviceSubmenu.callCenter}
-                    </Link>
-                    <Link
-                      href="/service/marketing"
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {t.serviceSubmenu.marketing}
-                    </Link>
-                    <Link
-                      href="/service/data-management"
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {t.serviceSubmenu.dataManagement}
-                    </Link>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                  <div className="w-[700px] backdrop-blur-xl bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                    <div className="grid grid-cols-3 gap-8">
+                      {/* Group 1 */}
+                      <div>
+                        <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                          {t.serviceGroups.group1.title}
+                        </h3>
+                        <div className="space-y-1">
+                          {t.serviceGroups.group1.items.map((item, idx) => (
+                            <Link
+                              key={idx}
+                              href={item.href}
+                              className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      {/* Group 2 */}
+                      <div>
+                        <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                          {t.serviceGroups.group2.title}
+                        </h3>
+                        <div className="space-y-1">
+                          {t.serviceGroups.group2.items.map((item, idx) => (
+                            <Link
+                              key={idx}
+                              href={item.href}
+                              className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      {/* Group 3 */}
+                      <div>
+                        <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
+                          {t.serviceGroups.group3.title}
+                        </h3>
+                        <div className="space-y-1">
+                          {t.serviceGroups.group3.items.map((item, idx) => (
+                            <Link
+                              key={idx}
+                              href={item.href}
+                              className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
