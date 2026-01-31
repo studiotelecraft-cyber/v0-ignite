@@ -48,31 +48,42 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Call Center System",
+      title: "Field Sales Execution",
       subtitle:
-        "Comprehensive call center system for faster response, improved service efficiency, and higher customer satisfaction.",
+        "Empowers sales reps with real-time customer data on the go. Improves visit planning, route optimization, and follow-ups.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Call Center Systems Can Help Your Organization",
+    benefitsTitle: "How Can Field Sales Execution Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Improved Service Efficiency",
-        desc: "The call center system enables your team to respond to customer inquiries faster and more accurately. With complete customer information and call history at your fingertips, agents can resolve issues promptly, reducing customer frustration and increasing satisfaction.",
+        title: "Empowers sales reps with real-time customer data on the go",
+        desc: "Field sales teams access comprehensive customer information, purchase history, and interaction records directly from mobile devices. Real-time data synchronization ensures reps always have the latest account details, enabling informed conversations and better decision-making during customer visits.",
       },
       benefit2: {
-        title: "Increase Efficiency",
-        desc: "Advanced call center features help you manage call flow effectively. With automatic call routing, intelligent queue management, and comprehensive reporting, you can optimize agent productivity and improve your team's overall performance.",
+        title: "Improves visit planning, route optimization, and follow-ups",
+        desc: "Intelligent route planning minimizes travel time and maximizes the number of customer visits per day. Automated task lists and follow-up reminders keep reps organized, while managers can monitor territory progress and make real-time adjustments to territories and priorities.",
       },
       benefit3: {
-        title: "Enhance Customer Satisfaction",
-        desc: "The call center system enables your team to deliver consistent, high-quality service across all touchpoints. Real-time dashboards, customer sentiment tracking, and comprehensive analytics help you identify areas for improvement and enhance the overall customer experience.",
+        title: "Increases productivity and win rates in face-to-face selling",
+        desc: "With mobile-first capabilities and data-driven insights, field sales teams close more deals faster. Analytics dashboards provide visibility into performance metrics, helping managers identify top performers, coaching opportunities, and best practices to replicate across the team.",
       },
+    },
+    summary: {
+      title: "Summary",
+      description: "Field Sales Execution (primarily through Consumer Goods Cloud Retail Execution) is designed for companies with field sales teams who need to manage in-store activities and customer relationships on-the-go. It revolutionizes how sales teams operate from headquarters to the field with a connected, intelligent platform grounded in real-time data. The solution includes mobile apps for field reps, detailed account information, recommended routes, automated task lists, and analytics for managers to track performance and optimize execution.",
+    },
+    bestFor: {
+      title: "Best for",
+      items: [
+        "FMCG, Pharma, Manufacturing, and Distribution",
+        "Companies with large field or territory-based sales teams",
+      ],
     },
     detailsSection: {
       paragraph1:
-        "Our call center system is designed to improve your customer service efficiency with cutting-edge technology. Features include automatic call routing to ensure customers reach the right agent, real-time monitoring of all calls, and comprehensive reporting that helps you analyze and improve your service quality.",
+        "Field Sales Execution transforms how sales teams operate in the field by providing a mobile-first platform that connects front-line reps with critical business information. The solution breaks down barriers between headquarters and field operations, enabling real-time collaboration and decision-making based on current market conditions.",
       paragraph2:
-        "Advanced ticketing system integration ensures no customer inquiry goes unanswered. With CRM integration, your agents have instant access to complete customer information, enabling personalized service. Interactive voice response (IVR) helps reduce wait times and direct customers to the right department automatically, improving both efficiency and customer satisfaction.",
+        "By combining Consumer Goods Cloud Retail Execution capabilities with intelligent route optimization and mobile analytics, Field Sales Execution enables companies to maximize territory coverage, increase customer engagement frequency, and drive higher win rates. Field teams become more efficient, productive, and accountable with clear visibility into performance metrics and automated workflows.",
     },
     contact: {
       title: "Contact Us",
@@ -88,14 +99,14 @@ const translations = {
       partners: "Our product partner",
     },
     booking: {
-      title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการรวาระบบ CRM ของคุณ",
-      firstName: "ชื่อ - นามสกุล",
-      email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
-      message: "ข้อความ",
+      title: "Book a Consultation",
+      subtitle: "Our Field Sales Execution experts are ready to listen to your challenges in optimizing field operations",
+      firstName: "Full Name",
+      email: "Email",
+      organization: "Organization",
+      message: "Message",
       captcha: "13 + 15 =",
-      submit: "นัดที่ปรึกษา",
+      submit: "Book Consultation",
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
@@ -115,11 +126,11 @@ const translations = {
         group1: {
           title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
           items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
+            { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+            { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
+            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
         group2: {
@@ -143,30 +154,41 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "Call Center System",
-      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้างความพึงพอใจให้ลูกค้า",
+      title: "การดำเนินการขายภาคสนาม",
+      subtitle: "ให้อำนาจแก่ตัวแทนขายด้วยข้อมูลลูกค้าแบบเรียลไทม์ในขณะเดินทาง ปรับปรุงการวางแผนการเยี่ยม การปรับเส้นทาง และการติดตาม",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "ระบบ Call Center สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การดำเนินการขายภาคสนามสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
-        title: "ปรับปรุงประสิทธิภาพการบริการ",
-        desc: "ระบบคอลเซ็นเตอร์ช่วยให้ทีมของคุณตอบสนองคำถามลูกค้าได้เร็วและแม่นยำยิ่งขึ้น ด้วยข้อมูลลูกค้าที่ครบถ้วนและประวัติการสนทนาที่อยู่ในมือ เจ้าหน้าที่สามารถแก้ไขปัญหาได้ทันท่วงที ลดความไม่พอใจของลูกค้า และเพิ่มความพึงพอใจ",
+        title: "ให้อำนาจแก่ตัวแทนขายด้วยข้อมูลลูกค้าแบบเรียลไทม์ในขณะเดินทาง",
+        desc: "ทีมขายภาคสนามเข้าถึงข้อมูลลูกค้าที่ครอบคลุม ประวัติการซื้อ และบันทึกการโต้ตอบได้โดยตรงจากอุปกรณ์มือถือ การซิงค์ข้อมูลแบบเรียลไทม์ช่วยให้ตัวแทนมีรายละเอียดบัญชีล่าสุดเสมอ ซึ่งเป็นการเพิ่มความสามารถในการสนทนาและการตัดสินใจที่ดีขึ้นในระหว่างการเยี่ยมชมลูกค้า",
       },
       benefit2: {
-        title: "เพิ่มประสิทธิภาพการทำงาน",
-        desc: "ฟีเจอร์คอลเซ็นเตอร์ขั้นสูงช่วยคุณจัดการการไหลของสายได้อย่างมีประสิทธิภาพ ด้วยระบบกระจายสายอัตโนมัติ การจัดการคิวอัจฉริยะ และการรายงานที่ครบถ้วน คุณสามารถเพิ่มผลิตภาพของเจ้าหน้าที่และปรับปรุงประสิทธิภาพโดยรวมของทีม",
+        title: "ปรับปรุงการวางแผนการเยี่ยม การปรับเส้นทาง และการติดตาม",
+        desc: "การวางแผนเส้นทางแบบอัจฉริยะลดเวลาในการเดินทางและเพิ่มจำนวนการเยี่ยมชมลูกค้าต่อวัน รายการงานอัตโนมัติและการเตือนการติดตามช่วยให้ตัวแทนเก็บระเบียบ ในขณะที่ผู้จัดการสามารถติดตามความคืบหน้าของอาณาเขตและทำการปรับปรุงเป็นเวลาจริง",
       },
       benefit3: {
-        title: "ยกระดับความพึงพอใจลูกค้า",
-        desc: "ระบบคอลเซ็นเตอร์ช่วยให้ทีมของคุณมอบการบริการที่สม่ำเสมอและมีคุณภาพสูงในทุกช่องทาง แดชบอร์ดแบบเรียลไทม์ การติดตามความรู้สึกของลูกค้า และการวิเคราะห์ที่ครบถ้วนช่วยให้คุณระบุจุดที่ต้องปรับปรุงและยกระดับประสบการณ์ลูกค้าโดยรวม",
+        title: "เพิ่มประสิทธิผลและอัตราการชนะในการขายแบบหน้าตัวต่อตัว",
+        desc: "ด้วยความสามารถที่มุ่งเน้นไปที่มือถือและข้อมูลเชิงลึกที่ขับเคลื่อนด้วยข้อมูล ทีมขายภาคสนามสามารถปิดดีลได้เร็วขึ้น แดชบอร์ดการวิเคราะห์ให้ความมองเห็นลงในเมตริกประสิทธิภาพ ช่วยให้ผู้จัดการระบุนักแสดงชั้นนำ โอกาสในการฝึกอบรม และแนวปฏิบัติที่ดีที่สุดเพื่อเลียนแบบทั่วทั้งทีม",
       },
+    },
+    summary: {
+      title: "สรุป",
+      description: "Field Sales Execution (ส่วนใหญ่ผ่าน Consumer Goods Cloud Retail Execution) ออกแบบมาสำหรับบริษัทที่มีทีมขายภาคสนามและต้องการจัดการกิจกรรมในร้านค้าและความสัมพันธ์ลูกค้าขณะเดินทาง ซึ่งเปลี่ยนวิธีการทำงานของทีมขายจากสำนักงานใหญ่ไปยังภาคสนามโดยมีแพลตฟอร์มที่เชื่อมต่อและอัจฉริยะบนพื้นฐานของข้อมูลแบบเรียลไทม์ สารละลายรวมแอปมือถือสำหรับตัวแทนภาคสนาม ข้อมูลบัญชีโดยละเอียด เส้นทางที่แนะนำ รายการงานอัตโนมัติ และการวิเคราะห์สำหรับผู้จัดการเพื่อติดตามประสิทธิภาพและปรับเปลี่ยนการดำเนินการ",
+    },
+    bestFor: {
+      title: "เหมาะสำหรับ",
+      items: [
+        "FMCG บรรจุภัณฑ์ การผลิต และการจัดจำหน่าย",
+        "บริษัทที่มีทีมขายภาคสนามหรือทีมตามพื้นที่จำนวนมาก",
+      ],
     },
     detailsSection: {
       paragraph1:
-        "ระบบคอลเซ็นเตอร์ของเราออกแบบมาเพื่อปรับปรุงประสิทธิภาพการบริการลูกค้าด้วยเทคโนโลยีล้ำสมัย ฟีเจอร์ต่างๆ รวมถึงการกระจายสายอัตโนมัติเพื่อให้แน่ใจว่าลูกค้าจะได้พูดคุยกับเจ้าหน้าที่ที่เหมาะสม การติดตามสายแบบเรียลไทม์ทุกสาย และการรายงานที่ครบถ้วนที่ช่วยให้คุณวิเคราะห์และปรับปรุงคุณภาพการบริการของคุณ",
+        "Field Sales Execution เปลี่ยนวิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้าระหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำนักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
-        "การผสานระบบตั๋วงาน (Ticketing) ขั้นสูงช่วยให้แน่ใจว่าไม่มีคำถามของลูกค้าใดตกหล่น ด้วยการผสาน CRM เจ้าหน้าที่ของคุณสามารถเข้าถึงข้อมูลลูกค้าที่สมบูรณ์ได้ทันที ช่วยให้สามารถบริการแบบเฉพาะบุคคลได้ ระบบตอบรับเสียงอัตโนมัติ (IVR) ช่วยลดเวลารอและนำลูกค้าไปยังแผนกที่ถูกต้องโดยอัตโนมัติ ปรับปรุงทั้งประสิทธิภาพและความพึงพอใจของลูกค้า",
+        "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
     contact: {
       title: "Contact Us",
@@ -183,10 +205,10 @@ const translations = {
     },
     booking: {
       title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการรวาระบบ CRM ของคุณ",
+      subtitle: "ทีมผู้เชี่ยวชาญด้านการดำเนินการขายภาคสนามของเราพร้อมให้บริการในการรับฟังปัญหาในการปรับปรุงการดำเนินการภาคสนามของคุณ",
       firstName: "ชื่อ - นามสกุล",
       email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
+      organization: "ชื่อองค์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
@@ -203,7 +225,7 @@ const translations = {
   },
 }
 
-export default function CallCenterPage() {
+export default function FieldSalesPage() {
   const [lang, setLang] = useState<"en" | "th">("en")
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -368,12 +390,12 @@ export default function CallCenterPage() {
                   </div>
                 )}
               </div>
-              <a href="#resources" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
-              </a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors">
+              </Link>
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4">
@@ -420,29 +442,13 @@ export default function CallCenterPage() {
                     {t.nav.service}
                     <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
-                  {serviceDropdownOpen && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      <Link href="/service/crm" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-blue-600 transition-colors py-2">
-                        {t.nav.serviceSubmenu.crm}
-                      </Link>
-                      <Link href="/service/call-center" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-blue-600 transition-colors py-2">
-                        {t.nav.serviceSubmenu.callCenter}
-                      </Link>
-                      <Link href="/service/marketing" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-blue-600 transition-colors py-2">
-                        {t.nav.serviceSubmenu.marketing}
-                      </Link>
-                      <Link href="/service/data-management" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-blue-600 transition-colors py-2">
-                        {t.nav.serviceSubmenu.dataManagement}
-                      </Link>
-                    </div>
-                  )}
                 </div>
-                <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.resources}
-                </a>
-                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                </Link>
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.about}
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -455,11 +461,6 @@ export default function CallCenterPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/images/design-mode/callcenter(1).png"
-            alt="Call Center Professional"
-            className="w-full h-full object-cover"
-          />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent" />
         </div>
 
@@ -482,7 +483,7 @@ export default function CallCenterPage() {
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            
+            {/* SVG path here */}
           </svg>
         </div>
       </section>
@@ -512,6 +513,30 @@ export default function CallCenterPage() {
               <h3 className="text-xl font-bold text-gray-900">{t.benefits.benefit3.title}</h3>
               <p className="text-gray-700 leading-relaxed">{t.benefits.benefit3.desc}</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Summary Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div className="container mx-auto max-w-5xl">
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">{t.summary.title}</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">{t.summary.description}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Best For Section */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-balance">{t.bestFor.title}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {t.bestFor.items.map((item, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100 hover:border-blue-300">
+                <p className="text-lg font-semibold text-gray-900">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -592,159 +617,95 @@ export default function CallCenterPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/service/crm" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-blue-600" />
+                    <Link href="/service/crm" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.crm}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-blue-600" />
+                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/marketing" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-blue-600" />
+                    <Link href="/service/marketing" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.marketing}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/data-management" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-blue-600" />
+                    <Link href="/service/data-management" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.dataManagement}
                     </Link>
                   </li>
                 </ul>
               </div>
-
-              {/* Partners */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.partners}</h3>
-                <div className="flex items-center gap-8 flex-wrap">
-                  <img 
-                    src="/images/design-mode/Group-1597881657.png.webp"
-                    alt="Salesforce" 
-                    className="h-12 opacity-70 hover:opacity-100 transition-opacity" 
-                  />
-                  <img 
-                    src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                    alt="Microsoft" 
-                    className="h-12 opacity-70 hover:opacity-100 transition-opacity" 
-                  />
-                </div>
-              </div>
             </div>
 
             {/* Right Side - Booking Form */}
-            <div className="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-400 p-10 md:p-12 rounded-3xl shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{t.booking.title}</h2>
-              <p className="text-white/90 mb-8 leading-relaxed">{t.booking.subtitle}</p>
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Field Sales Execution implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Field Sales Execution"}</p>
+              
+              <div className="space-y-5">
+                <div>
+                  <Label htmlFor="name" className="text-gray-900 font-semibold">{lang === "en" ? "Your Name" : "ชื่อของคุณ"}</Label>
+                  <Input id="name" placeholder={lang === "en" ? "John Doe" : "ชื่อ-นามสกุล"} className="mt-2 rounded-lg" />
+                </div>
 
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    placeholder={t.booking.firstName}
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
-                  <Input
-                    placeholder={t.booking.email}
-                    type="email"
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
+                <div>
+                  <Label htmlFor="email" className="text-gray-900 font-semibold">{lang === "en" ? "Company Email" : "อีเมลบริษัท"}</Label>
+                  <Input id="email" type="email" placeholder="company@example.com" className="mt-2 rounded-lg" />
                 </div>
-                <Input
-                  placeholder={t.booking.organization}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                />
-                <Textarea
-                  placeholder={t.booking.message}
-                  rows={5}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 resize-none rounded-xl shadow-sm"
-                />
-                <div className="flex items-center gap-4">
-                  <Label className="text-white font-semibold text-lg">{t.booking.captcha}</Label>
-                  <Input className="bg-white border-0 text-gray-900 max-w-[120px] h-12 rounded-xl shadow-sm" />
+
+                <div>
+                  <Label htmlFor="company" className="text-gray-900 font-semibold">{lang === "en" ? "Company Name" : "ชื่อบริษัท"}</Label>
+                  <Input id="company" placeholder={lang === "en" ? "Your Company" : "บริษัทของคุณ"} className="mt-2 rounded-lg" />
                 </div>
-                <Button className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.booking.submit} →
+
+                <div>
+                  <Label htmlFor="message" className="text-gray-900 font-semibold">{lang === "en" ? "Project Needs" : "ความต้องการโครงการ"}</Label>
+                  <Textarea id="message" placeholder={lang === "en" ? "Tell us about your needs..." : "บอกเราเกี่ยวกับความต้องการของคุณ..."} className="mt-2 rounded-lg" rows={4} />
+                </div>
+
+                <Button onClick={() => setScheduleModalOpen(true)} className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-6 text-lg font-semibold transition-all">
+                  {lang === "en" ? "Schedule Call" : "จองการติดต่อ"}
                 </Button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Consultation Dialog */}
+      {/* Schedule Modal */}
       <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
-        <DialogContent className="sm:max-w-5xl bg-white border-2 border-gray-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Left Side - Image */}
-            <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-              <img 
-                src="/images/design-mode/BookConsultIMG_001.jpg"
-                alt="Video Conference"
-                className="w-full h-full object-cover object-center"
-              />
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>{t.scheduleModal.title}</DialogTitle>
+            <DialogDescription>{t.scheduleModal.subtitle}</DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 mt-6">
+            <div>
+              <Label htmlFor="project" className="text-gray-900 font-semibold">{t.scheduleModal.projectLabel}</Label>
+              <Textarea id="project" placeholder={t.scheduleModal.projectPlaceholder} rows={4} className="mt-2 rounded-lg" />
             </div>
 
-            {/* Right Side - Form */}
-            <div className="md:col-span-1 p-12 overflow-y-auto max-h-[90vh]">
-              <DialogHeader>
-                <DialogTitle className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
-                  {t.scheduleModal.title}
-                </DialogTitle>
-                <DialogDescription className="text-xl text-gray-700 leading-relaxed">
-                  {t.scheduleModal.subtitle}
-                </DialogDescription>
-              </DialogHeader>
-              <div className="space-y-6 mt-8">
-                <div className="space-y-3">
-                  <Label htmlFor="project" className="text-lg text-gray-900 font-semibold">
-                    {t.scheduleModal.projectLabel}
-                  </Label>
-                  <Textarea
-                    id="project"
-                    placeholder={t.scheduleModal.projectPlaceholder}
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
-                    rows={4}
-                  />
-                </div>
-                <div className="space-y-3">
-                  <Label htmlFor="name" className="text-lg text-gray-900 font-semibold">
-                    {t.scheduleModal.nameLabel}
-                  </Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg h-14"
-                  />
-                </div>
-                <div className="space-y-3">
-                  <Label htmlFor="email" className="text-lg text-gray-900 font-semibold">
-                    {t.scheduleModal.emailLabel}
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg h-14"
-                  />
-                </div>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-xl font-bold py-7 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.scheduleModal.submit}
-                </Button>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="modal-name" className="text-gray-900 font-semibold">{t.scheduleModal.nameLabel}</Label>
+                <Input id="modal-name" placeholder="John Doe" className="mt-2 rounded-lg" />
+              </div>
+              <div>
+                <Label htmlFor="modal-email" className="text-gray-900 font-semibold">{t.scheduleModal.emailLabel}</Label>
+                <Input id="modal-email" type="email" placeholder="john@company.com" className="mt-2 rounded-lg" />
               </div>
             </div>
+
+            <Button onClick={() => setScheduleModalOpen(false)} className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 text-lg font-semibold">
+              {t.scheduleModal.submit}
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
-
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-gray-200 bg-white">
-        <div className="container mx-auto text-center text-gray-600">
-          <p>© 2025 IGNITE IDEA. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   )
 }

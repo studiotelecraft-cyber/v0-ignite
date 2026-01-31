@@ -19,11 +19,11 @@ const translations = {
         group1: {
           title: "Customer Experience & Sales Execution",
           items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/crm" },
-            { name: "Field Sales Execution", href: "/service/crm" },
-            { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
+            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
@@ -249,59 +249,103 @@ export default function AboutPage() {
                 </Link>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                    <div className="w-[700px] backdrop-blur-xl bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-                      <div className="grid grid-cols-3 gap-8">
-                        {/* Group 1 */}
+                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
+                      <div className="grid grid-cols-3 gap-10">
+                        {/* Group 1 - Customer Experience & Sales Execution */}
                         <div>
-                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
-                            {t.nav.serviceGroups.group1.title}
-                          </h3>
-                          <div className="space-y-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="6" />
+                                <circle cx="12" cy="12" r="2" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
+                              {t.nav.serviceGroups.group1.title}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-orange-400 mb-4"></div>
+                          <div className="space-y-3">
                             {t.nav.serviceGroups.group1.items.map((item, idx) => (
                               <Link
                                 key={idx}
                                 href={item.href}
-                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
                               >
                                 {item.name}
                               </Link>
                             ))}
                           </div>
                         </div>
-                        {/* Group 2 */}
+                        {/* Group 2 - Strategic Planning & Intelligence */}
                         <div>
-                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
-                            {t.nav.serviceGroups.group2.title}
-                          </h3>
-                          <div className="space-y-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
+                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
+                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
+                              {t.nav.serviceGroups.group2.title}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-blue-400 mb-4"></div>
+                          <div className="space-y-3">
                             {t.nav.serviceGroups.group2.items.map((item, idx) => (
                               <Link
                                 key={idx}
                                 href={item.href}
-                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
                               >
                                 {item.name}
                               </Link>
                             ))}
                           </div>
                         </div>
-                        {/* Group 3 */}
+                        {/* Group 3 - Supply Chain & Operations */}
                         <div>
-                          <h3 className="font-bold text-sm mb-4 pb-2 border-b-2 border-[#0083d8]" style={{ color: '#0083d8' }}>
-                            {t.nav.serviceGroups.group3.title}
-                          </h3>
-                          <div className="space-y-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-green-500 leading-tight">
+                              {t.nav.serviceGroups.group3.title}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-green-400 mb-4"></div>
+                          <div className="space-y-3">
                             {t.nav.serviceGroups.group3.items.map((item, idx) => (
                               <Link
                                 key={idx}
                                 href={item.href}
-                                className="block py-2 text-sm text-gray-600 hover:text-[#0083d8] hover:bg-blue-50 hover:pl-2 rounded transition-all duration-200"
+                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
                               >
                                 {item.name}
                               </Link>
                             ))}
                           </div>
                         </div>
+                      </div>
+                      {/* Bottom CTA Section */}
+                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
+                        <button
+                          onClick={() => setScheduleModalOpen(true)}
+                          className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
+                        >
+                          Schedule Consultation
+                        </button>
+                        <Link
+                          href="/resources"
+                          className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+                        >
+                          Download Case Study
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -624,25 +668,25 @@ export default function AboutPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
-                  <li>
+                  <li key="service1">
                     <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[0].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service2">
                     <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[3].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service3">
                     <Link href="/service/marketing" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[2].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service4">
                     <Link href="/service/data-management" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[1].name}

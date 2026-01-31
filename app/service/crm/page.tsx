@@ -16,90 +16,18 @@ const translations = {
     nav: {
       home: "Home",
       service: "Service",
-      resources: "Resources",
-      about: "About",
-      schedule: "Schedule a call",
-    },
-    hero: {
-      title: "CRM Services",
-      subtitle:
-        "Better Customer Relationships Start Here CRM isn't just software—it's your secret weapon for business growth. We help you organize customer data, spot opportunities, and turn insights into action that drives real results.",
-      cta: "Talk to Us",
-    },
-    scheduleModal: {
-      title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your challenges and discover practical solutions that work",
-      projectLabel: "Describe your project need",
-      projectPlaceholder: "Describe your project need here...",
-      nameLabel: "Your name",
-      emailLabel: "Company Email",
-      submit: "Submit",
-    },
-    stats: {
-      title: "Sales Increases",
-      stat1: "Increased sales success rate",
-      stat2: "Increased sales team efficiency",
-      stat3: "Increased deal closure speed",
-      stat4: "Increased revenue forecast accuracy",
-    },
-    benefits: {
-      title: "How Can CRM Help Your Organization?",
-      card1: {
-        title: "Centralize Customer and Lead Contact Data",
-        desc: "Never lose valuable customer information again when sales staff are unavailable or leave the company. With CRM, all contact data is stored centrally in the system. You can also set permissions to view, manage, and transfer customers and leads seamlessly.",
+      serviceGroups: {
+        group1: {
+          title: "Customer Experience & Sales Execution",
+          items: [
+            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+            { name: "Field Sales Execution", href: "/service/field-sales" },
+            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
+          ],
+        },
       },
-      card2: {
-        title: "Know Exactly Where Your Revenue Is Coming From",
-        desc: "Not all leads become customers—so how do you forecast monthly, quarterly, or yearly revenue accurately? CRM tracks every opportunity in your pipeline, giving you real-time insights into which deals will close and when.",
-      },
-      card3: {
-        title: "Work From Anywhere with Multi-Device Access",
-        desc: "Never be tied to your desk again. Our CRM gives you full access to customer data on desktop, mobile, and tablet—so you can work efficiently from anywhere, anytime.",
-      },
-    },
-    partner: {
-      title: "Technology Partner",
-      subtitle: "Powered by industry-leading CRM platform",
-    },
-    details: {
-      intro:
-        "We provide comprehensive CRM services that help you work smarter, keep customers happier, and hit your business goals. Our team partners with you to create a custom CRM strategy that fits your needs and delivers real results.",
-      heading: "What You'll Achieve with Our CRM Services",
-      body:
-        "Streamline your operations, boost customer satisfaction, and grow your business. Whether you want to increase sales, strengthen customer loyalty, or improve efficiency—we've got you covered.",
-      outro:
-        "Want to see how CRM can transform your business? Get in touch today for a free consultation.",
-    },
-    contact: {
-      title: "Contact Us",
-      phone: "+662-231-8088",
-      email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
-    },
-    booking: {
-      title: "Request a Consultation",
-      subtitle:
-        "Our expert CRM team is ready to listen to your needs and help you implement CRM solutions for your business.",
-      firstName: "First Name - Last Name",
-      email: "Email",
-      organization: "Organization Name",
-      message: "Message",
-      captcha: "13 + 15 =",
-      submit: "Book Consultation",
-    },
-  },
-  th: {
-    nav: {
-      home: "หน้าแรก",
-      service: "บริการ",
-      resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
@@ -240,38 +168,95 @@ export default function CRMPage() {
                   <ChevronDown className="w-4 h-4" />
                 </Link>
                 {serviceDropdownOpen && (
-                  <div className="absolute top-full left-0 pt-2">
-                    <div className="w-80 backdrop-blur-xl bg-white/95 rounded-lg shadow-xl border border-gray-200 py-2">
-                      <Link
-                        href="/service/crm"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Sales Solution (CRM)
-                      </Link>
-                      <Link
-                        href="/service/call-center"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Customer Service Solution (Call Center)
-                      </Link>
-                      <Link
-                        href="/service/marketing"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Marketing Automation Solution
-                      </Link>
-                      <Link
-                        href="/service/data-management"
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Data Management Solution
-                      </Link>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
+                      <div className="grid grid-cols-3 gap-10">
+                        {/* Group 1 - Customer Experience & Sales Execution */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <circle cx="12" cy="12" r="6" />
+                                <circle cx="12" cy="12" r="2" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
+                              {t.nav.serviceGroups.group1.title}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-orange-400 mb-4"></div>
+                          <div className="space-y-3">
+                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
+                              <Link
+                                key={idx}
+                                href={item.href}
+                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                        {/* Group 2 - Strategic Planning & Intelligence */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
+                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
+                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
+                              {/* Placeholder for Group 2 title */}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-blue-400 mb-4"></div>
+                          <div className="space-y-3">
+                            {/* Placeholder for Group 2 items */}
+                          </div>
+                        </div>
+                        {/* Group 3 - Supply Chain & Operations */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                              </svg>
+                            </div>
+                            <h3 className="font-bold text-sm text-green-500 leading-tight">
+                              {/* Placeholder for Group 3 title */}
+                            </h3>
+                          </div>
+                          <div className="border-b-2 border-green-400 mb-4"></div>
+                          <div className="space-y-3">
+                            {/* Placeholder for Group 3 items */}
+                          </div>
+                        </div>
+                      </div>
+                      {/* Bottom CTA Section */}
+                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
+                        <button
+                          onClick={() => setScheduleModalOpen(true)}
+                          className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
+                        >
+                          Schedule Consultation
+                        </button>
+                        <Link
+                          href="/resources"
+                          className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+                        >
+                          Download Case Study
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 )}
               </div>
               <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
-                {t.nav.resources}
+                {/* Placeholder for Resources */}
               </Link>
               <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
@@ -364,7 +349,7 @@ export default function CRMPage() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2"
                 >
-                  {t.nav.resources}
+                  {/* Placeholder for Resources */}
                 </Link>
                 <Link
                   href="/about"
@@ -698,7 +683,7 @@ export default function CRMPage() {
                   <Input className="bg-white border-0 text-gray-900 max-w-[120px] h-12 rounded-xl shadow-sm" />
                 </div>
                 <Button className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.booking.submit} →
+                  {t.booking.submit}
                 </Button>
               </form>
             </div>
