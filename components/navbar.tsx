@@ -46,6 +46,8 @@ export function Navbar() {
 
   const t = translations[lang]
 
+  console.log("[v0] Service submenu items:", t.serviceSubmenu)
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
