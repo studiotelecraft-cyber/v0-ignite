@@ -24,7 +24,7 @@ const translations = {
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
       },

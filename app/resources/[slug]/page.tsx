@@ -22,7 +22,7 @@ const translations = {
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
@@ -58,7 +58,7 @@ const translations = {
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
+            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
           ],
         },
         group2: {

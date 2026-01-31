@@ -23,7 +23,7 @@ const translations = {
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/data-management" },
             { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
+            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
@@ -668,25 +668,25 @@ export default function AboutPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
-                  <li>
+                  <li key="service1">
                     <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[0].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service2">
                     <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[3].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service3">
                     <Link href="/service/marketing" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[2].name}
                     </Link>
                   </li>
-                  <li>
+                  <li key="service4">
                     <Link href="/service/data-management" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[1].name}
