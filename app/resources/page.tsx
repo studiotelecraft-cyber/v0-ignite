@@ -85,7 +85,7 @@ const translations = {
         group3: {
           title: "Supply Chain & Operations",
           items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
+            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
             { name: "Production Planning", href: "/service/data-management" },
           ],
         },
@@ -152,7 +152,7 @@ const translations = {
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
