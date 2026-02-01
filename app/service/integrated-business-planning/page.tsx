@@ -48,43 +48,42 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Lead to Cash (Order) Management",
-      subtitle:
-        "Connects sales, pricing, contracts, orders, billing, and payments into one seamless flow. Reduces manual handoffs between Sales, Finance, and Operations.",
+      title: "Integrated Business Planning (IBP)",
+      subtitle: "Unifies strategic and operational plans. Breaks down silos across sales, operations, finance, HR, and supply chain.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Lead to Cash Help Your Organization?",
+    benefitsTitle: "How Can Integrated Business Planning Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Connects sales, pricing, contracts, orders, billing, and payments into one seamless flow",
-        desc: "Lead to Cash integrates your entire revenue management process, eliminating data silos and creating a unified customer journey. From initial quote to final payment, all information flows seamlessly across departments, ensuring consistency and reducing errors.",
+        title: "Unifies Strategic & Operational Plans and Breaks Down Silos",
+        desc: "Connects long-term strategy with medium-term tactical plans and short-term execution in a single unified framework. Integrates planning across sales, operations, finance, HR, supply chain, and product development to eliminate departmental silos. Enable enterprise-wide collaboration where all functions work from the same data and assumptions for aligned decision-making.",
       },
       benefit2: {
-        title: "Reduces manual handoffs between Sales, Finance, and Operations",
-        desc: "Automation eliminates the need for manual data entry and transfers between teams. Sales processes flow directly into billing systems, Finance has real-time visibility into orders and revenue recognition, and Operations receives accurate fulfillment data instantly.",
+        title: "Enables Predictive Planning & Improves Financial Outcomes",
+        desc: "AI and machine learning provide forward-looking insights for proactive decision-making rather than reactive responses. Aligns operational plans with financial targets to maximize profitability and ROI across the enterprise. Create a direct connection between strategic objectives and daily operations to ensure every action supports business goals.",
       },
       benefit3: {
-        title: "Speeds up revenue recognition and minimizes billing errors",
-        desc: "With automated order-to-cash processes, revenue recognition happens faster and more accurately. Your finance team spends less time chasing down orders and correcting billing issues, allowing them to focus on strategic financial planning.",
+        title: "Increases Adaptability",
+        desc: "Scenario planning and what-if analysis prepare organizations for multiple future possibilities and market changes. Enable real-time modeling to evaluate the impact of decisions before implementation. Build organizational resilience through continuous planning cycles that adapt to changing conditions rather than rigid annual plans.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Lead to Cash is an end-to-end business process that encompasses the complete customer lifecycle from lead generation through final payment. It combines Salesforce CPQ, Order Management, and Billing capabilities to create a unified revenue management system. The solution connects lead qualification, opportunity management, quoting, order fulfillment, invoicing, and payment collection within a single platform, replacing fragmented systems and manual processes.",
+      description: "Integrated Business Planning (IBP) is the evolution of S&OP that extends collaborative planning across the entire enterprise, integrating strategic planning, financial planning, demand/supply planning, and operational execution into a unified framework. IBP solutions (like ketteQ's IBP suite, SAP IBP, or Salesforce-integrated platforms) create a single source of truth by connecting data from CRM, ERP, finance, and supply chain systems. The solution provides enterprise-wide visibility, facilitates cross-functional collaboration, enables real-time scenario modeling, and ensures all departments work toward aligned objectives with consistent assumptions and coordinated execution.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "B2B companies",
-        "Subscription or contract-based businesses",
-        "Organizations struggling with order errors or delayed billing",
+        "Large enterprises",
+        "Organizations undergoing digital transformation",
+        "Companies needing end-to-end business alignment",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Lead to Cash transforms revenue management by creating a unified system that connects all stages of the customer lifecycle. From sales qualification to quote generation, order management, billing, and payment collection, every step is optimized and automated within a single platform.",
+        "Integrated Business Planning transforms how organizations align strategy with execution by creating a unified planning framework that connects all business functions. Unlike traditional planning approaches where departments work in isolation, IBP creates a single source of truth by integrating data from CRM, ERP, finance, and supply chain systems. This enables enterprise-wide visibility where executives and teams can see how decisions in one area impact the entire organization.",
       paragraph2:
-        "By integrating Salesforce CPQ, Order Management, and Billing capabilities, Lead to Cash eliminates fragmented systems and manual processes. Your sales team works faster with accurate quotes, your operations team fulfills orders without delays, and your finance team recognizes revenue accurately and promptly.",
+        "IBP solutions facilitate cross-functional collaboration through continuous planning cycles rather than annual budgets. Real-time scenario modeling allows organizations to evaluate multiple futures and make proactive decisions. By ensuring all departments work toward aligned objectives with consistent assumptions, IBP maximizes profitability, improves resource allocation, and builds organizational agility to respond to market changes effectively.",
     },
     contact: {
       title: "Contact Us",
@@ -100,18 +99,18 @@ const translations = {
       partners: "Our product partner",
     },
     booking: {
-      title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน Lead to Cash ของเราพร้อมให้บริการในการรับฟังปัญหาในการรวาระบบของคุณ",
-      firstName: "ชื่อ - นามสกุล",
-      email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
-      message: "ข้อความ",
+      title: "Book a Consultation",
+      subtitle: "Our Integrated Business Planning experts are ready to help align your enterprise",
+      firstName: "Full Name",
+      email: "Email",
+      organization: "Organization",
+      message: "Message",
       captcha: "13 + 15 =",
-      submit: "นัดที่ปรึกษา",
+      submit: "Book Consultation",
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your challenges and discover practical solutions that work",
+      subtitle: "Discuss your enterprise planning challenges and discover integrated solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -129,15 +128,15 @@ const translations = {
           items: [
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
+            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
+            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
           ],
         },
         group2: {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
+            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/integrated-business-planning" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
@@ -145,7 +144,7 @@ const translations = {
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
@@ -155,71 +154,71 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "Lead to Cash (Order) Management",
-      subtitle: "เชื่อมต่อการขาย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงินเข้าเป็นการไหลที่ราบรื่นเดียว ลดการส่งต่อด้วยตนเองระหว่างฝ่ายขาย การเงิน และการดำเนินงาน",
+      title: "การวางแผนธุรกิจแบบบูรณาการ (IBP)",
+      subtitle: "รวมแผนเชิงกลยุทธ์และการดำเนินงาน ทำลายกำแพงระหว่างแผนกการขาย การดำเนินงาน การเงิน HR และห่วงโซ่อุปทาน",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "Lead to Cash สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การวางแผนธุรกิจแบบบูรณาการสามารถช่วยองค์กรของคุณได้อย่างไร",
     benefits: {
       benefit1: {
-        title: "เชื่อมต่อการขาย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงิน",
-        desc: "Lead to Cash รวมกระบวนการจัดการรายได้ทั้งหมดของคุณ ลบข้อมูลไซโล และสร้างการเดินทางลูกค้าที่เป็นเอกโปรตีน ตั้งแต่ใบเสนอราคาเบื้องต้นจนถึงการชำระเงินครั้งสุดท้าย ข้อมูลทั้งหมดไหลราบรื่นในทั่วทั้งแผนก เพื่อให้มีความสอดคล้องและลดข้อผิดพลาด",
+        title: "รวมแผนเชิงกลยุทธ์และการดำเนินงานและทำลายกำแพง",
+        desc: "เชื่อมต่อกลยุทธ์ระยะยาวกับแผนยุทธวิธีระยะกลางและการดำเนินงานระยะสั้นในกรอบที่รวมศูนย์เดียว รวมการวางแผนในทุกแผนก การขาย การดำเนินงาน การเงิน HR ห่วงโซ่อุปทาน และการพัฒนาผลิตภัณฑ์เพื่อกำจัดกำแพงระหว่างแผนก เปิดใช้งานความร่วมมือทั่วทั้งองค์กรที่ทุกฟังก์ชั่นทำงานจากข้อมูลและสมมติฐานเดียวกันเพื่อการตัดสินใจที่สอดคล้องกัน",
       },
       benefit2: {
-        title: "ลดการส่งต่อด้วยตนเองระหว่างฝ่ายขาย การเงิน และการดำเนินงาน",
-        desc: "การทำอัตโนมัติกำจัดความจำเป็นในการป้อนข้อมูลด้วยตนเองและการโอนระหว่างทีม กระบวนการขายไหลโดยตรงเข้าระบบการเรียกเก็บเงิน การเงินจึงมีมองเห็น คำสั่งซื้อและการรับรู้รายได้แบบเรียลไทม์ และการดำเนินงานได้รับข้อมูลการตอบสนองที่แม่นยำทันที",
+        title: "เปิดใช้งานการวางแผนเชิงพยากรณ์และปรับปรุงผลลัพธ์ทางการเงิน",
+        desc: "AI และ machine learning ให้ข้อมูลเชิงลึกที่มองไปข้างหน้าสำหรับการตัดสินใจเชิงรุกแทนการตอบสนองแบบตามหลัง จัดเรียงแผนการดำเนินงานกับเป้าหมายทางการเงินเพื่อเพิ่มความสามารถในการทำกำไรและ ROI ทั่วทั้งองค์กร สร้างการเชื่อมต่อโดยตรงระหว่างวัตถุประสงค์เชิงกลยุทธ์และการดำเนินงานประจำวันเพื่อให้แน่ใจว่าทุกการดำเนินการสนับสนุนเป้าหมายทางธุรกิจ",
       },
       benefit3: {
-        title: "เพิ่มความเร็วในการรับรู้รายได้และลดข้อผิดพลาดในการเรียกเก็บเงิน",
-        desc: "ด้วยกระบวนการจากคำสั่งซื้อไปยังเงินสดอัตโนมัติ การรับรู้รายได้เกิดขึ้นเร็วขึ้นและแม่นยำยิ่งขึ้น ทีมการเงินของคุณใช้เวลาน้อยลงในการตามหาคำสั่งซื้อและการแก้ไขปัญหาการเรียกเก็บเงิน ซึ่งช่วยให้พวกเขาสามารถเน้นไปที่การวางแผนทางการเงินด้านกลยุทธ์",
+        title: "เพิ่มความสามารถในการปรับตัว",
+        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปรับตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งทื่อ",
       },
     },
     summary: {
       title: "สรุป",
-      description: "Lead to Cash เป็นกระบวนการทางธุรกิจแบบครบวงจรที่ครอบคลุมวงจรชีวิตลูกค้าที่สมบูรณ์ตั้งแต่การสร้างลีดไปจนถึงการชำระเงินครั้งสุดท้าย โดยรวมความสามารถของ Salesforce CPQ การจัดการคำสั่งซื้อ และการเรียกเก็บเงิน เพื่อสร้างระบบการจัดการรายได้ที่เป็นเอกภาพ",
+      description: "การวางแผนธุรกิจแบบบูรณาการ (IBP) คือวิวัฒนาการของ S&OP ที่ขยายการวางแผนแบบร่วมมือในทั่วทั้งองค์กร รวมการวางแผนเชิงกลยุทธ์ การวางแผนทางการเงิน การวางแผนอุปสงค์/อุปทาน และการดำเนินการปฏิบัติงานเป็นกรอบที่รวมศูนย์ โซลูชั่น IBP (เช่น ketteQ's IBP suite, SAP IBP หรือแพลตฟอร์มที่รวมกับ Salesforce) สร้างแหล่งความจริงเดียวโดยการเชื่อมต่อข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน โซลูชั่นให้การมองเห็นทั่วทั้งองค์กร ส่งเสริมความร่วมมือข้ามสายงาน เปิดใช้งานการสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ และรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้องและการดำเนินการที่ประสานกัน",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "บริษัท B2B",
-        "ธุรกิจตามการสมัครสมาชิกหรือสัญญา",
-        "องค์กรที่มีปัญหาขาดแคลนคำสั่งซื้อหรือการเรียกเก็บเงินที่ล่าช้า",
+        "องค์กรขนาดใหญ่",
+        "องค์กรที่กำลังผ่านการแปลงสู่ดิจิทัล",
+        "บริษัทที่ต้องการการจัดเรียงธุรกิจแบบครบวงจร",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Lead to Cash เปลี่ยนแปลงการจัดการรายได้โดยการสร้างระบบเอกภาพที่เชื่อมต่อขั้นตอนทั้งหมดของวงจรชีวิตลูกค้า ตั้งแต่การคัดกรองการขายจนถึงการสร้างใบเสนอราคา การจัดการคำสั่งซื้อ การเรียกเก็บเงิน และการเก็บเงิน ทุกขั้นตอนได้รับการปรับให้เหมาะสมและทำอัตโนมัติภายในแพลตฟอร์มเดียว",
+        "การวางแผนธุรกิจแบบบูรณาการแปลงวิธีการที่องค์กรจัดเรียงกลยุทธ์กับการดำเนินการโดยการสร้างกรอบการวางแผนที่รวมศูนย์ที่เชื่อมต่อทุกฟังก์ชั่นทางธุรกิจ ไม่เหมือนกับวิธีการวางแผนแบบดั้งเดิมที่แผนกทำงานแยกกัน IBP สร้างแหล่งความจริงเดียวโดยการรวมข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน สิ่งนี้เปิดใช้งานการมองเห็นทั่วทั้งองค์กรที่ผู้บริหารและทีมสามารถเห็นว่าการตัดสินใจในพื้นที่หนึ่งส่งผลกระทบต่อทั้งองค์กรอย่างไร",
       paragraph2:
-        "ด้วยการรวม Salesforce CPQ ความสามารถในการจัดการคำสั่งซื้อ และการเรียกเก็บเงิน Lead to Cash จึงกำจัดระบบที่แตกแยกและกระบวนการด้วยตนเอง ทีมขายของคุณจึงทำงานได้เร็วขึ้นด้วยใบเสนอราคาที่แม่นยำ ทีมดำเนินงานของคุณตอบสนองคำสั่งซื้อได้โดยไม่ล่าช้า และทีมการเงินของคุณรับรู้รายได้ได้อย่างแม่นยำและทันท่วงที",
+        "โซลูชั่น IBP ส่งเสริมความร่วมมือข้ามสายงานผ่านวงจรการวางแผนอย่างต่อเนื่องแทนงบประมาณประจำปี การสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ช่วยให้องค์กรประเมินอนาคตหลายอย่างและตัดสินใจเชิงรุก ด้วยการรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้อง IBP เพิ่มความสามารถในการทำกำไร ปรับปรุงการจัดสรรทรัพยากร และสร้างความคล่องตัวขององค์กรเพื่อตอบสนองต่อการเปลี่ยนแปลงของตลาดอย่างมีประสิทธิภาพ",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "+662-231-8088",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      callCenter: "ระบบศูนย์สายด่วน",
+      marketing: "ระบบการตลาดอัตโนมัติ",
+      dataManagement: "การจัดการข้อมูล",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
-      title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน Lead to Cash ของเราพร้อมให้บริการในการรับฟังปัญหาในการรวาระบบของคุณ",
-      firstName: "ชื่อ - นามสกุล",
-      email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
+      title: "จองการปรึกษา",
+      subtitle: "ผู้เชี่ยวชาญด้านการวางแผนธุรกิจแบบบูรณาการของเราพร้อมที่จะช่วยจัดเรียงองค์กรของคุณ",
+      firstName: "ชื่อเต็ม",
+      email: "อีเมล",
+      organization: "องค์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
-      submit: "นัดที่ปรึกษา",
+      submit: "จองการปรึกษา",
     },
     scheduleModal: {
-      title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
-      projectLabel: "อธิบายความต้องการโครงการของคุณ",
-      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
+      subtitle: "อภิปรายความท้าทายด้านการวางแผนองค์กรของคุณและค้นพบโซลูชั่นแบบบูรณาการ",
+      projectLabel: "อธิบายความต้องการของโครงการ",
+      projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
@@ -227,49 +226,32 @@ const translations = {
   },
 }
 
-export default function LeadToCashPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
-  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
+export default function IntegratedBusinessPlanningPage() {
+  const [lang, setLang] = useState("en")
+  const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  const t = translations[lang]
+  const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    setT(lang === "en" ? translations.en : translations.th)
+  }, [lang])
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact-us')
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
+    document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
-    <div className="min-h-screen">
-      {/* Floating Chat Button */}
-      <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
+    <div className="min-h-screen bg-white">
+      <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
+      <FloatingChatButton />
 
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
-        isScrolled 
-          ? 'bg-blue-900/90 border-blue-800/10' 
-          : 'bg-white/10 border-white/10'
-      }`}>
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-lg">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold text-white hover:text-blue-100 transition-colors">
+              Ignite Idea
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
@@ -392,12 +374,12 @@ export default function LeadToCashPage() {
                   </div>
                 )}
               </div>
-              <a href="#resources" className="text-white/90 hover:text-white transition-colors">
+              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.resources}
-              </a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors">
+              </Link>
+              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
                 {t.nav.about}
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4">
@@ -445,12 +427,12 @@ export default function LeadToCashPage() {
                     <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                 </div>
-                <a href="#resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.resources}
-                </a>
-                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
+                </Link>
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
                   {t.nav.about}
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -533,7 +515,7 @@ export default function LeadToCashPage() {
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-balance">{t.bestFor.title}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {t.bestFor.items.map((item, idx) => (
               <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100">
                 <p className="text-lg font-semibold text-gray-900">{item}</p>
@@ -624,7 +606,7 @@ export default function LeadToCashPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>
@@ -645,7 +627,7 @@ export default function LeadToCashPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Lead to Cash implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Lead to Cash"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Integrated Business Planning implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งานการวางแผนธุรกิจแบบบูรณาการ"}</p>
               
               <div className="space-y-5">
                 <div>

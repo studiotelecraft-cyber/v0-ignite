@@ -30,7 +30,7 @@ const translations = {
         group2: {
           title: "Strategic Planning & Intelligence",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
+            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
             { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
             { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
@@ -38,7 +38,7 @@ const translations = {
         group3: {
           title: "Supply Chain & Operations",
           items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
+            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
             { name: "Production Planning", href: "/service/data-management" },
           ],
         },
@@ -127,7 +127,7 @@ const translations = {
           items: [
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
+            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
             { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
           ],
@@ -135,7 +135,7 @@ const translations = {
         group2: {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
+            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/integrated-business-planning" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
@@ -143,7 +143,7 @@ const translations = {
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
