@@ -473,39 +473,11 @@ export default function IntegratedBusinessPlanningPage() {
               <div className="relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-600/20 blur-2xl animate-pulse" />
                 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-gradient-to-br from-emerald-500 via-green-500 to-emerald-500 flex items-center justify-center shadow-2xl shadow-emerald-500/60 z-10 border-4 border-white/20">
-                  <div className="text-center relative z-10">
-                    <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">IBP</div>
-                    <div className="text-lg font-bold text-emerald-100 tracking-wider">Platform</div>
-                  </div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent animate-pulse" />
-                  <div className="absolute inset-8 rounded-full border-2 border-white/20" />
-                  <div className="absolute inset-16 rounded-full border-2 border-white/10" />
-                </div>
+                
 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-xl shadow-blue-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                  </div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center shadow-xl shadow-purple-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  </div>
-                  <div className="absolute top-1/2 -translate-y-1/2 left-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-xl shadow-amber-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                  </div>
-                  <div className="absolute top-1/2 -translate-y-1/2 right-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center shadow-xl shadow-pink-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                  </div>
-                </div>
+                
 
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 text-white px-8 py-5 rounded-3xl shadow-2xl shadow-green-500/60 font-black text-xl md:text-2xl whitespace-nowrap border-4 border-white/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <span>{lang === "en" ? "Unified Planning" : "การวางแผนแบบรวม"}</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
