@@ -454,7 +454,7 @@ export default function Customer360Page() {
                 <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Unified Customer Intelligence" : "ข่าวกรองลูกค้าแบบรวม"}</span>
               </div>
               <div className="space-y-6">
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
+                <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] text-balance tracking-tight lg:text-8xl">
                   {t.hero.title}
                 </h1>
                 <div className="h-2 w-40 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-full" />
@@ -474,16 +474,7 @@ export default function Customer360Page() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-600/20 blur-2xl animate-pulse" />
                 
                 {/* Center Hub */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-2xl shadow-indigo-500/60 z-10 border-4 border-white/20">
-                  <div className="text-center relative z-10">
-                    <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">360°</div>
-                    <div className="text-lg font-bold text-indigo-100 tracking-wider">Customer</div>
-                  </div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent animate-pulse" />
-                  {/* Inner rings */}
-                  <div className="absolute inset-8 rounded-full border-2 border-white/20" />
-                  <div className="absolute inset-16 rounded-full border-2 border-white/10" />
-                </div>
+                
 
                 {/* Orbiting Data Sources */}
                 <div className="relative w-full h-96">
@@ -537,7 +528,7 @@ export default function Customer360Page() {
                 </div>
 
                 {/* Badge */}
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 text-white px-8 py-5 rounded-3xl shadow-2xl shadow-green-500/60 font-black text-xl md:text-2xl whitespace-nowrap border-4 border-white/30 backdrop-blur-sm">
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 text-white px-8 py-5 rounded-3xl shadow-2xl shadow-green-500/60 font-black text-xl md:text-2xl whitespace-nowrap border-4 border-white/30 backdrop-blur-sm my-44">
                   <div className="flex items-center gap-3">
                     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
