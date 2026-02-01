@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Globe, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe, ArrowRight, ChevronDown, X, Menu } from 'lucide-react'
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Navbar } from "@/components/navbar"
 
 const translations = {
   en: {
@@ -227,8 +228,6 @@ const translations = {
 export default function Customer360Page() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
-  const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 
   useEffect(() => {
@@ -244,201 +243,7 @@ export default function Customer360Page() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
       <FloatingChatButton />
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-lg">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-white hover:text-blue-100 transition-colors">
-              Ignite Idea
-            </Link>
-
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/#home" className="text-white/90 hover:text-white transition-colors">
-                {t.nav.home}
-              </Link>
-              <div
-                className="relative"
-                onMouseEnter={() => setServiceDropdownOpen(true)}
-                onMouseLeave={() => setServiceDropdownOpen(false)}
-              >
-                <Link
-                  href="/service/crm"
-                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
-                >
-                  {t.nav.service}
-                  <ChevronDown className="w-4 h-4" />
-                </Link>
-                {serviceDropdownOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
-                      <div className="grid grid-cols-3 gap-10">
-                        {/* Group 1 - Customer Experience & Sales Execution */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <circle cx="12" cy="12" r="6" />
-                                <circle cx="12" cy="12" r="2" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
-                              {t.nav.serviceGroups.group1.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-orange-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 2 - Strategic Planning & Intelligence */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
-                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
-                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
-                              {t.nav.serviceGroups.group2.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-blue-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 3 - Supply Chain & Operations */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-green-500 leading-tight">
-                              {t.nav.serviceGroups.group3.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-green-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      {/* Bottom CTA Section */}
-                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
-                        <button
-                          onClick={() => setScheduleModalOpen(true)}
-                          className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
-                        >
-                          Schedule Consultation
-                        </button>
-                        <Link
-                          href="/resources"
-                          className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
-                        >
-                          Download Case Study
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <Link href="/resources" className="text-white/90 hover:text-white transition-colors">
-                {t.nav.resources}
-              </Link>
-              <Link href="/about" className="text-white/90 hover:text-white transition-colors">
-                {t.nav.about}
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm rounded-full p-1">
-                <button
-                  onClick={() => setLang("th")}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    lang === "th" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  TH
-                </button>
-                <button
-                  onClick={() => setLang("en")}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    lang === "en" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  EN
-                </button>
-              </div>
-
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
-                aria-label="Toggle menu"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
-
-          {mobileMenuOpen && (
-            <div className="md:hidden border-t border-white/10 py-4 backdrop-blur-xl bg-white/95">
-              <div className="flex flex-col space-y-4">
-                <Link href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
-                  {t.nav.home}
-                </Link>
-                <div className="px-4">
-                  <button
-                    onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
-                    className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 transition-colors py-2"
-                  >
-                    {t.nav.service}
-                    <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                </div>
-                <Link href="/resources" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
-                  {t.nav.resources}
-                </Link>
-                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">
-                  {t.nav.about}
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
-      {/* Floating Call Button */}
-      <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
