@@ -22,7 +22,7 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
@@ -114,7 +114,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
@@ -675,7 +675,7 @@ export default function AboutPage() {
                     </Link>
                   </li>
                   <li key="service2">
-                    <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                    <Link href="/service/customer-services-centre" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[3].name}
                     </Link>

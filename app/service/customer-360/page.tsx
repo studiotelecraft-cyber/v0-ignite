@@ -23,7 +23,7 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
@@ -128,7 +128,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
           ],
         },
@@ -604,7 +604,7 @@ export default function Customer360Page() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>

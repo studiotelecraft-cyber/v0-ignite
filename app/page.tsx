@@ -23,7 +23,7 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
@@ -149,7 +149,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
@@ -686,7 +686,7 @@ export default function Home() {
               </Link>
 
               {/* Customer Service Solution */}
-              <Link href="/service/call-center" className="block">
+              <Link href="/service/customer-services-centre" className="block">
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
@@ -847,7 +847,7 @@ export default function Home() {
                     </li>
                     <li>
                       <Link
-                        href="/service/call-center"
+                        href="/service/customer-services-centre"
                         className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
                       >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
