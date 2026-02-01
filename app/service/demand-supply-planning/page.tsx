@@ -30,8 +30,8 @@ const translations = {
         group2: {
           title: "Strategic Planning & Intelligence",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
             { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
@@ -39,7 +39,7 @@ const translations = {
           title: "Supply Chain & Operations",
           items: [
             { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/data-management" },
+            { name: "Production Planning", href: "/service/production-planning" },
           ],
         },
       },

@@ -31,7 +31,7 @@ const translations = {
           title: "Strategic Planning & Intelligence",
           items: [
             { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
             { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
