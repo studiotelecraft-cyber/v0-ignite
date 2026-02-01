@@ -560,9 +560,13 @@ export default function Home() {
       </nav>
 
       <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/images/hero-banner-vdo.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/images/Hompage_HeroIMG_001.png" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/50 to-blue-950/60" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
