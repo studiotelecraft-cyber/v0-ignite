@@ -476,11 +476,8 @@ export default function LeadToCashPage() {
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] text-balance">{t.hero.title}</h1>
               <p className="text-xl text-blue-100 leading-relaxed max-w-xl">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={() => setScheduleModalOpen(true)} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 shadow-xl shadow-blue-500/30 text-lg">
+                <Button onClick={scrollToContact} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 shadow-xl shadow-blue-500/30 text-lg">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button onClick={scrollToContact} size="lg" variant="outline" className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 rounded-full px-8 text-lg">
-                  {lang === "en" ? "Learn More" : "เรียนรู้เพิ่มเติม"}
                 </Button>
               </div>
             </div>
