@@ -470,46 +470,14 @@ export default function CustomerServicesCentrePage() {
             <div className="relative">
               {/* AI-Human Hybrid Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-600/20 blur-2xl animate-pulse" />
                 
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-purple-500 flex items-center justify-center shadow-2xl shadow-purple-500/60 z-10 border-4 border-white/20">
-                  <div className="text-center relative z-10">
-                    <div className="text-5xl font-black text-white mb-2 drop-shadow-lg">AI+Human</div>
-                    <div className="text-lg font-bold text-purple-100 tracking-wider">Service</div>
-                  </div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-transparent animate-pulse" />
-                  <div className="absolute inset-8 rounded-full border-2 border-white/20" />
-                  <div className="absolute inset-16 rounded-full border-2 border-white/10" />
-                </div>
+                
+                
 
                 {/* Orbiting Service Channels */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]">
-                  {/* Phone */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-xl shadow-blue-500/50 border-2 border-white/30">
-                    <Phone className="w-10 h-10 text-white" />
-                  </div>
-                  {/* Chat */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center shadow-xl shadow-green-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                  </div>
-                  {/* Email */}
-                  <div className="absolute top-1/2 -translate-y-1/2 left-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-xl shadow-amber-500/50 border-2 border-white/30">
-                    <Mail className="w-10 h-10 text-white" />
-                  </div>
-                  {/* Social */}
-                  <div className="absolute top-1/2 -translate-y-1/2 right-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-600 flex items-center justify-center shadow-xl shadow-pink-500/50 border-2 border-white/30">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
-                  </div>
-                </div>
+                
 
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 text-white px-8 py-5 rounded-3xl shadow-2xl shadow-green-500/60 font-black text-xl md:text-2xl whitespace-nowrap border-4 border-white/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <span>{lang === "en" ? "24/7 Omnichannel" : "ทุกช่องทาง 24/7"}</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
