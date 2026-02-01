@@ -484,62 +484,7 @@ export default function LeadToCashPage() {
 
             <div className="relative">
               {/* Flow Visualization */}
-              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 shadow-2xl">
-                <div className="space-y-6">
-                  {/* Lead */}
-                  <div className="flex items-center gap-4 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-2xl p-4">
-                    <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/50">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-green-100 font-bold text-lg">Lead</div>
-                      <div className="text-green-200/70 text-sm">{lang === "en" ? "Qualification" : "คุณสมบัติ"}</div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-green-300" />
-                  </div>
-
-                  {/* Quote */}
-                  <div className="flex items-center gap-4 bg-gradient-to-r from-blue-500/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/50">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-blue-100 font-bold text-lg">Quote</div>
-                      <div className="text-blue-200/70 text-sm">{lang === "en" ? "Pricing & Proposal" : "ราคาและข้อเสนอ"}</div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-blue-300" />
-                  </div>
-
-                  {/* Order */}
-                  <div className="flex items-center gap-4 bg-gradient-to-r from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-4">
-                    <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/50">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-purple-100 font-bold text-lg">Order</div>
-                      <div className="text-purple-200/70 text-sm">{lang === "en" ? "Fulfillment" : "การปฏิบัติตาม"}</div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-purple-300" />
-                  </div>
-
-                  {/* Payment */}
-                  <div className="flex items-center gap-4 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-400/30 rounded-2xl p-4">
-                    <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/50">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-amber-100 font-bold text-lg">Cash</div>
-                      <div className="text-amber-200/70 text-sm">{lang === "en" ? "Payment Collection" : "การรับชำระเงิน"}</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Success Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-green-400 to-green-600 text-white px-6 py-3 rounded-2xl shadow-2xl shadow-green-500/50 font-bold">
-                  <div className="text-2xl">100%</div>
-                  <div className="text-xs">{lang === "en" ? "Automated" : "อัตโนมัติ"}</div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -482,70 +482,7 @@ export default function FieldSalesPage() {
 
             <div className="relative">
               {/* Mobile Field Sales Visualization */}
-              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 shadow-2xl">
-                <div className="space-y-6">
-                  {/* Mobile Device Frame */}
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border-2 border-blue-400/30 shadow-xl">
-                    <div className="space-y-4">
-                      {/* Customer Visit Card */}
-                      <div className="bg-gradient-to-r from-green-500/30 to-emerald-600/30 backdrop-blur-sm border border-green-400/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center shadow-lg">
-                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-green-100 font-bold text-sm">Next Visit</div>
-                            <div className="text-green-200/70 text-xs">2.5 km away</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Real-time Data */}
-                      <div className="bg-gradient-to-r from-blue-500/30 to-blue-600/30 backdrop-blur-sm border border-blue-400/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
-                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-blue-100 font-bold text-sm">Customer Data</div>
-                            <div className="text-blue-200/70 text-xs">Real-time sync</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Route Optimization */}
-                      <div className="bg-gradient-to-r from-purple-500/30 to-purple-600/30 backdrop-blur-sm border border-purple-400/40 rounded-xl p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center shadow-lg">
-                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-purple-100 font-bold text-sm">Route Optimized</div>
-                            <div className="text-purple-200/70 text-xs">8 visits today</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20">
-                      <div className="text-2xl font-bold text-green-400">95%</div>
-                      <div className="text-xs text-green-200">Visit Rate</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20">
-                      <div className="text-2xl font-bold text-blue-400">40%</div>
-                      <div className="text-xs text-blue-200">Time Saved</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-blue-400 to-blue-600 text-white px-5 py-3 rounded-2xl shadow-2xl shadow-blue-500/50 font-bold text-sm">
-                  {lang === "en" ? "On-The-Go" : "ระหว่างเดินทาง"}
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

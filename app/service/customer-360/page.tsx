@@ -477,65 +477,10 @@ export default function Customer360Page() {
                 
 
                 {/* Orbiting Data Sources */}
-                <div className="relative w-full h-96">
-                  {/* Sales */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-gradient-to-br from-blue-500/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-4 w-32 shadow-lg">
-                    <div className="w-10 h-10 mx-auto rounded-full bg-blue-500 flex items-center justify-center mb-2 shadow-lg shadow-blue-500/50">
-                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <div className="text-blue-100 text-xs font-semibold text-center">Sales</div>
-                  </div>
-
-                  {/* Service */}
-                  <div className="absolute top-1/2 right-0 -translate-y-1/2 bg-gradient-to-br from-green-500/20 to-green-600/20 backdrop-blur-sm border border-green-400/30 rounded-2xl p-4 w-32 shadow-lg">
-                    <div className="w-10 h-10 mx-auto rounded-full bg-green-500 flex items-center justify-center mb-2 shadow-lg shadow-green-500/50">
-                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    </div>
-                    <div className="text-green-100 text-xs font-semibold text-center">Service</div>
-                  </div>
-
-                  {/* Marketing */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-gradient-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-4 w-32 shadow-lg">
-                    <div className="w-10 h-10 mx-auto rounded-full bg-purple-500 flex items-center justify-center mb-2 shadow-lg shadow-purple-500/50">
-                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
-                    </div>
-                    <div className="text-purple-100 text-xs font-semibold text-center">Marketing</div>
-                  </div>
-
-                  {/* Commerce */}
-                  <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-br from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-400/30 rounded-2xl p-4 w-32 shadow-lg">
-                    <div className="w-10 h-10 mx-auto rounded-full bg-amber-500 flex items-center justify-center mb-2 shadow-lg shadow-amber-500/50">
-                      <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                    </div>
-                    <div className="text-amber-100 text-xs font-semibold text-center">Commerce</div>
-                  </div>
-
-                  {/* Connection Lines */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{zIndex: 1}}>
-                    <line x1="50%" y1="20%" x2="50%" y2="50%" stroke="rgba(99, 102, 241, 0.3)" strokeWidth="2" strokeDasharray="5,5">
-                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="85%" y1="50%" x2="50%" y2="50%" stroke="rgba(34, 197, 94, 0.3)" strokeWidth="2" strokeDasharray="5,5">
-                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="50%" y1="80%" x2="50%" y2="50%" stroke="rgba(168, 85, 247, 0.3)" strokeWidth="2" strokeDasharray="5,5">
-                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="15%" y1="50%" x2="50%" y2="50%" stroke="rgba(245, 158, 11, 0.3)" strokeWidth="2" strokeDasharray="5,5">
-                      <animate attributeName="stroke-dashoffset" from="0" to="10" dur="1s" repeatCount="indefinite"/>
-                    </line>
-                  </svg>
-                </div>
+                
 
                 {/* Badge */}
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 text-white px-8 py-5 rounded-3xl shadow-2xl shadow-green-500/60 font-black text-xl md:text-2xl whitespace-nowrap border-4 border-white/30 backdrop-blur-sm my-44">
-                  <div className="flex items-center gap-3">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <span>{lang === "en" ? "Single Source of Truth" : "แหล่งความจริงเดียว"}</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
