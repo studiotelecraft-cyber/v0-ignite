@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Globe, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe, ArrowRight, ChevronDown, X, Menu } from 'lucide-react'
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Navbar } from "@/components/navbar"
 
 const translations = {
   en: {
@@ -329,7 +330,7 @@ export default function ProductionPlanningPage() {
                         {/* Group 3 - Supply Chain & Operations */}
                         <div>
                           <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30">
                               <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -451,7 +452,9 @@ export default function ProductionPlanningPage() {
             <div className="space-y-10">
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500/30 to-red-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-orange-400/40 shadow-xl shadow-orange-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Manufacturing Excellence" : "ความเป็นเลิศในการผลิต"}</span>
+                <span className="text-white text-lg md:text-xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
+                  {lang === "en" ? "Manufacturing Excellence" : "ความเป็นเลิศในการผลิต"}
+                </span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
@@ -470,12 +473,6 @@ export default function ProductionPlanningPage() {
             <div className="relative">
               <div className="relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-orange-500/20 to-red-600/20 blur-2xl animate-pulse" />
-                
-                
-
-                
-
-                
               </div>
             </div>
           </div>

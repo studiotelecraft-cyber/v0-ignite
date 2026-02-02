@@ -5,11 +5,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Globe, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe, ArrowRight, ChevronDown, X, Menu } from 'lucide-react'
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Navbar } from "@/components/navbar"
 
 const translations = {
   en: {
@@ -170,7 +171,7 @@ const translations = {
       },
       benefit3: {
         title: "เพิ่มความสามารถในการปรับตัว",
-        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปรับตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งทื่อ",
+        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปรับตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งที่น่า",
       },
     },
     summary: {
@@ -331,7 +332,7 @@ export default function IntegratedBusinessPlanningPage() {
                         {/* Group 3 - Supply Chain & Operations */}
                         <div>
                           <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30">
                               <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -472,12 +473,6 @@ export default function IntegratedBusinessPlanningPage() {
             <div className="relative">
               <div className="relative">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-600/20 blur-2xl animate-pulse" />
-                
-                
-
-                
-
-                
               </div>
             </div>
           </div>
