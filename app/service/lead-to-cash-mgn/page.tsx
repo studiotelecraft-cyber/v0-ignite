@@ -23,23 +23,23 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
           title: "Strategic Planning & Intelligence",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "Supply Chain & Operations",
           items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
+            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
+            { name: "Production Planning", href: "/service/production-planning" },
           ],
         },
       },
@@ -130,7 +130,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
@@ -139,7 +139,7 @@ const translations = {
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
@@ -461,82 +461,172 @@ export default function LeadToCashPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent" />
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
 
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight text-balance">{t.hero.title}</h1>
-              <p className="text-xl text-white/90 leading-relaxed">{t.hero.subtitle}</p>
-              <Button onClick={() => setScheduleModalOpen(true)} size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 shadow-lg">
-                {lang === "en" ? "Contact Us" : "ติดต่อเรา"} <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-blue-200 text-sm font-medium">{lang === "en" ? "End-to-End Revenue Management" : "การจัดการรายได้แบบครบวงจร"}</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] text-balance">{t.hero.title}</h1>
+              <p className="text-xl text-blue-100 leading-relaxed max-w-xl">{t.hero.subtitle}</p>
+              <div className="flex flex-wrap gap-4">
+                <Button onClick={scrollToContact} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 shadow-xl shadow-blue-500/30 text-lg">
+                  {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
             </div>
 
             <div className="relative">
+              {/* Flow Visualization */}
               
             </div>
           </div>
         </div>
-
-        {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            
-          </svg>
-        </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16 text-balance">
-            {t.benefitsTitle}
-          </h2>
+      <section className="py-24 px-6 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
+              {t.benefitsTitle}
+            </h2>
+            <div className="h-1.5 w-32 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 mx-auto rounded-full" />
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Benefit 1 */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900">{t.benefits.benefit1.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{t.benefits.benefit1.desc}</p>
+            {/* Benefit 1 - Seamless Flow */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-white rounded-3xl p-8 shadow-lg border border-blue-100 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">{t.benefits.benefit1.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{t.benefits.benefit1.desc}</p>
+                
+                {/* Icon decoration */}
+                <div className="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-500" />
+              </div>
             </div>
 
-            {/* Benefit 2 */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900">{t.benefits.benefit2.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{t.benefits.benefit2.desc}</p>
+            {/* Benefit 2 - Reduced Handoffs */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-white rounded-3xl p-8 shadow-lg border border-purple-100 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 shadow-lg shadow-purple-500/30">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">{t.benefits.benefit2.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{t.benefits.benefit2.desc}</p>
+                
+                {/* Icon decoration */}
+                <div className="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-500" />
+              </div>
             </div>
 
-            {/* Benefit 3 */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900">{t.benefits.benefit3.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{t.benefits.benefit3.desc}</p>
+            {/* Benefit 3 - Speed & Accuracy */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-white rounded-3xl p-8 shadow-lg border border-amber-100 hover:shadow-2xl transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">{t.benefits.benefit3.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{t.benefits.benefit3.desc}</p>
+                
+                {/* Icon decoration */}
+                <div className="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-500" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Summary Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="container mx-auto max-w-5xl">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">{t.summary.title}</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">{t.summary.description}</p>
+      {/* Summary Section with Visual Process */}
+      <section className="py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-[3rem] p-12 md:p-16 shadow-2xl border border-blue-800/30 relative overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px'}} />
+            </div>
+            
+            <div className="relative space-y-8">
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30">
+                <span className="text-blue-200 text-sm font-semibold uppercase tracking-wider">{t.summary.title}</span>
+              </div>
+              <p className="text-xl md:text-2xl text-blue-50 leading-relaxed max-w-4xl">{t.summary.description}</p>
+              
+              {/* Visual Process Indicators */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30">
+                    <span className="text-3xl font-bold text-white">1</span>
+                  </div>
+                  <div className="text-green-300 font-semibold text-sm">Lead Gen</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <span className="text-3xl font-bold text-white">2</span>
+                  </div>
+                  <div className="text-blue-300 font-semibold text-sm">Quote & CPQ</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                    <span className="text-3xl font-bold text-white">3</span>
+                  </div>
+                  <div className="text-purple-300 font-semibold text-sm">Order Mgmt</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                    <span className="text-3xl font-bold text-white">4</span>
+                  </div>
+                  <div className="text-amber-300 font-semibold text-sm">Billing & Cash</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Best For Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-balance">{t.bestFor.title}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+      <section className="py-24 px-6 bg-gradient-to-br from-blue-50/50 via-white to-slate-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">{t.bestFor.title}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{lang === "en" ? "Perfect fit for organizations looking to streamline their revenue operations" : "เหมาะสำหรับองค์กรที่ต้องการปรับปรุงการดำเนินงานรายได้"}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
             {t.bestFor.items.map((item, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100">
-                <p className="text-lg font-semibold text-gray-900">{item}</p>
+              <div key={idx} className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500" />
+                <div className="relative bg-white rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl h-full flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                    <span className="text-2xl font-bold text-white">{idx + 1}</span>
+                  </div>
+                  <p className="text-xl font-bold text-gray-900 leading-tight">{item}</p>
+                  
+                  {/* Checkmark icon */}
+                  <div className="absolute top-6 right-6 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -544,11 +634,57 @@ export default function LeadToCashPage() {
       </section>
 
       {/* Details Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800">
-        <div className="container mx-auto max-w-5xl">
-          <div className="space-y-6 text-white">
-            <p className="text-lg leading-relaxed">{t.detailsSection.paragraph1}</p>
-            <p className="text-lg leading-relaxed">{t.detailsSection.paragraph2}</p>
+      <section className="py-24 px-6 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '48px 48px'}} />
+        </div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="space-y-8 text-white">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/30 mb-6">
+                  <span className="text-blue-200 text-sm font-semibold uppercase tracking-wider">{lang === "en" ? "How It Works" : "วิธีการทำงาน"}</span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 text-balance">{lang === "en" ? "Transform Your Revenue Management" : "เปลี่ยนแปลงการจัดการรายได้ของคุณ"}</h2>
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl text-blue-100 leading-relaxed">{t.detailsSection.paragraph1}</p>
+                <p className="text-lg md:text-xl text-blue-100 leading-relaxed">{t.detailsSection.paragraph2}</p>
+              </div>
+
+              <Button onClick={() => setScheduleModalOpen(true)} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 shadow-xl shadow-blue-500/30">
+                {lang === "en" ? "Schedule Demo" : "จองการสาธิต"} <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+
+            {/* Right: Stats/Metrics */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+                <div className="text-5xl font-bold text-blue-400 mb-2">85%</div>
+                <div className="text-blue-200 text-sm leading-tight">{lang === "en" ? "Faster Quote Generation" : "การสร้างใบเสนอราคาเร็วขึ้น"}</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+                <div className="text-5xl font-bold text-purple-400 mb-2">60%</div>
+                <div className="text-purple-200 text-sm leading-tight">{lang === "en" ? "Reduced Manual Errors" : "ลดข้อผิดพลาดด้วยตนเอง"}</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+                <div className="text-5xl font-bold text-green-400 mb-2">40%</div>
+                <div className="text-green-200 text-sm leading-tight">{lang === "en" ? "Faster Revenue Recognition" : "การรับรู้รายได้เร็วขึ้น"}</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+                <div className="text-5xl font-bold text-amber-400 mb-2">100%</div>
+                <div className="text-amber-200 text-sm leading-tight">{lang === "en" ? "Cross-Dept Visibility" : "การมองเห็นข้ามแผนก"}</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -624,7 +760,7 @@ export default function LeadToCashPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>

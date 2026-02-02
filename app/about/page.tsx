@@ -22,23 +22,23 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
           title: "Strategic Planning & Intelligence",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "Supply Chain & Operations",
           items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
+            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
+            { name: "Production Planning", href: "/service/production-planning" },
           ],
         },
       },
@@ -114,7 +114,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
@@ -123,13 +123,13 @@ const translations = {
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
@@ -534,7 +534,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="dataSecurity">
               <Lock className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Data Security" : "ความปลอดภัยของข้อมูล"}
@@ -546,7 +546,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="fullTransparency">
               <Eye className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Full Transparency" : "ความโปร่งใสเต็มรูปแบบ"}
@@ -558,7 +558,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="yourRights">
               <Users className="w-10 h-10 text-white mb-4" />
               <h3 className="text-white font-bold text-lg mb-2">
                 {lang === "en" ? "Your Rights" : "สิทธิของคุณ"}
@@ -675,7 +675,7 @@ export default function AboutPage() {
                     </Link>
                   </li>
                   <li key="service2">
-                    <Link href="/service/call-center" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                    <Link href="/service/customer-services-centre" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                       <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
                       {t.nav.serviceGroups.group1.items[3].name}
                     </Link>

@@ -49,41 +49,41 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Contractual Sales for Manufacturing",
-      subtitle: "Manages complex pricing, volume discounts, and long-term contracts. Ensures contract compliance across orders and invoices.",
+      title: "Sales & Operations Planning (S&OP)",
+      subtitle: "Brings sales, operations, finance, and marketing together to establish shared revenue and growth goals. Ensures operational capacity matches sales commitments.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Contractual Sales Help Your Organization?",
+    benefitsTitle: "How Can S&OP Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Manages complex pricing, volume discounts, and long-term contracts",
-        desc: "Handle sophisticated pricing strategies including tiered discounts, volume-based pricing, and promotional offers all managed within the sales agreements framework. Automate price calculations based on contract terms and ensure consistency across all transactions.",
+        title: "Aligns Departments & Prevents Overselling",
+        desc: "Brings sales, operations, finance, and marketing together to establish shared revenue and growth goals across the entire organization. Ensures operational capacity matches sales commitments to avoid supply chain issues and delivery failures. Enable cross-functional collaboration through a single source of truth that connects sales data with supply chain systems.",
       },
       benefit2: {
-        title: "Ensures contract compliance across orders and invoices",
-        desc: "Maintain full visibility into contract terms, pricing, and conditions through every stage of the order-to-cash process. Automated compliance checks prevent orders that violate contract terms and ensure all invoices reflect agreed-upon pricing and conditions.",
+        title: "Improves Business Agility & Enhances Decision-Making",
+        desc: "Scenario management helps teams prepare for unexpected market changes and disruptions with pre-planned responses. Data-driven planning processes provide visibility across departments for better strategic choices and resource allocation. Enable real-time collaboration between departments and automated scenario planning to optimize operations.",
       },
       benefit3: {
-        title: "Improves forecasting accuracy for manufacturing demand",
-        desc: "Leverage time-phased agreement metrics and historical order realization data to predict demand patterns with greater precision. Better forecasts enable manufacturing teams to optimize production schedules and inventory levels while improving program profitability.",
+        title: "Reduces Surprises",
+        desc: "Proactive planning ensures materials, staff, and infrastructure are ready to meet forecasted demand before it arrives. Monthly S&OP cycles including demand planning, supply planning, pre-meetings, and executive reviews keep everyone aligned. Enable organizations to meet customer demands profitably by synchronizing sales forecasts with operational capabilities.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Contractual Sales for Manufacturing (part of Manufacturing Cloud for Sales) is specifically designed for manufacturers who manage run-rate business through sales agreements and long-term contracts. It unifies sales agreements, order management, and contract lifecycle management within the CRM platform. The solution provides visibility into time-phased agreement metrics, captures order realization data, and enables collaboration between sales, operations, and product teams to improve forecast accuracy and program profitability.",
+      description: "Sales & Operations Planning is a collaborative business process that aligns sales forecasts with operational capabilities to ensure organizations can meet customer demands profitably. The S&OP process typically includes demand planning, supply planning, pre-meetings, and executive reviews on a monthly cycle. Salesforce-integrated S&OP solutions (like ketteQ, Rootstock, and Manufacturing Cloud) connect sales data with supply chain systems to create a single source of truth, enabling real-time collaboration between departments and automated scenario planning to optimize resource allocation and prevent costly misalignments.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "Manufacturing & industrial enterprises",
-        "Businesses with dealer, distributor, or bulk contracts",
+        "Manufacturing & distribution companies",
+        "Organizations facing forecast vs capacity mismatch",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Contractual Sales for Manufacturing transforms how manufacturers manage complex business-to-business relationships by providing a unified platform for sales agreements and long-term contract management. The solution breaks down silos between sales, operations, and finance teams, enabling real-time visibility into contract performance and compliance across the entire revenue cycle.",
+        "Sales & Operations Planning transforms how organizations align demand with supply by creating a collaborative framework that connects sales, operations, finance, and marketing. The monthly S&OP cycle brings cross-functional teams together to review forecasts, assess capacity, and make strategic decisions about resource allocation. By integrating Salesforce sales data with supply chain systems, organizations create a single source of truth that enables data-driven decision-making.",
       paragraph2:
-        "By combining advanced sales agreement capabilities with order management and contract lifecycle management, Contractual Sales enables manufacturers to optimize pricing strategies, improve contract compliance, and make data-driven forecasting decisions. Manufacturing teams can align production planning with actual contract demand, while sales teams maintain stronger customer relationships through transparent, well-managed contractual commitments.",
+        "With automated scenario planning and real-time collaboration capabilities, S&OP solutions help organizations prepare for market changes and disruptions before they occur. The process reduces surprises by ensuring materials, staff, and infrastructure are aligned with forecasted demand. By synchronizing sales commitments with operational capabilities, S&OP prevents overselling, optimizes resource utilization, and enables profitable growth while maintaining high service levels.",
     },
     contact: {
       title: "Contact Us",
@@ -100,7 +100,7 @@ const translations = {
     },
     booking: {
       title: "Book a Consultation",
-      subtitle: "Our Contractual Sales experts are ready to help optimize your manufacturing contracts",
+      subtitle: "Our S&OP experts are ready to help align your sales and operations",
       firstName: "Full Name",
       email: "Email",
       organization: "Organization",
@@ -110,7 +110,7 @@ const translations = {
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your contract management challenges and discover practical solutions",
+      subtitle: "Discuss your sales and operations planning challenges and discover alignment solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -137,7 +137,7 @@ const translations = {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/integrated-business-planning" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
+            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/sales-operations-planning" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
@@ -145,7 +145,7 @@ const translations = {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
             { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
+            { name: "การวางแผนการผลิต", href: "/service/production-planning" },
           ],
         },
       },
@@ -154,41 +154,41 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "การขายตามสัญญาสำหรับการผลิต",
-      subtitle: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
+      title: "การวางแผนการขายและการดำเนินงาน (S&OP)",
+      subtitle: "รวมแผนกการขาย การดำเนินงาน การเงิน และการตลาดเข้าด้วยกันเพื่อกำหนดเป้าหมายรายได้และการเติบโตร่วมกัน ทำให้กำลังการผลิตตรงกับคำมั่นสัญญาการขาย",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การขายตามสัญญาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "S&OP สามารถช่วยองค์กรของคุณได้อย่างไร",
     benefits: {
       benefit1: {
-        title: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว",
-        desc: "จัดการกลยุทธ์การกำหนดราคาที่ซับซ้อนรวมถึงส่วนลดแบบเรียงลำดับ การกำหนดราคาตามปริมาณ และข้อเสนออื่นๆ ทั้งหมดที่จัดการภายในกรอบข้อตกลงการขาย อัตโนมัติการคำนวณราคาตามเงื่อนไขของสัญญาและตรวจสอบความสอดคล้องในทุกธุรกรรม",
+        title: "จัดเรียงแผนกและป้องกันการขายเกิน",
+        desc: "รวมแผนกการขาย การดำเนินงาน การเงิน และการตลาดเข้าด้วยกันเพื่อกำหนดเป้าหมายรายได้และการเติบโตร่วมกันทั่วทั้งองค์กร ทำให้กำลังการผลิตตรงกับคำมั่นสัญญาการขายเพื่อหลีกเลี่ยงปัญหาห่วงโซ่อุปทานและความล้มเหลวในการส่งมอบ เปิดใช้งานความร่วมมือข้ามสายงานผ่านแหล่งความจริงเดียวที่เชื่อมต่อข้อมูลการขายกับระบบห่วงโซ่อุปทาน",
       },
       benefit2: {
-        title: "ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
-        desc: "รักษาการมองเห็นเต็มไปในเงื่อนไขของสัญญา การกำหนดราคา และเงื่อนไขทั่วทั้งทุกขั้นตอนของกระบวนการคำสั่งซื้อจนถึงการจ่ายเงิน การตรวจสอบการปฏิบัติตามข้อบังคับอัตโนมัติช่วยป้องกันคำสั่งซื้อที่ละเมิดเงื่อนไขของสัญญาและตรวจสอบให้แน่ใจว่าใบแจ้งหนี้ทั้งหมดสะท้อนการกำหนดราคาและเงื่อนไขที่ตกลงกัน",
+        title: "ปรับปรุงความคล่องตัวทางธุรกิจและเพิ่มประสิทธิภาพการตัดสินใจ",
+        desc: "การจัดการสถานการณ์ช่วยให้ทีมเตรียมพร้อมสำหรับการเปลี่ยนแปลงของตลาดที่ไม่คาดคิดและการหยุดชะงักด้วยการตอบสนองที่วางแผนไว้ล่วงหน้า กระบวนการวางแผนที่ขับเคลื่อนด้วยข้อมูลให้การมองเห็นในทุกแผนกเพื่อตัดสินใจเชิงกลยุทธ์และการจัดสรรทรัพยากรที่ดีขึ้น เปิดใช้งานความร่วมมือแบบเรียลไทม์ระหว่างแผนกและการวางแผนสถานการณ์อัตโนมัติเพื่อเพิ่มประสิทธิภาพการดำเนินงาน",
       },
       benefit3: {
-        title: "ปรับปรุงความแม่นยำของการพยากรณ์สำหรับความต้องการในการผลิต",
-        desc: "ใช้ประโยชน์จากเมตริกข้อตกลงแบบเรียงลำดับเวลาและข้อมูลการรับรู้คำสั่งซื้อทางประวัติศาสตร์เพื่อคาดการณ์รูปแบบความต้องการได้อย่างแม่นยำยิ่งขึ้น การพยากรณ์ที่ดีขึ้นช่วยให้ทีมการผลิตสามารถปรับปรุงตารางเวลาการผลิตและระดับสินค้าคงคลังในขณะที่ปรับปรุงความสามารถในการทำกำไรของโปรแกรม",
+        title: "ลดความประหลาดใจ",
+        desc: "การวางแผนเชิงรุกรับประกันว่าวัสดุ พนักงาน และโครงสร้างพื้นฐานพร้อมที่จะตอบสนองความต้องการที่พยากรณ์ไว้ก่อนที่จะมาถึง วงจร S&OP รายเดือนรวมถึงการวางแผนความต้องการ การวางแผนอุปทาน การประชุมเตรียมการ และการทบทวนของผู้บริหารเพื่อให้ทุกคนสอดคล้องกัน เปิดใช้งานองค์กรเพื่อตอบสนองความต้องการของลูกค้าอย่างทำกำไรโดยซิงโครไนซ์การพยากรณ์การขายกับความสามารถในการดำเนินงาน",
       },
     },
     summary: {
       title: "สรุป",
-      description: "การขายตามสัญญาสำหรับการผลิต (ส่วนหนึ่งของ Manufacturing Cloud for Sales) ออกแบบมาโดยเฉพาะสำหรับผู้ผลิตที่จัดการธุรกิจแบบ run-rate ผ่านข้อตกลงการขายและสัญญาระยะยาว ซึ่งรวมการจัดการข้อตกลงการขาย การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญาภายในแพลตฟอร์ม CRM นอกจากนี้ยังมองเห็นแบบเรียงลำดับเวลา ข้อมูลการรับรู้คำสั่งซื้อ และสามารถทำงานร่วมกันระหว่างทีมการขาย การดำเนินงาน และผลิตภัณฑ์เพื่อปรับปรุงความแม่นยำของการพยากรณ์และความสามารถในการทำกำไรของโปรแกรม",
+      description: "การวางแผนการขายและการดำเนินงานเป็นกระบวนการทางธุรกิจแบบร่วมมือที่จัดเรียงการพยากรณ์การขายกับความสามารถในการดำเนินงานเพื่อให้องค์กรสามารถตอบสนองความต้องการของลูกค้าอย่างทำกำไร กระบวนการ S&OP โดยทั่วไปรวมถึงการวางแผนความต้องการ การวางแผนอุปทาน การประชุมเตรียมการ และการทบทวนของผู้บริหารในวงจรรายเดือน โซลูชั่น S&OP ที่รวมกับ Salesforce (เช่น ketteQ, Rootstock และ Manufacturing Cloud) เชื่อมต่อข้อมูลการขายกับระบบห่วงโซ่อุปทานเพื่อสร้างแหล่งความจริงเดียว เปิดใช้งานความร่วมมือแบบเรียลไทม์ระหว่างแผนกและการวางแผนสถานการณ์อัตโนมัติเพื่อเพิ่มประสิทธิภาพการจัดสรรทรัพยากรและป้องกันการไม่สอดคล้องกันที่มีค่าใช้จ่ายสูง",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "วิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "บริษัทการผลิตและการจัดจำหน่าย",
+        "องค์กรที่เผชิญกับความไม่สอดคล้องระหว่างการพยากรณ์กับกำลังการผลิต",
       ],
     },
     detailsSection: {
       paragraph1:
-        "การขายตามสัญญาสำหรับการผลิตแปลงวิธีการจัดการความสัมพันธ์ระหว่างธุรกิจของผู้ผลิตโดยการให้แพลตฟอร์มแบบรวมสำหรับการจัดการข้อตกลงการขายและสัญญาระยะยาว วิธีแก้ปัญหาช่วยทำลายสิ่งกีดขวางระหว่างทีมการขาย การดำเนินงาน และการเงิน ซึ่งช่วยให้สามารถมองเห็นแบบเรียลไทม์ในการปฏิบัติตามสัญญาและการปฏิบัติตามข้อบังคับทั่วทั้งรอบการสร้างรายได้ทั้งหมด",
+        "การวางแผนการขายและการดำเนินงานแปลงวิธีการที่องค์กรจัดเรียงความต้องการกับอุปทานโดยการสร้างกรอบความร่วมมือที่เชื่อมต่อการขาย การดำเนินงาน การเงิน และการตลาด วงจร S&OP รายเดือนนำทีมข้ามสายงานมารวมกันเพื่อทบทวนการพยากรณ์ ประเมินกำลังการผลิต และตัดสินใจเชิงกลยุทธ์เกี่ยวกับการจัดสรรทรัพยากร ด้วยการรวมข้อมูลการขาย Salesforce กับระบบห่วงโซ่อุปทาน องค์กรสร้างแหล่งความจริงเดียวที่เปิดใช้งานการตัดสินใจที่ขับเคลื่อนด้วยข้อมูล",
       paragraph2:
-        "ด้วยการรวมความสามารถของข้อตกลงการขายขั้นสูง การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญา การขายตามสัญญาช่วยให้ผู้ผลิตเพิ่มประสิทธิภาพกลยุทธ์การกำหนดราคา ปรับปรุงการปฏิบัติตามสัญญา และตัดสินใจพยากรณ์โดยใช้ข้อมูล ทีมการผลิตสามารถจัดเรียงการวางแผนการผลิตให้สอดคล้องกับความต้องการของสัญญาจริง ในขณะที่ทีมการขายรักษาความสัมพันธ์ลูกค้าที่แข็งแกร่งผ่านการจัดการการผูกพันที่โปร่งใส",
+        "ด้วยการวางแผนสถานการณ์อัตโนมัติและความสามารถในการทำงานร่วมกันแบบเรียลไทม์ โซลูชั่น S&OP ช่วยให้องค์กรเตรียมพร้อมสำหรับการเปลี่ยนแปลงของตลาดและการหยุดชะงักก่อนที่จะเกิดขึ้น กระบวนการลดความประหลาดใจโดยรับประกันว่าวัสดุ พนักงาน และโครงสร้างพื้นฐานสอดคล้องกับความต้องการที่พยากรณ์ไว้ ด้วยการซิงโครไนซ์คำมั่นสัญญาการขายกับความสามารถในการดำเนินงาน S&OP ป้องกันการขายเกิน เพิ่มประสิทธิภาพการใช้ทรัพยากร และเปิดใช้งานการเติบโตที่ทำกำไรในขณะที่รักษาระดับการบริการสูง",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -205,7 +205,7 @@ const translations = {
     },
     booking: {
       title: "จองการปรึกษา",
-      subtitle: "ผู้เชี่ยวชาญด้านการขายตามสัญญาของเราพร้อมที่จะช่วยปรับปรุงการจัดการสัญญาของคุณ",
+      subtitle: "ผู้เชี่ยวชาญด้าน S&OP ของเราพร้อมที่จะช่วยจัดเรียงการขายและการดำเนินงานของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
       organization: "องค์กร",
@@ -215,7 +215,7 @@ const translations = {
     },
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายในการจัดการสัญญาของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      subtitle: "อภิปรายความท้าทายด้านการวางแผนการขายและการดำเนินงานของคุณและค้นพบโซลูชั่นการจัดเรียง",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -225,7 +225,7 @@ const translations = {
   },
 }
 
-export default function ContractualSalesPage() {
+export default function SalesOperationsPlanningPage() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -330,7 +330,7 @@ export default function ContractualSalesPage() {
                         {/* Group 3 - Supply Chain & Operations */}
                         <div>
                           <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30">
+                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
                               <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
                                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -442,7 +442,7 @@ export default function ContractualSalesPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,32 +450,30 @@ export default function ContractualSalesPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400/40 shadow-xl shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-500/30 to-cyan-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-teal-400/40 shadow-xl shadow-teal-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Contract Lifecycle Management" : "การจัดการวงจรสัญญา"}</span>
+                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Demand-Supply Alignment" : "การจัดเรียงอุปสงค์-อุปทาน"}</span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 rounded-full" />
+                <div className="h-2 w-40 bg-gradient-to-r from-teal-400 via-cyan-400 to-teal-400 rounded-full" />
               </div>
-              <p className="text-2xl md:text-3xl text-cyan-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
+              <p className="text-2xl md:text-3xl text-teal-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-cyan-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-teal-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              {/* Contract Hub Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-2xl animate-pulse" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-teal-500/20 to-cyan-600/20 blur-2xl animate-pulse" />
                 
                 
 
-                {/* Contract Components */}
                 
 
                 
@@ -619,7 +617,7 @@ export default function ContractualSalesPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>
@@ -640,7 +638,7 @@ export default function ContractualSalesPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Contractual Sales implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Contractual Sales"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Sales & Operations Planning implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งานการวางแผนการขายและการดำเนินงาน"}</p>
               
               <div className="space-y-5">
                 <div>

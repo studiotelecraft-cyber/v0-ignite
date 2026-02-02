@@ -49,41 +49,42 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Contractual Sales for Manufacturing",
-      subtitle: "Manages complex pricing, volume discounts, and long-term contracts. Ensures contract compliance across orders and invoices.",
+      title: "Financial Planning & Analysis (FP&A)",
+      subtitle: "Improves budgeting, forecasting, and financial visibility. Enables real-time financial insights instead of static spreadsheets.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Contractual Sales Help Your Organization?",
+    benefitsTitle: "How Can FP&A Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Manages complex pricing, volume discounts, and long-term contracts",
-        desc: "Handle sophisticated pricing strategies including tiered discounts, volume-based pricing, and promotional offers all managed within the sales agreements framework. Automate price calculations based on contract terms and ensure consistency across all transactions.",
+        title: "Improves budgeting, forecasting, and financial visibility",
+        desc: "Transform financial planning from static spreadsheets into dynamic, data-driven processes. Leverage Salesforce operational data to create accurate budgets and forecasts that reflect real business activity. Provide finance teams with comprehensive visibility into financial performance across all business units and dimensions.",
       },
       benefit2: {
-        title: "Ensures contract compliance across orders and invoices",
-        desc: "Maintain full visibility into contract terms, pricing, and conditions through every stage of the order-to-cash process. Automated compliance checks prevent orders that violate contract terms and ensure all invoices reflect agreed-upon pricing and conditions.",
+        title: "Enables real-time financial insights instead of static spreadsheets",
+        desc: "Replace end-of-period manual reporting with continuous financial insights. Automatically sync operational data from Salesforce with financial systems to eliminate data entry errors and delays. Enable finance teams to access up-to-date financial information on-demand for faster decision-making.",
       },
       benefit3: {
-        title: "Improves forecasting accuracy for manufacturing demand",
-        desc: "Leverage time-phased agreement metrics and historical order realization data to predict demand patterns with greater precision. Better forecasts enable manufacturing teams to optimize production schedules and inventory levels while improving program profitability.",
+        title: "Aligns finance with business strategy and operational performance",
+        desc: "Connect financial plans directly to operational metrics and strategic initiatives. Enable finance teams to understand how business activities impact financial outcomes and adjust plans accordingly. Foster alignment between finance, sales, operations, and executive leadership through shared financial visibility.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Contractual Sales for Manufacturing (part of Manufacturing Cloud for Sales) is specifically designed for manufacturers who manage run-rate business through sales agreements and long-term contracts. It unifies sales agreements, order management, and contract lifecycle management within the CRM platform. The solution provides visibility into time-phased agreement metrics, captures order realization data, and enables collaboration between sales, operations, and product teams to improve forecast accuracy and program profitability.",
+      description: "Financial Planning & Analysis for Salesforce integrates financial planning capabilities directly with CRM data to create a unified planning platform. The solution connects operational data (from Salesforce) with financial systems (ERP, accounting software) to provide FP&A teams with accurate, real-time insights for budgeting, forecasting, and financial analysis. Solutions like Certinia (Salesforce-native) and third-party tools like Prophix, Cube, and OnPlan integrate seamlessly with Salesforce to automate data flow, eliminate manual processes, and enable finance teams to focus on strategic analysis rather than data compilation.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "Manufacturing & industrial enterprises",
-        "Businesses with dealer, distributor, or bulk contracts",
+        "CFO & Finance teams",
+        "Enterprises needing agile forecasting",
+        "Organizations moving toward data-driven finance",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Contractual Sales for Manufacturing transforms how manufacturers manage complex business-to-business relationships by providing a unified platform for sales agreements and long-term contract management. The solution breaks down silos between sales, operations, and finance teams, enabling real-time visibility into contract performance and compliance across the entire revenue cycle.",
+        "Financial Planning & Analysis transforms how organizations manage financial planning and forecasting by integrating Salesforce operational data with comprehensive financial planning tools. The solution eliminates the traditional disconnect between sales, operational, and financial data, enabling finance teams to base forecasts and budgets on real, current business activities rather than historical trends or manual estimates.",
       paragraph2:
-        "By combining advanced sales agreement capabilities with order management and contract lifecycle management, Contractual Sales enables manufacturers to optimize pricing strategies, improve contract compliance, and make data-driven forecasting decisions. Manufacturing teams can align production planning with actual contract demand, while sales teams maintain stronger customer relationships through transparent, well-managed contractual commitments.",
+        "By automating data flows between Salesforce and financial systems, FP&A solutions enable continuous planning, faster scenario analysis, and more accurate forecasting. Finance teams can respond quickly to business changes, evaluate the financial impact of strategic initiatives, and make data-driven decisions. This integration empowers CFOs and finance leaders to provide strategic guidance aligned with business performance while reducing the time spent on manual data compilation and reporting.",
     },
     contact: {
       title: "Contact Us",
@@ -100,7 +101,7 @@ const translations = {
     },
     booking: {
       title: "Book a Consultation",
-      subtitle: "Our Contractual Sales experts are ready to help optimize your manufacturing contracts",
+      subtitle: "Our FP&A experts are ready to help transform your financial planning",
       firstName: "Full Name",
       email: "Email",
       organization: "Organization",
@@ -110,7 +111,7 @@ const translations = {
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your contract management challenges and discover practical solutions",
+      subtitle: "Discuss your financial planning challenges and discover practical solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -136,7 +137,7 @@ const translations = {
         group2: {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/integrated-business-planning" },
+            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
@@ -144,7 +145,7 @@ const translations = {
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
@@ -154,41 +155,42 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "การขายตามสัญญาสำหรับการผลิต",
-      subtitle: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
+      title: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)",
+      subtitle: "ปรับปรุงการจัดทำงบประมาณ การพยากรณ์ และการมองเห็นทางการเงิน เปิดใช้งานข้อมูลเชิงลึกทางการเงินแบบเรียลไทม์แทนสเปรดชีตแบบคงที่",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การขายตามสัญญาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การวางแผนและวิเคราะห์ทางการเงินสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
-        title: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว",
-        desc: "จัดการกลยุทธ์การกำหนดราคาที่ซับซ้อนรวมถึงส่วนลดแบบเรียงลำดับ การกำหนดราคาตามปริมาณ และข้อเสนออื่นๆ ทั้งหมดที่จัดการภายในกรอบข้อตกลงการขาย อัตโนมัติการคำนวณราคาตามเงื่อนไขของสัญญาและตรวจสอบความสอดคล้องในทุกธุรกรรม",
+        title: "ปรับปรุงการจัดทำงบประมาณ การพยากรณ์ และการมองเห็นทางการเงิน",
+        desc: "แปลงการวางแผนทางการเงินจากสเปรดชีตแบบคงที่เป็นกระบวนการ 'Data-Driven' แบบไดนามิก ใช้ประโยชน์จากข้อมูลการดำเนินงาน Salesforce เพื่อสร้างงบประมาณและการพยากรณ์ที่ถูกต้องซึ่งสะท้อนกิจกรรมทางธุรกิจที่แท้จริง มอบความสามารถในการมองเห็นที่ครอบคลุมให้กับทีมการเงินในการดำเนินการทางการเงินในทุกหน่วยธุรกิจและมิติต่างๆ",
       },
       benefit2: {
-        title: "ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
-        desc: "รักษาการมองเห็นเต็มไปในเงื่อนไขของสัญญา การกำหนดราคา และเงื่อนไขทั่วทั้งทุกขั้นตอนของกระบวนการคำสั่งซื้อจนถึงการจ่ายเงิน การตรวจสอบการปฏิบัติตามข้อบังคับอัตโนมัติช่วยป้องกันคำสั่งซื้อที่ละเมิดเงื่อนไขของสัญญาและตรวจสอบให้แน่ใจว่าใบแจ้งหนี้ทั้งหมดสะท้อนการกำหนดราคาและเงื่อนไขที่ตกลงกัน",
+        title: "เปิดใช้งานข้อมูลเชิงลึกทางการเงินแบบเรียลไทม์แทนสเปรดชีตแบบคงที่",
+        desc: "แทนที่การรายงานด้านปลายงวดด้วยตนเองด้วยข้อมูลเชิงลึกทางการเงินที่ต่อเนื่อง ซิงค์ข้อมูลการดำเนินงานจาก Salesforce โดยอัตโนมัติกับระบบการเงินเพื่อขจัดข้อผิดพลาดและความล่าช้าในการป้อนข้อมูล เปิดใช้งานให้ทีมการเงินเข้าถึงข้อมูลทางการเงินที่เป็นปัจจุบันได้ตามต้องการสำหรับการตัดสินใจที่เร็วขึ้น",
       },
       benefit3: {
-        title: "ปรับปรุงความแม่นยำของการพยากรณ์สำหรับความต้องการในการผลิต",
-        desc: "ใช้ประโยชน์จากเมตริกข้อตกลงแบบเรียงลำดับเวลาและข้อมูลการรับรู้คำสั่งซื้อทางประวัติศาสตร์เพื่อคาดการณ์รูปแบบความต้องการได้อย่างแม่นยำยิ่งขึ้น การพยากรณ์ที่ดีขึ้นช่วยให้ทีมการผลิตสามารถปรับปรุงตารางเวลาการผลิตและระดับสินค้าคงคลังในขณะที่ปรับปรุงความสามารถในการทำกำไรของโปรแกรม",
+        title: "จัดเรียงการเงินให้สอดคล้องกับกลยุทธ์ทางธุรกิจและผลการดำเนินงาน",
+        desc: "เชื่อมต่อแผนทางการเงินโดยตรงกับเมตริกการดำเนินงานและความคิดริเริ่มเชิงกลยุทธ์ เปิดใช้งานให้ทีมการเงินเข้าใจว่ากิจกรรมทางธุรกิจส่งผลต่อผลลัพธ์ทางการเงินอย่างไรและปรับแผนตามนั้น ส่งเสริมการจัดเรียงระหว่างการเงิน การขาย การดำเนินงาน และภาคผนวกนำหน้าผ่านความสามารถในการมองเห็นทางการเงินที่ใช้ร่วมกัน",
       },
     },
     summary: {
       title: "สรุป",
-      description: "การขายตามสัญญาสำหรับการผลิต (ส่วนหนึ่งของ Manufacturing Cloud for Sales) ออกแบบมาโดยเฉพาะสำหรับผู้ผลิตที่จัดการธุรกิจแบบ run-rate ผ่านข้อตกลงการขายและสัญญาระยะยาว ซึ่งรวมการจัดการข้อตกลงการขาย การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญาภายในแพลตฟอร์ม CRM นอกจากนี้ยังมองเห็นแบบเรียงลำดับเวลา ข้อมูลการรับรู้คำสั่งซื้อ และสามารถทำงานร่วมกันระหว่างทีมการขาย การดำเนินงาน และผลิตภัณฑ์เพื่อปรับปรุงความแม่นยำของการพยากรณ์และความสามารถในการทำกำไรของโปรแกรม",
+      description: "การวางแผนและวิเคราะห์ทางการเงินสำหรับ Salesforce รวมความสามารถด้านการวางแผนทางการเงินโดยตรงกับข้อมูล CRM เพื่อสร้างแพลตฟอร์มการวางแผนแบบรวมศูนย์ วิธีแก้ปัญหาจะเชื่อมต่อข้อมูลการดำเนินงาน (จาก Salesforce) กับระบบการเงิน (ERP, ซอฟต์แวร์บัญชี) เพื่อให้ทีม FP&A ได้รับข้อมูลเชิงลึกที่ถูกต้องและแบบเรียลไทม์สำหรับการจัดทำงบประมาณ การพยากรณ์ และการวิเคราะห์ทางการเงิน โซลูชั่นเช่น Certinia (Salesforce-native) และเครื่องมือบุคคลที่สามเช่น Prophix, Cube และ OnPlan รวมเข้ากับ Salesforce ได้อย่างราบรื่นเพื่อทำให้การไหลของข้อมูลเป็นอัตโนมัติ ขจัดกระบวนการด้วยตนเอง และเปิดใช้งานให้ทีมการเงินมุ่งเน้นไปที่การวิเคราะห์เชิงกลยุทธ์แทนการรวบรวมข้อมูล",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "วิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "ทีม CFO และทีมการเงิน",
+        "วิสาหกิจที่ต้องการการพยากรณ์ที่เก่ง",
+        "องค์กรที่กำลังก้าวไปสู่การเงินแบบ 'Data-Driven'",
       ],
     },
     detailsSection: {
       paragraph1:
-        "การขายตามสัญญาสำหรับการผลิตแปลงวิธีการจัดการความสัมพันธ์ระหว่างธุรกิจของผู้ผลิตโดยการให้แพลตฟอร์มแบบรวมสำหรับการจัดการข้อตกลงการขายและสัญญาระยะยาว วิธีแก้ปัญหาช่วยทำลายสิ่งกีดขวางระหว่างทีมการขาย การดำเนินงาน และการเงิน ซึ่งช่วยให้สามารถมองเห็นแบบเรียลไทม์ในการปฏิบัติตามสัญญาและการปฏิบัติตามข้อบังคับทั่วทั้งรอบการสร้างรายได้ทั้งหมด",
+        "การวางแผนและวิเคราะห์ทางการเงินแปลงวิธีการจัดการการวางแผนทางการเงินและการพยากรณ์ของสถาบันโดยการรวมข้อมูลการดำเนินงาน Salesforce กับเครื่องมือการวางแผนทางการเงินที่ครอบคลุม วิธีแก้ปัญหาขจัดการปิดกั้นแบบดั้งเดิมระหว่างข้อมูลการขาย การดำเนินงาน และทางการเงิน เปิดใช้งานให้ทีมการเงินจัดทำการพยากรณ์ตามข้อมูลกิจกรรมทางธุรกิจที่แท้จริงปัจจุบันแทนแนวโน้มทางประวัติศาสตร์หรือการประมาณการด้วยตนเอง",
       paragraph2:
-        "ด้วยการรวมความสามารถของข้อตกลงการขายขั้นสูง การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญา การขายตามสัญญาช่วยให้ผู้ผลิตเพิ่มประสิทธิภาพกลยุทธ์การกำหนดราคา ปรับปรุงการปฏิบัติตามสัญญา และตัดสินใจพยากรณ์โดยใช้ข้อมูล ทีมการผลิตสามารถจัดเรียงการวางแผนการผลิตให้สอดคล้องกับความต้องการของสัญญาจริง ในขณะที่ทีมการขายรักษาความสัมพันธ์ลูกค้าที่แข็งแกร่งผ่านการจัดการการผูกพันที่โปร่งใส",
+        "ด้วยการทำให้การไหลของข้อมูลระหว่าง Salesforce และระบบการเงินเป็นอัตโนมัติ โซลูชั่น FP&A เปิดใช้งานการวางแผนอย่างต่อเนื่อง การวิเคราะห์สถานการณ์ที่เร็วขึ้น และการพยากรณ์ที่แม่นยำยิ่งขึ้น ทีมการเงินสามารถตอบสนองต่อการเปลี่ยนแปลงทางธุรกิจได้อย่างรวดเร็ว ประเมินผลกระทบทางการเงินของความคิดริเริ่มเชิงกลยุทธ์ และตัดสินใจโดยใช้ข้อมูล การรวมนี้ช่วยให้ประธานธนาคารและผู้นำการเงินสามารถให้คำแนะนำเชิงกลยุทธ์ที่สอดคล้องกับผลการดำเนินงานทางธุรกิจในขณะที่ลดเวลาที่ใช้ในการรวบรวมและการรายงานข้อมูลด้วยตนเอง",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -205,7 +207,7 @@ const translations = {
     },
     booking: {
       title: "จองการปรึกษา",
-      subtitle: "ผู้เชี่ยวชาญด้านการขายตามสัญญาของเราพร้อมที่จะช่วยปรับปรุงการจัดการสัญญาของคุณ",
+      subtitle: "ผู้เชี่ยวชาญด้าน FP&A ของเราพร้อมที่จะช่วยแปลงการวางแผนทางการเงินของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
       organization: "องค์กร",
@@ -215,7 +217,7 @@ const translations = {
     },
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายในการจัดการสัญญาของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      subtitle: "อภิปรายความท้าทายด้านการวางแผนทางการเงินของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -225,7 +227,7 @@ const translations = {
   },
 }
 
-export default function ContractualSalesPage() {
+export default function FinancialPlanningAnalysisPage() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -442,7 +444,7 @@ export default function ContractualSalesPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-amber-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,32 +452,30 @@ export default function ContractualSalesPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400/40 shadow-xl shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500/30 to-orange-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-amber-400/40 shadow-xl shadow-amber-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Contract Lifecycle Management" : "การจัดการวงจรสัญญา"}</span>
+                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Data-Driven Finance" : "การเงินที่ขับเคลื่อนด้วยข้อมูล"}</span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 rounded-full" />
+                <div className="h-2 w-40 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 rounded-full" />
               </div>
-              <p className="text-2xl md:text-3xl text-cyan-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
+              <p className="text-2xl md:text-3xl text-amber-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-cyan-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-amber-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              {/* Contract Hub Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-2xl animate-pulse" />
+                
                 
                 
 
-                {/* Contract Components */}
                 
 
                 
@@ -640,7 +640,7 @@ export default function ContractualSalesPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Contractual Sales implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Contractual Sales"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on FP&A implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน FP&A"}</p>
               
               <div className="space-y-5">
                 <div>

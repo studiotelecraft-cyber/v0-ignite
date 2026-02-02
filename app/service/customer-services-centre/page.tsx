@@ -49,41 +49,41 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Contractual Sales for Manufacturing",
-      subtitle: "Manages complex pricing, volume discounts, and long-term contracts. Ensures contract compliance across orders and invoices.",
+      title: "Next Gen. Customer Services Centre",
+      subtitle: "AI-Powered Service Delivery combines Agentforce AI agents with human reps for efficient issue resolution across all channels.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Contractual Sales Help Your Organization?",
+    benefitsTitle: "How Can Next-Gen Customer Service Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Manages complex pricing, volume discounts, and long-term contracts",
-        desc: "Handle sophisticated pricing strategies including tiered discounts, volume-based pricing, and promotional offers all managed within the sales agreements framework. Automate price calculations based on contract terms and ensure consistency across all transactions.",
+        title: "AI-Powered Service Delivery",
+        desc: "Combines Agentforce AI agents with human representatives for efficient issue resolution. AI handles routine inquiries automatically while seamlessly escalating complex cases to human agents with full context. Enable 24/7 service availability with AI agents that learn from every interaction to continuously improve response quality and accuracy.",
       },
       benefit2: {
-        title: "Ensures contract compliance across orders and invoices",
-        desc: "Maintain full visibility into contract terms, pricing, and conditions through every stage of the order-to-cash process. Automated compliance checks prevent orders that violate contract terms and ensure all invoices reflect agreed-upon pricing and conditions.",
+        title: "Omnichannel Support & Real-Time Coaching",
+        desc: "Unifies phone, email, chat, social media, and messaging in a single console for consistent customer experiences. Provides AI-driven guidance, sentiment analysis, and next-best-action recommendations for agents during live interactions. Enable agents to deliver personalized service with complete customer context regardless of communication channel.",
       },
       benefit3: {
-        title: "Improves forecasting accuracy for manufacturing demand",
-        desc: "Leverage time-phased agreement metrics and historical order realization data to predict demand patterns with greater precision. Better forecasts enable manufacturing teams to optimize production schedules and inventory levels while improving program profitability.",
+        title: "Enhanced Supervisor Tools & Integrated Telephony",
+        desc: "Offers real-time monitoring, performance insights, and automated coaching for hybrid AI-human teams. Connects voice systems with CRM for seamless call handling with AI transcription and summaries. Enable supervisors to track metrics, identify training opportunities, and optimize team performance across all service channels.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Contractual Sales for Manufacturing (part of Manufacturing Cloud for Sales) is specifically designed for manufacturers who manage run-rate business through sales agreements and long-term contracts. It unifies sales agreements, order management, and contract lifecycle management within the CRM platform. The solution provides visibility into time-phased agreement metrics, captures order realization data, and enables collaboration between sales, operations, and product teams to improve forecast accuracy and program profitability.",
+      description: "Next Generation Customer Services Centre (Next Gen Service Console powered by Service Cloud) is an intelligent command center that transforms traditional contact centers into AI-enhanced service operations. It features Customer 360 Metrics & Insights for complete customer journey visibility, Service Coach for real-time agent training, and AI-powered automation for routine tasks. The solution enables both AI agents and human reps to work together efficiently, with supervisors having full visibility into performance metrics, customer sentiment, and operational analytics across all channels.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "Manufacturing & industrial enterprises",
-        "Businesses with dealer, distributor, or bulk contracts",
+        "Call centers & shared service centers",
+        "Companies prioritizing CX (Customer Experience)",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Contractual Sales for Manufacturing transforms how manufacturers manage complex business-to-business relationships by providing a unified platform for sales agreements and long-term contract management. The solution breaks down silos between sales, operations, and finance teams, enabling real-time visibility into contract performance and compliance across the entire revenue cycle.",
+        "Next Generation Customer Services Centre transforms contact centers by integrating AI-powered automation with human expertise in a unified platform. The solution combines Agentforce AI agents that handle routine inquiries with skilled human representatives who manage complex cases, creating a hybrid service model that maximizes efficiency while maintaining service quality. Real-time coaching and sentiment analysis help agents deliver exceptional customer experiences while AI handles the repetitive tasks.",
       paragraph2:
-        "By combining advanced sales agreement capabilities with order management and contract lifecycle management, Contractual Sales enables manufacturers to optimize pricing strategies, improve contract compliance, and make data-driven forecasting decisions. Manufacturing teams can align production planning with actual contract demand, while sales teams maintain stronger customer relationships through transparent, well-managed contractual commitments.",
+        "With integrated telephony, omnichannel support, and advanced supervisor tools, the Next Gen Service Console provides complete visibility into service operations. Supervisors can monitor team performance in real-time, identify coaching opportunities, and leverage AI-generated insights to optimize service delivery. Customer 360 Metrics & Insights ensure every interaction is informed by complete customer history, enabling personalized service that builds loyalty and drives customer satisfaction across all touchpoints.",
     },
     contact: {
       title: "Contact Us",
@@ -100,7 +100,7 @@ const translations = {
     },
     booking: {
       title: "Book a Consultation",
-      subtitle: "Our Contractual Sales experts are ready to help optimize your manufacturing contracts",
+      subtitle: "Our Customer Service experts are ready to help transform your contact center operations",
       firstName: "Full Name",
       email: "Email",
       organization: "Organization",
@@ -110,7 +110,7 @@ const translations = {
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your contract management challenges and discover practical solutions",
+      subtitle: "Discuss your customer service challenges and discover AI-powered solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -136,7 +136,7 @@ const translations = {
         group2: {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/integrated-business-planning" },
+            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
@@ -154,41 +154,41 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "การขายตามสัญญาสำหรับการผลิต",
-      subtitle: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
+      title: "ศูนย์บริการลูกค้ายุคใหม่",
+      subtitle: "การให้บริการที่ขับเคลื่อนด้วย AI รวม Agentforce AI agents กับตัวแทนมนุษย์เพื่อแก้ไขปัญหาอย่างมีประสิทธิภาพในทุกช่องทาง",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การขายตามสัญญาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "ศูนย์บริการลูกค้ายุคใหม่สามารถช่วยองค์กรของคุณได้อย่างไร",
     benefits: {
       benefit1: {
-        title: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว",
-        desc: "จัดการกลยุทธ์การกำหนดราคาที่ซับซ้อนรวมถึงส่วนลดแบบเรียงลำดับ การกำหนดราคาตามปริมาณ และข้อเสนออื่นๆ ทั้งหมดที่จัดการภายในกรอบข้อตกลงการขาย อัตโนมัติการคำนวณราคาตามเงื่อนไขของสัญญาและตรวจสอบความสอดคล้องในทุกธุรกรรม",
+        title: "การให้บริการที่ขับเคลื่อนด้วย AI",
+        desc: "รวม Agentforce AI agents กับตัวแทนมนุษย์เพื่อการแก้ไขปัญหาที่มีประสิทธิภาพ AI จัดการคำถามประจำโดยอัตโนมัติในขณะที่ส่งต่อกรณีที่ซับซ้อนไปยังตัวแทนมนุษย์อย่างราบรื่นพร้อมบริบทที่ครบถ้วน เปิดใช้งานการให้บริการตลอด 24/7 ด้วย AI agents ที่เรียนรู้จากทุกการโต้ตอบเพื่อปรับปรุงคุณภาพและความแม่นยำของคำตอบอย่างต่อเนื่อง",
       },
       benefit2: {
-        title: "ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
-        desc: "รักษาการมองเห็นเต็มไปในเงื่อนไขของสัญญา การกำหนดราคา และเงื่อนไขทั่วทั้งทุกขั้นตอนของกระบวนการคำสั่งซื้อจนถึงการจ่ายเงิน การตรวจสอบการปฏิบัติตามข้อบังคับอัตโนมัติช่วยป้องกันคำสั่งซื้อที่ละเมิดเงื่อนไขของสัญญาและตรวจสอบให้แน่ใจว่าใบแจ้งหนี้ทั้งหมดสะท้อนการกำหนดราคาและเงื่อนไขที่ตกลงกัน",
+        title: "การสนับสนุนหลายช่องทางและการฝึกสอนแบบเรียลไทม์",
+        desc: "รวมโทรศัพท์ อีเมล แชท โซเชียลมีเดีย และการส่งข้อความในคอนโซลเดียวเพื่อประสบการณ์ลูกค้าที่สอดคล้องกัน ให้คำแนะนำที่ขับเคลื่อนด้วย AI การวิเคราะห์อารมณ์ และคำแนะนำการดำเนินการที่ดีที่สุดสำหรับตัวแทนระหว่างการโต้ตอบสด ช่วยให้ตัวแทนส่งมอบบริการส่วนบุคคลด้วยบริบทลูกค้าที่สมบูรณ์ไม่ว่าจะเป็นช่องทางการสื่อสารใดก็ตาม",
       },
       benefit3: {
-        title: "ปรับปรุงความแม่นยำของการพยากรณ์สำหรับความต้องการในการผลิต",
-        desc: "ใช้ประโยชน์จากเมตริกข้อตกลงแบบเรียงลำดับเวลาและข้อมูลการรับรู้คำสั่งซื้อทางประวัติศาสตร์เพื่อคาดการณ์รูปแบบความต้องการได้อย่างแม่นยำยิ่งขึ้น การพยากรณ์ที่ดีขึ้นช่วยให้ทีมการผลิตสามารถปรับปรุงตารางเวลาการผลิตและระดับสินค้าคงคลังในขณะที่ปรับปรุงความสามารถในการทำกำไรของโปรแกรม",
+        title: "เครื่องมือผู้บริหารที่ปรับปรุงและโทรศัพท์ที่รวมกัน",
+        desc: "ให้การตรวจสอบแบบเรียลไทม์ ข้อมูลเชิงลึกด้านประสิทธิภาพ และการฝึกสอนอัตโนมัติสำหรับทีม AI-มนุษย์แบบผสมผสาน เชื่อมต่อระบบเสียงกับ CRM เพื่อการจัดการการโทรที่ราบรื่นพร้อมการถอดเสียงและสรุปด้วย AI ช่วยให้ผู้บริหารติดตามเมตริก ระบุโอกาสในการฝึกอบรม และเพิ่มประสิทธิภาพทีมในทุกช่องทางบริการ",
       },
     },
     summary: {
       title: "สรุป",
-      description: "การขายตามสัญญาสำหรับการผลิต (ส่วนหนึ่งของ Manufacturing Cloud for Sales) ออกแบบมาโดยเฉพาะสำหรับผู้ผลิตที่จัดการธุรกิจแบบ run-rate ผ่านข้อตกลงการขายและสัญญาระยะยาว ซึ่งรวมการจัดการข้อตกลงการขาย การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญาภายในแพลตฟอร์ม CRM นอกจากนี้ยังมองเห็นแบบเรียงลำดับเวลา ข้อมูลการรับรู้คำสั่งซื้อ และสามารถทำงานร่วมกันระหว่างทีมการขาย การดำเนินงาน และผลิตภัณฑ์เพื่อปรับปรุงความแม่นยำของการพยากรณ์และความสามารถในการทำกำไรของโปรแกรม",
+      description: "ศูนย์บริการลูกค้ายุคใหม่ (Next Gen Service Console ขับเคลื่อนด้วย Service Cloud) เป็นศูนย์ควบคุมอัจฉริยะที่แปลงศูนย์ติดต่อแบบดั้งเดิมเป็นการดำเนินการบริการที่ปรับปรุงด้วย AI มีคุณสมบัติ Customer 360 Metrics & Insights สำหรับการมองเห็นเส้นทางลูกค้าอย่างสมบูรณ์ Service Coach สำหรับการฝึกอบรมตัวแทนแบบเรียลไทม์ และระบบอัตโนมัติที่ขับเคลื่อนด้วย AI สำหรับงานประจำ โซลูชั่นช่วยให้ทั้ง AI agents และตัวแทนมนุษย์ทำงานร่วมกันอย่างมีประสิทธิภาพ โดยผู้บริหารมีการมองเห็นเต็มรูปแบบในเมตริกประสิทธิภาพ อารมณ์ของลูกค้า และการวิเคราะห์การดำเนินงานในทุกช่องทาง",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "วิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "ศูนย์สายด่วนและศูนย์บริการร่วม",
+        "บริษัทที่ให้ความสำคัญกับประสบการณ์ลูกค้า (CX)",
       ],
     },
     detailsSection: {
       paragraph1:
-        "การขายตามสัญญาสำหรับการผลิตแปลงวิธีการจัดการความสัมพันธ์ระหว่างธุรกิจของผู้ผลิตโดยการให้แพลตฟอร์มแบบรวมสำหรับการจัดการข้อตกลงการขายและสัญญาระยะยาว วิธีแก้ปัญหาช่วยทำลายสิ่งกีดขวางระหว่างทีมการขาย การดำเนินงาน และการเงิน ซึ่งช่วยให้สามารถมองเห็นแบบเรียลไทม์ในการปฏิบัติตามสัญญาและการปฏิบัติตามข้อบังคับทั่วทั้งรอบการสร้างรายได้ทั้งหมด",
+        "ศูนย์บริการลูกค้ายุคใหม่แปลงศูนย์ติดต่อโดยการรวมระบบอัตโนมัติที่ขับเคลื่อนด้วย AI กับความเชี่ยวชาญของมนุษย์ในแพลตฟอร์มที่รวมศูนย์ โซลูชั่นรวม Agentforce AI agents ที่จัดการคำถามประจำกับตัวแทนมนุษย์ที่มีทักษะซึ่งจัดการกรณีที่ซับซ้อน สร้างโมเดลบริการแบบผสมผสานที่เพิ่มประสิทธิภาพสูงสุดในขณะที่รักษาคุณภาพการบริการ การฝึกสอนแบบเรียลไทม์และการวิเคราะห์อารมณ์ช่วยให้ตัวแทนส่งมอบประสบการณ์ลูกค้าที่ยอดเยี่ยมในขณะที่ AI จัดการงานซ้ำๆ",
       paragraph2:
-        "ด้วยการรวมความสามารถของข้อตกลงการขายขั้นสูง การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญา การขายตามสัญญาช่วยให้ผู้ผลิตเพิ่มประสิทธิภาพกลยุทธ์การกำหนดราคา ปรับปรุงการปฏิบัติตามสัญญา และตัดสินใจพยากรณ์โดยใช้ข้อมูล ทีมการผลิตสามารถจัดเรียงการวางแผนการผลิตให้สอดคล้องกับความต้องการของสัญญาจริง ในขณะที่ทีมการขายรักษาความสัมพันธ์ลูกค้าที่แข็งแกร่งผ่านการจัดการการผูกพันที่โปร่งใส",
+        "ด้วยโทรศัพท์ที่รวมกัน การสนับสนุนหลายช่องทาง และเครื่องมือผู้บริหารขั้นสูง Next Gen Service Console ให้การมองเห็นที่สมบูรณ์ในการดำเนินการบริการ ผู้บริหารสามารถตรวจสอบประสิทธิภาพทีมแบบเรียลไทม์ ระบุโอกาสในการฝึกสอน และใช้ประโยชน์จากข้อมูลเชิงลึกที่สร้างโดย AI เพื่อเพิ่มประสิทธิภาพการให้บริการ Customer 360 Metrics & Insights รับประกันว่าทุกการโต้ตอบมีข้อมูลจากประวัติลูกค้าที่สมบูรณ์ ช่วยให้บริการส่วนบุคคลที่สร้างความภักดีและผลักดันความพึงพอใจของลูกค้าในทุกจุดสัมผัส",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -205,7 +205,7 @@ const translations = {
     },
     booking: {
       title: "จองการปรึกษา",
-      subtitle: "ผู้เชี่ยวชาญด้านการขายตามสัญญาของเราพร้อมที่จะช่วยปรับปรุงการจัดการสัญญาของคุณ",
+      subtitle: "ผู้เชี่ยวชาญด้านบริการลูกค้าของเราพร้อมที่จะช่วยแปลงการดำเนินงานศูนย์ติดต่อของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
       organization: "องค์กร",
@@ -215,7 +215,7 @@ const translations = {
     },
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายในการจัดการสัญญาของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      subtitle: "อภิปรายความท้าทายด้านบริการลูกค้าของคุณและค้นพบโซลูชั่นที่ขับเคลื่อนด้วย AI",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -225,7 +225,7 @@ const translations = {
   },
 }
 
-export default function ContractualSalesPage() {
+export default function CustomerServicesCentrePage() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -442,7 +442,7 @@ export default function ContractualSalesPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,32 +450,32 @@ export default function ContractualSalesPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400/40 shadow-xl shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500/30 to-pink-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-purple-400/40 shadow-xl shadow-purple-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Contract Lifecycle Management" : "การจัดการวงจรสัญญา"}</span>
+                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "AI-Powered Customer Service" : "บริการลูกค้าที่ขับเคลื่อนด้วย AI"}</span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 rounded-full" />
+                <div className="h-2 w-40 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full" />
               </div>
-              <p className="text-2xl md:text-3xl text-cyan-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
+              <p className="text-2xl md:text-3xl text-purple-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-cyan-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-purple-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              {/* Contract Hub Visualization */}
+              {/* AI-Human Hybrid Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-2xl animate-pulse" />
+                
                 
                 
 
-                {/* Contract Components */}
+                {/* Orbiting Service Channels */}
                 
 
                 
@@ -640,7 +640,7 @@ export default function ContractualSalesPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Contractual Sales implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Contractual Sales"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Next-Gen Customer Service Centre implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งานศูนย์บริการลูกค้ายุคใหม่"}</p>
               
               <div className="space-y-5">
                 <div>

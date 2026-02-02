@@ -23,23 +23,23 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
         group2: {
           title: "Strategic Planning & Intelligence",
           items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/data-management" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/crm" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/data-management" },
+            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
+            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
+            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "Supply Chain & Operations",
           items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
+            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
+            { name: "Production Planning", href: "/service/production-planning" },
           ],
         },
       },
@@ -149,7 +149,7 @@ const translations = {
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
             { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/call-center" },
+            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
             { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
           ],
         },
@@ -158,13 +158,13 @@ const translations = {
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/data-management" },
+            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
         group3: {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/data-management" },
+            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
           ],
         },
@@ -560,9 +560,13 @@ export default function Home() {
       </nav>
 
       <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/images/hero-banner-vdo.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/images/Hompage_HeroIMG_001.png" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/50 to-blue-950/60" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -686,7 +690,7 @@ export default function Home() {
               </Link>
 
               {/* Customer Service Solution */}
-              <Link href="/service/call-center" className="block">
+              <Link href="/service/customer-services-centre" className="block">
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
@@ -847,7 +851,7 @@ export default function Home() {
                     </li>
                     <li>
                       <Link
-                        href="/service/call-center"
+                        href="/service/customer-services-centre"
                         className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
                       >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />

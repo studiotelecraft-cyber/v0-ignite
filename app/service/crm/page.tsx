@@ -23,7 +23,7 @@ const translations = {
             { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
             { name: "Field Sales Execution", href: "/service/field-sales" },
             { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
+            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
             { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
           ],
         },
@@ -321,7 +321,7 @@ export default function CRMPage() {
                         Sales Solution (CRM)
                       </Link>
                       <Link
-                        href="/service/call-center"
+                        href="/service/customer-services-centre"
                         onClick={() => setMobileMenuOpen(false)}
                         className="block text-gray-600 hover:text-blue-600 transition-colors py-2"
                       >
@@ -616,7 +616,7 @@ export default function CRMPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
+                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium flex items-center gap-2 group">
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-blue-600" />
                       {t.contact.callCenter}
                     </Link>

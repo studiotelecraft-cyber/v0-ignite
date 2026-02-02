@@ -49,41 +49,41 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Contractual Sales for Manufacturing",
-      subtitle: "Manages complex pricing, volume discounts, and long-term contracts. Ensures contract compliance across orders and invoices.",
+      title: "Production Planning",
+      subtitle: "Provides 360-degree view of production capacity, work orders, and shop floor operations. Automates materials planning with MRP capabilities.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Contractual Sales Help Your Organization?",
+    benefitsTitle: "How Can Production Planning Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Manages complex pricing, volume discounts, and long-term contracts",
-        desc: "Handle sophisticated pricing strategies including tiered discounts, volume-based pricing, and promotional offers all managed within the sales agreements framework. Automate price calculations based on contract terms and ensure consistency across all transactions.",
+        title: "Improves Schedule Visibility & Automates Materials Planning",
+        desc: "Provides 360-degree view of production capacity, work orders, and shop floor operations for complete manufacturing visibility. MRP capabilities automatically calculate material requirements based on sales orders and forecasts to ensure materials are available when needed. Enable real-time tracking of production progress from raw materials through finished goods.",
       },
       benefit2: {
-        title: "Ensures contract compliance across orders and invoices",
-        desc: "Maintain full visibility into contract terms, pricing, and conditions through every stage of the order-to-cash process. Automated compliance checks prevent orders that violate contract terms and ensure all invoices reflect agreed-upon pricing and conditions.",
+        title: "Enhances Resource Utilization & Accelerates Order Fulfillment",
+        desc: "Optimizes labor, equipment, and facility allocation for maximum efficiency across all production resources. Streamlines work order management from creation through completion with automated workflows and shop floor control. Enable faster order fulfillment through intelligent production scheduling that balances capacity with demand.",
       },
       benefit3: {
-        title: "Improves forecasting accuracy for manufacturing demand",
-        desc: "Leverage time-phased agreement metrics and historical order realization data to predict demand patterns with greater precision. Better forecasts enable manufacturing teams to optimize production schedules and inventory levels while improving program profitability.",
+        title: "Reduces Production Costs",
+        desc: "Minimizes waste, overtime, and carrying costs through intelligent production scheduling and resource optimization. Reduce excess inventory holding costs while preventing stock-outs that disrupt production. Enable cost-effective manufacturing operations by synchronizing production with customer demand and sales agreements.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Contractual Sales for Manufacturing (part of Manufacturing Cloud for Sales) is specifically designed for manufacturers who manage run-rate business through sales agreements and long-term contracts. It unifies sales agreements, order management, and contract lifecycle management within the CRM platform. The solution provides visibility into time-phased agreement metrics, captures order realization data, and enables collaboration between sales, operations, and product teams to improve forecast accuracy and program profitability.",
+      description: "Production Planning within Salesforce Manufacturing Cloud coordinates manufacturing activities with customer demand and sales agreements to ensure efficient production operations. Solutions like Rootstock Cloud ERP provide comprehensive work order management, shop floor control, and production scheduling capabilities natively on the Salesforce platform. The system integrates sales forecasts and actual orders to generate production plans, automate materials procurement, track production progress in real-time, and provide visibility across the entire manufacturing process from raw materials to finished goods.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "Manufacturing & industrial enterprises",
-        "Businesses with dealer, distributor, or bulk contracts",
+        "Manufacturing plants",
+        "Multi-site or complex production environments",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Contractual Sales for Manufacturing transforms how manufacturers manage complex business-to-business relationships by providing a unified platform for sales agreements and long-term contract management. The solution breaks down silos between sales, operations, and finance teams, enabling real-time visibility into contract performance and compliance across the entire revenue cycle.",
+        "Production Planning transforms manufacturing operations by connecting customer demand with production capacity and shop floor execution. The solution integrates with Salesforce Manufacturing Cloud to leverage sales orders, forecasts, and contractual agreements to create optimized production schedules. MRP capabilities automatically calculate material requirements and trigger procurement processes, ensuring all necessary materials are available when production begins.",
       paragraph2:
-        "By combining advanced sales agreement capabilities with order management and contract lifecycle management, Contractual Sales enables manufacturers to optimize pricing strategies, improve contract compliance, and make data-driven forecasting decisions. Manufacturing teams can align production planning with actual contract demand, while sales teams maintain stronger customer relationships through transparent, well-managed contractual commitments.",
+        "With comprehensive work order management and shop floor control, production planning solutions enable manufacturers to track every aspect of production in real-time. From resource allocation and capacity planning to progress tracking and quality control, the system provides complete visibility into manufacturing operations. By synchronizing production with actual demand and automating materials planning, manufacturers can reduce costs, improve efficiency, and deliver products on time while maintaining optimal inventory levels.",
     },
     contact: {
       title: "Contact Us",
@@ -100,7 +100,7 @@ const translations = {
     },
     booking: {
       title: "Book a Consultation",
-      subtitle: "Our Contractual Sales experts are ready to help optimize your manufacturing contracts",
+      subtitle: "Our Production Planning experts are ready to help optimize your manufacturing operations",
       firstName: "Full Name",
       email: "Email",
       organization: "Organization",
@@ -110,7 +110,7 @@ const translations = {
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your contract management challenges and discover practical solutions",
+      subtitle: "Discuss your production planning challenges and discover manufacturing solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -145,7 +145,7 @@ const translations = {
           title: "ห่วงโซ่อุปทานและการดำเนินงาน",
           items: [
             { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
+            { name: "การวางแผนการผลิต", href: "/service/production-planning" },
           ],
         },
       },
@@ -154,41 +154,41 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "การขายตามสัญญาสำหรับการผลิต",
-      subtitle: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
+      title: "การวางแผนการผลิต",
+      subtitle: "ให้มุมมอง 360 องศาของกำลังการผลิต ใบสั่งงาน และการดำเนินงานพื้นโรงงาน ทำให้การวางแผนวัสดุเป็นอัตโนมัติด้วยความสามารถ MRP",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การขายตามสัญญาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การวางแผนการผลิตสามารถช่วยองค์กรของคุณได้อย่างไร",
     benefits: {
       benefit1: {
-        title: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว",
-        desc: "จัดการกลยุทธ์การกำหนดราคาที่ซับซ้อนรวมถึงส่วนลดแบบเรียงลำดับ การกำหนดราคาตามปริมาณ และข้อเสนออื่นๆ ทั้งหมดที่จัดการภายในกรอบข้อตกลงการขาย อัตโนมัติการคำนวณราคาตามเงื่อนไขของสัญญาและตรวจสอบความสอดคล้องในทุกธุรกรรม",
+        title: "ปรับปรุงการมองเห็นตารางเวลาและทำให้การวางแผนวัสดุเป็นอัตโนมัติ",
+        desc: "ให้มุมมอง 360 องศาของกำลังการผลิต ใบสั่งงาน และการดำเนินงานพื้นโรงงานเพื่อการมองเห็นการผลิตที่สมบูรณ์ ความสามารถ MRP คำนวณความต้องการวัสดุโดยอัตโนมัติตามคำสั่งซื้อและการพยากรณ์เพื่อให้แน่ใจว่ามีวัสดุพร้อมเมื่อจำเป็น เปิดใช้งานการติดตามความคืบหน้าการผลิตแบบเรียลไทม์จากวัตถุดิบถึงสินค้าสำเร็จรูป",
       },
       benefit2: {
-        title: "ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
-        desc: "รักษาการมองเห็นเต็มไปในเงื่อนไขของสัญญา การกำหนดราคา และเงื่อนไขทั่วทั้งทุกขั้นตอนของกระบวนการคำสั่งซื้อจนถึงการจ่ายเงิน การตรวจสอบการปฏิบัติตามข้อบังคับอัตโนมัติช่วยป้องกันคำสั่งซื้อที่ละเมิดเงื่อนไขของสัญญาและตรวจสอบให้แน่ใจว่าใบแจ้งหนี้ทั้งหมดสะท้อนการกำหนดราคาและเงื่อนไขที่ตกลงกัน",
+        title: "เพิ่มประสิทธิภาพการใช้ทรัพยากรและเร่งการดำเนินการตามคำสั่งซื้อ",
+        desc: "เพิ่มประสิทธิภาพการจัดสรรแรงงาน อุปกรณ์ และสิ่งอำนวยความสะดวกเพื่อประสิทธิภาพสูงสุดในทุกทรัพยากรการผลิต ทำให้การจัดการใบสั่งงานคล่องตัวตั้งแต่การสร้างจนเสร็จสมบูรณ์ด้วยเวิร์กโฟลว์อัตโนมัติและการควบคุมพื้นโรงงาน เปิดใช้งานการดำเนินการตามคำสั่งซื้อที่เร็วขึ้นผ่านการจัดตารางการผลิตที่ชาญฉลาดซึ่งสมดุลกำลังการผลิตกับความต้องการ",
       },
       benefit3: {
-        title: "ปรับปรุงความแม่นยำของการพยากรณ์สำหรับความต้องการในการผลิต",
-        desc: "ใช้ประโยชน์จากเมตริกข้อตกลงแบบเรียงลำดับเวลาและข้อมูลการรับรู้คำสั่งซื้อทางประวัติศาสตร์เพื่อคาดการณ์รูปแบบความต้องการได้อย่างแม่นยำยิ่งขึ้น การพยากรณ์ที่ดีขึ้นช่วยให้ทีมการผลิตสามารถปรับปรุงตารางเวลาการผลิตและระดับสินค้าคงคลังในขณะที่ปรับปรุงความสามารถในการทำกำไรของโปรแกรม",
+        title: "ลดต้นทุนการผลิต",
+        desc: "ลดของเสีย ค่าล่วงเวลา และต้นทุนการถือครองผ่านการจัดตารางการผลิตที่ชาญฉลาดและการเพิ่มประสิทธิภาพทรัพยากร ลดต้นทุนการถือครองสินค้าคงคลังส่วนเกินในขณะที่ป้องกันการสต็อกหมดที่ขัดขวางการผลิต เปิดใช้งานการดำเนินการผลิตที่คุ้มค่าโดยการซิงโครไนซ์การผลิตกับความต้องการของลูกค้าและข้อตกลงการขาย",
       },
     },
     summary: {
       title: "สรุป",
-      description: "การขายตามสัญญาสำหรับการผลิต (ส่วนหนึ่งของ Manufacturing Cloud for Sales) ออกแบบมาโดยเฉพาะสำหรับผู้ผลิตที่จัดการธุรกิจแบบ run-rate ผ่านข้อตกลงการขายและสัญญาระยะยาว ซึ่งรวมการจัดการข้อตกลงการขาย การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญาภายในแพลตฟอร์ม CRM นอกจากนี้ยังมองเห็นแบบเรียงลำดับเวลา ข้อมูลการรับรู้คำสั่งซื้อ และสามารถทำงานร่วมกันระหว่างทีมการขาย การดำเนินงาน และผลิตภัณฑ์เพื่อปรับปรุงความแม่นยำของการพยากรณ์และความสามารถในการทำกำไรของโปรแกรม",
+      description: "การวางแผนการผลิตภายใน Salesforce Manufacturing Cloud ประสานกิจกรรมการผลิตกับความต้องการของลูกค้าและข้อตกลงการขายเพื่อให้การดำเนินการผลิตมีประสิทธิภาพ โซลูชั่นเช่น Rootstock Cloud ERP ให้การจัดการใบสั่งงานที่ครอบคลุม การควบคุมพื้นโรงงาน และความสามารถในการจัดตารางการผลิตบนแพลตฟอร์ม Salesforce โดยกำเนิด ระบบรวมการพยากรณ์การขายและคำสั่งซื้อจริงเพื่อสร้างแผนการผลิต ทำให้การจัดซื้อวัสดุเป็นอัตโนมัติ ติดตามความคืบหน้าการผลิตแบบเรียลไทม์ และให้การมองเห็นทั่วทั้งกระบวนการผลิตตั้งแต่วัตถุดิบจนถึงสินค้าสำเร็จรูป",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "วิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "โรงงานผลิต",
+        "สภาพแวดล้อมการผลิตหลายสถานที่หรือซับซ้อน",
       ],
     },
     detailsSection: {
       paragraph1:
-        "การขายตามสัญญาสำหรับการผลิตแปลงวิธีการจัดการความสัมพันธ์ระหว่างธุรกิจของผู้ผลิตโดยการให้แพลตฟอร์มแบบรวมสำหรับการจัดการข้อตกลงการขายและสัญญาระยะยาว วิธีแก้ปัญหาช่วยทำลายสิ่งกีดขวางระหว่างทีมการขาย การดำเนินงาน และการเงิน ซึ่งช่วยให้สามารถมองเห็นแบบเรียลไทม์ในการปฏิบัติตามสัญญาและการปฏิบัติตามข้อบังคับทั่วทั้งรอบการสร้างรายได้ทั้งหมด",
+        "การวางแผนการผลิตแปลงการดำเนินงานการผลิตโดยการเชื่อมต่อความต้องการของลูกค้ากับกำลังการผลิตและการดำเนินการพื้นโรงงาน โซลูชั่นรวมเข้ากับ Salesforce Manufacturing Cloud เพื่อใช้ประโยชน์จากคำสั่งซื้อ การพยากรณ์ และข้อตกลงตามสัญญาเพื่อสร้างตารางการผลิตที่เหมาะสมที่สุด ความสามารถ MRP คำนวณความต้องการวัสดุโดยอัตโนมัติและกระตุ้นกระบวนการจัดซื้อ เพื่อให้แน่ใจว่ามีวัสดุที่จำเป็นทั้งหมดพร้อมเมื่อเริ่มการผลิต",
       paragraph2:
-        "ด้วยการรวมความสามารถของข้อตกลงการขายขั้นสูง การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญา การขายตามสัญญาช่วยให้ผู้ผลิตเพิ่มประสิทธิภาพกลยุทธ์การกำหนดราคา ปรับปรุงการปฏิบัติตามสัญญา และตัดสินใจพยากรณ์โดยใช้ข้อมูล ทีมการผลิตสามารถจัดเรียงการวางแผนการผลิตให้สอดคล้องกับความต้องการของสัญญาจริง ในขณะที่ทีมการขายรักษาความสัมพันธ์ลูกค้าที่แข็งแกร่งผ่านการจัดการการผูกพันที่โปร่งใส",
+        "ด้วยการจัดการใบสั่งงานที่ครอบคลุมและการควบคุมพื้นโรงงาน โซลูชั่นการวางแผนการผลิตช่วยให้ผู้ผลิตติดตามทุกแง่มุมของการผลิตแบบเรียลไทม์ ตั้งแต่การจัดสรรทรัพยากรและการวางแผนกำลังการผลิตไปจนถึงการติดตามความคืบหน้าและการควบคุมคุณภาพ ระบบให้การมองเห็นที่สมบูรณ์ในการดำเนินงานการผลิต ด้วยการซิงโครไนซ์การผลิตกับความต้องการจริงและการทำให้การวางแผนวัสดุเป็นอัตโนมัติ ผู้ผลิตสามารถลดต้นทุน ปรับปรุงประสิทธิภาพ และส่งมอบผลิตภัณฑ์ตรงเวลาในขณะที่รักษาระดับสินค้าคงคลังที่เหมาะสม",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -205,7 +205,7 @@ const translations = {
     },
     booking: {
       title: "จองการปรึกษา",
-      subtitle: "ผู้เชี่ยวชาญด้านการขายตามสัญญาของเราพร้อมที่จะช่วยปรับปรุงการจัดการสัญญาของคุณ",
+      subtitle: "ผู้เชี่ยวชาญด้านการวางแผนการผลิตของเราพร้อมที่จะช่วยเพิ่มประสิทธิภาพการดำเนินงานการผลิตของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
       organization: "องค์กร",
@@ -215,7 +215,7 @@ const translations = {
     },
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายในการจัดการสัญญาของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      subtitle: "อภิปรายความท้าทายด้านการวางแผนการผลิตของคุณและค้นพบโซลูชั่นการผลิต",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -225,7 +225,7 @@ const translations = {
   },
 }
 
-export default function ContractualSalesPage() {
+export default function ProductionPlanningPage() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -442,7 +442,7 @@ export default function ContractualSalesPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-orange-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,35 +450,29 @@ export default function ContractualSalesPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400/40 shadow-xl shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500/30 to-red-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-orange-400/40 shadow-xl shadow-orange-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Contract Lifecycle Management" : "การจัดการวงจรสัญญา"}</span>
+                <span className="text-white text-lg md:text-xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
+                  {lang === "en" ? "Manufacturing Excellence" : "ความเป็นเลิศในการผลิต"}
+                </span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 rounded-full" />
+                <div className="h-2 w-40 bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 rounded-full" />
               </div>
-              <p className="text-2xl md:text-3xl text-cyan-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
+              <p className="text-2xl md:text-3xl text-orange-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-cyan-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-orange-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              {/* Contract Hub Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-2xl animate-pulse" />
-                
-                
-
-                {/* Contract Components */}
-                
-
-                
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-orange-500/20 to-red-600/20 blur-2xl animate-pulse" />
               </div>
             </div>
           </div>
@@ -619,7 +613,7 @@ export default function ContractualSalesPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>
@@ -640,7 +634,7 @@ export default function ContractualSalesPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Contractual Sales implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Contractual Sales"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Production Planning implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งานการวางแผนการผลิต"}</p>
               
               <div className="space-y-5">
                 <div>

@@ -49,41 +49,42 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "Contractual Sales for Manufacturing",
-      subtitle: "Manages complex pricing, volume discounts, and long-term contracts. Ensures contract compliance across orders and invoices.",
+      title: "Integrated Business Planning (IBP)",
+      subtitle: "Unifies strategic and operational plans. Breaks down silos across sales, operations, finance, HR, and supply chain.",
       cta: "Contact Us",
     },
-    benefitsTitle: "How Can Contractual Sales Help Your Organization?",
+    benefitsTitle: "How Can Integrated Business Planning Help Your Organization?",
     benefits: {
       benefit1: {
-        title: "Manages complex pricing, volume discounts, and long-term contracts",
-        desc: "Handle sophisticated pricing strategies including tiered discounts, volume-based pricing, and promotional offers all managed within the sales agreements framework. Automate price calculations based on contract terms and ensure consistency across all transactions.",
+        title: "Unifies Strategic & Operational Plans and Breaks Down Silos",
+        desc: "Connects long-term strategy with medium-term tactical plans and short-term execution in a single unified framework. Integrates planning across sales, operations, finance, HR, supply chain, and product development to eliminate departmental silos. Enable enterprise-wide collaboration where all functions work from the same data and assumptions for aligned decision-making.",
       },
       benefit2: {
-        title: "Ensures contract compliance across orders and invoices",
-        desc: "Maintain full visibility into contract terms, pricing, and conditions through every stage of the order-to-cash process. Automated compliance checks prevent orders that violate contract terms and ensure all invoices reflect agreed-upon pricing and conditions.",
+        title: "Enables Predictive Planning & Improves Financial Outcomes",
+        desc: "AI and machine learning provide forward-looking insights for proactive decision-making rather than reactive responses. Aligns operational plans with financial targets to maximize profitability and ROI across the enterprise. Create a direct connection between strategic objectives and daily operations to ensure every action supports business goals.",
       },
       benefit3: {
-        title: "Improves forecasting accuracy for manufacturing demand",
-        desc: "Leverage time-phased agreement metrics and historical order realization data to predict demand patterns with greater precision. Better forecasts enable manufacturing teams to optimize production schedules and inventory levels while improving program profitability.",
+        title: "Increases Adaptability",
+        desc: "Scenario planning and what-if analysis prepare organizations for multiple future possibilities and market changes. Enable real-time modeling to evaluate the impact of decisions before implementation. Build organizational resilience through continuous planning cycles that adapt to changing conditions rather than rigid annual plans.",
       },
     },
     summary: {
       title: "Summary",
-      description: "Contractual Sales for Manufacturing (part of Manufacturing Cloud for Sales) is specifically designed for manufacturers who manage run-rate business through sales agreements and long-term contracts. It unifies sales agreements, order management, and contract lifecycle management within the CRM platform. The solution provides visibility into time-phased agreement metrics, captures order realization data, and enables collaboration between sales, operations, and product teams to improve forecast accuracy and program profitability.",
+      description: "Integrated Business Planning (IBP) is the evolution of S&OP that extends collaborative planning across the entire enterprise, integrating strategic planning, financial planning, demand/supply planning, and operational execution into a unified framework. IBP solutions (like ketteQ's IBP suite, SAP IBP, or Salesforce-integrated platforms) create a single source of truth by connecting data from CRM, ERP, finance, and supply chain systems. The solution provides enterprise-wide visibility, facilitates cross-functional collaboration, enables real-time scenario modeling, and ensures all departments work toward aligned objectives with consistent assumptions and coordinated execution.",
     },
     bestFor: {
       title: "Best for",
       items: [
-        "Manufacturing & industrial enterprises",
-        "Businesses with dealer, distributor, or bulk contracts",
+        "Large enterprises",
+        "Organizations undergoing digital transformation",
+        "Companies needing end-to-end business alignment",
       ],
     },
     detailsSection: {
       paragraph1:
-        "Contractual Sales for Manufacturing transforms how manufacturers manage complex business-to-business relationships by providing a unified platform for sales agreements and long-term contract management. The solution breaks down silos between sales, operations, and finance teams, enabling real-time visibility into contract performance and compliance across the entire revenue cycle.",
+        "Integrated Business Planning transforms how organizations align strategy with execution by creating a unified planning framework that connects all business functions. Unlike traditional planning approaches where departments work in isolation, IBP creates a single source of truth by integrating data from CRM, ERP, finance, and supply chain systems. This enables enterprise-wide visibility where executives and teams can see how decisions in one area impact the entire organization.",
       paragraph2:
-        "By combining advanced sales agreement capabilities with order management and contract lifecycle management, Contractual Sales enables manufacturers to optimize pricing strategies, improve contract compliance, and make data-driven forecasting decisions. Manufacturing teams can align production planning with actual contract demand, while sales teams maintain stronger customer relationships through transparent, well-managed contractual commitments.",
+        "IBP solutions facilitate cross-functional collaboration through continuous planning cycles rather than annual budgets. Real-time scenario modeling allows organizations to evaluate multiple futures and make proactive decisions. By ensuring all departments work toward aligned objectives with consistent assumptions, IBP maximizes profitability, improves resource allocation, and builds organizational agility to respond to market changes effectively.",
     },
     contact: {
       title: "Contact Us",
@@ -100,7 +101,7 @@ const translations = {
     },
     booking: {
       title: "Book a Consultation",
-      subtitle: "Our Contractual Sales experts are ready to help optimize your manufacturing contracts",
+      subtitle: "Our Integrated Business Planning experts are ready to help align your enterprise",
       firstName: "Full Name",
       email: "Email",
       organization: "Organization",
@@ -110,7 +111,7 @@ const translations = {
     },
     scheduleModal: {
       title: "Book a Free 30-Minute Strategy Call",
-      subtitle: "Discuss your contract management challenges and discover practical solutions",
+      subtitle: "Discuss your enterprise planning challenges and discover integrated solutions",
       projectLabel: "Describe your project need",
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
@@ -154,41 +155,42 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "การขายตามสัญญาสำหรับการผลิต",
-      subtitle: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
+      title: "การวางแผนธุรกิจแบบบูรณาการ (IBP)",
+      subtitle: "รวมแผนเชิงกลยุทธ์และการดำเนินงาน ทำลายกำแพงระหว่างแผนกการขาย การดำเนินงาน การเงิน HR และห่วงโซ่อุปทาน",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การขายตามสัญญาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การวางแผนธุรกิจแบบบูรณาการสามารถช่วยองค์กรของคุณได้อย่างไร",
     benefits: {
       benefit1: {
-        title: "จัดการการกำหนดราคาที่ซับซ้อน ส่วนลดตามปริมาณ และสัญญาระยะยาว",
-        desc: "จัดการกลยุทธ์การกำหนดราคาที่ซับซ้อนรวมถึงส่วนลดแบบเรียงลำดับ การกำหนดราคาตามปริมาณ และข้อเสนออื่นๆ ทั้งหมดที่จัดการภายในกรอบข้อตกลงการขาย อัตโนมัติการคำนวณราคาตามเงื่อนไขของสัญญาและตรวจสอบความสอดคล้องในทุกธุรกรรม",
+        title: "รวมแผนเชิงกลยุทธ์และการดำเนินงานและทำลายกำแพง",
+        desc: "เชื่อมต่อกลยุทธ์ระยะยาวกับแผนยุทธวิธีระยะกลางและการดำเนินงานระยะสั้นในกรอบที่รวมศูนย์เดียว รวมการวางแผนในทุกแผนก การขาย การดำเนินงาน การเงิน HR ห่วงโซ่อุปทาน และการพัฒนาผลิตภัณฑ์เพื่อกำจัดกำแพงระหว่างแผนก เปิดใช้งานความร่วมมือทั่วทั้งองค์กรที่ทุกฟังก์ชั่นทำงานจากข้อมูลและสมมติฐานเดียวกันเพื่อการตัดสินใจที่สอดคล้องกัน",
       },
       benefit2: {
-        title: "ตรวจสอบการปฏิบัติตามสัญญาในคำสั่งซื้อและใบแจ้งหนี้",
-        desc: "รักษาการมองเห็นเต็มไปในเงื่อนไขของสัญญา การกำหนดราคา และเงื่อนไขทั่วทั้งทุกขั้นตอนของกระบวนการคำสั่งซื้อจนถึงการจ่ายเงิน การตรวจสอบการปฏิบัติตามข้อบังคับอัตโนมัติช่วยป้องกันคำสั่งซื้อที่ละเมิดเงื่อนไขของสัญญาและตรวจสอบให้แน่ใจว่าใบแจ้งหนี้ทั้งหมดสะท้อนการกำหนดราคาและเงื่อนไขที่ตกลงกัน",
+        title: "เปิดใช้งานการวางแผนเชิงพยากรณ์และปรับปรุงผลลัพธ์ทางการเงิน",
+        desc: "AI และ machine learning ให้ข้อมูลเชิงลึกที่มองไปข้างหน้าสำหรับการตัดสินใจเชิงรุกแทนการตอบสนองแบบตามหลัง จัดเรียงแผนการดำเนินงานกับเป้าหมายทางการเงินเพื่อเพิ่มความสามารถในการทำกำไรและ ROI ทั่วทั้งองค์กร สร้างการเชื่อมต่อโดยตรงระหว่างวัตถุประสงค์เชิงกลยุทธ์และการดำเนินงานประจำวันเพื่อให้แน่ใจว่าทุกการดำเนินการสนับสนุนเป้าหมายทางธุรกิจ",
       },
       benefit3: {
-        title: "ปรับปรุงความแม่นยำของการพยากรณ์สำหรับความต้องการในการผลิต",
-        desc: "ใช้ประโยชน์จากเมตริกข้อตกลงแบบเรียงลำดับเวลาและข้อมูลการรับรู้คำสั่งซื้อทางประวัติศาสตร์เพื่อคาดการณ์รูปแบบความต้องการได้อย่างแม่นยำยิ่งขึ้น การพยากรณ์ที่ดีขึ้นช่วยให้ทีมการผลิตสามารถปรับปรุงตารางเวลาการผลิตและระดับสินค้าคงคลังในขณะที่ปรับปรุงความสามารถในการทำกำไรของโปรแกรม",
+        title: "เพิ่มความสามารถในการปรับตัว",
+        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปรับตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งที่น่า",
       },
     },
     summary: {
       title: "สรุป",
-      description: "การขายตามสัญญาสำหรับการผลิต (ส่วนหนึ่งของ Manufacturing Cloud for Sales) ออกแบบมาโดยเฉพาะสำหรับผู้ผลิตที่จัดการธุรกิจแบบ run-rate ผ่านข้อตกลงการขายและสัญญาระยะยาว ซึ่งรวมการจัดการข้อตกลงการขาย การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญาภายในแพลตฟอร์ม CRM นอกจากนี้ยังมองเห็นแบบเรียงลำดับเวลา ข้อมูลการรับรู้คำสั่งซื้อ และสามารถทำงานร่วมกันระหว่างทีมการขาย การดำเนินงาน และผลิตภัณฑ์เพื่อปรับปรุงความแม่นยำของการพยากรณ์และความสามารถในการทำกำไรของโปรแกรม",
+      description: "การวางแผนธุรกิจแบบบูรณาการ (IBP) คือวิวัฒนาการของ S&OP ที่ขยายการวางแผนแบบร่วมมือในทั่วทั้งองค์กร รวมการวางแผนเชิงกลยุทธ์ การวางแผนทางการเงิน การวางแผนอุปสงค์/อุปทาน และการดำเนินการปฏิบัติงานเป็นกรอบที่รวมศูนย์ โซลูชั่น IBP (เช่น ketteQ's IBP suite, SAP IBP หรือแพลตฟอร์มที่รวมกับ Salesforce) สร้างแหล่งความจริงเดียวโดยการเชื่อมต่อข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน โซลูชั่นให้การมองเห็นทั่วทั้งองค์กร ส่งเสริมความร่วมมือข้ามสายงาน เปิดใช้งานการสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ และรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้องและการดำเนินการที่ประสานกัน",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
       items: [
-        "วิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "องค์กรขนาดใหญ่",
+        "องค์กรที่กำลังผ่านการแปลงสู่ดิจิทัล",
+        "บริษัทที่ต้องการการจัดเรียงธุรกิจแบบครบวงจร",
       ],
     },
     detailsSection: {
       paragraph1:
-        "การขายตามสัญญาสำหรับการผลิตแปลงวิธีการจัดการความสัมพันธ์ระหว่างธุรกิจของผู้ผลิตโดยการให้แพลตฟอร์มแบบรวมสำหรับการจัดการข้อตกลงการขายและสัญญาระยะยาว วิธีแก้ปัญหาช่วยทำลายสิ่งกีดขวางระหว่างทีมการขาย การดำเนินงาน และการเงิน ซึ่งช่วยให้สามารถมองเห็นแบบเรียลไทม์ในการปฏิบัติตามสัญญาและการปฏิบัติตามข้อบังคับทั่วทั้งรอบการสร้างรายได้ทั้งหมด",
+        "การวางแผนธุรกิจแบบบูรณาการแปลงวิธีการที่องค์กรจัดเรียงกลยุทธ์กับการดำเนินการโดยการสร้างกรอบการวางแผนที่รวมศูนย์ที่เชื่อมต่อทุกฟังก์ชั่นทางธุรกิจ ไม่เหมือนกับวิธีการวางแผนแบบดั้งเดิมที่แผนกทำงานแยกกัน IBP สร้างแหล่งความจริงเดียวโดยการรวมข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน สิ่งนี้เปิดใช้งานการมองเห็นทั่วทั้งองค์กรที่ผู้บริหารและทีมสามารถเห็นว่าการตัดสินใจในพื้นที่หนึ่งส่งผลกระทบต่อทั้งองค์กรอย่างไร",
       paragraph2:
-        "ด้วยการรวมความสามารถของข้อตกลงการขายขั้นสูง การจัดการคำสั่งซื้อ และการจัดการรอบชีวิตของสัญญา การขายตามสัญญาช่วยให้ผู้ผลิตเพิ่มประสิทธิภาพกลยุทธ์การกำหนดราคา ปรับปรุงการปฏิบัติตามสัญญา และตัดสินใจพยากรณ์โดยใช้ข้อมูล ทีมการผลิตสามารถจัดเรียงการวางแผนการผลิตให้สอดคล้องกับความต้องการของสัญญาจริง ในขณะที่ทีมการขายรักษาความสัมพันธ์ลูกค้าที่แข็งแกร่งผ่านการจัดการการผูกพันที่โปร่งใส",
+        "โซลูชั่น IBP ส่งเสริมความร่วมมือข้ามสายงานผ่านวงจรการวางแผนอย่างต่อเนื่องแทนงบประมาณประจำปี การสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ช่วยให้องค์กรประเมินอนาคตหลายอย่างและตัดสินใจเชิงรุก ด้วยการรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้อง IBP เพิ่มความสามารถในการทำกำไร ปรับปรุงการจัดสรรทรัพยากร และสร้างความคล่องตัวขององค์กรเพื่อตอบสนองต่อการเปลี่ยนแปลงของตลาดอย่างมีประสิทธิภาพ",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -205,7 +207,7 @@ const translations = {
     },
     booking: {
       title: "จองการปรึกษา",
-      subtitle: "ผู้เชี่ยวชาญด้านการขายตามสัญญาของเราพร้อมที่จะช่วยปรับปรุงการจัดการสัญญาของคุณ",
+      subtitle: "ผู้เชี่ยวชาญด้านการวางแผนธุรกิจแบบบูรณาการของเราพร้อมที่จะช่วยจัดเรียงองค์กรของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
       organization: "องค์กร",
@@ -215,7 +217,7 @@ const translations = {
     },
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายในการจัดการสัญญาของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
+      subtitle: "อภิปรายความท้าทายด้านการวางแผนองค์กรของคุณและค้นพบโซลูชั่นแบบบูรณาการ",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -225,7 +227,7 @@ const translations = {
   },
 }
 
-export default function ContractualSalesPage() {
+export default function IntegratedBusinessPlanningPage() {
   const [lang, setLang] = useState("en")
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -442,7 +444,7 @@ export default function ContractualSalesPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,35 +452,27 @@ export default function ContractualSalesPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-cyan-400/40 shadow-xl shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 to-green-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-emerald-400/40 shadow-xl shadow-emerald-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Contract Lifecycle Management" : "การจัดการวงจรสัญญา"}</span>
+                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Enterprise Planning Platform" : "แพลตฟอร์มการวางแผนองค์กร"}</span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 rounded-full" />
+                <div className="h-2 w-40 bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-400 rounded-full" />
               </div>
-              <p className="text-2xl md:text-3xl text-cyan-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
+              <p className="text-2xl md:text-3xl text-emerald-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-cyan-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-emerald-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
             </div>
 
             <div className="relative">
-              {/* Contract Hub Visualization */}
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-2xl animate-pulse" />
-                
-                
-
-                {/* Contract Components */}
-                
-
-                
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-emerald-500/20 to-green-600/20 blur-2xl animate-pulse" />
               </div>
             </div>
           </div>
@@ -619,7 +613,7 @@ export default function ContractualSalesPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                    <Link href="/service/call-center" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
                       {t.contact.callCenter}
                     </Link>
                   </li>
@@ -640,7 +634,7 @@ export default function ContractualSalesPage() {
             {/* Right Side - Booking Form */}
             <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}</h3>
-              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Contractual Sales implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งาน Contractual Sales"}</p>
+              <p className="text-gray-600 mb-8">{lang === "en" ? "Get expert advice on Integrated Business Planning implementation" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการใช้งานการวางแผนธุรกิจแบบบูรณาการ"}</p>
               
               <div className="space-y-5">
                 <div>
