@@ -246,7 +246,7 @@ export default function Customer360Page() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -254,7 +254,7 @@ export default function Customer360Page() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500/30 to-purple-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-indigo-400/40 shadow-xl shadow-indigo-500/20">
+              <div className="inline-flex items-center gap-3 bg-linear-to-r from-indigo-500/30 to-purple-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-indigo-400/40 shadow-xl shadow-indigo-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
                 <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Unified Customer Intelligence" : "ข่าวกรองลูกค้าแบบรวม"}</span>
               </div>
@@ -262,11 +262,11 @@ export default function Customer360Page() {
                 <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] text-balance tracking-tight lg:text-8xl">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-full" />
+                <div className="h-2 w-40 bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-full" />
               </div>
               <p className="text-2xl md:text-3xl text-indigo-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-indigo-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-linear-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-indigo-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
@@ -299,7 +299,7 @@ export default function Customer360Page() {
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">
               {t.benefitsTitle}
             </h2>
-            <div className="h-1.5 w-32 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 mx-auto rounded-full" />
+            <div className="h-1.5 w-32 bg-linear-to-r from-indigo-500 via-purple-500 to-indigo-500 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -488,7 +488,7 @@ export default function Customer360Page() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
+            <div className="h-1 w-24 bg-linear-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">

@@ -246,7 +246,7 @@ export default function DemandSupplyPlanningPage() {
       <FloatingChatButton />
 
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-lg">
+      <nav className="sticky top-0 z-50 bg-linear-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-lg">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold text-white hover:text-blue-100 transition-colors">
@@ -442,7 +442,7 @@ export default function DemandSupplyPlanningPage() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-gradient-to-br from-slate-900 via-sky-900 to-slate-800">
+      <section className="relative pt-32 pb-32 px-6 overflow-hidden bg-linear-to-br from-slate-900 via-sky-900 to-slate-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}} />
         </div>
@@ -450,7 +450,7 @@ export default function DemandSupplyPlanningPage() {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-sky-400/40 shadow-xl shadow-sky-500/20">
+              <div className="inline-flex items-center gap-3 bg-linear-to-r from-sky-500/30 to-blue-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-sky-400/40 shadow-xl shadow-sky-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
                 <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Supply Chain Optimization" : "การเพิ่มประสิทธิภาพห่วงโซ่อุปทาน"}</span>
               </div>
@@ -458,11 +458,11 @@ export default function DemandSupplyPlanningPage() {
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
                   {t.hero.title}
                 </h1>
-                <div className="h-2 w-40 bg-gradient-to-r from-sky-400 via-blue-400 to-sky-400 rounded-full" />
+                <div className="h-2 w-40 bg-linear-to-r from-sky-400 via-blue-400 to-sky-400 rounded-full" />
               </div>
               <p className="text-2xl md:text-3xl text-sky-100 leading-relaxed max-w-2xl font-light">{t.hero.subtitle}</p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-sky-500/40 text-xl font-bold">
+                <Button onClick={scrollToContact} size="lg" className="bg-linear-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white rounded-full px-10 py-7 shadow-2xl shadow-sky-500/40 text-xl font-bold">
                   {lang === "en" ? "Get Started" : "เริ่มต้น"} <ArrowRight className="ml-3 w-6 h-6" />
                 </Button>
               </div>
@@ -470,7 +470,7 @@ export default function DemandSupplyPlanningPage() {
 
             <div className="relative">
               <div className="relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-sky-500/20 to-blue-600/20 blur-2xl animate-pulse" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-linear-to-br from-sky-500/20 to-blue-600/20 blur-2xl animate-pulse" />
               </div>
             </div>
           </div>
@@ -507,7 +507,7 @@ export default function DemandSupplyPlanningPage() {
       </section>
 
       {/* Summary Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-50 to-cyan-50">
+      <section className="py-20 px-6 bg-linear-to-br from-blue-50 to-cyan-50">
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">{t.summary.title}</h2>
@@ -522,7 +522,7 @@ export default function DemandSupplyPlanningPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-balance">{t.bestFor.title}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {t.bestFor.items.map((item, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100">
+              <div key={idx} className="bg-linear-to-br from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-100">
                 <p className="text-lg font-semibold text-gray-900">{item}</p>
               </div>
             ))}
@@ -531,7 +531,7 @@ export default function DemandSupplyPlanningPage() {
       </section>
 
       {/* Details Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-600 to-blue-800">
+      <section className="py-20 px-6 bg-linear-to-br from-blue-600 to-blue-800">
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-6 text-white">
             <p className="text-lg leading-relaxed">{t.detailsSection.paragraph1}</p>
@@ -541,11 +541,11 @@ export default function DemandSupplyPlanningPage() {
       </section>
 
       {/* Contact & Booking Section */}
-      <section id="contact-us" className="py-20 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+      <section id="contact-us" className="py-20 px-6 bg-linear-to-br from-slate-50 via-blue-50 to-cyan-50">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
+            <div className="h-1 w-24 bg-linear-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -555,7 +555,7 @@ export default function DemandSupplyPlanningPage() {
               <div className="grid gap-6">
                 <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -572,7 +572,7 @@ export default function DemandSupplyPlanningPage() {
 
                 <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100 hover:border-cyan-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/30">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-cyan-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/30">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -589,7 +589,7 @@ export default function DemandSupplyPlanningPage() {
 
                 <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
