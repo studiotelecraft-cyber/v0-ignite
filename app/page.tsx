@@ -135,26 +135,6 @@ const translations = {
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
-        group2: {
-          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
-          items: [
-            { name: "ก���รวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
-          items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
-          ],
-        },
-      },
-      resources: "คลังทรัพยากร",
-      about: "เกี่ยวกับเรา",
-      schedule: "นัดที่ปรึกษา",
-    },
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
@@ -205,7 +185,7 @@ const translations = {
     },
     partners: {
       title: "พาร์ทเนอร์ด้านเทคโนโลยี",
-      subtitle: "เราทำงานร่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
+      subtitle: "เราทำงาน���่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
     },
     contact: {
       title: "Contact Us",
