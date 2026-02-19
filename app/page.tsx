@@ -16,33 +16,14 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -142,33 +123,14 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการของเรา",
-      serviceGroups: {
-        group1: {
-          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
-          items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
-          ],
-        },
-        group2: {
-          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
-          items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
-          items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
-          ],
-        },
-      },
+      services: [
+        { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+        { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
+        { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
+        { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
+        { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
@@ -183,14 +145,14 @@ const translations = {
     features: {
       feature1: {
         title: "สร้างความสัมพันธ์กับลูกค้าให้แน่นแฟ้นยิ่งขึ้น",
-        desc: "รวมศูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
+        desc: "รวม���ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
       },
       feature2: {
         title: "เชื่อมต่อกับลูกค้า 24/7",
         desc: "มอบการบริการลูกค้าที่เป็นเลิศ เพิ่มความพึงพอใจของลูกค้า และเพิ่มความภักดีของลูกค้า",
       },
       feature3: {
-        title: "ทำให้การขายและการตลาดของคุณเป็นอัตโนมัติ",
+        title: "ทำใ��้การขายและการตลาดของคุณเป็นอัตโนมัติ",
         desc: "ปรับปรุงความประสิทธิภาพในการทำการการตลาดของคุณ สร้างการรับรู้ของแบรนด์ สร้างความสัมพันธ์ที่ดีให้กับลูกค้า และเพิ่มยอดขาย",
       },
       feature4: {
@@ -223,7 +185,7 @@ const translations = {
     },
     partners: {
       title: "พาร์ทเนอร์ด้านเทคโนโลยี",
-      subtitle: "เราทำงานร่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
+      subtitle: "เราทำงาน���่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
     },
     contact: {
       title: "Contact Us",
@@ -254,7 +216,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "อีเมลบริษัท",
+      emailLabel: "���ีเมลบริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -331,91 +293,20 @@ export default function Home() {
                 </Link>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
-                      <div className="grid grid-cols-3 gap-10">
-                        {/* Group 1 - Customer Experience & Sales Execution */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <circle cx="12" cy="12" r="6" />
-                                <circle cx="12" cy="12" r="2" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
-                              {t.nav.serviceGroups.group1.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-orange-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 2 - Strategic Planning & Intelligence */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
-                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
-                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
-                              {t.nav.serviceGroups.group2.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-blue-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 3 - Supply Chain & Operations */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-green-500 leading-tight">
-                              {t.nav.serviceGroups.group3.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-green-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                      <div className="space-y-3">
+                        {t.nav.services.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="block text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-200"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
                       </div>
                       {/* Bottom CTA Section */}
-                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
+                      <div className="border-t border-dashed border-gray-300 mt-6 pt-6 flex items-center justify-center gap-4">
                         <button
                           onClick={() => setScheduleModalOpen(true)}
                           className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
@@ -611,7 +502,7 @@ export default function Home() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative">
                   <img
-                    src="/images/design-mode/Untitled%20design%20%282%29.png"
+                    src="/images/robot-mascot.png"
                     alt="IGNITE Mascot"
                     className="w-[350px] md:w-[450px] lg:w-[500px] object-contain animate-float"
                   />

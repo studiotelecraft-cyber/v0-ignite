@@ -1,11 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const lexend = localFont({
+  src: '../public/fonts/Lexend-VariableFont_wght.ttf',
+  variable: '--font-lexend',
+  display: 'swap',
+})
+
+const sarabun = localFont({
+  src: '../public/fonts/Sarabun-Regular.ttf',
+  variable: '--font-sarabun',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Ignite Idea - ปลดล็อกศักยภาพองค์กรด้วยนวัตกรรมแห่งอนาคต",
@@ -34,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
