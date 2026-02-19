@@ -216,7 +216,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "อีเมลบริษัท",
+      emailLabel: "���ีเมลบริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -502,7 +502,7 @@ export default function Home() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
                 <div className="relative">
                   <img
-                    src="/images/design-mode/Untitled%20design%20%282%29.png"
+                    src="/images/robot-mascot.png"
                     alt="IGNITE Mascot"
                     className="w-[350px] md:w-[450px] lg:w-[500px] object-contain animate-float"
                   />
