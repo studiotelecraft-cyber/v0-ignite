@@ -16,33 +16,14 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -142,21 +123,22 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการของเรา",
-      serviceGroups: {
-        group1: {
-          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
-          items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
-          ],
-        },
+      services: [
+        { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+        { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
+        { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
+        { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
+        { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
+      resources: "คลังทรัพยากร",
+      about: "เกี่ยวกับเรา",
+      schedule: "นัดที่ปรึกษา",
+    },
         group2: {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
+            { name: "ก���รวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
             { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
