@@ -508,72 +508,7 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       
 
-      <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20" />
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="text-center mb-8">
-            <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-              {lang === "en" ? "Your Privacy Matters" : "ความเป็นส่วนตัวของคุณสำคัญ"}
-            </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
-              {lang === "en" 
-                ? "We are committed to protecting your personal data and maintaining transparency in how we handle your information." 
-                : "เรามุ่งมั่นในการปกป้องข้อมูลส่วนบุคคลของคุณและรักษาความโปร่งใสในการจัดการข้อมูลของคุณ"}
-            </p>
-            <Link href="/privacy-policy">
-              <Button 
-                size="lg" 
-                className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-10 py-6 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold"
-              >
-                {lang === "en" ? "Read Privacy Policy" : "อ่านนโยบายความเป็นส่วนตัว"} →
-              </Button>
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="dataSecurity">
-              <Lock className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Data Security" : "ความปลอดภัยของข้อมูล"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Your data is protected with industry-leading security standards" 
-                  : "ข้อมูลของคุณได้รับการปกป้องด้วยมาตรฐานความปลอดภัยชั้นนำ"}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="fullTransparency">
-              <Eye className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Full Transparency" : "ความโปร่งใสเต็มรูปแบบ"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Clear information about how we collect and use your data" 
-                  : "ข้อมูลที่ชัดเจนเกี่ยวกับวิธีที่เราเก็บรวบรวมและใช้ข้อมูลของคุณ"}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="yourRights">
-              <Users className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Your Rights" : "สิทธิของคุณ"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Full control over your personal information and how it's used" 
-                  : "ควบคุมข้อมูลส่วนบุคคลของคุณอย่างเต็มที่"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section 
+      <section
         className="py-24 px-6 relative overflow-hidden"
         style={{
           backgroundImage: `url('/images/Hompage_HeroIMG_001.png')`,
