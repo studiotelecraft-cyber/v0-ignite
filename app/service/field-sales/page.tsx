@@ -16,33 +16,14 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -175,7 +156,7 @@ const translations = {
     },
     summary: {
       title: "สรุป",
-      description: "Field Sales Execution (ส่วนใหญ่ผ่าน Consumer Goods Cloud Retail Execution) ออกแบบมาสำหรับบริษัทที่มีทีมขายภาคสนามและต้องการจัดการกิจกรรมในร้านค้าและความสัมพันธ์ลูกค้าขณะเดินทาง ซึ่งเปลี่ยนวิธีการทำงานของทีมขายจากสำนักงานใหญ่ไปยังภาคสนามโดยมีแพลตฟอร์มที่เชื่อมต่อและอัจฉริยะบนพื้นฐานของข้อมูลแบบเรียลไทม์ สารละลายรวมแอปมือถือสำหรับตัวแทนภาคสนาม ข้อมูลบัญชีโดยละเอียด เส้นทางที่แนะนำ รายการงานอัตโนมัติ และการวิเคราะห์สำหรับผู้จัดการเพื่อติดตามประสิทธิภาพและปรับเปลี่ยนการดำเนินการ",
+      description: "Field Sales Execution (ส่วนใหญ่ผ่าน Consumer Goods Cloud Retail Execution) ออกแบบมาสำหรับบริษัทที่มีทีมขายภาคสนามและต้องการจัดการกิจกรรมในร้า��ค้าและความสัมพันธ์ลูกค้าขณะเดินทาง ซึ่งเปลี่ยนวิธีการทำงานของทีมขายจากสำนักงานใหญ่ไปยังภาคสนามโดยมีแพลตฟอร์มที่เชื่อมต่อและอัจฉริยะบนพื้นฐานของข้อมูลแบบเรียลไทม์ สารละลายรวมแอปมือถือสำหรับตัวแทนภาคสนาม ข้อมูลบัญชีโดยละเอียด เส้นทางที่แนะนำ รายการงานอัตโนมัติ และการวิเคราะห์สำหรับผู้จัดการเพื่อติดตามประสิทธิภาพและปรับเปลี่ยนการดำเนินการ",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
