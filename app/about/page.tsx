@@ -430,6 +430,79 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ASEAN Rising Star Award Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+        {/* Animated Background Patterns */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)] animate-pulse" />
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        </div>
+
+        <div className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Award Title */}
+            <div className="text-center mb-12">
+              <div className="inline-block mb-6 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                <span className="text-white/90 text-sm font-semibold tracking-wider uppercase">
+                  {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl">
+                  WINNER
+                </span>
+              </h2>
+              <p className="text-2xl md:text-4xl font-bold text-white/90 mb-4 drop-shadow-lg">
+                ASEAN Rising Star Partner of the Year
+              </p>
+              <div className="flex items-center justify-center gap-2 text-white/70">
+                <Award className="w-5 h-5" />
+                <span className="text-lg">FY25 APAC Partner of the Year</span>
+              </div>
+            </div>
+
+            {/* Video Container with Scroll Animation */}
+            <div className="relative group">
+              {/* Glowing Border Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
+              
+              {/* Video */}
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover"
+                >
+                  <source src="/videos/asean-rising-star-award.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              {/* Decorative Corner Accents */}
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-yellow-400 rounded-tl-3xl opacity-80" />
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-yellow-400 rounded-br-3xl opacity-80" />
+            </div>
+
+            {/* Additional Info */}
+            <div className="text-center mt-12">
+              <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                {lang === "en" 
+                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region." 
+                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-white/50" />
+        </div>
+      </section>
+
       <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
