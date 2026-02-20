@@ -145,7 +145,7 @@ const translations = {
     features: {
       feature1: {
         title: "สร้างความสัมพันธ์กับลูกค้าให้แน่นแฟ้นยิ่งขึ้น",
-        desc: "รวม���ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
+        desc: "รวม�����ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
       },
       feature2: {
         title: "เชื่อมต่อกับลูกค้า 24/7",
@@ -650,11 +650,11 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">{t.partners.title}</h2>
               <p className="text-xl text-gray-600">{t.partners.subtitle}</p>
             </div>
-            <div className="flex justify-center items-center gap-8">
+            <div className="flex justify-center items-center">
               <div className="relative group">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/messageImage_1771576659599-sRYMlFhk6elpHGcRaC3UPyoUoF2ouv.jpg"
-                  alt="Salesforce Partner and Authorized Cloud Reseller"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                  alt="Salesforce Authorized Cloud Reseller"
                   className="h-[156px] md:h-[195px] lg:h-[234px] w-auto object-contain transform transition-all duration-700 ease-out group-hover:scale-105 opacity-0 animate-fade-in"
                   style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
                 />
@@ -771,8 +771,8 @@ export default function Home() {
                     <h3 className="text-2xl font-bold text-white mb-6">{t.contact.partners}</h3>
                     <div className="flex items-center">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/messageImage_1771576659599-sRYMlFhk6elpHGcRaC3UPyoUoF2ouv.jpg"
-                        alt="Salesforce Partner and Authorized Cloud Reseller"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                        alt="Salesforce Authorized Cloud Reseller"
                         className="h-[98px] md:h-[117px] w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
                       />
                     </div>
