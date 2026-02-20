@@ -216,7 +216,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "�����เมลบริษัท",
+      emailLabel: "�����เมล���ริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -655,7 +655,7 @@ export default function Home() {
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
                   alt="Salesforce Authorized Cloud Reseller"
-                  className="h-32 md:h-40 lg:h-48 w-auto object-contain transform transition-all duration-700 ease-out group-hover:scale-105 opacity-0 animate-fade-in"
+                  className="h-[156px] md:h-[195px] lg:h-[234px] w-auto object-contain transform transition-all duration-700 ease-out group-hover:scale-105 opacity-0 animate-fade-in"
                   style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
                 />
               </div>
@@ -773,7 +773,7 @@ export default function Home() {
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
                         alt="Salesforce Authorized Cloud Reseller"
-                        className="h-20 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
+                        className="h-[98px] md:h-[117px] w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
                       />
                     </div>
                   </div>
