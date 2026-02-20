@@ -216,7 +216,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "���ีเมลบริษัท",
+      emailLabel: "�����เมลบริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -644,23 +644,21 @@ export default function Home() {
         </section>
 
         {/* Partners Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 overflow-hidden">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">{t.partners.title}</h2>
               <p className="text-xl text-gray-600">{t.partners.subtitle}</p>
             </div>
-            <div className="flex justify-center items-center gap-24 flex-wrap">
-              <img
-                src="/images/design-mode/Group-1597881657.png.webp"
-                alt="Salesforce"
-                className="h-16 opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                alt="Microsoft"
-                className="h-16 opacity-70 hover:opacity-100 transition-opacity"
-              />
+            <div className="flex justify-center items-center">
+              <div className="relative group">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                  alt="Salesforce Authorized Cloud Reseller"
+                  className="h-32 md:h-40 lg:h-48 w-auto object-contain transform transition-all duration-700 ease-out group-hover:scale-105 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -771,16 +769,11 @@ export default function Home() {
 
                   <div className="mt-8 pt-8 border-t border-white/20">
                     <h3 className="text-2xl font-bold text-white mb-6">{t.contact.partners}</h3>
-                    <div className="flex items-center gap-8 flex-wrap">
+                    <div className="flex items-center">
                       <img
-                        src="/images/design-mode/Group-1597881657.png.webp"
-                        alt="Salesforce"
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
-                      />
-                      <img
-                        src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                        alt="Microsoft"
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                        alt="Salesforce Authorized Cloud Reseller"
+                        className="h-20 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
                       />
                     </div>
                   </div>
