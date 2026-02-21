@@ -98,26 +98,6 @@ const translations = {
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
-        group2: {
-          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
-          items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
-          items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
-          ],
-        },
-      },
-      resources: "คลังทรัพยากร",
-      about: "เกี่ยวกับเรา",
-      schedule: "นัดที่ปรึกษา",
-    },
     hero: {
       title: "IGNITE IDEA",
       subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ช��ดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
