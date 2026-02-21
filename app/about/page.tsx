@@ -15,33 +15,13 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -107,40 +87,20 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการของเรา",
-      serviceGroups: {
-        group1: {
-          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
-          items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/crm" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/crm" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/data-management" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/crm" },
-          ],
-        },
-        group2: {
-          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
-          items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
-          items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
-          ],
-        },
-      },
+      services: [
+        { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+        { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
+        { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
+        { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
       title: "IGNITE IDEA",
-      subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ชัดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
+      subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ช��ดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
     },
     mission: {
       title: "พันธกิจของเรา",
@@ -249,91 +209,20 @@ export default function AboutPage() {
                 </Link>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
-                      <div className="grid grid-cols-3 gap-10">
-                        {/* Group 1 - Customer Experience & Sales Execution */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <circle cx="12" cy="12" r="6" />
-                                <circle cx="12" cy="12" r="2" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
-                              {t.nav.serviceGroups.group1.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-orange-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 2 - Strategic Planning & Intelligence */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
-                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
-                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
-                              {t.nav.serviceGroups.group2.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-blue-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 3 - Supply Chain & Operations */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-green-500 leading-tight">
-                              {t.nav.serviceGroups.group3.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-green-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                      <div className="space-y-3">
+                        {t.nav.services.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="block text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-200"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
                       </div>
                       {/* Bottom CTA Section */}
-                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
+                      <div className="border-t border-dashed border-gray-300 mt-6 pt-6 flex items-center justify-center gap-4">
                         <button
                           onClick={() => setScheduleModalOpen(true)}
                           className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
@@ -430,6 +319,79 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ASEAN Rising Star Award Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+        {/* Animated Background Patterns */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)] animate-pulse" />
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        </div>
+
+        <div className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Award Title */}
+            <div className="text-center mb-12">
+              <div className="inline-block mb-6 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                <span className="text-white/90 text-sm font-semibold tracking-wider uppercase">
+                  {lang === "en" ? "Award Winner" : "ผู้ได้รั���รางวัล"}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl">
+                  WINNER
+                </span>
+              </h2>
+              <p className="text-2xl md:text-4xl font-bold text-white/90 mb-4 drop-shadow-lg">
+                ASEAN Rising Star Partner of the Year
+              </p>
+              <div className="flex items-center justify-center gap-2 text-white/70">
+                <Award className="w-5 h-5" />
+                <span className="text-lg">FY25 APAC Partner of the Year</span>
+              </div>
+            </div>
+
+            {/* Video Container with Scroll Animation */}
+            <div className="relative group">
+              {/* Glowing Border Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
+              
+              {/* Video */}
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover"
+                >
+                  <source src="/videos/asean-rising-star-award.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              {/* Decorative Corner Accents */}
+              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-yellow-400 rounded-tl-3xl opacity-80" />
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-yellow-400 rounded-br-3xl opacity-80" />
+            </div>
+
+            {/* Additional Info */}
+            <div className="text-center mt-12">
+              <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                {lang === "en" 
+                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region." 
+                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-white/50" />
+        </div>
+      </section>
+
       <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -508,72 +470,7 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       
 
-      <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtNi42MjcgNS4zNzMtMTIgMTIgMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMgMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20" />
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="text-center mb-8">
-            <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-              {lang === "en" ? "Your Privacy Matters" : "ความเป็นส่วนตัวของคุณสำคัญ"}
-            </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
-              {lang === "en" 
-                ? "We are committed to protecting your personal data and maintaining transparency in how we handle your information." 
-                : "เรามุ่งมั่นในการปกป้องข้อมูลส่วนบุคคลของคุณและรักษาความโปร่งใสในการจัดการข้อมูลของคุณ"}
-            </p>
-            <Link href="/privacy-policy">
-              <Button 
-                size="lg" 
-                className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-10 py-6 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-105 font-semibold"
-              >
-                {lang === "en" ? "Read Privacy Policy" : "อ่านนโยบายความเป็นส่วนตัว"} →
-              </Button>
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="dataSecurity">
-              <Lock className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Data Security" : "ความปลอดภัยของข้อมูล"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Your data is protected with industry-leading security standards" 
-                  : "ข้อมูลของคุณได้รับการปกป้องด้วยมาตรฐานความปลอดภัยชั้นนำ"}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="fullTransparency">
-              <Eye className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Full Transparency" : "ความโปร่งใสเต็มรูปแบบ"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Clear information about how we collect and use your data" 
-                  : "ข้อมูลที่ชัดเจนเกี่ยวกับวิธีที่เราเก็บรวบรวมและใช้ข้อมูลของคุณ"}
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20" key="yourRights">
-              <Users className="w-10 h-10 text-white mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">
-                {lang === "en" ? "Your Rights" : "สิทธิของคุณ"}
-              </h3>
-              <p className="text-white/80 text-sm">
-                {lang === "en" 
-                  ? "Full control over your personal information and how it's used" 
-                  : "ควบคุมข้อมูลส่วนบุคคลของคุณอย่างเต็มที่"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section 
+      <section
         className="py-24 px-6 relative overflow-hidden"
         style={{
           backgroundImage: `url('/images/Hompage_HeroIMG_001.png')`,
@@ -668,44 +565,23 @@ export default function AboutPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
-                  <li key="service1">
-                    <Link href="/service/crm" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
-                      <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceGroups.group1.items[0].name}
-                    </Link>
-                  </li>
-                  <li key="service2">
-                    <Link href="/service/customer-services-centre" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
-                      <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceGroups.group1.items[3].name}
-                    </Link>
-                  </li>
-                  <li key="service3">
-                    <Link href="/service/marketing" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
-                      <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceGroups.group1.items[2].name}
-                    </Link>
-                  </li>
-                  <li key="service4">
-                    <Link href="/service/data-management" className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
-                      <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                      {t.nav.serviceGroups.group1.items[1].name}
-                    </Link>
-                  </li>
+                  {t.nav.services.slice(0, 4).map((service, idx) => (
+                    <li key={`service${idx}`}>
+                      <Link href={service.href} className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
+                        <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
 
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.partnersTitle}</h3>
-                  <div className="flex items-center gap-8 flex-wrap">
+                  <div className="flex items-center">
                     <img 
-                      src="/images/design-mode/Group-1597881657.png.webp"
-                      alt="Salesforce" 
-                      className="h-12 opacity-90 hover:opacity-100 transition-opacity" 
-                    />
-                    <img 
-                      src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                      alt="Microsoft" 
-                      className="h-12 opacity-90 hover:opacity-100 transition-opacity" 
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                      alt="Salesforce Authorized Cloud Reseller" 
+                      className="h-[98px] md:h-[117px] w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105" 
                     />
                   </div>
                 </div>

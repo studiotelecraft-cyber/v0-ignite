@@ -19,7 +19,6 @@ const translations = {
       services: [
         { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
         { name: "Field Sales Execution", href: "/service/field-sales" },
-        { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
         { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
         { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
         { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
@@ -126,7 +125,6 @@ const translations = {
       services: [
         { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
         { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-        { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
         { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
         { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
         { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
@@ -145,7 +143,7 @@ const translations = {
     features: {
       feature1: {
         title: "สร้างความสัมพันธ์กับลูกค้าให้แน่นแฟ้นยิ่งขึ้น",
-        desc: "รวม���ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
+        desc: "รวม�����ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
       },
       feature2: {
         title: "เชื่อมต่อกับลูกค้า 24/7",
@@ -216,7 +214,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "���ีเมลบริษัท",
+      emailLabel: "�����เมล���ริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -644,23 +642,21 @@ export default function Home() {
         </section>
 
         {/* Partners Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 overflow-hidden">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">{t.partners.title}</h2>
               <p className="text-xl text-gray-600">{t.partners.subtitle}</p>
             </div>
-            <div className="flex justify-center items-center gap-24 flex-wrap">
-              <img
-                src="/images/design-mode/Group-1597881657.png.webp"
-                alt="Salesforce"
-                className="h-16 opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                alt="Microsoft"
-                className="h-16 opacity-70 hover:opacity-100 transition-opacity"
-              />
+            <div className="flex justify-center items-center">
+              <div className="relative group">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                  alt="Salesforce Authorized Cloud Reseller"
+                  className="h-[156px] md:h-[195px] lg:h-[234px] w-auto object-contain transform transition-all duration-700 ease-out group-hover:scale-105 opacity-0 animate-fade-in"
+                  style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -771,16 +767,11 @@ export default function Home() {
 
                   <div className="mt-8 pt-8 border-t border-white/20">
                     <h3 className="text-2xl font-bold text-white mb-6">{t.contact.partners}</h3>
-                    <div className="flex items-center gap-8 flex-wrap">
+                    <div className="flex items-center">
                       <img
-                        src="/images/design-mode/Group-1597881657.png.webp"
-                        alt="Salesforce"
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
-                      />
-                      <img
-                        src="/images/design-mode/Microsoft_logo_%282012%29.svg.png"
-                        alt="Microsoft"
-                        className="h-12 opacity-90 hover:opacity-100 transition-opacity"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reseller-Badge-siIusAWgY6c3Xszg6rwOEBGKUzHgws.png"
+                        alt="Salesforce Authorized Cloud Reseller"
+                        className="h-[98px] md:h-[117px] w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
                       />
                     </div>
                   </div>
