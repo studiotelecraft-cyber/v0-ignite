@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ���ะการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ����ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -401,18 +401,18 @@ export default function AboutPage() {
             <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
               {t.values.title}
             </h2>
-            <div className="h-2 w-40 bg-white/80 mx-auto rounded-full" />
+            <div className="h-2 w-40 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto rounded-full shadow-lg" />
           </div>
           
-          <div className="relative max-w-6xl mx-auto h-[900px] md:h-[700px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {Object.entries(t.values)
               .filter(([key]) => key.startsWith("value"))
               .map(([key, value], index) => {
                 const icons = [
-                  <Lightbulb className="w-8 h-8" />,
-                  <TrendingUp className="w-8 h-8" />,
-                  <Award className="w-8 h-8" />,
-                  <Heart className="w-8 h-8" />
+                  <Lightbulb className="w-10 h-10" />,
+                  <TrendingUp className="w-10 h-10" />,
+                  <Award className="w-10 h-10" />,
+                  <Heart className="w-10 h-10" />
                 ]
                 const gradients = [
                   "from-blue-500 to-cyan-500",
@@ -421,44 +421,35 @@ export default function AboutPage() {
                   "from-green-500 to-teal-500"
                 ]
                 
-                const angle = (index * 90 - 45) * (Math.PI / 180)
-                const radius = 320
-                const top = 50 + Math.sin(angle) * radius / 9
-                const left = 50 + Math.cos(angle) * radius / 9
-                
                 return (
                   <div 
                     key={key}
-                    className="absolute w-144 group"
-                    style={{
-                      top: `${top}%`,
-                      left: `${left}%`,
-                      transform: 'translate(-50%, -50%)',
-                      animationDelay: `${index * 0.1}s`
-                    }}
+                    className="group animate-fade-in"
+                    style={{ animationDelay: `${index * 0.15}s` }}
                   >
-                    <div className="relative p-8 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 px-8 mx-36 ml-[111px]">
-                      <div className={`absolute inset-0 bg-gradient-to-br mx-36 ${gradients[index]} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`} />
-                      <div className="text-center">
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg mx-auto mb-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                    <div className="relative h-full p-10 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
+                      {/* Gradient overlay on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`} />
+                      
+                      {/* Icon container */}
+                      <div className="flex items-start gap-6 relative z-10">
+                        <div className={`flex-shrink-0 w-24 h-24 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                           {icons[index]}
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
-                          {value.title}
-                        </h3>
-                        <p className="text-gray-700 leading-relaxed">{value.desc}</p>
+                        
+                        {/* Content */}
+                        <div className="flex-1 pt-2">
+                          <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
+                            {value.title}
+                          </h3>
+                          <p className="text-lg text-gray-700 leading-relaxed">
+                            {value.desc}
+                          </p>
+                        </div>
                       </div>
                       
-                      <div 
-                        className="absolute w-0.5 bg-gradient-to-b from-transparent via-blue-300/50 to-transparent opacity-20 group-hover:opacity-40 transition-opacity"
-                        style={{
-                          height: '80px',
-                          top: '50%',
-                          left: '50%',
-                          transform: `rotate(${-angle * 180 / Math.PI + 90}deg) translateX(-50%)`,
-                          transformOrigin: 'top center'
-                        }}
-                      />
+                      {/* Decorative corner accent */}
+                      <div className={`absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl ${gradients[index]} opacity-5 group-hover:opacity-10 rounded-tl-[100px] transition-opacity duration-500`} />
                     </div>
                   </div>
                 )
