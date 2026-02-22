@@ -17,33 +17,13 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -188,7 +168,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "การวางแผนและวิเคราะห์ทางการเงินแปลงวิธีการจัดการการวางแผนทางการเงินและการพยากรณ์ของสถาบันโดยการรวมข้อมูลการดำเนินงาน Salesforce กับเครื่องมือการวางแผน��างการเงินที่ครอบคลุม วิธีแก้ปัญหาขจัดการปิดกั้นแบบดั้งเดิมระหว่างข้อมูลการขาย การดำเนินงาน และทางการเงิน เปิดใช้งานให้ทีมการเงินจัดทำการพยากรณ์ตามข้อมูลกิจกรรมทางธุรกิจที่แท้จริงปัจจุบันแทนแนวโน้มทางประวัติศาสตร์หรือการประมาณการด้วยตนเอง",
+        "การวางแผนและวิเคราะห์ทางการเงินแปลงวิธีการจัดการการวางแผนทางการเงินและการพยากรณ์ของสถาบันโดยการรวมข้อมูลการดำเนินงาน Salesforce กับเครื่องมือการวางแผน���างการเงินที่ครอบคลุม วิธีแก้ปัญหาขจัดการปิดกั้นแบบดั้งเดิมระหว่างข้อมูลการขาย การดำเนินงาน และทางการเงิน เปิดใช้งานให้ทีมการเงินจัดทำการพยากรณ์ตามข้อมูลกิจกรรมทางธุรกิจที่แท้จริงปัจจุบันแทนแนวโน้มทางประวัติศาสตร์หรือการประมาณการด้วยตนเอง",
       paragraph2:
         "ด้วยการทำให้การไหลของข้อมูลระหว่าง Salesforce และระบบการเงินเป็นอัตโนมัติ โซลูชั่น FP&A เปิดใช้งานการวางแผนอย่างต่อเนื่อง การวิเคราะห์สถานการณ์ที่เร็วขึ้น และการพยากรณ์ที่แม่นยำยิ่งขึ้น ทีมการเงินสามารถตอบสนองต่อการเปลี่ยนแปลงทางธุรกิจได้อย่างรวดเร็ว ประเมินผลกระทบทางการเงินของความคิดริเริ่มเชิงกลยุทธ์ และตัดสินใจโดยใช้ข้อมูล การรวมนี้ช่วยให้ประธานธนาคารและผู้นำการเงินสามารถให้คำแนะนำเชิงกลยุทธ์ที่สอดคล้องกับผลการดำเนินงานทางธุรกิจในขณะที่ลดเวลาที่ใช้ในการรวบรวมและการรายงานข้อมูลด้วยตนเอง",
     },

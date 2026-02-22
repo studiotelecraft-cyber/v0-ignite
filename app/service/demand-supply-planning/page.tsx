@@ -17,33 +17,13 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/call-center" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -186,7 +166,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "การวางแผนอุปสงค์และอุปทานแปลงการจัดการสินค้าคงคลังและห่วงโซ่อุปทานโดยรวมการวิเคราะห์เชิงพยากรณ์กับการมองเห็นการดำเนินงานแบบเรียลไ���ม์ โซลูชั่นจะรวมเข้ากับ Salesforce เพื่อใช้ประโยชน์จากการพยากรณ์การขาย สัญญาณความต้องการของลูกค้า และรูปแบบในอดีตเพื่อสร้างการพยากรณ์ความต้องการที่แม่นยำ ด้วยการทำให้กระบวนการวางแผนเป็นอัตโนมัติและให้คำแนะนำที่ขับเคลื่อนด้วย AI องค์กรสามารถเพิ่มประสิทธิภาพการลงทุนสินค้าคงคลังและปรับปรุงประสิทธิภาพห่วงโซ่อุปทาน",
+        "การวางแผนอุปสงค์และอุปทานแปลงการจัดการสินค้าคงคลังและห่วงโซ่อุปทานโดยรวมการวิเคราะห์เชิงพยากรณ์กับการมองเห็นการดำเนินงานแบบเรียล������ม์ โซลูชั่นจะรวมเข้ากับ Salesforce เพื่อใช้ประโยชน์จากการพยากรณ์การขาย สัญญาณความต้องการของลูกค้า และรูปแบบในอดีตเพื่อสร้างการพยากรณ์ความต้องการที่แม่นยำ ด้วยการทำให้กระบวนการวางแผนเป็นอัตโนมัติและให้คำแนะนำที่ขับเคลื่อนด้วย AI องค์กรสามารถเพิ่มประสิทธิภาพการลงทุนสินค้าคงคลังและปรับปรุงประสิทธิภาพห่วงโซ่อุปทาน",
       paragraph2:
         "ด้วยความสามารถเช่น Materials Requirements Planning และ Distribution Requirements Planning โซลูชั่นการวางแผนอุปสงค์และอุปทานช่วยให้องค์กรสามารถสมดุลอุปสงค์และอุปทานในหลายตำแหน่งและสายผลิตภัณฑ์ การจับคู่อุปสงค์-อุปทานแบบเรียลไทม์ช่วยให้ผู้ผลิตและผู้จัดจำหน่ายตอบสนองต่อการเปลี่ยนแปลงได้อย่างรวดเร็ว ลดต้นทุนการขนส่ง และปรับปรุงระดับการบริการ ด้วยการเชื่อมต่อสัญญาณความต้องการจาก Salesforce กับการดำเนินการห่วงโซ่อุปทาน โซลูชั่นเหล่านี้เปิดใช้งานการมองเห็นและควบคุมห่วงโซ่อุปทานแบบครบวงจร",
     },
