@@ -143,7 +143,7 @@ const translations = {
     features: {
       feature1: {
         title: "สร้างความสัมพันธ์กับลูกค้าให้แน่นแฟ้นยิ่งขึ้น",
-        desc: "รวม�����ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งคอมพิวเตอร์ มือถือ และแท็บเล็ต",
+        desc: "รวม�����ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งค��มพิวเตอร์ มือถือ และแท็บเล็ต",
       },
       feature2: {
         title: "เชื่อมต่อกับลูกค้า 24/7",
@@ -450,11 +450,16 @@ export default function Home() {
 
       <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <img 
-            src="/images/Hompage_HeroIMG_001.png" 
-            alt="Hero Background" 
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-          />
+          >
+            <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/VDO1-zORJd82UJMheGSHUMtIJAKJqs5ziJE.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/50 to-blue-950/60" />
         <div className="container mx-auto relative z-10">
