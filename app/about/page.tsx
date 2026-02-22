@@ -351,27 +351,18 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Video Container with Scroll Animation */}
+            {/* Award Image Container with Scroll Animation */}
             <div className="relative group">
               {/* Glowing Border Effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
               
-              {/* Video */}
+              {/* Award Image */}
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  disablePictureInPicture
-                  controls={false}
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
                   className="w-full h-auto object-cover"
-                  style={{ display: 'block' }}
-                >
-                  <source src="/videos/asean-rising-star-award.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
             </div>
 
