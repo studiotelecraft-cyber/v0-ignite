@@ -91,10 +91,11 @@ const translations = {
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
+      service1: "Lead to Cash (Order) Management",
+      service2: "Field Sales Execution",
+      service3: "Customer 360 Data Consolidation",
+      service4: "Next Gen. Customer Service Centre",
+      service5: "Salesforce Manage Service",
       partners: "Our product partner",
     },
     booking: {
@@ -193,7 +194,7 @@ const translations = {
     },
     partners: {
       title: "พาร์ทเนอร์ด้านเทคโนโลยี",
-      subtitle: "เราทำงาน���่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
+      subtitle: "เราทำงานร่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
     },
     contact: {
       title: "Contact Us",
@@ -202,10 +203,11 @@ const translations = {
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
+      service1: "การจัดการ Lead to Cash (Order)",
+      service2: "การดำเนินการขายภาคสนาม",
+      service3: "การรวมข้อมูลลูกค้า 360 องศา",
+      service4: "ศูนย์บริการลูกค้ายุคใหม่",
+      service5: "บริการจัดการ Salesforce",
       partners: "Our product partner",
     },
     booking: {
@@ -764,11 +766,29 @@ export default function Home() {
                   <ul className="space-y-3">
                     <li>
                       <Link
-                        href="/service/crm"
+                        href="/service/lead-to-cash-mgn"
                         className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
                       >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                        {t.contact.crm}
+                        {t.contact.service1}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/service/field-sales"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
+                        <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
+                        {t.contact.service2}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/service/customer-360"
+                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
+                      >
+                        <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
+                        {t.contact.service3}
                       </Link>
                     </li>
                     <li>
@@ -777,25 +797,16 @@ export default function Home() {
                         className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
                       >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                        {t.contact.callCenter}
+                        {t.contact.service4}
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/service/marketing"
+                        href="/service/salesforce-manage-service"
                         className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
                       >
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                        {t.contact.marketing}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/service/data-management"
-                        className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group"
-                      >
-                        <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
-                        {t.contact.dataManagement}
+                        {t.contact.service5}
                       </Link>
                     </li>
                   </ul>
