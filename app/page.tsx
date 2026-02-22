@@ -81,7 +81,7 @@ const translations = {
     },
     contact: {
       title: "Contact Us",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
@@ -187,7 +187,7 @@ const translations = {
     },
     contact: {
       title: "Contact Us",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
@@ -220,7 +220,7 @@ const translations = {
     caseStudyModal: {
       title: "ดาวน์โหลดเคสสตัดดี้",
       nameLabel: "ชื่อ",
-      emailLabel: "อีเมลบริษัท",
+      emailLabel: "���ีเมลบริษัท",
       download: "ดาวน์โหลดเลย",
     },
   },

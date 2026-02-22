@@ -74,7 +74,7 @@ const translations = {
     contactUs: {
       title: "Contact Us",
       subtitle: "Get in touch with us for a consultation",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       servicesTitle: "Our consult & services",
@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ����ะการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ�����ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -146,7 +146,7 @@ const translations = {
     contactUs: {
       title: "ติดต่อเรา",
       subtitle: "ติดต่อเราเพื่อขอคำปรึกษา",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       servicesTitle: "บริการของเรา",
@@ -701,7 +701,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-gray-900 font-semibold text-lg">
-                    {lang === "en" ? "Your name" : "ชื่อของคุ���"}
+                    {lang === "en" ? "Your name" : "ช��่อของคุ���"}
                   </Label>
                   <Input
                     id="name"
