@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ��ะการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ���ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -308,8 +308,6 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
         <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
-         <h3 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h3>
-
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
           <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
           
@@ -380,6 +378,17 @@ export default function AboutPage() {
         {/* Bottom Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-white/50" />
+        </div>
+      </section>
+
+      {/* Salesforce Certification Badges Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-MJFzQubsB1d9lCApA8f3RmHkKGq4OI.png"
+            alt="Salesforce Certifications"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -701,7 +710,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-gray-900 font-semibold text-lg">
-                    {lang === "en" ? "Your name" : "ชื่อของคุณ"}
+                    {lang === "en" ? "Your name" : "ชื่อของคุ���"}
                   </Label>
                   <Input
                     id="name"
