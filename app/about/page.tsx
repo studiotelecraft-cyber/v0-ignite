@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้และการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ��ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -313,14 +313,6 @@ export default function AboutPage() {
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
           <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
           
-          {/* Salesforce Certification Badges */}
-          <div className="mt-12 flex justify-center">
-            <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-8UmZ7VMrmBCGchtFipwoNfpcYu25Nt.png"
-              alt="Salesforce Certifications"
-              className="max-w-full h-auto rounded-lg shadow-2xl"
-            />
-          </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-white/70" />
@@ -711,7 +703,7 @@ export default function AboutPage() {
                   </Label>
                   <Textarea
                     id="project"
-                    placeholder={lang === "en" ? "Describe your project need here..." : "อธิบายความต้องการโครงการของคุณที่นี่..."}
+                    placeholder={lang === "en" ? "Describe your project need here..." : "��ธิบายความต้องการโครงการของคุณที่นี่..."}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
                     rows={3}
                   />
