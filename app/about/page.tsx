@@ -27,8 +27,8 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "IGNITE IDEA",
-      subtitle: "We are CRM experts who enhance the performance of your Sales, Customer Service, and Marketing teams through secure, user-friendly systems with measurable results that boost sales and customer satisfaction.",
+      title: "WHO WE ARE",
+      subtitle: "Our mission aim is to assist and support our customers in fueling their ideas with the power of technology to achieve next level of success.\n\nWe experience in area of supporting customer to connect to their customers in a whole new way.",
     },
     mission: {
       title: "Our Mission",
@@ -99,8 +99,8 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "IGNITE IDEA",
-      subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ช��ดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
+      title: "WHO WE ARE",
+      subtitle: "Our mission aim is to assist and support our customers in fueling their ideas with the power of technology to achieve next level of success.\n\nWe experience in area of supporting customer to connect to their customers in a whole new way.",
     },
     mission: {
       title: "พันธกิจของเรา",
@@ -311,8 +311,16 @@ export default function AboutPage() {
          <h3 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h3>
 
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
-          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto">{t.hero.subtitle}</p>
+          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
           
+          {/* Salesforce Certification Badges */}
+          <div className="mt-12 flex justify-center">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-8UmZ7VMrmBCGchtFipwoNfpcYu25Nt.png"
+              alt="Salesforce Certifications"
+              className="max-w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-white/70" />
