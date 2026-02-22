@@ -363,16 +363,16 @@ export default function AboutPage() {
                   loop
                   muted
                   playsInline
+                  preload="auto"
+                  disablePictureInPicture
+                  controls={false}
                   className="w-full h-auto object-cover"
+                  style={{ display: 'block' }}
                 >
                   <source src="/videos/asean-rising-star-award.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
-
-              {/* Decorative Corner Accents */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-yellow-400 rounded-tl-3xl opacity-80" />
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-yellow-400 rounded-br-3xl opacity-80" />
             </div>
 
             {/* Additional Info */}
