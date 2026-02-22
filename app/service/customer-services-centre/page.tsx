@@ -102,33 +102,13 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการของเรา",
-      serviceGroups: {
-        group1: {
-          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
-          items: [
-            { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
-            { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-            { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
-            { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
-            { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
-          items: [
-            { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
-            { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
-          items: [
-            { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
-            { name: "การวางแผนการผลิต", href: "/service/data-management" },
-          ],
-        },
-      },
+      services: [
+        { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+        { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
+        { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
+        { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
+        { name: "บริการจัดการ Salesforce", href: "/service/salesforce-manage-service" },
+      ],
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
@@ -150,7 +130,7 @@ const translations = {
       },
       benefit3: {
         title: "เครื่องมือผู้บริหารที่ปรับปรุงและโทรศัพท์ที่รวมกัน",
-        desc: "ให้การตรวจสอบแบบเรียลไทม์ ข้อมูลเชิงลึกด้านประสิทธิภาพ และการฝึกสอนอัตโนมัติสำหรับทีม AI-มนุษย์แบบผสมผสาน เชื่อมต่อระบบเสียงกับ CRM เพื่อการจัดการการโทรที่ราบรื่นพร้อมการถอดเสียงและสรุปด้วย AI ช่วยให้ผู้บริหารติดตามเมตริก ระบุโอกาสในการฝึกอบรม และเพิ่มประสิทธิภาพทีมในทุกช่องทางบริการ",
+        desc: "ให้การตรวจสอบแบบเรียลไทม์ ข้อมูลเชิงลึกด้านประสิทธิภาพ และการฝึกสอนอัตโนมัติสำหรับทีม AI-มนุษย์แบบผสมผสาน เชื่อมต่อระบบเสียงกับ CRM เพื่อการจัดการการโทรที่ราบรื่นพร้อมการถอดเสียงและสรุปด้วย AI ช่วยให้ผู้บริหารติดตามเมตริก ร��บุโอกาสในการฝึกอบรม และเพิ่มประสิทธิภาพทีมในทุกช่องทางบริการ",
       },
     },
     summary: {
@@ -168,7 +148,7 @@ const translations = {
       paragraph1:
         "ศูนย์บริการลูกค้ายุคใหม่แปลงศูนย์ติดต่อโดยการรวมระบบอัตโนมัติที่ขับเคลื่อนด้วย AI กับความเชี่ยวชาญของมนุษย์ในแพลตฟอร์มที่รวมศูนย์ โซลูชั่นรวม Agentforce AI agents ที่จัดการคำถามประจำกับตัวแทนมนุษย์ที่มีทักษะซึ่งจัดการกรณีที่ซับซ้อน สร้างโมเดลบริการแบบผสมผสานที่เพิ่มประสิทธิภาพสูงสุดในขณะที่รักษาคุณภาพการบริการ การฝึกสอนแบบเรียลไทม์และการวิเคราะห์อารมณ์ช่วยให้ตัวแทนส่งมอบประสบการณ์ลูกค้าที่ยอดเยี่ยมในขณะที่ AI จัดการงานซ้ำๆ",
       paragraph2:
-        "ด้วยโทรศัพท์ที่รวมกัน การสนับสนุนหลายช่องทาง และเครื่องมือผู้บริหารขั้นสูง Next Gen Service Console ให้การมองเห็นที่สมบูรณ์ในการดำเนินการบริการ ผู้บริหารสามารถตรวจสอบประสิทธิภาพทีมแบบเรียลไทม์ ระบุโอกาสในการฝึกสอน และใช้ประโยชน์จากข้อมูลเชิงลึกที่สร้างโดย AI เพื่อเพิ่มประสิทธิภาพการให้บริการ Customer 360 Metrics & Insights รับประกันว่าทุกการโต้ตอบมีข้อมูลจากประวัติลูกค้าที่สมบูรณ์ ช่วยให้บริการส่วนบุคคลที่สร้างความภักดีและผลักดันความพึงพอใจของลูกค้าในทุกจุดสัมผัส",
+        "ด้วยโทรศัพท์ที่รวมกัน การสนับสนุนหลายช่องทาง และเครื่องมือผู้บริหารขั้นสูง Next Gen Service Console ให้การมองเห็นที่สมบูรณ์ในการดำเนินการบริการ ผู้บริหารสามารถตรวจสอบประสิทธิภาพทีมแบบเรียลไทม์ ระบุโอกาสในการฝึกสอน และใช้ประโยชน์จากข้อมู���เชิงลึกที่สร้างโดย AI เพื่อเพิ่มประสิทธิภาพการให้บริการ Customer 360 Metrics & Insights รับประกันว่าทุกการโต้ตอบมีข้อมูลจากประวัติลูกค้าที่สมบูรณ์ ช่วยให้บริการส่วนบุคคลที่สร้างความภักดีและผลักดันความพึงพอใจของลูกค้าในทุกจุดสัมผัส",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -251,91 +231,20 @@ export default function CustomerServicesCentrePage() {
                 </Link>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
-                      <div className="grid grid-cols-3 gap-10">
-                        {/* Group 1 - Customer Experience & Sales Execution */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <circle cx="12" cy="12" r="6" />
-                                <circle cx="12" cy="12" r="2" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-orange-500 leading-tight">
-                              {t.nav.serviceGroups.group1.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-orange-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group1.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-orange-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 2 - Strategic Planning & Intelligence */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="10" width="4" height="10" rx="1" fill="currentColor" opacity="0.3" />
-                                <rect x="10" y="6" width="4" height="14" rx="1" fill="currentColor" opacity="0.5" />
-                                <rect x="17" y="2" width="4" height="18" rx="1" fill="currentColor" opacity="0.7" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-blue-500 leading-tight">
-                              {t.nav.serviceGroups.group2.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-blue-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group2.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-blue-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Group 3 - Supply Chain & Operations */}
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30">
-                              <svg className="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                              </svg>
-                            </div>
-                            <h3 className="font-bold text-sm text-green-500 leading-tight">
-                              {t.nav.serviceGroups.group3.title}
-                            </h3>
-                          </div>
-                          <div className="border-b-2 border-green-400 mb-4"></div>
-                          <div className="space-y-3">
-                            {t.nav.serviceGroups.group3.items.map((item, idx) => (
-                              <Link
-                                key={idx}
-                                href={item.href}
-                                className="block text-sm text-gray-700 hover:text-green-500 transition-colors duration-200"
-                              >
-                                {item.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                    <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                      <div className="space-y-3">
+                        {t.nav.services.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="block text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-200"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
                       </div>
                       {/* Bottom CTA Section */}
-                      <div className="border-t border-dashed border-gray-300 mt-8 pt-6 flex items-center justify-center gap-4">
+                      <div className="border-t border-dashed border-gray-300 mt-6 pt-6 flex items-center justify-center gap-4">
                         <button
                           onClick={() => setScheduleModalOpen(true)}
                           className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
@@ -343,10 +252,10 @@ export default function CustomerServicesCentrePage() {
                           Schedule Consultation
                         </button>
                         <Link
-                          href="/resources"
-                          className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+                          href="/about"
+                          className="px-6 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
                         >
-                          Download Case Study
+                          Learn More
                         </Link>
                       </div>
                     </div>
