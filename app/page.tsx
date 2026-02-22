@@ -54,25 +54,30 @@ const translations = {
     },
     tech: {
       title: "Technology That Grows With You",
-      sales: {
-        title: "Sales Solution (CRM)",
-        tagline: "Close More Deals, Faster.",
-        desc: "Our Sales Solution (CRM) empowers your team with the tools to manage customer relationships, track every opportunity, and accelerate your sales pipeline.",
+      leadToCash: {
+        title: "Lead to Cash (Order) Management",
+        tagline: "Streamline Your Revenue Process.",
+        desc: "Transform your entire revenue cycle from lead capture to order fulfillment. Our Lead to Cash solution connects sales, operations, and finance to eliminate bottlenecks and accelerate cash flow.",
       },
-      service: {
-        title: "Customer Service Solution (Call Center)",
+      fieldSales: {
+        title: "Field Sales Execution",
+        tagline: "Empower Your Sales Team in the Field.",
+        desc: "Give your field sales team the mobile tools they need to close deals anywhere. Real-time access to customer data, inventory, and pricing helps your reps work smarter and faster on the go.",
+      },
+      customer360: {
+        title: "Customer 360 Data Consolidation",
+        tagline: "See the Complete Customer Picture.",
+        desc: "Break down data silos and get a unified view of every customer. Our Customer 360 solution consolidates information from all touchpoints, enabling personalized experiences and informed decisions.",
+      },
+      customerService: {
+        title: "Next Gen. Customer Service Centre",
         tagline: "Deliver Exceptional Service.",
-        desc: "Transform your customer support with our Call Center Solution. Manage all interactions from one place and resolve issues faster to create happier, more loyal customers.",
+        desc: "Transform your customer support with our next-generation service centre. Manage all interactions from one intelligent platform and resolve issues faster to create happier, more loyal customers.",
       },
-      marketing: {
-        title: "Marketing Automation Solution",
-        tagline: "Marketing on Autopilot.",
-        desc: "Grow your business 24/7. Our Marketing Automation platform nurtures leads, engages customers with personalized journeys, and drives revenue while you sleep.",
-      },
-      data: {
-        title: "Data Management Solution",
-        tagline: "Turn Data into Decisions.",
-        desc: "Stop guessing. Our Data Management Solution cleans, organizes, and unlocks the power of your business data, giving you the clear insights you need to make smarter moves.",
+      salesforceManage: {
+        title: "Salesforce Manage Service",
+        tagline: "Expert Salesforce Management.",
+        desc: "Focus on your business while we handle your Salesforce platform. Our managed services ensure your Salesforce environment stays optimized, secure, and aligned with your evolving business needs.",
       },
     },
     partners: {
@@ -160,25 +165,30 @@ const translations = {
     },
     tech: {
       title: "เทคโนโลยีที่เติบโตไปกับคุณ",
-      sales: {
-        title: "โซลูชันการขาย (CRM)",
-        tagline: "ปิดการขายได้เร็วขึ้น",
-        desc: "โซลูชันการขาย (CRM) ของเรา มอบเครื่องมือที่ช่วยให้ทีมของคุณบริหารความสัมพันธ์ลูกค้า ติดตามทุกโอกาส และเร่งกระบวนการขายให้ไวยิ่งขึ้น",
+      leadToCash: {
+        title: "การจัดการ Lead to Cash (Order)",
+        tagline: "ปรับปรุงกระบวนการรายได้",
+        desc: "เปลี่ยนวงจรรายได้ทั้งหมดตั้งแต่การรับ Lead จนถึงการส่งมอบคำสั่งซื้อ โซลูชัน Lead to Cash ของเราเชื่อมต่อฝ่ายขาย ฝ่ายปฏิบัติการ และฝ่ายการเงิน เพื่อขจัดอุปสรรคและเร่งกระแสเงินสด",
       },
-      service: {
-        title: "โซลูชันบริการลูกค้า (Call Center)",
+      fieldSales: {
+        title: "การดำเนินการขายภาคสนาม",
+        tagline: "เสริมพลังให้ทีมขายของคุณ",
+        desc: "มอบเครื่องมือมือถือที่ทีมขายภาคสนามของคุณต้องการเพื่อปิดการขายได้ทุกที่ การเข้าถึงข้อมูลลูกค้า สินค้าคงคลัง และราคาแบบเรียลไทม์ช่วยให้พนักงานของคุณทำงานได้อย่างชาญฉลาดและรวดเร็วขึ้น",
+      },
+      customer360: {
+        title: "การรวมข้อมูลลูกค้า 360 องศา",
+        tagline: "มองเห็นภาพลูกค้าที่สมบูรณ์",
+        desc: "ทำลายอุปสรรคข้อมูลและรับมุมมองลูกค้าแบบครบวงจร โซลูชัน Customer 360 ของเรารวมข้อมูลจากทุกจุดสัมผัส ช่วยให้สามารถสร้างประสบการณ์ที่เป็นส่วนตัวและการตัดสินใจอย่างมีข้อมูล",
+      },
+      customerService: {
+        title: "ศูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
-        desc: "พลิกโฉมการบริการลูกค้าด้วยโซลูชัน Call Center ของเรา จัดการทุกการติดต่อได้ในที่เดียว และแก้ปัญหาได้รวดเร็วขึ้น เพื่อสร้างลูกค้าที่พึงพอใจและภักดีต่อแบรนด์",
+        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มีความสุขและภักดีมากขึ้น",
       },
-      marketing: {
-        title: "โซลูชันการตลาดอัตโนมัติ",
-        tagline: "ทำการตลาดแบบอัตโนมัติ",
-        desc: "ขยายธุรกิจของคุณตลอด 24 ชั่วโมง แพลตฟอร์มการตลาดอัตโนมัติของเราจะช่วยฟูมฟักผู้มุ่งหวัง (leads) สร้างการมีส่วนร่วมด้วยแคมเปญที่ตรงจุด และสร้างยอดขายให้คุณแม้ในยามพักผ่อน",
-      },
-      data: {
-        title: "โซลูชันการจัดการข้อมูล",
-        tagline: "เปลี่ยนข้อมูลสู่การตัดสินใจ",
-        desc: "หยุดการคาดเดา โซลูชันการจัดการข้อมูลของเราจะช่วยจัดระเบียบและปลดล็อกพลังข้อมูลธุรกิจของคุณ มอบข้อมูลเชิงลึกที่ชัดเจนเพื่อการตัดสินใจที่เฉียบคมยิ่งขึ้น",
+      salesforceManage: {
+        title: "บริการจัดการ Salesforce",
+        tagline: "การจัดการ Salesforce ระดับมืออาชีพ",
+        desc: "มุ่งเน้นธุรกิจของคุณในขณะที่เราจัดการแพลตฟอร์ม Salesforce ของคุณ บริการจัดการของเราทำให้มั่นใจว่าสภาพแวดล้อม Salesforce ของคุณจะได้รับการเพิ่มประสิทธิภาพ ปลอดภัย และสอดคล้องกับความต้องการทางธุรกิจที่เปลี่ยนแปลง",
       },
     },
     partners: {
@@ -563,81 +573,101 @@ export default function Home() {
             <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-16 rounded-full" />
 
             <div className="space-y-8">
-              {/* Sales Solution */}
-              <Link href="/service/crm" className="block">
+              {/* Lead to Cash Management */}
+              <Link href="/service/lead-to-cash-mgn" className="block">
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
                       <img
                         src="/images/design-mode/SalesSolutionIMG_001.jpg"
-                        alt="Sales Solution"
+                        alt="Lead to Cash Management"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.sales.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.sales.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.sales.desc}</p>
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.leadToCash.title}</h3>
+                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.leadToCash.tagline}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.leadToCash.desc}</p>
                     </div>
                   </div>
                 </div>
               </Link>
 
-              {/* Customer Service Solution */}
+              {/* Field Sales Execution */}
+              <Link href="/service/field-sales" className="block">
+                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className="relative h-80 overflow-hidden">
+                      <img
+                        src="/images/design-mode/MarketingIMG_001.jpg"
+                        alt="Field Sales Execution"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-10 flex flex-col justify-center">
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.fieldSales.title}</h3>
+                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.fieldSales.tagline}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.fieldSales.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Customer 360 Data Consolidation */}
+              <Link href="/service/customer-360" className="block">
+                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    <div className="relative h-80 overflow-hidden">
+                      <img
+                        src="/images/datamanagement.jpg"
+                        alt="Customer 360"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-10 flex flex-col justify-center">
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customer360.title}</h3>
+                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customer360.tagline}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customer360.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Next Gen Customer Service Centre */}
               <Link href="/service/customer-services-centre" className="block">
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
                       <img
                         src="/images/design-mode/callcenter.png"
-                        alt="Call Center Solution"
+                        alt="Customer Service Centre"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.service.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.service.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.service.desc}</p>
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customerService.title}</h3>
+                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customerService.tagline}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customerService.desc}</p>
                     </div>
                   </div>
                 </div>
               </Link>
 
-              {/* Marketing Automation Solution */}
-              <Link href="/service/marketing" className="block">
+              {/* Salesforce Manage Service */}
+              <Link href="/service/salesforce-manage-service" className="block">
                 <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-80 overflow-hidden">
                       <img
-                        src="/images/design-mode/MarketingIMG_001.jpg"
-                        alt="Marketing Automation"
+                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
+                        alt="Salesforce Manage Service"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.marketing.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.marketing.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.marketing.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Data Management Solution */}
-              <Link href="/service/data-management" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/datamanagement.jpg"
-                        alt="Data Management"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.data.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.data.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.data.desc}</p>
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.salesforceManage.title}</h3>
+                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.salesforceManage.tagline}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.salesforceManage.desc}</p>
                     </div>
                   </div>
                 </div>
