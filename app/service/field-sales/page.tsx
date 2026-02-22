@@ -19,7 +19,6 @@ const translations = {
       services: [
         { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
         { name: "Field Sales Execution", href: "/service/field-sales" },
-        { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
         { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
         { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
         { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
@@ -106,7 +105,6 @@ const translations = {
       services: [
         { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
         { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
-        { name: "การขายตามสัญญาสำหรับการผลิต", href: "/service/contractual-sales" },
         { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
         { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
         { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
@@ -148,7 +146,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "Field Sales Execution เปลี่ยนวิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำนักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
+        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำนักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
         "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
@@ -181,7 +179,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "อีเ���ลบริษัท",
+      emailLabel: "อีเ�����ลบริษัท",
       submit: "ส่ง",
     },
   },
