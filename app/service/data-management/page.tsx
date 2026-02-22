@@ -15,30 +15,14 @@ const translations = {
   en: {
     nav: {
       home: "Home",
-      service: "Service",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-        },
-      },
+      service: "Our Services",
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -75,15 +59,16 @@ const translations = {
     },
     contact: {
       title: "Contact Us",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
+      service1: "Lead to Cash (Order) Management",
+      service2: "Field Sales Execution",
+      service3: "Customer 360 Data Consolidation",
+      service4: "Next Gen. Customer Service Centre",
+      service5: "Salesforce Manage Service",
       partners: "Our product partner",
     },
     booking: {
@@ -110,33 +95,13 @@ const translations = {
     nav: {
       home: "หน้าแรก",
       service: "บริการ",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/crm" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/data-management" },
-            { name: "Production Planning", href: "/service/data-management" },
-          ],
-        },
-      },
+      services: [
+        { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
+        { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
+        { name: "การรวมข้อมูลลูกค้า 360 องศา", href: "/service/customer-360" },
+        { name: "ศูนย์บริการลูกค้ายุคใหม่", href: "/service/customer-services-centre" },
+        { name: "บริการจัดการ Salesforce", href: "/service/salesforce-manage-service" },
+      ],
       resources: "คลังทรัพยากร",
       about: "เกี่ยวกับเรา",
       schedule: "นัดที่ปรึกษา",
@@ -167,21 +132,22 @@ const translations = {
     },
     detailsTitle: "เปลี่ยนข้อมูลดิบให้กลายเป็นข้อมูลเชิงลึกทางธุรกิจ",
     details: {
-      p1: "ระบบการจัดการข้อมูลช่วยให้องค์กรสามารถรวบรวม จัดเก็บ จัดระเบียบ และวิเคราะห์ข้อมูลอย่างมีประสิทธิภาพ โซลูชันการจัดการข้อมูลสมัยใหม่ให้แพลตฟอร์มกลางสำหรับการควบคุมข้อมูล ควบคุมคุณภาพ และการผสานระบบอย่างราบรื่น",
-      p2: "ผู้เชี่ยวชาญของ Ignite Idea ช่วยติดตั้งและปรับแต่งโซลูชันการจัดการข้อมูลให้เหมาะกับความต้องการขององค์กร เราสามารถผสานระบบกับฐานข้อมูลที่มีอยู่ ตั้งค่าขั้นตอนการทำงานอัตโนมัติสำหรับข้อมูล และสร้างแดชบอร์ดวิเคราะห์ที่ครอบคลุมและให้ข้อมูลเชิงลึกแบบเรียลไทม์",
-      p3: "ส่วนที่ดีที่สุด? ระบบการจัดการข้อมูลช่วยกำจัดการแยกข้อมูล (data silos) และรับประกันความสอดคล้องของข้อมูลทั่วทั้งองค์กร เครื่องมือวิเคราะห์และการแสดงผลแบบอินเทอร์แอคทีฟช่วยระบุแนวโน้ม คาดการณ์ผล และทำการตัดสินใจบนฐานข้อมูลที่ขับเคลื่อนการเติบโตทางธุรกิจและข้อได้เปรียบทางการแข่งขัน",
+      p1: "ระบบการจัดการข้อมูลช่วยให้องค์กรสามารถรวบรวม จัดเก็บ จัดระเบียบ และวิเคราะห์ข้อมูลอย่างมีประสิทธิภาพ โซลูชันการจัดการข้อมูลสมัยใหม���ให้แพลตฟอร์มกลางสำหรับการควบคุมข้อมูล ควบคุมคุณภาพ และการผสานระบบอย่างราบรื่น",
+      p2: "ผู้เชี่ยวชาญของ Ignite Idea ช่วยติดตั้งและปรับแต่งโซลูชันการจัดการข้อมูลให้เหมาะกับความต้องการขององค์กร เราสามารถผสานระบบกับฐานข้อมูลที่มีอยู่ ตั้งค่า��ั้นตอนการทำงานอัตโนมัติสำหรับข้อมูล และสร้างแดชบอร์ดวิเคราะห์ที่ครอบคลุมและให้ข้อมูลเชิงลึกแบบเรียลไทม์",
+      p3: "ส่วนที่ดีที่สุด? ระบบการจัดการข้อมูลช่วยกำจัดการแยกข้อมูล (data silos) และรับประกันความสอดคล้องของข้อมูลทั่วทั้งองค์กร เครื่องมือวิเคราะห์และการแสดงผลแบบอินเทอร์แอคทีฟช่วยระบุแนวโน้ม คาดการณ์ผล และทำการตัดสินใจบนฐานข้อมูลที่ขับเคลื่อนการเติบโตทางธุรกิจและข้อได้เปรียบทางก��รแข่งขัน",
     },
     contact: {
       title: "Contact Us",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
+      service1: "การจัดการ Lead to Cash (Order)",
+      service2: "การดำเนินการขายภาคสนาม",
+      service3: "การรวมข้อมูลลูกค้า 360 องศา",
+      service4: "ศูนย์บริการลูกค้ายุคใหม่",
+      service5: "บริการจัดการ Salesforce",
       partners: "Our product partner",
     },
     booking: {

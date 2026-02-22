@@ -420,7 +420,7 @@ const blogContent = {
 
       <p><strong>Contact Ignite Idea Consult now – Let's turn your email into your most powerful sales tool.</strong></p>
 
-      <p><strong>Call Us:</strong> +662-231-8088</p>
+      <p><strong>Call Us:</strong> 02-1243295</p>
       <p><strong>Email:</strong> contact@igniteidea.com</p>
     `,
   },
@@ -666,7 +666,7 @@ const blogContent = {
         <li>Learn about our CRM optimization services</li>
       </ul>
 
-      <p><strong>Call Us:</strong> +662-231-8088</p>
+      <p><strong>Call Us:</strong> 02-1243295</p>
       <p><strong>Email:</strong> contact@igniteidea.com</p>
     `,
   },
@@ -934,7 +934,7 @@ const blogContent = {
         <li>Learn how leading companies are leveraging these trends</li>
       </ul>
 
-      <p><strong>Call Us:</strong> +662-231-8088</p>
+      <p><strong>Call Us:</strong> 02-1243295</p>
       <p><strong>Email:</strong> contact@igniteidea.com</p>
     `,
   },

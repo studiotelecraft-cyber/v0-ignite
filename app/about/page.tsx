@@ -27,8 +27,8 @@ const translations = {
       schedule: "Schedule a call",
     },
     hero: {
-      title: "IGNITE IDEA",
-      subtitle: "We are CRM experts who enhance the performance of your Sales, Customer Service, and Marketing teams through secure, user-friendly systems with measurable results that boost sales and customer satisfaction.",
+      title: "WHO WE ARE",
+      subtitle: "Our mission aim is to assist and support our customers in fueling their ideas with the power of technology to achieve next level of success.\n\nWe experience in area of supporting customer to connect to their customers in a whole new way.",
     },
     mission: {
       title: "Our Mission",
@@ -74,7 +74,7 @@ const translations = {
     contactUs: {
       title: "Contact Us",
       subtitle: "Get in touch with us for a consultation",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       servicesTitle: "Our consult & services",
@@ -99,8 +99,8 @@ const translations = {
       schedule: "นัดที่ปรึกษา",
     },
     hero: {
-      title: "IGNITE IDEA",
-      subtitle: "เราคือผู้เชี่ยวชาญด้านระบบ CRM ที่ช่วยเพิ่มประสิทธิภาพการทำงานของทีมขาย บริการลูกค้า และการตลาดของคุณ ด้วยระบบที่ปลอดภัย ใช้งานง่าย และสามารถวัดผลได้ช��ดเจน เพื่อเพิ่มยอดขายและความพึงพอใจของลูกค้า",
+      title: "WHO WE ARE",
+      subtitle: "Our mission aim is to assist and support our customers in fueling their ideas with the power of technology to achieve next level of success.\n\nWe experience in area of supporting customer to connect to their customers in a whole new way.",
     },
     mission: {
       title: "พันธกิจของเรา",
@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้และการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ�����ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -146,7 +146,7 @@ const translations = {
     contactUs: {
       title: "ติดต่อเรา",
       subtitle: "ติดต่อเราเพื่อขอคำปรึกษา",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       servicesTitle: "บริการของเรา",
@@ -308,10 +308,8 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
         <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
-         <h3 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">ABOUT</h3>
-
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
-          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto">{t.hero.subtitle}</p>
+          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
           
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
@@ -351,28 +349,19 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Video Container with Scroll Animation */}
+            {/* Award Image Container with Scroll Animation */}
             <div className="relative group">
               {/* Glowing Border Effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
               
-              {/* Video */}
+              {/* Award Image */}
               <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
                   className="w-full h-auto object-cover"
-                >
-                  <source src="/videos/asean-rising-star-award.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
-
-              {/* Decorative Corner Accents */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-yellow-400 rounded-tl-3xl opacity-80" />
-              <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-yellow-400 rounded-br-3xl opacity-80" />
             </div>
 
             {/* Additional Info */}
@@ -392,6 +381,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Salesforce Certification Badges Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-MJFzQubsB1d9lCApA8f3RmHkKGq4OI.png"
+            alt="Salesforce Certifications"
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
+
       <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -401,18 +401,18 @@ export default function AboutPage() {
             <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
               {t.values.title}
             </h2>
-            <div className="h-2 w-40 bg-white/80 mx-auto rounded-full" />
+            <div className="h-2 w-40 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto rounded-full shadow-lg" />
           </div>
           
-          <div className="relative max-w-6xl mx-auto h-[900px] md:h-[700px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {Object.entries(t.values)
               .filter(([key]) => key.startsWith("value"))
               .map(([key, value], index) => {
                 const icons = [
-                  <Lightbulb className="w-8 h-8" />,
-                  <TrendingUp className="w-8 h-8" />,
-                  <Award className="w-8 h-8" />,
-                  <Heart className="w-8 h-8" />
+                  <Lightbulb className="w-10 h-10" />,
+                  <TrendingUp className="w-10 h-10" />,
+                  <Award className="w-10 h-10" />,
+                  <Heart className="w-10 h-10" />
                 ]
                 const gradients = [
                   "from-blue-500 to-cyan-500",
@@ -421,44 +421,35 @@ export default function AboutPage() {
                   "from-green-500 to-teal-500"
                 ]
                 
-                const angle = (index * 90 - 45) * (Math.PI / 180)
-                const radius = 320
-                const top = 50 + Math.sin(angle) * radius / 9
-                const left = 50 + Math.cos(angle) * radius / 9
-                
                 return (
                   <div 
                     key={key}
-                    className="absolute w-144 group"
-                    style={{
-                      top: `${top}%`,
-                      left: `${left}%`,
-                      transform: 'translate(-50%, -50%)',
-                      animationDelay: `${index * 0.1}s`
-                    }}
+                    className="group animate-fade-in"
+                    style={{ animationDelay: `${index * 0.15}s` }}
                   >
-                    <div className="relative p-8 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 px-8 mx-36 ml-[111px]">
-                      <div className={`absolute inset-0 bg-gradient-to-br mx-36 ${gradients[index]} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`} />
-                      <div className="text-center">
-                        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg mx-auto mb-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                    <div className="relative h-full p-10 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
+                      {/* Gradient overlay on hover */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`} />
+                      
+                      {/* Icon container */}
+                      <div className="flex items-start gap-6 relative z-10">
+                        <div className={`flex-shrink-0 w-24 h-24 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                           {icons[index]}
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all">
-                          {value.title}
-                        </h3>
-                        <p className="text-gray-700 leading-relaxed">{value.desc}</p>
+                        
+                        {/* Content */}
+                        <div className="flex-1 pt-2">
+                          <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
+                            {value.title}
+                          </h3>
+                          <p className="text-lg text-gray-700 leading-relaxed">
+                            {value.desc}
+                          </p>
+                        </div>
                       </div>
                       
-                      <div 
-                        className="absolute w-0.5 bg-gradient-to-b from-transparent via-blue-300/50 to-transparent opacity-20 group-hover:opacity-40 transition-opacity"
-                        style={{
-                          height: '80px',
-                          top: '50%',
-                          left: '50%',
-                          transform: `rotate(${-angle * 180 / Math.PI + 90}deg) translateX(-50%)`,
-                          transformOrigin: 'top center'
-                        }}
-                      />
+                      {/* Decorative corner accent */}
+                      <div className={`absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl ${gradients[index]} opacity-5 group-hover:opacity-10 rounded-tl-[100px] transition-opacity duration-500`} />
                     </div>
                   </div>
                 )
@@ -703,14 +694,14 @@ export default function AboutPage() {
                   </Label>
                   <Textarea
                     id="project"
-                    placeholder={lang === "en" ? "Describe your project need here..." : "อธิบายความต้องการโครงการของคุณที่นี่..."}
+                    placeholder={lang === "en" ? "Describe your project need here..." : "��ธิบายความต้องการโครงการของคุณที่นี่..."}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
                     rows={3}
                   />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-gray-900 font-semibold text-lg">
-                    {lang === "en" ? "Your name" : "ชื่อของคุณ"}
+                    {lang === "en" ? "Your name" : "ช��่อของคุ���"}
                   </Label>
                   <Input
                     id="name"

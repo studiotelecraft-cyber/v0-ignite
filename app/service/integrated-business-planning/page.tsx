@@ -17,33 +17,13 @@ const translations = {
     nav: {
       home: "Home",
       service: "Our Services",
-      serviceGroups: {
-        group1: {
-          title: "Customer Experience & Sales Execution",
-          items: [
-            { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
-            { name: "Field Sales Execution", href: "/service/field-sales" },
-            { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
-            { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
-            { name: "Contractual Sales for Manufacturing", href: "/service/contractual-sales" },
-          ],
-        },
-        group2: {
-          title: "Strategic Planning & Intelligence",
-          items: [
-            { name: "Integrated Business Planning (IBP)", href: "/service/integrated-business-planning" },
-            { name: "Sales & Operations Planning (S&OP)", href: "/service/sales-operations-planning" },
-            { name: "Financial Planning & Analysis (FP&A)", href: "/service/financial-planning-analysis" },
-          ],
-        },
-        group3: {
-          title: "Supply Chain & Operations",
-          items: [
-            { name: "Demand & Supply Planning", href: "/service/demand-supply-planning" },
-            { name: "Production Planning", href: "/service/production-planning" },
-          ],
-        },
-      },
+      services: [
+        { name: "Lead to Cash (Order) Management", href: "/service/lead-to-cash-mgn" },
+        { name: "Field Sales Execution", href: "/service/field-sales" },
+        { name: "Customer 360 Data Consolidation", href: "/service/customer-360" },
+        { name: "Next Gen. Customer Service Centre", href: "/service/customer-services-centre" },
+        { name: "Salesforce Manage Service", href: "/service/salesforce-manage-service" },
+      ],
       resources: "Resources",
       about: "About",
       schedule: "Schedule a call",
@@ -88,7 +68,7 @@ const translations = {
     },
     contact: {
       title: "Contact Us",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "Monday-Friday: 9am – 6pm",
@@ -171,7 +151,7 @@ const translations = {
       },
       benefit3: {
         title: "เพิ่มความสามารถในการปรับตัว",
-        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปรับตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งที่น่า",
+        desc: "การวางแผนสถานการณ์และการวิเคราะห์ what-if เตรียมองค์กรสำหรับความเป็นไปได้หลายอย่างในอนาคตและการเปลี่ยนแปลงของตลาด เปิดใช้งานการสร้างแบบจำลองแบบเรียลไทม์เพื่อประเมินผลกระทบของการตัดสินใจก่อนการดำเนินการ สร้างความยืดหยุ่นขององค์กรผ่านวงจรการวางแผนอย่างต่อเนื่องที่ปร��บตัวตามเงื่อนไขที่เปลี่ยนแปลงแทนแผนประจำปีที่แข็งที่น่า",
       },
     },
     summary: {
@@ -188,13 +168,13 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "การวางแผนธุรกิจแบบบูรณาการแปลงวิธีการที่องค์กรจัดเรียงกลยุทธ์กับการดำเนินการโดยการสร้างกรอบการวางแผนที่รวมศูนย์ที่เชื่อมต่อทุกฟังก์ชั่นทางธุรกิจ ไม่เหมือนกับวิธีการวางแผนแบบดั้งเดิมที่แผนกทำงานแยกกัน IBP สร้างแหล่งความจริงเดียวโดยการรวมข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน สิ่งนี้เปิดใช้งานการมองเห็นทั่วทั้งองค์กรที่ผู้บริหารและทีมสามารถเห็นว่าการตัดสินใจในพื้นที่หนึ่งส่งผลกระทบต่อทั้งองค์กรอย่างไร",
+        "การวางแผนธุรกิจแบบบูรณาการแปลงวิธีการที่องค์กรจัดเรียงกลยุทธ์กับการดำเนินการโดยการสร้างกรอบการวางแผนที่รวม�����ูนย์ที่เชื่อมต่อทุกฟังก์ชั่นทางธุรกิจ ไม่เหมือนกับวิธีการวางแผนแบบดั้งเดิมที่แผนกทำงานแยกกัน IBP สร้างแหล่งความจริงเดียวโดยการรวมข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน สิ่งนี้เปิดใช้งานการมองเห็นทั่วทั้งองค์กรที่ผู้บริหารและทีมสามารถเห็นว่าการตัดสินใจในพื้นที่หนึ่งส่งผลกระทบต่อทั้งองค์กรอย่างไร",
       paragraph2:
         "โซลูชั่น IBP ส่งเสริมความร่วมมือข้ามสายงานผ่านวงจรการวางแผนอย่างต่อเนื่องแทนงบประมาณประจำปี การสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ช่วยให้องค์กรประเมินอนาคตหลายอย่างและตัดสินใจเชิงรุก ด้วยการรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้อง IBP เพิ่มความสามารถในการทำกำไร ปรับปรุงการจัดสรรทรัพยากร และสร้างความคล่องตัวขององค์กรเพื่อตอบสนองต่อการเปลี่ยนแปลงของตลาดอย่างมีประสิทธิภาพ",
     },
     contact: {
       title: "ติดต่อเรา",
-      phone: "+662-231-8088",
+      phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
