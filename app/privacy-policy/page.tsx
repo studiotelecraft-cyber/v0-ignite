@@ -460,7 +460,7 @@ export default function PrivacyPolicyPage() {
             <div className="contact-box">
               <h3 style={{ marginTop: 0, color: '#1e40af' }}>ติดต่อเรา</h3>
               <p><strong>ชื่อบริษัท:</strong> บริษัท อิกไนท ไอเดีย จำกัด</p>
-              <p><strong>ที่อยู่:</strong> 1-7 ชั้น 8 ห้องเลขที่ 0871 อาคารซิลลิคเฮ้าส์ ถนนสีลม แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500</p>
+              <p><strong>ที่อยู่:</strong> เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310</p>
               <p><strong>โทรศัพท์ติดต่อ:</strong> 02-1243295</p>
               <p><strong>อีเมล:</strong> <a href="mailto:dpo@ignite-idea.com" className="text-blue-600 hover:text-blue-800 font-semibold">dpo@ignite-idea.com</a></p>
             </div>

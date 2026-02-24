@@ -88,7 +88,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       service1: "Lead to Cash (Order) Management",
@@ -143,7 +143,7 @@ const translations = {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
         "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจให้เติบโตเร็วยิ่งขึ้น",
-      cta1: "นัดที่ปรึกษา",
+      cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
     features: {
@@ -200,7 +200,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       service1: "การจัดการ Lead to Cash (Order)",

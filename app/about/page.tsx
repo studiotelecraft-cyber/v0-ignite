@@ -76,7 +76,7 @@ const translations = {
       subtitle: "Get in touch with us for a consultation",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       servicesTitle: "Our consult & services",
       partnersTitle: "Our product partner",
       bookingFormTitle: "Schedule a call",
@@ -122,7 +122,7 @@ const translations = {
       },
       value3: {
         title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ�����ะการสนับสนุน",
+        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ������ะการสนับสนุน",
       },
       value4: {
         title: "ความเป็นพันธมิตร",
@@ -148,7 +148,7 @@ const translations = {
       subtitle: "ติดต่อเราเพื่อขอคำปรึกษา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       servicesTitle: "บริการของเรา",
       partnersTitle: "คู่ค้าผลิตภัณฑ์ของเรา",
       bookingFormTitle: "นัดที่ปรึกษา",

@@ -70,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -170,13 +170,13 @@ const translations = {
       paragraph1:
         "การวางแผนธุรกิจแบบบูรณาการแปลงวิธีการที่องค์กรจัดเรียงกลยุทธ์กับการดำเนินการโดยการสร้างกรอบการวางแผนที่รวม�����ูนย์ที่เชื่อมต่อทุกฟังก์ชั่นทางธุรกิจ ไม่เหมือนกับวิธีการวางแผนแบบดั้งเดิมที่แผนกทำงานแยกกัน IBP สร้างแหล่งความจริงเดียวโดยการรวมข้อมูลจาก CRM, ERP, การเงิน และระบบห่วงโซ่อุปทาน สิ่งนี้เปิดใช้งานการมองเห็นทั่วทั้งองค์กรที่ผู้บริหารและทีมสามารถเห็นว่าการตัดสินใจในพื้นที่หนึ่งส่งผลกระทบต่อทั้งองค์กรอย่างไร",
       paragraph2:
-        "โซลูชั่น IBP ส่งเสริมความร่วมมือข้ามสายงานผ่านวงจรการวางแผนอย่างต่อเนื่องแทนงบประมาณประจำปี การสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ช่วยให้องค์กรประเมินอนาคตหลายอย่างและตัดสินใจเชิงรุก ด้วยการรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้อง IBP เพิ่มความสามารถในการทำกำไร ปรับปรุงการจัดสรรทรัพยากร และสร้างความคล่องตัวขององค์กรเพื่อตอบสนองต่อการเปลี่ยนแปลงของตลาดอย่างมีประสิทธิภาพ",
+        "โซลูชั่น IBP ส่งเสริมความร่วมมือข้ามสายงานผ่านวงจรการวางแผนอย่างต่อเนื่องแทนงบประมาณประจำปี การสร้างแบบจำลองสถานการณ์แบบเรียลไทม์ช่วยให้องค์กรประเมินอนาคตหลายอย่างและตัดสินใจเชิงรุก ด้วยการรับประกันว่าทุกแผนกทำงานไปสู่วัตถุประสงค์ที่สอดคล้องกันด้วยสมมติฐานที่สอดคล้อง IBP เพิ่มความสามารถในการทำกำไร ปรับปรุงการจัดสรรทรัพยากร และสร้างความคล่องตัวขององค์กรเพื่อตอบสนองต่อก��รเปลี่ยนแปลงของตลาดอย่างมีประสิทธิภาพ",
     },
     contact: {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
@@ -434,7 +434,7 @@ export default function IntegratedBusinessPlanningPage() {
             <div className="space-y-10">
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 to-green-500/30 backdrop-blur-md px-6 py-3 rounded-full border border-emerald-400/40 shadow-xl shadow-emerald-500/20">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Enterprise Planning Platform" : "แพลตฟอร์มการวางแผนองค์กร"}</span>
+                <span className="text-white text-lg md:text-xl font-bold tracking-wide">{lang === "en" ? "Enterprise Planning Platform" : "แพลตฟอร์มการว��งแผนองค์กร"}</span>
               </div>
               <div className="space-y-6">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.95] text-balance tracking-tight">
