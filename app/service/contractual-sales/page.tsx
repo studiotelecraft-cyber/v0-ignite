@@ -122,7 +122,7 @@ const translations = {
           ],
         },
         group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
+          title: "ห่วงโซ่อุปท���นและการดำเนินงาน",
           items: [
             { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
@@ -174,9 +174,9 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
-      services: "บริการและการปรึกษาของเรา",
+      services: "บริการและก���รปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
       marketing: "ระบบก���รตลาดอัตโนมัติ",

@@ -148,7 +148,7 @@ const translations = {
       subtitle: "ติดต่อเราเพื่อขอคำปรึกษา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       servicesTitle: "บริการของเรา",
       partnersTitle: "คู่ค้าผลิตภัณฑ์ของเรา",
       bookingFormTitle: "นัดที่ปรึกษา",

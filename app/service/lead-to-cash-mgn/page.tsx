@@ -122,7 +122,7 @@ const translations = {
     benefitsTitle: "Lead to Cash สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
-        title: "เชื่อมต่อการขาย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงิน",
+        title: "เชื่อมต่อการ��าย การกำหนดราคา สัญญา คำสั่งซื้อ การเรียกเก็บเงิน และการชำระเงิน",
         desc: "Lead to Cash รวมกระบวนการจัดการรายได้ทั้งหมดของคุณ ลบข้อมูลไซโล และสร้างการเดินทางลูกค้าที่เป็นเอกโปรตีน ตั้งแต่ใบเสนอราคาเบื้องต้นจนถึงการชำระเงินครั้งสุดท้าย ข้อมูลทั้งหมดไหลราบรื่นในทั่วทั้งแผนก เพื่อให้มีความสอดคล้องและลดข้อผิดพลาด",
       },
       benefit2: {
@@ -153,17 +153,17 @@ const translations = {
         "ด้วยการรวม Salesforce CPQ ความสามารถในการจัดการคำสั่งซื้อ และการเรียกเก็บเงิน Lead to Cash จึงกำจัดระบบที่แตกแยกและกระบวนการด้วยตนเอง ทีมขายของคุณจึงทำงานได้เร็วขึ้นด้วยใบเสนอราคาที่แม่นยำ ทีมดำเนินงานของคุณตอบสนองคำสั่งซื้อได้โดยไม่ล่าช้า และทีมการเงินของคุณรับรู้รายได้ได้อย่างแม่นยำและทันท่วงที",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      callCenter: "ระบบศูนย์สายด่วน",
+      marketing: "ระบบการตลาดอัตโนมัติ",
+      dataManagement: "การจัดการข้อมูล",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
       title: "จองคำปรึกษา",
