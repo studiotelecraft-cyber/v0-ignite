@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown, Shield, FileText, Lock, Eye, Users, Scale } from 'lucide-react'
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -91,7 +92,7 @@ const translations = {
 }
 
 export default function PrivacyPolicyPage() {
-  const [lang, setLang] = useState<"en" | "th">("th")
+  const { lang, setLang } = useLanguage()
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

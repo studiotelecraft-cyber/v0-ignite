@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Phone, Mail, MapPin, ChevronDown, ArrowRight, Menu, X } from 'lucide-react'
 import Link from "next/link"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -178,7 +179,7 @@ const translations = {
 }
 
 export default function MarketingPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

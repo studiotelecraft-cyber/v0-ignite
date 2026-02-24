@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -155,7 +156,7 @@ const translations = {
     },
     summary: {
       title: "สรุป",
-      description: "การวางแผนการขายและการดำเนินงานเป็นกระบวนการทางธุรกิจแบบร่วมมือที่จัดเรียงการพยากรณ์การขายกับความสามารถในการดำเนินงานเพื่อให้องค์กรสามารถตอบสนองความต้องการของลูกค้าอย่างทำกำไร กระบวนการ S&OP โดยทั่วไปรวมถึงการวางแผนความต้องการ การวางแผนอุปทาน การประชุมเตรียมการ และการทบทวนของผู้บริหารในวงจรรายเดือน โซลูชั่น S&OP ที่รว��กับ Salesforce (เช่น ketteQ, Rootstock และ Manufacturing Cloud) เชื่อมต่อข้อมูลการขายกับระบบห่วงโซ่อุปทานเพื่อสร้างแหล่งความจริงเดียว เปิดใช้งานความร่วมมือแบบเรียลไทม์ระหว่างแผนกและการวางแผนสถานการณ์อัตโนมัติเพื่อเพิ่มประสิทธิภาพการจัดสรรทรัพยากรและป้องกันการไม่สอดคล้องกันที่มีค่าใช้จ่ายสูง",
+      description: "การวางแผนการขายและการดำเนินงานเป็นกระบวนการทางธุรกิจแบบร่วมมือที่จัดเรียงการพยากรณ์การขายกับความสามารถในการดำเนินงานเพื่อให้องค์กรสามารถตอบสนองความต้องการของลูกค้าอย่างทำกำไร กระบวนการ S&OP โดยทั่วไปรวมถึงการวางแผนความต้องการ การวางแผนอุปทาน การประชุมเตรียมการ และการทบทวนของผู้บริหารในวงจรรายเดือน โซลูชั่�� S&OP ที่รว��กับ Salesforce (เช่น ketteQ, Rootstock และ Manufacturing Cloud) เชื่อมต่อข้อมูลการขายกับระบบห่วงโซ่อุปทานเพื่อสร้างแหล่งความจริงเดียว เปิดใช้งานความร่วมมือแบบเรียลไทม์ระหว่างแผนกและการวางแผนสถานการณ์อัตโนมัติเพื่อเพิ่มประสิทธิภาพการจัดสรรทรัพยากรและป้องกันการไม่สอดคล้องกันที่มีค่าใช้จ่ายสูง",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
@@ -206,7 +207,7 @@ const translations = {
 }
 
 export default function SalesOperationsPlanningPage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

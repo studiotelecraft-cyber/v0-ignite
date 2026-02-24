@@ -10,6 +10,7 @@ import { Users, Headphones, Zap, BarChart3, Phone, Mail, MapPin, ChevronDown, Me
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -184,7 +185,7 @@ const translations = {
       customerService: {
         title: "ศูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
-        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มีความสุขและภักดีมากขึ้น",
+        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มี��วามสุขและภักดีมากขึ้น",
       },
       salesforceManage: {
         title: "บริการจัดการ Salesforce",
@@ -226,7 +227,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "�����เมล���ริษัท",
+      emailLabel: "������เมล���ริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -239,7 +240,7 @@ const translations = {
 }
 
 export default function Home() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [caseStudyModalOpen, setCaseStudyModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)

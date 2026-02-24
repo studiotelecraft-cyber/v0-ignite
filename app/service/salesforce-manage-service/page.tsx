@@ -8,6 +8,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -177,7 +178,7 @@ const translations = {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
       subtitle: "พูดคุยเกี่ยวกับความท้าทายในการสนับสนุน Salesforce ของคุณและค้นพบว่าบริการจัดการสามารถช่วยได้อย่างไร",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
-      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      projectPlaceholder: "อธิบายควา��ต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function SalesforceManagedServicePage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 

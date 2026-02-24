@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -168,7 +169,7 @@ const translations = {
       paragraph1:
         "การวางแผนการผลิตแปลงการดำเนินงานการผลิตโดยการเชื่อมต่อความต้องการของลูกค้ากับกำลังการผลิตและการดำเนินการพื้นโรงงาน โซลูชั่นรวมเข้ากับ Salesforce Manufacturing Cloud เพื่อใช้ประโยชน์จากคำสั่งซื้อ การพยากรณ์ และข้อตกลงตามสัญญาเพื่อสร้างตารางการผลิตที่เหมาะสมที่สุด ความสามารถ MRP คำนวณความต้องการวัสดุโดยอัตโนมัติและกระตุ้นกระบวนการจัดซื้อ เพื่อให้แน่ใจว่ามีวัสดุที่จำเป็นทั้งหมดพร้อมเมื่อเริ่มการผลิต",
       paragraph2:
-        "ด้วยการจัดการใบสั่งงานที่ครอบคลุมและการควบคุมพื้นโรงงาน โซลูชั่นการวางแผนการผลิตช่วยให้ผู้ผลิตติดตามทุกแง่มุมของการผลิตแบบเรียลไทม์ ตั้งแต่การจัดสรรทรัพยากรและการวางแผนกำลังการผลิตไปจนถึงการติดตามความคืบหน้าและการควบคุมคุณภาพ ระ���บให้การมองเห็นที่สมบูรณ์ในการดำเนินงานการผลิต ด้วยการซิงโครไนซ์การผลิตกับความต้องการจริงและการทำให้การวางแผนวัสดุเป็นอัตโนมัติ ผู้ผลิตสามารถลดต้นทุน ปรับปรุงประสิทธิภาพ และส่งมอบผลิตภัณฑ์ตรงเวลาในขณะที่รักษาระดับสินค้าคงคลังที่เหมาะสม",
+        "ด้วยการจัดการใบสั่งงานที่ครอบคลุมและการควบคุมพื้นโรงงาน โซลูชั่นการวางแผนการผลิตช่วยให้ผู้ผ���ิตติดตามทุกแง่มุมของการผลิตแบบเรียลไทม์ ตั้งแต่การจัดสรรทรัพยากรและการวางแผนกำลังการผลิตไปจนถึงการติดตามความคืบหน้าและการควบคุมคุณภาพ ร������บให้การมองเห็นที่สมบูรณ์ในการดำเนินงานการผลิต ด้วยการซิงโครไนซ์การผลิตกับความต้องการจริงและการทำให้การวางแผนวัสดุเป็นอัตโนมัติ ผู้ผลิตสามารถลดต้นทุน ปรับปรุงประสิทธิภาพ และส่งมอบผลิตภัณฑ์ตรงเวลาในขณะที่รักษาระดับสินค้าคงคลังที่เหมาะสม",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -206,7 +207,7 @@ const translations = {
 }
 
 export default function ProductionPlanningPage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

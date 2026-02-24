@@ -10,6 +10,7 @@ import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -124,7 +125,7 @@ const translations = {
     },
     hero: {
       title: "Call Center System",
-      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้างความพึงพอใจให้ลูกค้า",
+      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้าง���วามพึงพอใจให้ลูกค้า",
       cta: "ติดต่อเรา",
     },
     benefitsTitle: "ระบบ Call Center สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
@@ -184,7 +185,7 @@ const translations = {
 }
 
 export default function CallCenterPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

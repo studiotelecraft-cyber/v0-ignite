@@ -10,6 +10,7 @@ import { Globe, ArrowRight, Check, Phone, Mail, MapPin, ChevronDown, Menu, X, Tr
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -105,7 +106,7 @@ const translations = {
 }
 
 export default function CRMPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)

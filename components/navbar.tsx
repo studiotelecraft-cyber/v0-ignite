@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -37,7 +38,7 @@ const translations = {
 }
 
 export function Navbar() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isDarkBg, setIsDarkBg] = useState(false)

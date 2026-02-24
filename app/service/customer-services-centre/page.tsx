@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -135,7 +136,7 @@ const translations = {
     },
     summary: {
       title: "สรุป",
-      description: "ศูนย์บริการลูกค้ายุคใหม่ (Next Gen Service Console ขับเคลื่อนด้วย Service Cloud) เป็นศูนย์ควบคุมอัจฉริยะที่แปลงศูนย์ติดต่อแบบดั้งเดิมเป็นการดำเนินการบริการที่ปรับปรุงด้วย AI มีคุณสมบัติ Customer 360 Metrics & Insights สำหรับการมองเห็นเส้นทางลูกค้าอย่างสมบูรณ์ Service Coach สำหรับการฝึกอบรมตัวแทนแบบเรียลไทม์ และระบบอัตโนมัติที่ขับเคลื่อนด้วย AI สำหรับงานประจำ โซลูชั่นช่วยให้ทั้ง AI agents และตัวแทนมนุษย์ทำงานร่วมกันอย่างมีประสิทธิภาพ โดยผู้บริหารมีการมองเห็นเต็มรูปแบบในเมตริกประสิทธิภาพ อารมณ์ของลูกค้า และการวิเคราะห์การดำเนินงานในทุกช่องทาง",
+      description: "ศูนย์บริการลูกค้ายุคใหม่ (Next Gen Service Console ขับเคลื่อนด้วย Service Cloud) เป็นศูนย์ควบคุมอัจฉริยะที่แปลงศูนย์ติดต่อแบบดั้งเดิมเป็นการดำเนินการบริการที่ปรับปรุงด้วย AI มีคุณสมบัติ Customer 360 Metrics & Insights สำหรับการมองเห็นเส้นทางลูกค้าอย่างสมบูรณ์ Service Coach สำหรับการฝึกอบรมตัวแทนแบบเรียลไทม์ และระบบอัตโนมัติที่ขับเคลื่อนด้วย AI สำหรับงานประจำ โซลูชั่นช่วยให้ทั้ง AI agents และตัวแทนมนุษย์ทำงานร่วมกันอย่างมีประสิทธิภาพ โดยผู้บริหารมีการมองเห็นเต็มรูปแบบในเมตริกประสิทธิภาพ ���ารมณ์ของลูกค้า และการวิเคราะห์การดำเนินงานในทุกช่องทาง",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
@@ -157,7 +158,7 @@ const translations = {
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
-      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      crm: "การจัด���ารความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
       marketing: "ระบบการตลา��อัตโนมัติ",
       dataManagement: "การจัดการข้อมูล",
@@ -174,7 +175,7 @@ const translations = {
       submit: "จองการปรึกษา",
     },
     scheduleModal: {
-      title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
+      title: "จองการเรียกปรึกษา��ชิงกลยุทธ์ฟรี 30 นาที",
       subtitle: "อภิปรายความท้าทายด้านบริการลูกค้าของคุณแ���ะค้นพบโซลูชั่นที่ขับเคลื่อนด้วย AI",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function CustomerServicesCentrePage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
