@@ -81,7 +81,7 @@ export function Navbar() {
   const currentPath = pathname || '/'
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b shadow-sm transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[9999] pointer-events-auto backdrop-blur-xl border-b shadow-sm transition-all duration-300 ${
       isDarkBg || isScrolled
         ? 'bg-blue-900/90 border-blue-800' 
         : 'bg-white/80 border-gray-200'
@@ -113,17 +113,21 @@ export function Navbar() {
               onMouseEnter={() => setServiceDropdownOpen(true)}
               onMouseLeave={() => setServiceDropdownOpen(false)}
             >
-              <Link href="/service/crm" className={`transition-colors flex items-center gap-1 ${
+              <button
+                onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
+                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-[inherit] text-[inherit] ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
               } ${currentPath.startsWith('/service') ? 'font-semibold' : ''}`}>
                 {t.service}
-                <ChevronDown className="w-4 h-4" />
-              </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
               {serviceDropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                  <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[480px]">
+                  {/* invisible bridge prevents mouseLeave from firing in the gap */}
+                  <div className="h-3 w-full" />
+                  <div className="w-full bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
                     <div className="space-y-3">
                       {t.services.map((item, idx) => (
                         <Link
