@@ -90,7 +90,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
-      hours: "Monday-Friday: 9am – 6pm",
+      hours: "Monday - Friday: 9:00 AM – 6:00 PM",
       services: "Our consult & services",
       service1: "Lead to Cash (Order) Management",
       service2: "Field Sales Execution",
@@ -143,7 +143,7 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจให้เติบโตเร็วยิ่งขึ้น",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
       cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
@@ -202,7 +202,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
-      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
       service1: "การจัดการ Lead to Cash (Order)",
       service2: "การดำเนินการขายภาคสนาม",
@@ -756,7 +756,7 @@ export default function Home() {
                     <div>
                       <h3 className="font-bold text-white text-lg mb-2">Address</h3>
                       <p className="text-white/90 leading-relaxed">{t.contact.address}</p>
-                      <p className="text-white/80 text-sm mt-3 font-medium">{t.contact.hours}</p>
+                      <p className="text-white text-sm mt-3 font-bold">{t.contact.hours}</p>
                     </div>
                   </div>
                 </div>

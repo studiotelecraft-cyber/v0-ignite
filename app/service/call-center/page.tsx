@@ -60,7 +60,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
-      hours: "Monday-Friday: 9am – 6pm",
+      hours: "Monday - Friday: 9:00 AM – 6:00 PM",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
       callCenter: "Call Center System",
@@ -125,7 +125,7 @@ const translations = {
     },
     hero: {
       title: "Call Center System",
-      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้าง���วามพึงพอใจให้ลูกค้า",
+      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิ��าพการบริการ และสร้าง���วามพึงพอใจให้ลูกค้า",
       cta: "ติดต่อเรา",
     },
     benefitsTitle: "ระบบ Call Center สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
@@ -154,7 +154,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
-      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
@@ -491,7 +491,7 @@ export default function CallCenterPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                       <p className="text-gray-700 leading-relaxed">{t.contact.address}</p>
-                      <p className="text-gray-600 text-sm mt-2">{t.contact.hours}</p>
+                      <p className="text-gray-800 text-sm mt-2 font-bold">{t.contact.hours}</p>
                     </div>
                   </div>
                 </div>

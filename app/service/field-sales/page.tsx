@@ -71,7 +71,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
-      hours: "Monday-Friday: 9am – 6pm",
+      hours: "Monday - Friday: 9:00 AM – 6:00 PM",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
       callCenter: "Call Center System",
@@ -147,7 +147,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
+        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส���วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
         "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
@@ -156,7 +156,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
-      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
@@ -176,7 +176,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จร���ง",
       projectLabel: "อธิบายความ���้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้��งการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -624,7 +624,7 @@ export default function FieldSalesPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                       <p className="text-gray-700 leading-relaxed">{t.contact.address}</p>
-                      <p className="text-gray-600 text-sm mt-2">{t.contact.hours}</p>
+                      <p className="text-gray-800 text-sm mt-2 font-bold">{t.contact.hours}</p>
                     </div>
                   </div>
                 </div>
