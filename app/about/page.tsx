@@ -318,6 +318,87 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Vision Section */}
+      <section className="relative py-28 px-6 overflow-hidden bg-white">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: 'radial-gradient(circle, #1d4ed8 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        />
+        {/* Blue accent line top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
+
+        <div className="container mx-auto max-w-5xl relative z-10">
+          {/* Label */}
+          <div className="flex items-center gap-3 mb-10">
+            <div className="h-px w-12 bg-amber-500" />
+            <span className="text-amber-500 text-lg font-semibold tracking-widest uppercase">
+              {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
+            </span>
+          </div>
+
+          {/* Main statement */}
+          <div className="mb-12">
+            {lang === "th" ? (
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
+                <span className="text-sky-500">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
+                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">ไว้วางใจได้</span>
+                <span className="text-sky-500"> ที่จุดประกายการเติบโตอย่างยั่งยืนผ่าน</span>
+                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4"> โซลูชันที่รอบคอบ</span>
+              </h2>
+            ) : (
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
+                <span className="text-sky-500">To be the </span>
+                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">trusted</span>
+                <span className="text-sky-500"> technology advisor that ignites sustainable growth through </span>
+                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">thoughtful solutions</span>
+              </h2>
+            )}
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4 mb-10">
+            <div className="h-px flex-1 bg-gradient-to-r from-sky-200 to-transparent" />
+            <div className="w-2 h-2 rounded-full bg-sky-400" />
+            <div className="h-px flex-1 bg-gradient-to-l from-sky-200 to-transparent" />
+          </div>
+
+          {/* Supporting stats / pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                label: lang === "th" ? "ความไว้วางใจ" : "Trusted",
+                desc: lang === "th" ? "สร้างความสัมพันธ์ระยะยาวกับลูกค้าบนพื้นฐานของความโปร่งใสและความซื่อสัตย์" : "Building long-term client relationships founded on transparency and integrity",
+                color: "border-sky-500",
+                textColor: "text-sky-600",
+              },
+              {
+                label: lang === "th" ? "เทคโนโลยี" : "Technology",
+                desc: lang === "th" ? "นำเทคโนโลยีล้ำสมัยมาประยุกต์ใช้ให้เกิดผลลัพธ์ทางธุรกิจที่จริงจัง" : "Applying cutting-edge technology to deliver meaningful business outcomes",
+                color: "border-blue-600",
+                textColor: "text-blue-700",
+              },
+              {
+                label: lang === "th" ? "การเติบโตอย่างยั่งยืน" : "Sustainable Growth",
+                desc: lang === "th" ? "ผลักดันความสำเร็จที่ยั่งยืนผ่านโซลูชันที่รอบคอบและผ่านการพิสูจน์แล้ว" : "Driving enduring success through thoughtful, proven solutions",
+                color: "border-amber-500",
+                textColor: "text-amber-600",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className={`border-l-4 ${item.color} pl-5 py-4 bg-slate-50 rounded-r-xl hover:shadow-md transition-shadow duration-300`}
+              >
+                <p className={`text-lg font-bold mb-1 ${item.textColor}`}>{item.label}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Blue accent line bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
+      </section>
+
       {/* ASEAN Rising Star Award Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
         {/* Animated Background Patterns */}
