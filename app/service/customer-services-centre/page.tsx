@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -69,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -115,7 +116,7 @@ const translations = {
     },
     hero: {
       title: "ศูนย์บริการลูกค้ายุคใหม่",
-      subtitle: "การให้บริการที่ขับเคลื่อนด้วย AI รวม Agentforce AI agents กับตัวแทนมนุษย์เพื่อแก้ไขปัญหาอย่างมีประสิทธิภาพในทุกช่องทาง",
+      subtitle: "การให้บริการที่ขับเคลื่อนด้วย AI รวม Agentforce AI agents กับตัวแทนมนุษย์เพื่อแก้ไขปัญหาอย่างมีประสิทธิภ��พในทุกช่องทาง",
       cta: "ติดต่อเรา",
     },
     benefitsTitle: "ศูนย์บริการลูกค้ายุคใหม่สามารถช่วยองค์กรของคุณได้อย่างไร",
@@ -135,7 +136,7 @@ const translations = {
     },
     summary: {
       title: "สรุป",
-      description: "ศูนย์บริการลูกค้ายุคใหม่ (Next Gen Service Console ขับเคลื่อนด้วย Service Cloud) เป็นศูนย์ควบคุมอัจฉริยะที่แปลงศูนย์ติดต่อแบบดั้งเดิมเป็นการดำเนินการบริการที่ปรับปรุงด้วย AI มีคุณสมบัติ Customer 360 Metrics & Insights สำหรับการมองเห็นเส้นทางลูกค้าอย่างสมบูรณ์ Service Coach สำหรับการฝึกอบรมตัวแทนแบบเรียลไทม์ และระบบอัตโนมัติที่ขับเคลื่อนด้วย AI สำหรับงานประจำ โซลูชั่นช่วยให้ทั้ง AI agents และตัวแทนมนุษย์ทำงานร่วมกันอย่างมีประสิทธิภาพ โดยผู้บริหารมีการมองเห็นเต็มรูปแบบในเมตริกประสิทธิภาพ อารมณ์ของลูกค้า และการวิเคราะห์การดำเนินงานในทุกช่องทาง",
+      description: "ศูนย์บริการลูกค้ายุคใหม่ (Next Gen Service Console ขับเคลื่อนด้วย Service Cloud) เป็นศูนย์ควบคุมอัจฉริยะที่แปลงศูนย์ติดต่อแบบดั้งเดิมเป็นการดำเนินการบริการที่ปรับปรุงด้วย AI มีคุณสมบัติ Customer 360 Metrics & Insights สำหรับการมองเห็นเส้นทางลูกค้าอย่างสมบูรณ์ Service Coach สำหรับการฝึกอบรมตัวแทนแบบเรียลไทม์ และระบบอัตโนมัติที่ขับเคลื่อนด้วย AI สำหรับงานประจำ โซลูชั่นช่วยให้ทั้ง AI agents และตัวแทนมนุษย์ทำงานร่วมกันอย่างมีประสิทธิภาพ โดยผู้บริหารมีการมองเห็นเต็มรูปแบบในเมตริกประสิทธิภาพ ���ารมณ์ของลูกค้า และการวิเคราะห์การดำเนินงานในทุกช่องทาง",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
@@ -154,12 +155,12 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
-      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      crm: "การจัด���ารความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
-      marketing: "ระบบการตลาดอัตโนมัติ",
+      marketing: "ระบบการตลา��อัตโนมัติ",
       dataManagement: "การจัดการข้อมูล",
       partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
@@ -174,8 +175,8 @@ const translations = {
       submit: "จองการปรึกษา",
     },
     scheduleModal: {
-      title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
-      subtitle: "อภิปรายความท้าทายด้านบริการลูกค้าของคุณและค้นพบโซลูชั่นที่ขับเคลื่อนด้วย AI",
+      title: "จองการเรียกปรึกษา��ชิงกลยุทธ์ฟรี 30 นาที",
+      subtitle: "อภิปรายความท้าทายด้านบริการลูกค้าของคุณแ���ะค้นพบโซลูชั่นที่ขับเคลื่อนด้วย AI",
       projectLabel: "อธิบายความต้องการของโครงการ",
       projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function CustomerServicesCentrePage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

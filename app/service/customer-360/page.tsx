@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -69,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -118,7 +119,7 @@ const translations = {
       subtitle: "สร้างแหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า ทำลายสิ่งกีดขวางข้อมูลทั่วการขาย บริการ การตลาด และการค้า",
       cta: "ติดต่อเรา",
     },
-    benefitsTitle: "การรวมข้อมูลลูกค้า 360 องศาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
+    benefitsTitle: "การรวมข้อมูลลู��ค้า 360 องศาสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
         title: "สร้างแหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า",
@@ -146,7 +147,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "การรวมข้อมูลลูกค้า 360 องศาแปลงวิธีการจัดการข้อมูลลูกค้าของวิสาหกิจโดยสร้างแพลตฟอร์มที่ชาญฉลาดและเป็นแบบรวมที่ทำลายสิ่งกีดขวางข้อมูลและเปิดใช้งานการบูรณาการที่ราบรื่นในทุกฟังก์ชันทางธุรกิจ วิธีแก้ปัญหาให้แหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า ช่วยขจัดความซับซ้อนและความไม่มีประสิทธิภาพของการจัดการบันทึกลูกค้าที่แตกกระจายในระบบที่ไม่เชื่อมต่อหลายระบบ",
+        "การรวมข้อมูลลูกค้า 360 องศาแปลงวิธีการจัดการข้อมูลลูกค้าของ��ิสาหกิจโดยสร้างแพลตฟอร์มที่ชาญฉลาดและเป็นแบบรวมที่ทำลายสิ่งกีดขวางข้อมูลและเปิดใช้งานการบูรณาการที่ราบรื่นในทุกฟังก์ชันทางธุรกิจ วิธีแก้ปัญหาให้แหล่งข้อมูลเดี่ยวที่เชื่อถือได้สำหรับข้อมูลลูกค้า ช่วยขจัดความซับซ้อนและความไม่มีประสิทธิภาพของการจัดการบันทึกลูกค้าที่แตกกระจายในระบบที่ไม่เชื่อมต่อหลายระบบ",
       paragraph2:
         "ด้วยการใช้ประโยชน์จากความสามารถด้านการจัดการข้อมูลขั้นสูง รวมถึง identity resolution, data standardization และการซิงโครไนซ์แบบเรียลไทม์ Customer 360 ช่วยให้องค์กรสามารถรับข้อมูลเชิงลึกของลูกค้าที่ลึกซึ้งยิ่งขึ้นและให้บริการที่ปรับแต่งเองได้มากขึ้น ทีมการขายสามารถเห็นประวัติลูกค้าแบบเต็ม ทีมการบริการสามารถให้การสนับสนุนที่มีความเหมาะสม และทีมการตลาดสามารถสร้างแคมเปญที่มีเป้าหมายตามโปรไฟล์ลูกค้าแบบรวม วิธีการแบบบูรณาการนี้ปรับปรุงประสิทธิภาพการปฏิบัติงาน ปรับปรุงความพึงพอใจของลูกค้า และปลดล็อกโอกาสใหม่สำหรับการเติบโตของรายได้และความจงรักภักดีของลูกค้า",
     },
@@ -154,7 +155,7 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
@@ -164,7 +165,7 @@ const translations = {
       partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
-      title: "จองการปรึกษา",
+      title: "จองการ���รึกษา",
       subtitle: "ผู้เชี่ยวชาญด้านลูกค้า 360 ของเราพร้อมที่จะช่วยรวมข้อมูลลูกค้าของคุณ",
       firstName: "ชื่อเต็ม",
       email: "อีเมล",
@@ -177,7 +178,7 @@ const translations = {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
       subtitle: "อภิปรายความท้าทายในการรวมข้อมูลของคุณและค้นพบวิธีแก้ปัญหาที่ใช้ได้จริง",
       projectLabel: "อธิบายความต้องการของโครงการ",
-      projectPlaceholder: "อธิบายความต้องการของโครงการที่นี่...",
+      projectPlaceholder: "อธิบายความต้องการของโครงก���รที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function Customer360Page() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 

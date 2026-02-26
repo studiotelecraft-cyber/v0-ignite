@@ -10,6 +10,7 @@ import { Users, Headphones, Zap, BarChart3, Phone, Mail, MapPin, ChevronDown, Me
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -88,7 +89,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       service1: "Lead to Cash (Order) Management",
@@ -143,7 +144,7 @@ const translations = {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
         "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจให้เติบโตเร็วยิ่งขึ้น",
-      cta1: "นัดที่ปรึกษา",
+      cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
     features: {
@@ -184,7 +185,7 @@ const translations = {
       customerService: {
         title: "ศูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
-        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มีความสุขและภักดีมากขึ้น",
+        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มี��วามสุขและภักดีมากขึ้น",
       },
       salesforceManage: {
         title: "บริการจัดการ Salesforce",
@@ -197,18 +198,18 @@ const translations = {
       subtitle: "เราทำงานร่วมกับแพลตฟอร์มชั้นนำของอุตสาหกรรม",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
       service1: "การจัดการ Lead to Cash (Order)",
       service2: "การดำเนินการขายภาคสนาม",
       service3: "การรวมข้อมูลลูกค้า 360 องศา",
       service4: "ศูนย์บริการลูกค้ายุคใหม่",
       service5: "บริการจัดการ Salesforce",
-      partners: "Our product partner",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
       title: "จองคำปรึกษา",
@@ -226,7 +227,7 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "�����เมล���ริษัท",
+      emailLabel: "������เมล���ริษัท",
       submit: "ส่ง",
     },
     caseStudyModal: {
@@ -239,7 +240,7 @@ const translations = {
 }
 
 export default function Home() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [caseStudyModalOpen, setCaseStudyModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)

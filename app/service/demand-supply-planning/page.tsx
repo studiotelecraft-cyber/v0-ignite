@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -69,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -166,7 +167,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "การวางแผนอุปสงค์และอุปทานแปลงการจัดการสินค้าคงคลังและห่วงโซ่อุปทานโดยรวมการวิเคราะห์เชิงพยากรณ์กับการมองเห็นการดำเนินงานแบบเรียล������ม์ โซลูชั่นจะรวมเข้ากับ Salesforce เพื่อใช้ประโยชน์จากการพยากรณ์การขาย สัญญาณความต้องการของลูกค้า และรูปแบบในอดีตเพื่อสร้างการพยากรณ์ความต้องการที่แม่นยำ ด้วยการทำให้กระบวนการวางแผนเป็นอัตโนมัติและให้คำแนะนำที่ขับเคลื่อนด้วย AI องค์กรสามารถเพิ่มประสิทธิภาพการลงทุนสินค้าคงคลังและปรับปรุงประสิทธิภาพห่วงโซ่อุปทาน",
+        "การวางแผนอุปสงค์และอุปทานแปลงการจัดการสินค้าคงคลังและห่วงโซ่อุปทานโดยรวมการวิเคราะห์เชิงพยากรณ์กับการมองเห็นการดำเนินงานแบบเรียล������ม์ โซลูชั่นจะรวมเข้ากับ Salesforce เพื่อใช้ประโยชน์จากการพยากรณ์การขาย สัญญาณความต้องการของลูกค้า และรูปแบบในอดีตเพื่อสร้างการพยากรณ์ความต้องการที่แม่นยำ ด้วยกา��ทำให้กระบวนการวางแผนเป็นอัตโนมัติและให้คำแนะนำที่ขับเคลื่อนด้วย AI องค์กรสามารถเพิ่มประสิทธิภาพการลงทุนสินค้าคงคลังและปรับปรุงประสิทธิภาพห่วงโซ่��ุปทาน",
       paragraph2:
         "ด้วยความสามารถเช่น Materials Requirements Planning และ Distribution Requirements Planning โซลูชั่นการวางแผนอุปสงค์และอุปทานช่วยให้องค์กรสามารถสมดุลอุปสงค์และอุปทานในหลายตำแหน่งและสายผลิตภัณฑ์ การจับคู่อุปสงค์-อุปทานแบบเรียลไทม์ช่วยให้ผู้ผลิตและผู้จัดจำหน่ายตอบสนองต่อการเปลี่ยนแปลงได้อย่างรวดเร็ว ลดต้นทุนการขนส่ง และปรับปรุงระดับการบริการ ด้วยการเชื่อมต่อสัญญาณความต้องการจาก Salesforce กับการดำเนินการห่วงโซ่อุปทาน โซลูชั่นเหล่านี้เปิดใช้งานการมองเห็นและควบคุมห่วงโซ่อุปทานแบบครบวงจร",
     },
@@ -174,7 +175,7 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
@@ -206,7 +207,7 @@ const translations = {
 }
 
 export default function DemandSupplyPlanningPage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

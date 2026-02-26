@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation'
 import { Menu, X, ChevronDown, Calendar, ArrowLeft, Share2, User, Clock } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -945,7 +946,7 @@ export default function BlogPostPage() {
   const slug = params.slug as string
   const post = blogContent[slug as keyof typeof blogContent]
 
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   // Added state for dynamic navbar background color

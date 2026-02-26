@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Phone, Mail, MapPin, ChevronDown, ArrowRight, Menu, X } from 'lucide-react'
 import Link from "next/link"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -56,7 +57,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -146,8 +147,8 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการของเรา",
       crm: "ระบบบริหารความสัมพันธ์กับลูกค้า (CRM)",
       callCenter: "ระบบศูนย์บริการโทรศัพท์",
@@ -178,7 +179,7 @@ const translations = {
 }
 
 export default function MarketingPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

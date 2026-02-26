@@ -8,6 +8,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -68,7 +69,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -148,13 +149,13 @@ const translations = {
       paragraph1:
         "บริการจัดการ Salesforce เปลี่ยนวิธีการที่องค์กรดูแลและพัฒนาแพลตฟอร์ม Salesforce ของตนโดยการให้การสนับสนุนจากผู้เชี่ยวชาญโดยไม่มีค่าใช้จ่ายในการสร้างทีมภายใน บริการครอบคลุมของเรารวมถึงการตรวจสอบระบบเชิงรุก การตรวจสุขภาพเป็นประจำ การฝึกอบรมผู้ใช้ และการให้คำปรึกษาเชิงกลยุทธ์เพื่อให้แน่ใจว่าสภาพแวดล้อม Salesforce ของคุณสอดคล้องกับวัตถุประสงค์ทางธุรกิจ",
       paragraph2:
-        "นอกเหนือจากการสนับสนุนประจำวัน บริการจัดการของเรารวมถึงการปรับปรุงอย่างต่อเนื่อง การปรับปรุงคุณสมบัติ การจัดการการบูรณาการ และการจัดการการเผยแพร่ เราทำงานเป็นส่วนขยายของทีมของคุณ เข้าใจกระบวนการทางธุรกิจของคุณและแนะนำการปรับปรุงที่ขับเคลื่อนประสิทธิภาพและการนำไปใช้ วิธีการหุ้นส่วนนี้ช่วยให้แพลตฟอร์ม Salesforce ของคุณพัฒนาไปพร้อมกับธุรกิจของคุณ เพิ่ม ROI และความพึงพอใจของผู้ใช้สูงสุด",
+        "นอกเหนือจากการสนับสนุนประจำวัน บริการจัดการของเรารวมถึงการปรับปร��งอย่างต่อเนื่อง การปรับปรุงคุณสมบัติ การจัดการการบูรณาการ และการจัดการการเผยแพร่ เราทำงานเป็นส่วนขยายของทีมของคุณ เข้าใจกระบวนการทางธุรกิจของคุณและแนะนำการปรับปรุงที่ขับเคลื่อนประสิทธิภาพและการนำไปใช้ วิธีการหุ้นส่วนนี้ช่วยให้แพลตฟอร์ม Salesforce ของคุณพัฒนาไปพร้อมกับธุรกิจของคุณ เพิ่ม ROI และความพึงพอใจของผู้ใช้สูงสุด",
     },
     contact: {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
@@ -177,7 +178,7 @@ const translations = {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
       subtitle: "พูดคุยเกี่ยวกับความท้าทายในการสนับสนุน Salesforce ของคุณและค้นพบว่าบริการจัดการสามารถช่วยได้อย่างไร",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
-      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      projectPlaceholder: "อธิบายควา��ต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function SalesforceManagedServicePage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
 

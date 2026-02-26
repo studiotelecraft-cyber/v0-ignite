@@ -10,6 +10,7 @@ import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -69,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -121,7 +122,7 @@ const translations = {
     benefitsTitle: "การดำเนินการขายภาคสนามสามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
     benefits: {
       benefit1: {
-        title: "ให้อำนาจแก่ตัวแทนขายด้วยข้อมูลลูกค้าแบบเรียลไทม์ในขณะเดินทาง",
+        title: "ให้อำนาจแก่ตัวแทนขายด้วยข้อมูลลูกค้า���บบเรียลไทม์ในขณะเดินทาง",
         desc: "ทีมขายภาคสนามเข้าถึงข้อมูลลูกค้าที่ครอบคลุม ประวัติการซื้อ และบันทึกการโต้ตอบได้โดยตรงจากอุปกรณ์มือถือ การซิงค์ข้อมูลแบบเรียลไทม์ช่วยให้ตัวแทนมีรายละเอียดบัญชีล่าสุดเสมอ ซึ่งเป็นการเพิ่มความสามารถในการสนทนาและการตัดสินใจที่ดีขึ้นในระหว่างการเยี่ยมชมลูกค้า",
       },
       benefit2: {
@@ -146,22 +147,22 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำนักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
+        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส่วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
         "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      callCenter: "ระบบศูนย์สายด่วน",
+      marketing: "ระบบการตลาดอัตโนมัติ",
+      dataManagement: "การจัดการข้อมูล",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
       title: "จองคำปรึกษา",
@@ -176,8 +177,8 @@ const translations = {
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
       subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
-      projectLabel: "อธิบายความต้องการโครงการของคุณ",
-      projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
+      projectLabel: "อธิบายความ���้องการโครงการของคุณ",
+      projectPlaceholder: "อธิบายความต้��งการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเ�����ลบริษัท",
       submit: "ส่ง",
@@ -186,7 +187,7 @@ const translations = {
 }
 
 export default function FieldSalesPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

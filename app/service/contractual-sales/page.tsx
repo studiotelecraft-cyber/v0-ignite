@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -69,7 +70,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -104,7 +105,7 @@ const translations = {
       service: "บริการของเรา",
       serviceGroups: {
         group1: {
-          title: "ประสบการณ์ลูกค้าและการดำเนินการขาย",
+          title: "ประสบการณ���ลูกค้าและการดำเนินการขาย",
           items: [
             { name: "การจัดการ Lead to Cash (Order)", href: "/service/lead-to-cash-mgn" },
             { name: "การดำเนินการขายภาคสนาม", href: "/service/field-sales" },
@@ -122,7 +123,7 @@ const translations = {
           ],
         },
         group3: {
-          title: "ห่วงโซ่อุปทานและการดำเนินงาน",
+          title: "ห่วงโซ่อุปท���นและการดำเนินงาน",
           items: [
             { name: "การวางแผนอุปสงค์และอุปทาน", href: "/service/demand-supply-planning" },
             { name: "การวางแผนการผลิต", href: "/service/data-management" },
@@ -161,7 +162,7 @@ const translations = {
       title: "เหมาะสำหรับ",
       items: [
         "���ิสาหกิจการผลิตและอุตสาหกรรม",
-        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือส่วนรวม",
+        "ธุรกิจที่มีสัญญาระหว่างผู้ค้า จำหน่าย หรือ��่วนรวม",
       ],
     },
     detailsSection: {
@@ -174,9 +175,9 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง ��ขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
-      services: "บริการและการปรึกษาของเรา",
+      services: "บริการและก���รปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
       marketing: "ระบบก���รตลาดอัตโนมัติ",
@@ -206,7 +207,7 @@ const translations = {
 }
 
 export default function ContractualSalesPage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

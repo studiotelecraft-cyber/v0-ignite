@@ -10,6 +10,7 @@ import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -58,7 +59,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -124,7 +125,7 @@ const translations = {
     },
     hero: {
       title: "Call Center System",
-      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้างความพึงพอใจให้ลูกค้า",
+      subtitle: "ระบบคอลเซ็นเตอร์ครบวงจร สำหรับการตอบสนองที่รวดเร็ว ปรับปรุงประสิทธิภาพการบริการ และสร้าง���วามพึงพอใจให้ลูกค้า",
       cta: "ติดต่อเรา",
     },
     benefitsTitle: "ระบบ Call Center สามารถช่วยองค์กรของคุณด้านใดได้บ้าง",
@@ -149,17 +150,17 @@ const translations = {
         "การผสานระบบตั๋วงาน (Ticketing) ขั้นสูงช่วยให้แน่ใจว่าไม่มีคำถามของลูกค้าใดตกหล่น ด้วยการผสาน CRM เจ้าหน้าที่ของคุณสามารถเข้าถึงข้อมูลลูกค้าที่สมบูรณ์ได้ทันที ช่วยให้สามารถบริการแบบเฉพาะบุคคลได้ ระบบตอบรับเสียงอัตโนมัติ (IVR) ช่วยลดเวลารอและนำลูกค้าไปยังแผนกที่ถูกต้องโดยอัตโนมัติ ปรับปรุงทั้งประสิทธิภาพและความพึงพอใจของลูกค้า",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      crm: "Customer Relationship Management (CRM)",
-      callCenter: "Call Center System",
-      marketing: "Marketing Automation System",
-      dataManagement: "Data Management",
-      partners: "Our product partner",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      callCenter: "ระบบศูนย์สายด่วน",
+      marketing: "ระบบการตลาดอัตโนมัติ",
+      dataManagement: "การจัดการข้อมูล",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
       title: "จองคำปรึกษา",
@@ -184,7 +185,7 @@ const translations = {
 }
 
 export default function CallCenterPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

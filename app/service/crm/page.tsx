@@ -10,6 +10,7 @@ import { Globe, ArrowRight, Check, Phone, Mail, MapPin, ChevronDown, Menu, X, Tr
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -78,18 +79,18 @@ const translations = {
         "หากคุณสนใจที่จะเรียนรู้เพิ่มเติมเกี่ยวกับบริการ CRM ของเราและวิธีที่บริการเหล่านั้นจะเป็นประโยชน์ต่อธุรกิจของคุณ โปรดติดต่อเราวันนี้เพื่อนัดหมายเวลารับคำปรึกษา",
     },
     contact: {
-      title: "Contact Us",
+      title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
-      hours: "Monday-Friday: 9am – 6pm",
-      services: "Our consult & services",
-      service1: "Lead to Cash (Order) Management",
-      service2: "Field Sales Execution",
-      service3: "Customer 360 Data Consolidation",
-      service4: "Next Gen. Customer Service Centre",
-      service5: "Salesforce Manage Service",
-      partners: "Our product partner",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      services: "บริการและการปรึกษาของเรา",
+      service1: "การจัดการ Lead to Cash (Order)",
+      service2: "การดำเนินการขายภาคสนาม",
+      service3: "การรวมข้อมูลลูกค้า 360 องศา",
+      service4: "ศูนย์บริการลูกค้ายุคใหม่",
+      service5: "บริการจัดการ Salesforce",
+      partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
     booking: {
       title: "จองคำปรึกษา",
@@ -105,7 +106,7 @@ const translations = {
 }
 
 export default function CRMPage() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)

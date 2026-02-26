@@ -1,9 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -37,12 +38,22 @@ const translations = {
 }
 
 export function Navbar() {
-  const [lang, setLang] = useState<"en" | "th">("en")
+  const { lang, setLang } = useLanguage()
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isDarkBg, setIsDarkBg] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openDropdown = () => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
+    setServiceDropdownOpen(true)
+  }
+
+  const closeDropdown = () => {
+    closeTimerRef.current = setTimeout(() => setServiceDropdownOpen(false), 120)
+  }
 
   const t = translations[lang]
 
@@ -80,7 +91,7 @@ export function Navbar() {
   const currentPath = pathname || '/'
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b shadow-sm transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[9999] pointer-events-auto backdrop-blur-xl border-b shadow-sm transition-all duration-300 ${
       isDarkBg || isScrolled
         ? 'bg-blue-900/90 border-blue-800' 
         : 'bg-white/80 border-gray-200'
@@ -109,41 +120,49 @@ export function Navbar() {
             </Link>
             <div
               className="relative"
-              onMouseEnter={() => setServiceDropdownOpen(true)}
-              onMouseLeave={() => setServiceDropdownOpen(false)}
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdown}
             >
-              <Link href="/service/crm" className={`transition-colors flex items-center gap-1 ${
+              <button
+                onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
+                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-[inherit] text-base ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
               } ${currentPath.startsWith('/service') ? 'font-semibold' : ''}`}>
                 {t.service}
-                <ChevronDown className="w-4 h-4" />
-              </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
               {serviceDropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                  <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-                    <div className="space-y-3">
+                <div
+                  className="absolute top-full left-1/2 -translate-x-1/2 w-[480px] pt-2"
+                  onMouseEnter={openDropdown}
+                  onMouseLeave={closeDropdown}
+                >
+                  <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                    <div className="space-y-1">
                       {t.services.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
+                          onClick={() => setServiceDropdownOpen(false)}
                           className="block text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-200"
                         >
                           {item.name}
                         </Link>
                       ))}
                     </div>
-                    {/* Bottom CTA Section */}
-                    <div className="border-t border-dashed border-gray-300 mt-6 pt-6 flex items-center justify-center gap-4">
+                    <div className="border-t border-dashed border-gray-300 mt-4 pt-4 flex items-center justify-center gap-4">
                       <Link
                         href="/#contact"
+                        onClick={() => setServiceDropdownOpen(false)}
                         className="px-6 py-2.5 bg-blue-500 text-white rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
                       >
                         Schedule Consultation
                       </Link>
                       <Link
                         href="/resources"
+                        onClick={() => setServiceDropdownOpen(false)}
                         className="px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
                       >
                         Download Case Study
@@ -176,12 +195,13 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className={`flex items-center gap-1 rounded-full p-1 ${
+            <div className={`relative z-10 flex items-center gap-1 rounded-full p-1 ${
               isDarkBg || isScrolled ? 'bg-blue-800/50' : 'bg-gray-100'
             }`}>
               <button
+                type="button"
                 onClick={() => setLang("th")}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer select-none ${
                   lang === "th" 
                     ? (isDarkBg || isScrolled)
                       ? "bg-blue-600 text-white shadow-md" 
@@ -194,8 +214,9 @@ export function Navbar() {
                 TH
               </button>
               <button
+                type="button"
                 onClick={() => setLang("en")}
-                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all cursor-pointer select-none ${
                   lang === "en" 
                     ? (isDarkBg || isScrolled)
                       ? "bg-blue-600 text-white shadow-md" 

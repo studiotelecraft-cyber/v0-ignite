@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import localFont from 'next/font/local'
 import { Analytics } from "@vercel/analytics/next"
+import { LanguageProvider } from "@/context/language-context"
 import "./globals.css"
 
 const lexend = localFont({
@@ -44,7 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

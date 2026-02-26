@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Navbar } from "@/components/navbar"
+import { useLanguage } from "@/context/language-context"
 
 const translations = {
   en: {
@@ -70,7 +71,7 @@ const translations = {
       title: "Contact Us",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "No. 9 G Tower Grand Rama 9 Building, 31st Floor, Room No. T01, Rama 9 Road, Huai Khwang, Huai Khwang, Bangkok 10310",
       hours: "Monday-Friday: 9am – 6pm",
       services: "Our consult & services",
       crm: "Customer Relationship Management (CRM)",
@@ -118,7 +119,7 @@ const translations = {
           title: "การวางแผนเชิงกลยุทธ์และข่าวกรอง",
           items: [
             { name: "การวางแผนธุรกิจแบบบูรณาการ (IBP)", href: "/service/data-management" },
-            { name: "การวางแผนการขายและการดำเนินงาน (S&OP)", href: "/service/crm" },
+            { name: "การวางแผนการขายและการ��ำเนินงา��� (S&OP)", href: "/service/crm" },
             { name: "การวางแผนและวิเคราะห์ทางการเงิน (FP&A)", href: "/service/financial-planning-analysis" },
           ],
         },
@@ -156,7 +157,7 @@ const translations = {
     },
     summary: {
       title: "สรุป",
-      description: "การวางแผนและวิเคราะห์ทางการเงินสำหรับ Salesforce รวมความสามารถด้านการวางแผนทางการเงินโดยตรงกับข้อมูล CRM เพื่อสร้างแพลตฟอร์มการวางแผนแบบรวมศูนย์ วิธีแก้ปัญหาจะเชื่อมต่อข้อมูลการดำเนินงาน (จาก Salesforce) กับระบบการเงิน (ERP, ซอฟต์แวร์บัญชี) เพื่อให้ทีม FP&A ได้รับข้อมูลเชิงลึกที่ถูกต้องและแบบเรียลไทม์สำหรับการจัดทำงบประมาณ การพยากรณ์ และการวิเคราะห์ทางการเงิน โซลูชั่นเช่น Certinia (Salesforce-native) และเครื่องมือบุคคลที่สามเช่น Prophix, Cube และ OnPlan รวมเข้ากับ Salesforce ได้อย่างราบรื่นเพื่อทำให้การไหลของข้อมูลเป็นอัตโนมัติ ขจัดกระบวนการด้วยตนเอง และเปิดใช้งานให้ทีมการเงินมุ่งเน้นไปที่การวิเคราะห์เชิงกลยุทธ์แทนการรวบรวมข้อมูล",
+      description: "การวางแผนและวิเคราะห์ทางการเงินสำหรับ Salesforce รวมความสามารถด้านการวางแผนทางการเงินโดยตรงกับข้อมูล CRM เพื่อสร้างแพลตฟอร์มการวางแผนแบบรวมศูนย์ วิธีแก้ปัญหาจะเชื่อมต่อข้อมูลการดำเนินงาน (จาก Salesforce) กับระบบการเงิน (ERP, ซอฟต์แวร์บัญ��ี) เพื่อให้ทีม FP&A ได้รับข้อมูลเชิงลึกที่ถูกต้องและแบบเรียลไทม์สำหรับการจัดทำงบประมาณ การพยากรณ์ และการวิเคราะห์ทางการเงิน โซลูชั่นเช่น Certinia (Salesforce-native) และเครื่องมือบุคคลที่สามเช่น Prophix, Cube และ OnPlan รวมเข้ากับ Salesforce ได้อย่างราบรื่นเพื่อทำให้การไหลของข้อมูลเป็นอัตโนมัติ ขจัดกระบวนการด้วยตนเอง และเปิดใช้งานให้ทีมการเงินมุ่งเน้นไปที่การวิเคราะห์เชิงกลยุทธ์แทนการรวบรวมข้อมูล",
     },
     bestFor: {
       title: "เหมาะสำหรับ",
@@ -170,13 +171,13 @@ const translations = {
       paragraph1:
         "การวางแผนและวิเคราะห์ทางการเงินแปลงวิธีการจัดการการวางแผนทางการเงินและการพยากรณ์ของสถาบันโดยการรวมข้อมูลการดำเนินงาน Salesforce กับเครื่องมือการวางแผน���างการเงินที่ครอบคลุม วิธีแก้ปัญหาขจัดการปิดกั้นแบบดั้งเดิมระหว่างข้อมูลการขาย การดำเนินงาน และทางการเงิน เปิดใช้งานให้ทีมการเงินจัดทำการพยากรณ์ตามข้อมูลกิจกรรมทางธุรกิจที่แท้จริงปัจจุบันแทนแนวโน้มทางประวัติศาสตร์หรือการประมาณการด้วยตนเอง",
       paragraph2:
-        "ด้วยการทำให้การไหลของข้อมูลระหว่าง Salesforce และระบบการเงินเป็นอัตโนมัติ โซลูชั่น FP&A เปิดใช้งานการวางแผนอย่างต่อเนื่อง การวิเคราะห์สถานการณ์ที่เร็วขึ้น และการพยากรณ์ที่แม่นยำยิ่งขึ้น ทีมการเงินสามารถตอบสนองต่อการเปลี่ยนแปลงทางธุรกิจได้อย่างรวดเร็ว ประเมินผลกระทบทางการเงินของความคิดริเริ่มเชิงกลยุทธ์ และตัดสินใจโดยใช้ข้อมูล การรวมนี้ช่วยให้ประธานธนาคารและผู้นำการเงินสามารถให้คำแนะนำเชิงกลยุทธ์ที่สอดคล้องกับผลการดำเนินงานทางธุรกิจในขณะที่ลดเวลาที่ใช้ในการรวบรวมและการรายงานข้อมูลด้วยตนเอง",
+        "ด้วยการทำให้การไหลของข้อมูลระหว่าง Salesforce และระบ����ารเงินเป็���อัตโนมัติ โซลูชั่น FP&A เปิดใช้งานการวางแผนอย่างต่อเนื่อง การวิเคราะห์สถานการณ์ที่เร็วขึ้น และการพยากรณ์ที่แม่นยำยิ่งขึ้น ทีมการเงินสามารถตอบสนองต่อการเปลี่ยนแปลงทางธุรกิจได้อย่างรวดเร็ว ประเมินผลกระทบทางการเงินของความคิดริเริ่มเชิงกลยุทธ์ และตัดสินใจโดยใช้ข้อมูล การรวมนี้ช่วยให้ประธานธนาคารและผู้นำการเงินสามารถให้คำแนะนำเชิงกลยุทธ์ที่สอดคล้องกับผลการดำเนินงานทางธุรกิจในขณะที่ลดเวลาที่ใช้ในการรวบรวมและการรายงานข้อมูลด้วยตนเอง",
     },
     contact: {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "Suite 0871, Level 8, 1-7 Zuellig House, Silom Road, Silom, Bangrak, Bangkok, 10500, Thailand",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9น. – 18น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
@@ -208,7 +209,7 @@ const translations = {
 }
 
 export default function FinancialPlanningAnalysisPage() {
-  const [lang, setLang] = useState("en")
+  const { lang, setLang } = useLanguage()
   const [t, setT] = useState(translations.en)
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
