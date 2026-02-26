@@ -83,7 +83,7 @@ const translations = {
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
-      hours: "จันทร์-ศุกร์: 9น. – 18น.",
+      hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
       service1: "การจัดการ Lead to Cash (Order)",
       service2: "การดำเนินการขายภาคสนาม",
@@ -543,7 +543,7 @@ export default function CRMPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                       <p className="text-gray-700 leading-relaxed">{t.contact.address}</p>
-                      <p className="text-gray-600 text-sm mt-2">{t.contact.hours}</p>
+                      <p className="text-gray-800 text-sm mt-2 font-bold">{t.contact.hours}</p>
                     </div>
                   </div>
                 </div>

@@ -549,7 +549,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-bold text-white text-lg mb-2">Address</h3>
                     <p className="text-white/90 leading-relaxed">{t.contactUs.address}</p>
-                    <p className="text-white/80 text-sm mt-3 font-medium">Monday-Friday: 9am – 6pm</p>
+                    <p className="text-white text-sm mt-3 font-bold">{lang === "th" ? "จันทร์-ศุกร์: 9:00 น. – 18:00 น." : "Monday - Friday: 9:00 AM – 6:00 PM"}</p>
                   </div>
                 </div>
               </div>
