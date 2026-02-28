@@ -47,8 +47,8 @@ export default function RootLayout({
       <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
+          <Analytics />
         </LanguageProvider>
-        <Analytics />
       </body>
     </html>
   )
