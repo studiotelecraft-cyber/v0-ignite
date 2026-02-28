@@ -395,10 +395,10 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative bg-white overflow-hidden flex flex-col lg:flex-row">
+      <section className="relative bg-white overflow-hidden flex flex-col lg:flex-row items-stretch">
 
-        {/* Left: full-height image panel */}
-        <div className="relative w-full lg:w-[45%] min-h-[360px] lg:min-h-full flex-shrink-0">
+        {/* Left: full-height image panel — self-stretch so it fills right column height */}
+        <div className="relative w-full lg:w-[45%] min-h-[320px] flex-shrink-0 self-stretch">
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
             alt="Core Values whiteboard — Integrity, Collaboration, Innovation, Money, Optimism"
