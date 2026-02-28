@@ -434,59 +434,77 @@ export default function AboutPage() {
 
       {/* Core Values Section */}
       <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
-        {/* Dot grid — same as Vision section */}
+        {/* Dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
         />
-        {/* Soft glow top-left */}
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-700/15 rounded-full blur-3xl pointer-events-none" />
+        {/* Soft glow */}
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sky-700/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* Left: value list */}
+          {/* Header */}
+          <div className="mb-14">
+            <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+              {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <span className="text-sky-400">Ignite</span>
+              <span className="text-white/90">'s </span>
+              <span className="text-amber-400">Core Value</span>
+            </h2>
+          </div>
+
+          {/* Two-column body */}
+          <div className="grid lg:grid-cols-[1fr_420px] gap-12 items-start">
+
+            {/* Left: numbered value rows */}
             <div>
-              <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-                {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
-              </p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-                <span className="text-sky-400">Ignite</span>
-                <span className="text-white/90">'s </span>
-                <span className="text-amber-400">Core Value</span>
-              </h2>
-
-              <div className="space-y-6">
-                {Object.entries(t.values)
-                  .filter(([key]) => key.startsWith("value"))
-                  .map(([key, value]) => (
-                    <div key={key} className="flex items-start gap-4 group">
-                      {/* Accent dot */}
-                      <div className="flex-shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full bg-amber-400" />
-                      <div>
-                        <p className="text-sky-400 font-bold text-lg leading-snug">
+              {Object.entries(t.values)
+                .filter(([key]) => key.startsWith("value"))
+                .map(([key, value], idx) => (
+                  <div key={key}>
+                    <div className="flex items-start gap-6 py-6">
+                      {/* Number */}
+                      <span className="flex-shrink-0 text-xs font-bold text-white/25 mt-1 w-6 text-right">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
+                      {/* Content */}
+                      <div className="flex-1">
+                        <p className="text-white font-semibold text-lg leading-snug mb-1">
                           {value.title}
                         </p>
-                        <p className="text-white/60 text-sm mt-1 leading-relaxed">
+                        <p className="text-white/50 text-sm leading-relaxed">
                           {value.desc}
                         </p>
                       </div>
+                      {/* Right accent line */}
+                      <div className="flex-shrink-0 self-stretch flex items-center">
+                        <div className="w-8 h-px bg-sky-500/40" />
+                      </div>
                     </div>
-                  ))}
-              </div>
+                    {/* Divider — skip after last */}
+                    {idx < 5 && <div className="h-px bg-white/[0.06]" />}
+                  </div>
+                ))}
             </div>
 
-            {/* Right: image */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F4qWS6SPeCsRIsExLUqCwd3ZQCsRpy.png"
-                alt="Ignite Core Values — whiteboard with core value diagram in a modern office"
-                className="w-full h-full object-cover grayscale contrast-75"
-              />
-              {/* Dark overlay to blend with dark theme */}
-              <div className="absolute inset-0 bg-slate-900/40" />
-              {/* Amber bottom accent bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-400/60" />
+            {/* Right: team photo */}
+            <div className="relative lg:sticky lg:top-28">
+              {/* Sky-blue accent frame offset */}
+              <div className="absolute -top-3 -right-3 w-full h-full rounded-2xl border border-sky-500/30 pointer-events-none" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <img
+                  src="/images/core-values-team.jpg"
+                  alt="Ignite team collaborating around a table — representing our core values in action"
+                  className="w-full h-full object-cover"
+                />
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-slate-900/30" />
+                {/* Amber bottom rule */}
+                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-amber-400/70" />
+              </div>
             </div>
 
           </div>
