@@ -457,7 +457,7 @@ export default function AboutPage() {
                 .map(([key, value], idx) => (
                   <div key={key} className="flex items-start gap-6 py-5 group">
                     {/* Number */}
-                    <span className="flex-shrink-0 text-sm font-bold text-gray-300 w-8 pt-1">
+                    <span className="flex-shrink-0 text-2xl font-bold text-gray-200 w-10 pt-0.5 leading-none">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
                     {/* Content */}
@@ -479,8 +479,8 @@ export default function AboutPage() {
           {/* Right: full-height image, no border */}
           <div className="relative w-full lg:w-[42%] min-h-[400px] lg:min-h-full">
             <img
-              src="/images/core-values-team.jpg"
-              alt="Ignite team collaborating — core values in action"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
+              alt="Core Values whiteboard — Money, Optimism, Integrity, Collaboration, Innovation"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>

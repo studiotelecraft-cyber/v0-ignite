@@ -567,6 +567,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Vision Section */}
+        <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
+          />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="container mx-auto max-w-4xl relative z-10 text-center">
+            <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-8">
+              {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
+            </p>
+            {lang === "th" ? (
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
+                <span className="text-sky-400">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
+                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">ไว้วางใจได้</span>
+                <span className="text-sky-400"> ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน</span>
+                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4"> โซลูชันที่รอบคอบ</span>
+              </h2>
+            ) : (
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
+                <span className="text-sky-400">To be the </span>
+                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">trusted</span>
+                <span className="text-sky-400"> technology advisor that ignites sustainable growth through </span>
+                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">thoughtful solutions</span>
+              </h2>
+            )}
+            <div className="mt-12 mx-auto w-16 h-1 rounded-full bg-amber-400" />
+          </div>
+        </section>
+
         {/* Technology Solutions Section */}
         <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto max-w-7xl">
