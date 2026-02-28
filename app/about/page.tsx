@@ -334,44 +334,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
-        {/* Subtle dot grid */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
-        />
-        {/* Soft blue glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="container mx-auto max-w-4xl relative z-10 text-center">
-          {/* Label */}
-          <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-8">
-            {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
-          </p>
-
-          {/* Main statement */}
-          {lang === "th" ? (
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
-              <span className="text-sky-400">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
-              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">ไว้วางใจได้</span>
-              <span className="text-sky-400"> ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน</span>
-              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4"> โซลูชันที่รอบคอบ</span>
-            </h2>
-          ) : (
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
-              <span className="text-sky-400">To be the </span>
-              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">trusted</span>
-              <span className="text-sky-400"> technology advisor that ignites sustainable growth through </span>
-              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">thoughtful solutions</span>
-            </h2>
-          )}
-
-          {/* Bottom rule */}
-          <div className="mt-12 mx-auto w-16 h-1 rounded-full bg-amber-400" />
-        </div>
-      </section>
-
       {/* ASEAN Rising Star Award Section */}
       <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
         {/* Static background accent */}
@@ -414,7 +376,7 @@ export default function AboutPage() {
               <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
                 {lang === "en"
                   ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
-                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด��เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
               </p>
             </div>
           </div>
@@ -433,58 +395,64 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative bg-white overflow-hidden" style={{ fontFamily: "'Lexend', sans-serif" }}>
-        <div className="flex flex-col lg:flex-row min-h-[700px]">
+      <section className="py-20 px-6 bg-white overflow-hidden">
+        <div className="container mx-auto max-w-7xl">
 
-          {/* Left: content */}
-          <div className="flex-1 py-24 px-8 lg:px-16 xl:px-24 flex flex-col justify-center">
-            {/* Label */}
-            <p className="text-amber-500 text-xs font-semibold tracking-[0.25em] uppercase mb-4">
-              {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
-            </p>
-
-            {/* Heading */}
-            <h2 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-12">
-              <span className="text-sky-500">Ignite</span>
-              <span className="text-gray-900">'s </span>
-              <span className="text-amber-500">Core Value</span>
+          {/* Header — same style as What We Do */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {lang === "th" ? "คุณค่าหลักของ Ignite" : "Ignite's Core Value"}
             </h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
+          </div>
 
-            {/* Value list */}
-            <div className="divide-y divide-gray-100 max-w-xl">
+          {/* Two-column layout: image left, cards right — mirrors What We Do */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+            {/* Left: image */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
+                  alt="Core Values whiteboard — Integrity, Collaboration, Innovation, Money, Optimism"
+                  className="w-full h-auto object-contain rounded-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Right: value cards */}
+            <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
               {Object.entries(t.values)
                 .filter(([key]) => key.startsWith("value"))
-                .map(([key, value], idx) => (
-                  <div key={key} className="flex items-start gap-6 py-5 group">
-                    {/* Number */}
-                    <span className="flex-shrink-0 text-2xl font-bold text-gray-200 w-10 pt-0.5 leading-none">
-                      {String(idx + 1).padStart(2, "0")}
-                    </span>
-                    {/* Content */}
-                    <div className="flex-1">
-                      <p className="text-sky-600 font-bold text-xl leading-snug mb-1">
-                        {value.title}
-                      </p>
-                      <p className="text-gray-500 text-base leading-relaxed">
-                        {value.desc}
-                      </p>
+                .map(([key, value], idx) => {
+                  const cardStyles = [
+                    { card: "hover:border-blue-500", badge: "from-blue-500 to-blue-600", shadow: "shadow-blue-500/30" },
+                    { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-cyan-600",  shadow: "shadow-cyan-500/30"  },
+                    { card: "hover:border-blue-500", badge: "from-blue-500 to-cyan-500",  shadow: "shadow-blue-500/30"  },
+                    { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-blue-500",  shadow: "shadow-cyan-500/30"  },
+                    { card: "hover:border-blue-600", badge: "from-blue-600 to-blue-500",  shadow: "shadow-blue-600/30"  },
+                    { card: "hover:border-cyan-500",  badge: "from-cyan-400 to-blue-600",  shadow: "shadow-cyan-400/30"  },
+                  ]
+                  const style = cardStyles[idx] ?? cardStyles[0]
+                  return (
+                    <div
+                      key={key}
+                      className={`group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:shadow-xl transition-all duration-300 ${style.card}`}
+                    >
+                      {/* Number badge */}
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${style.badge} flex items-center justify-center mb-4 shadow-lg ${style.shadow} group-hover:scale-110 transition-transform`}>
+                        <span className="text-white font-bold text-base leading-none">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2">{value.title}</h3>
+                      <p className="text-gray-600 leading-relaxed text-sm">{value.desc}</p>
                     </div>
-                    {/* Hover accent */}
-                    <div className="flex-shrink-0 self-center w-6 h-px bg-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                ))}
+                  )
+                })}
             </div>
-          </div>
 
-          {/* Right: full-height image, no border */}
-          <div className="relative w-full lg:w-[42%] min-h-[400px] lg:min-h-full">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
-              alt="Core Values whiteboard — Money, Optimism, Integrity, Collaboration, Innovation"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
           </div>
-
         </div>
       </section>
 
