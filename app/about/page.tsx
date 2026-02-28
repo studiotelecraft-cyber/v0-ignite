@@ -433,77 +433,89 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
-        {/* Dot grid */}
+      <section className="relative py-24 px-6 overflow-hidden bg-slate-900 font-sans">
+        {/* Dot grid background */}
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
         />
-        {/* Soft glow */}
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sky-700/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto max-w-7xl relative z-10">
 
-          {/* Header */}
-          <div className="mb-14">
-            <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
-              {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              <span className="text-sky-400">Ignite</span>
-              <span className="text-white/90">'s </span>
-              <span className="text-amber-400">Core Value</span>
-            </h2>
+          {/* Top: header + image side-by-side */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+            <div>
+              <p className="text-amber-400 text-xs font-semibold tracking-[0.25em] uppercase mb-4">
+                {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold leading-[1.1] text-white">
+                {lang === "th" ? (
+                  <>
+                    <span className="text-sky-400">Ignite</span>
+                    <span className="text-white">'s </span>
+                    <span className="text-amber-400">Core Value</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-sky-400">Ignite</span>
+                    <span className="text-white">'s </span>
+                    <span className="text-amber-400">Core Value</span>
+                  </>
+                )}
+              </h2>
+            </div>
+            {/* Top-right: thin amber rule */}
+            <div className="hidden lg:block h-px w-64 bg-amber-400/30 mb-3" />
           </div>
 
-          {/* Two-column body */}
-          <div className="grid lg:grid-cols-[1fr_420px] gap-12 items-start">
+          {/* Body: values grid left, photo right */}
+          <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start">
 
-            {/* Left: numbered value rows */}
-            <div>
+            {/* Values grid — 2 columns on md+ */}
+            <div className="grid sm:grid-cols-2 gap-px bg-white/[0.06] rounded-2xl overflow-hidden border border-white/[0.06]">
               {Object.entries(t.values)
                 .filter(([key]) => key.startsWith("value"))
                 .map(([key, value], idx) => (
-                  <div key={key}>
-                    <div className="flex items-start gap-6 py-6">
-                      {/* Number */}
-                      <span className="flex-shrink-0 text-xs font-bold text-white/25 mt-1 w-6 text-right">
-                        {String(idx + 1).padStart(2, "0")}
-                      </span>
-                      {/* Content */}
-                      <div className="flex-1">
-                        <p className="text-white font-semibold text-lg leading-snug mb-1">
-                          {value.title}
-                        </p>
-                        <p className="text-white/50 text-sm leading-relaxed">
-                          {value.desc}
-                        </p>
-                      </div>
-                      {/* Right accent line */}
-                      <div className="flex-shrink-0 self-stretch flex items-center">
-                        <div className="w-8 h-px bg-sky-500/40" />
-                      </div>
+                  <div
+                    key={key}
+                    className="bg-slate-900 px-7 py-7 flex flex-col gap-3 hover:bg-slate-800/60 transition-colors duration-200"
+                  >
+                    {/* Index */}
+                    <span className="text-[11px] font-bold tracking-[0.2em] text-sky-500/60 uppercase">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    {/* Title */}
+                    <p className="text-white font-semibold text-base leading-snug">
+                      {value.title}
+                    </p>
+                    {/* Desc */}
+                    <p className="text-white/45 text-sm leading-relaxed">
+                      {value.desc}
+                    </p>
+                    {/* Bottom accent */}
+                    <div className="mt-auto pt-4">
+                      <div className="h-px w-8 bg-sky-500/40" />
                     </div>
-                    {/* Divider — skip after last */}
-                    {idx < 5 && <div className="h-px bg-white/[0.06]" />}
                   </div>
                 ))}
             </div>
 
-            {/* Right: team photo */}
-            <div className="relative lg:sticky lg:top-28">
-              {/* Sky-blue accent frame offset */}
-              <div className="absolute -top-3 -right-3 w-full h-full rounded-2xl border border-sky-500/30 pointer-events-none" />
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                <img
-                  src="/images/core-values-team.jpg"
-                  alt="Ignite team collaborating around a table — representing our core values in action"
-                  className="w-full h-full object-cover"
-                />
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-slate-900/30" />
-                {/* Amber bottom rule */}
-                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-amber-400/70" />
+            {/* Photo */}
+            <div className="relative lg:sticky lg:top-28 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img
+                src="/images/core-values-team.jpg"
+                alt="Ignite team collaborating — core values in action"
+                className="w-full object-cover aspect-[3/4]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+              {/* Caption overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="text-white font-semibold text-sm leading-snug">
+                  {lang === "th"
+                    ? "ทีมงาน Ignite — เชื่อมต่อ เติบโต สร้างคุณค่า"
+                    : "Ignite Team — Connect, Grow, Deliver Value"}
+                </p>
+                <div className="mt-2 h-[2px] w-10 bg-amber-400" />
               </div>
             </div>
 
