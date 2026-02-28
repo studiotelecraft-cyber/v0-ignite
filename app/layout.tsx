@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import localFont from 'next/font/local'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "@/context/language-context"
 import "./globals.css"
 
@@ -47,8 +47,8 @@ export default function RootLayout({
       <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
-          <Analytics />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   )
