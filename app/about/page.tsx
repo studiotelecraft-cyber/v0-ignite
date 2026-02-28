@@ -432,33 +432,42 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-white">
-        <div className="container mx-auto max-w-7xl">
+      {/* Core Values Section */}
+      <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
+        {/* Dot grid — same as Vision section */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
+        />
+        {/* Soft glow top-left */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-700/15 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* Left: values list */}
+            {/* Left: value list */}
             <div>
-              {/* Section label */}
-              <p className="text-amber-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-4">
                 {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
               </p>
               <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-                <span className="text-sky-500">Ignite</span>
-                <span className="text-gray-800">'s </span>
-                <span className="text-amber-500">Core Value</span>
+                <span className="text-sky-400">Ignite</span>
+                <span className="text-white/90">'s </span>
+                <span className="text-amber-400">Core Value</span>
               </h2>
 
-              <div className="space-y-7">
+              <div className="space-y-6">
                 {Object.entries(t.values)
                   .filter(([key]) => key.startsWith("value"))
                   .map(([key, value]) => (
                     <div key={key} className="flex items-start gap-4 group">
-                      <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-sky-400 mt-2" />
+                      {/* Accent dot */}
+                      <div className="flex-shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full bg-amber-400" />
                       <div>
-                        <p className="text-sky-500 font-bold text-lg leading-snug group-hover:text-sky-600 transition-colors">
+                        <p className="text-sky-400 font-bold text-lg leading-snug">
                           {value.title}
                         </p>
-                        <p className="text-gray-600 text-base mt-0.5 leading-relaxed">
+                        <p className="text-white/60 text-sm mt-1 leading-relaxed">
                           {value.desc}
                         </p>
                       </div>
@@ -468,14 +477,16 @@ export default function AboutPage() {
             </div>
 
             {/* Right: image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F4qWS6SPeCsRIsExLUqCwd3ZQCsRpy.png"
                 alt="Ignite Core Values — whiteboard with core value diagram in a modern office"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale contrast-75"
               />
-              {/* Subtle overlay so image doesn't overpower */}
-              <div className="absolute inset-0 bg-slate-900/10" />
+              {/* Dark overlay to blend with dark theme */}
+              <div className="absolute inset-0 bg-slate-900/40" />
+              {/* Amber bottom accent bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-400/60" />
             </div>
 
           </div>
