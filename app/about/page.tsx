@@ -319,147 +319,89 @@ export default function AboutPage() {
       </section>
 
       {/* Vision Section */}
-      <section className="relative py-28 px-6 overflow-hidden bg-white">
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: 'radial-gradient(circle, #1d4ed8 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+      <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
+        {/* Subtle dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
         />
-        {/* Blue accent line top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
+        {/* Soft blue glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="container mx-auto max-w-4xl relative z-10 text-center">
           {/* Label */}
-          <div className="flex items-center gap-3 mb-10">
-            <div className="h-px w-12 bg-amber-500" />
-            <span className="text-amber-500 text-lg font-semibold tracking-widest uppercase">
-              {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
-            </span>
-          </div>
+          <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-8">
+            {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
+          </p>
 
           {/* Main statement */}
-          <div className="mb-12">
-            {lang === "th" ? (
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
-                <span className="text-sky-500">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">ไว้วางใจได้</span>
-                <span className="text-sky-500"> ที่จุดประกายการเติบโตอย่างยั่งยืนผ่าน</span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4"> โซลูชันที่รอบคอบ</span>
-              </h2>
-            ) : (
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
-                <span className="text-sky-500">To be the </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">trusted</span>
-                <span className="text-sky-500"> technology advisor that ignites sustainable growth through </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">thoughtful solutions</span>
-              </h2>
-            )}
-          </div>
+          {lang === "th" ? (
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
+              <span className="text-sky-400">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
+              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">ไว้วางใจได้</span>
+              <span className="text-sky-400"> ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน</span>
+              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4"> โซลูชันที่รอบคอบ</span>
+            </h2>
+          ) : (
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
+              <span className="text-sky-400">To be the </span>
+              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">trusted</span>
+              <span className="text-sky-400"> technology advisor that ignites sustainable growth through </span>
+              <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">thoughtful solutions</span>
+            </h2>
+          )}
 
-          {/* Divider */}
-          <div className="flex items-center gap-4 mb-10">
-            <div className="h-px flex-1 bg-gradient-to-r from-sky-200 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-sky-400" />
-            <div className="h-px flex-1 bg-gradient-to-l from-sky-200 to-transparent" />
-          </div>
-
-          {/* Supporting stats / pillars */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                label: lang === "th" ? "ความไว้วางใจ" : "Trusted",
-                desc: lang === "th" ? "สร้างความสัมพันธ์ระยะยาวกับลูกค้าบนพื้นฐานของความโปร่งใสและความซื่อสัตย์" : "Building long-term client relationships founded on transparency and integrity",
-                color: "border-sky-500",
-                textColor: "text-sky-600",
-              },
-              {
-                label: lang === "th" ? "เทคโนโลยี" : "Technology",
-                desc: lang === "th" ? "นำเทคโนโลยีล้ำสมัยมาประยุกต์ใช้ให้เกิดผลลัพธ์ทางธุรกิจที่จริงจัง" : "Applying cutting-edge technology to deliver meaningful business outcomes",
-                color: "border-blue-600",
-                textColor: "text-blue-700",
-              },
-              {
-                label: lang === "th" ? "การเติบโตอย่างยั่งยืน" : "Sustainable Growth",
-                desc: lang === "th" ? "ผลักดันความสำเร็จที่ยั่งยืนผ่านโซลูชันที่รอบคอบและผ่านการพิสูจน์แล้ว" : "Driving enduring success through thoughtful, proven solutions",
-                color: "border-amber-500",
-                textColor: "text-amber-600",
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className={`border-l-4 ${item.color} pl-5 py-4 bg-slate-50 rounded-r-xl hover:shadow-md transition-shadow duration-300`}
-              >
-                <p className={`text-lg font-bold mb-1 ${item.textColor}`}>{item.label}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          {/* Bottom rule */}
+          <div className="mt-12 mx-auto w-16 h-1 rounded-full bg-amber-400" />
         </div>
-
-        {/* Blue accent line bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
       </section>
 
       {/* ASEAN Rising Star Award Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
-        {/* Animated Background Patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)] animate-pulse" />
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
+        {/* Static background accent */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.4),transparent_60%)]" />
         </div>
 
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
             {/* Award Title */}
             <div className="text-center mb-12">
-              <div className="inline-block mb-6 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                <span className="text-white/90 text-sm font-semibold tracking-wider uppercase">
-                  {lang === "en" ? "Award Winner" : "ผู้ได้รั���รางวัล"}
+              <div className="inline-block mb-6 px-6 py-2 bg-white/10 rounded-full border border-white/20">
+                <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">
+                  {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
                 </span>
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl">
-                  WINNER
-                </span>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                <span className="text-yellow-300">WINNER</span>
               </h2>
-              <p className="text-2xl md:text-4xl font-bold text-white/90 mb-4 drop-shadow-lg">
+              <p className="text-xl md:text-3xl font-bold text-white/90 mb-4">
                 ASEAN Rising Star Partner of the Year
               </p>
-              <div className="flex items-center justify-center gap-2 text-white/70">
-                <Award className="w-5 h-5" />
-                <span className="text-lg">FY25 APAC Partner of the Year</span>
+              <div className="flex items-center justify-center gap-2 text-white/60">
+                <Award className="w-4 h-4" />
+                <span className="text-base">FY25 APAC Partner of the Year</span>
               </div>
             </div>
 
-            {/* Award Image Container with Scroll Animation */}
-            <div className="relative group">
-              {/* Glowing Border Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
-              
-              {/* Award Image */}
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            {/* Award Image — no animations */}
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+                alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Additional Info */}
-            <div className="text-center mt-12">
-              <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                {lang === "en" 
-                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region." 
+            <div className="text-center mt-10">
+              <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+                {lang === "en"
+                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
                   : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-white/50" />
         </div>
       </section>
 
