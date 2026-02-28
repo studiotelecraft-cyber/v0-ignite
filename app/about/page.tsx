@@ -395,64 +395,59 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-20 px-6 bg-white overflow-hidden">
-        <div className="container mx-auto max-w-7xl">
+      <section className="relative bg-white overflow-hidden flex flex-col lg:flex-row">
 
-          {/* Header — same style as What We Do */}
-          <div className="text-center mb-16">
+        {/* Left: full-height image panel */}
+        <div className="relative w-full lg:w-[45%] min-h-[360px] lg:min-h-full flex-shrink-0">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
+            alt="Core Values whiteboard — Integrity, Collaboration, Innovation, Money, Optimism"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Right: header + cards */}
+        <div className="flex-1 py-20 px-8 lg:px-12 xl:px-16">
+
+          {/* Header */}
+          <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {lang === "th" ? "คุณค่าหลักของ Ignite" : "Ignite's Core Value"}
             </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full" />
           </div>
 
-          {/* Two-column layout: image left, cards right — mirrors What We Do */}
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-
-            {/* Left: image */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UYQpktym8ZkFV2bjZNTGB18rwsrM8f.png"
-                  alt="Core Values whiteboard — Integrity, Collaboration, Innovation, Money, Optimism"
-                  className="w-full h-auto object-contain rounded-2xl"
-                />
-              </div>
-            </div>
-
-            {/* Right: value cards */}
-            <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
-              {Object.entries(t.values)
-                .filter(([key]) => key.startsWith("value"))
-                .map(([key, value], idx) => {
-                  const cardStyles = [
-                    { card: "hover:border-blue-500", badge: "from-blue-500 to-blue-600", shadow: "shadow-blue-500/30" },
-                    { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-cyan-600",  shadow: "shadow-cyan-500/30"  },
-                    { card: "hover:border-blue-500", badge: "from-blue-500 to-cyan-500",  shadow: "shadow-blue-500/30"  },
-                    { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-blue-500",  shadow: "shadow-cyan-500/30"  },
-                    { card: "hover:border-blue-600", badge: "from-blue-600 to-blue-500",  shadow: "shadow-blue-600/30"  },
-                    { card: "hover:border-cyan-500",  badge: "from-cyan-400 to-blue-600",  shadow: "shadow-cyan-400/30"  },
-                  ]
-                  const style = cardStyles[idx] ?? cardStyles[0]
-                  return (
-                    <div
-                      key={key}
-                      className={`group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:shadow-xl transition-all duration-300 ${style.card}`}
-                    >
-                      {/* Number badge */}
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${style.badge} flex items-center justify-center mb-4 shadow-lg ${style.shadow} group-hover:scale-110 transition-transform`}>
-                        <span className="text-white font-bold text-base leading-none">
-                          {String(idx + 1).padStart(2, "0")}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{value.title}</h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">{value.desc}</p>
+          {/* Value cards grid */}
+          <div className="grid sm:grid-cols-2 gap-5">
+            {Object.entries(t.values)
+              .filter(([key]) => key.startsWith("value"))
+              .map(([key, value], idx) => {
+                const cardStyles = [
+                  { card: "hover:border-blue-500", badge: "from-blue-500 to-blue-600", shadow: "shadow-blue-500/30" },
+                  { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-cyan-600",  shadow: "shadow-cyan-500/30"  },
+                  { card: "hover:border-blue-500", badge: "from-blue-500 to-cyan-500",  shadow: "shadow-blue-500/30"  },
+                  { card: "hover:border-cyan-500",  badge: "from-cyan-500 to-blue-500",  shadow: "shadow-cyan-500/30"  },
+                  { card: "hover:border-blue-600", badge: "from-blue-600 to-blue-500",  shadow: "shadow-blue-600/30"  },
+                  { card: "hover:border-cyan-500",  badge: "from-cyan-400 to-blue-600",  shadow: "shadow-cyan-400/30"  },
+                ]
+                const style = cardStyles[idx] ?? cardStyles[0]
+                return (
+                  <div
+                    key={key}
+                    className={`group p-7 rounded-2xl bg-white border-2 border-gray-200 hover:shadow-xl transition-all duration-300 ${style.card}`}
+                  >
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${style.badge} flex items-center justify-center mb-4 shadow-lg ${style.shadow} group-hover:scale-110 transition-transform`}>
+                      <span className="text-white font-bold text-base leading-none">
+                        {String(idx + 1).padStart(2, "0")}
+                      </span>
                     </div>
-                  )
-                })}
-            </div>
-
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{value.title}</h3>
+                    <p className="text-gray-500 leading-relaxed text-sm">{value.desc}</p>
+                  </div>
+                )
+              })}
           </div>
+
         </div>
       </section>
 
