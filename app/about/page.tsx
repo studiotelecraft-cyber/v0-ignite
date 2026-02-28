@@ -433,76 +433,58 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-24 px-6 bg-white" style={{ fontFamily: "'Lexend', sans-serif" }}>
-        <div className="container mx-auto max-w-7xl">
+      <section className="relative bg-white overflow-hidden" style={{ fontFamily: "'Lexend', sans-serif" }}>
+        <div className="flex flex-col lg:flex-row min-h-[700px]">
 
-          {/* Layout: left content, right image */}
-          <div className="grid lg:grid-cols-[1fr_440px] gap-16 items-start">
+          {/* Left: content */}
+          <div className="flex-1 py-24 px-8 lg:px-16 xl:px-24 flex flex-col justify-center">
+            {/* Label */}
+            <p className="text-amber-500 text-xs font-semibold tracking-[0.25em] uppercase mb-4">
+              {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
+            </p>
 
-            {/* Left */}
-            <div>
-              {/* Label */}
-              <p className="text-amber-500 text-xs font-semibold tracking-[0.25em] uppercase mb-4">
-                {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
-              </p>
+            {/* Heading */}
+            <h2 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-12">
+              <span className="text-sky-500">Ignite</span>
+              <span className="text-gray-900">'s </span>
+              <span className="text-amber-500">Core Value</span>
+            </h2>
 
-              {/* Heading */}
-              <h2 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-12">
-                <span className="text-sky-500">Ignite</span>
-                <span className="text-gray-900">'s </span>
-                <span className="text-amber-500">Core Value</span>
-              </h2>
-
-              {/* Value list */}
-              <div className="divide-y divide-gray-100">
-                {Object.entries(t.values)
-                  .filter(([key]) => key.startsWith("value"))
-                  .map(([key, value], idx) => (
-                    <div key={key} className="flex items-start gap-6 py-6 group">
-                      {/* Number */}
-                      <span className="flex-shrink-0 text-sm font-bold text-gray-300 w-8 pt-1">
-                        {String(idx + 1).padStart(2, "0")}
-                      </span>
-                      {/* Content */}
-                      <div className="flex-1">
-                        <p className="text-sky-600 font-bold text-xl leading-snug mb-1">
-                          {value.title}
-                        </p>
-                        <p className="text-gray-500 text-base leading-relaxed">
-                          {value.desc}
-                        </p>
-                      </div>
-                      {/* Hover accent */}
-                      <div className="flex-shrink-0 self-center w-6 h-px bg-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+            {/* Value list */}
+            <div className="divide-y divide-gray-100 max-w-xl">
+              {Object.entries(t.values)
+                .filter(([key]) => key.startsWith("value"))
+                .map(([key, value], idx) => (
+                  <div key={key} className="flex items-start gap-6 py-5 group">
+                    {/* Number */}
+                    <span className="flex-shrink-0 text-sm font-bold text-gray-300 w-8 pt-1">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    {/* Content */}
+                    <div className="flex-1">
+                      <p className="text-sky-600 font-bold text-xl leading-snug mb-1">
+                        {value.title}
+                      </p>
+                      <p className="text-gray-500 text-base leading-relaxed">
+                        {value.desc}
+                      </p>
                     </div>
-                  ))}
-              </div>
+                    {/* Hover accent */}
+                    <div className="flex-shrink-0 self-center w-6 h-px bg-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                ))}
             </div>
-
-            {/* Right: photo */}
-            <div className="relative lg:sticky lg:top-28">
-              {/* Offset decorative border */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-sky-100 pointer-events-none" />
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-                <img
-                  src="/images/core-values-team.jpg"
-                  alt="Ignite team collaborating — core values in action"
-                  className="w-full object-cover aspect-[3/4]"
-                />
-                {/* Gradient + caption */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="h-[3px] w-10 bg-amber-400 mb-3" />
-                  <p className="text-white font-semibold text-base leading-snug">
-                    {lang === "th"
-                      ? "ทีมงาน Ignite — เชื่อมต่อ เติบโต สร้างคุณค่า"
-                      : "Ignite Team — Connect, Grow, Deliver Value"}
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          {/* Right: full-height image, no border */}
+          <div className="relative w-full lg:w-[42%] min-h-[400px] lg:min-h-full">
+            <img
+              src="/images/core-values-team.jpg"
+              alt="Ignite team collaborating — core values in action"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+
         </div>
       </section>
 
