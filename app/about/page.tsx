@@ -40,22 +40,30 @@ const translations = {
       description: "To be the leading provider of customer-centric technology solutions that transform how businesses connect with their customers and achieve sustainable success.",
     },
     values: {
-      title: "Our Core Values",
+      title: "Ignite's Core Value",
       value1: {
-        title: "Innovation",
-        desc: "We continuously seek new and better ways to solve complex business challenges through cutting-edge technology.",
+        title: "Client Success is First",
+        desc: "We create real outcomes for our clients' businesses.",
       },
       value2: {
-        title: "Customer Success",
-        desc: "Your success is our success. We are committed to delivering solutions that drive measurable results for your business.",
+        title: "Think Beyond the Solution",
+        desc: "We think beyond the obvious for more sustainable choices.",
       },
       value3: {
-        title: "Excellence",
-        desc: "We maintain the highest standards in everything we do, from solution design to implementation and support.",
+        title: "Ownership & Accountability",
+        desc: "We take responsibility as if it were our own business.",
       },
       value4: {
-        title: "Partnership",
-        desc: "We build long-term relationships based on trust, transparency, and mutual growth with our clients.",
+        title: "Professional with Heart",
+        desc: "We work with expertise, sincerity, and genuine care.",
+      },
+      value5: {
+        title: "Integrity & Trust",
+        desc: "We stand firm in honesty and long-term reliability.",
+      },
+      value6: {
+        title: "People Grow, Company Grows",
+        desc: "We believe people's growth is the foundation of our company.",
       },
     },
     team: {
@@ -112,22 +120,30 @@ const translations = {
       description: "เป็นผู้ให้บริการชั้นนำด้านโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลาง เพื่อเปลี่ยนแปลงวิธีที่ธุรกิจเชื่อมต่อกับลูกค้าและบรรลุความสำเร็จอย่างยั่งยืน",
     },
     values: {
-      title: "คุณค่าหลักของเรา",
+      title: "คุณค่าหลักของ Ignite",
       value1: {
-        title: "นวัตกรรม",
-        desc: "เราแสวงหาวิธีใหม่ๆ ที่ดีกว่าอยู่เสมอในการแก้ปัญหาทางธุรกิจที่ซับซ้อนด้วยเทคโนโลยีล้ำสมัย",
+        title: "Client Success is First",
+        desc: "เราสร้างผลลัพธ์ที่เกิดขึ้นจริงกับธุรกิจของลูกค้า",
       },
       value2: {
-        title: "ความสำเร็จของลูกค้า",
-        desc: "ความสำเร็จของคุณคือความสำเร็จของเรา เรามุ่งมั่นส่งมอบโซลูชันที่สร้างผลลัพธ์ที่วัดได้สำหรับธุรกิจของคุณ",
+        title: "Think Beyond the Solution",
+        desc: "เราคิดโลกกว่าโจทย์ เพื่อทางเลือกที่ยิ่งยืนกว่า",
       },
       value3: {
-        title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ������ะการสนับสนุน",
+        title: "Ownership & Accountability",
+        desc: "เรารับผิดชอบงานเหมือนเป็นธุรกิจของเราเอง",
       },
       value4: {
-        title: "ความเป็นพันธมิตร",
-        desc: "เราสร้างความสัมพันธ์ระยะยาวบนพื้นฐานของความไว้วางใจ ความโปร่งใส และการเติบโตร่วมกันกับลูกค้า",
+        title: "Professional with Heart",
+        desc: "เราทำงานอย่างมืออาชีพ พร้อมความจริงใจและความเคารพ",
+      },
+      value5: {
+        title: "Integrity & Trust",
+        desc: "เรายึดมั่นในความซื่อสัตย์และความเชื่อมั่นระยะยาว",
+      },
+      value6: {
+        title: "People Grow, Company Grows",
+        desc: "เราเชื่อว่าการเติบโตของคน คือรากฐานของบริษัท",
       },
     },
     team: {
@@ -416,68 +432,52 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              {t.values.title}
-            </h2>
-            <div className="h-2 w-40 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto rounded-full shadow-lg" />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {Object.entries(t.values)
-              .filter(([key]) => key.startsWith("value"))
-              .map(([key, value], index) => {
-                const icons = [
-                  <Lightbulb className="w-10 h-10" />,
-                  <TrendingUp className="w-10 h-10" />,
-                  <Award className="w-10 h-10" />,
-                  <Heart className="w-10 h-10" />
-                ]
-                const gradients = [
-                  "from-blue-500 to-cyan-500",
-                  "from-purple-500 to-pink-500",
-                  "from-orange-500 to-yellow-500",
-                  "from-green-500 to-teal-500"
-                ]
-                
-                return (
-                  <div 
-                    key={key}
-                    className="group animate-fade-in"
-                    style={{ animationDelay: `${index * 0.15}s` }}
-                  >
-                    <div className="relative h-full p-10 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
-                      {/* Gradient overlay on hover */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`} />
-                      
-                      {/* Icon container */}
-                      <div className="flex items-start gap-6 relative z-10">
-                        <div className={`flex-shrink-0 w-24 h-24 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                          {icons[index]}
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1 pt-2">
-                          <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
-                            {value.title}
-                          </h3>
-                          <p className="text-lg text-gray-700 leading-relaxed">
-                            {value.desc}
-                          </p>
-                        </div>
+      <section className="py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left: values list */}
+            <div>
+              {/* Section label */}
+              <p className="text-amber-500 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                {lang === "th" ? "คุณค่าหลักของเรา" : "Our Core Values"}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
+                <span className="text-sky-500">Ignite</span>
+                <span className="text-gray-800">'s </span>
+                <span className="text-amber-500">Core Value</span>
+              </h2>
+
+              <div className="space-y-7">
+                {Object.entries(t.values)
+                  .filter(([key]) => key.startsWith("value"))
+                  .map(([key, value]) => (
+                    <div key={key} className="flex items-start gap-4 group">
+                      <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-sky-400 mt-2" />
+                      <div>
+                        <p className="text-sky-500 font-bold text-lg leading-snug group-hover:text-sky-600 transition-colors">
+                          {value.title}
+                        </p>
+                        <p className="text-gray-600 text-base mt-0.5 leading-relaxed">
+                          {value.desc}
+                        </p>
                       </div>
-                      
-                      {/* Decorative corner accent */}
-                      <div className={`absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl ${gradients[index]} opacity-5 group-hover:opacity-10 rounded-tl-[100px] transition-opacity duration-500`} />
                     </div>
-                  </div>
-                )
-              })}
+                  ))}
+              </div>
+            </div>
+
+            {/* Right: image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F4qWS6SPeCsRIsExLUqCwd3ZQCsRpy.png"
+                alt="Ignite Core Values — whiteboard with core value diagram in a modern office"
+                className="w-full h-full object-cover"
+              />
+              {/* Subtle overlay so image doesn't overpower */}
+              <div className="absolute inset-0 bg-slate-900/10" />
+            </div>
+
           </div>
         </div>
       </section>
