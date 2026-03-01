@@ -194,7 +194,7 @@ const translations = {
     },
     cta: {
       title: "พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณ?",
-      subtitle: "มาพูดคุยกันว่าเราจะช่วยคุณ��รรลุเป้าหมายได้อย่างไร",
+      subtitle: "มาพูดคุยกันว่าเราจะ���่วยคุณ��รรลุเป้าหมายได้อย่างไร",
       button: "ติดต่อเรา",
     },
     contactUs: {
@@ -268,12 +268,12 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
         >
           <Award className="w-5 h-5 text-amber-400 flex-shrink-0" />
           <p className="text-amber-400 text-xs font-semibold tracking-[0.4em] uppercase">
-            {lang === "en" ? "Award Winner · FY25 APAC Partner of the Year" : "ผู้ได้รับรางวัล · FY25 APAC Partner of the Year"}
+            {lang === "en" ? "Award Winner · FY25 APAC Partner of the Year" : "��ู้ได้รับรางวัล · FY25 APAC Partner of the Year"}
           </p>
         </div>
 
         {/* Main two-column grid */}
-        <div className="grid lg:grid-cols-[1fr_440px] gap-16 xl:gap-24 items-center">
+        <div className="grid lg:grid-cols-[1fr_620px] gap-12 xl:gap-16 items-center">
 
           {/* ── Left: typographic hero ── */}
           <div>
