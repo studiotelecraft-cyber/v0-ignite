@@ -194,7 +194,7 @@ const translations = {
     },
     cta: {
       title: "พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณ?",
-      subtitle: "มาพูดคุยกันว่าเราจะช่วยคุณบรรลุเป้าหมายได้อย่างไร",
+      subtitle: "มาพูดคุยกันว่าเราจะ����่วยคุณ�����รลุเป้าหมายได้อย่างไร",
       button: "ติดต่อเรา",
     },
     contactUs: {
@@ -209,6 +209,185 @@ const translations = {
       bookingFormSubtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการระบบ CRM ของคุณ",
     },
   },
+}
+
+function AwardSection({ lang }: { lang: "en" | "th" }) {
+  const ref = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.1 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const ease = "cubic-bezier(0.22,1,0.36,1)"
+
+  return (
+    <section ref={ref} className="relative overflow-hidden bg-slate-950 min-h-screen flex flex-col lg:flex-row">
+
+      {/* ══════════════════════════════════════════
+          LEFT PANEL — full-height image (50%)
+      ══════════════════════════════════════════ */}
+      <div
+        className="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-screen overflow-hidden order-2 lg:order-1"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateX(0)" : "translateX(-40px)",
+          transition: `opacity 1.2s ${ease} 0.4s, transform 1.2s ${ease} 0.4s`,
+        }}
+      >
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+          alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
+          className="absolute inset-0 w-full h-full object-cover object-left"
+        />
+        {/* Right-edge feather so image blends into the text panel */}
+        <div className="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/10 to-transparent" />
+        {/* Top + bottom vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/60" />
+
+        {/* Floating FY25 badge */}
+        <div
+          className="absolute top-8 left-8 flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/70 backdrop-blur-md border border-amber-400/30"
+          style={{
+            opacity: visible ? 1 : 0,
+            transition: `opacity 0.8s ease 1.3s`,
+          }}
+        >
+          <Award className="w-4 h-4 text-amber-400" />
+          <span className="text-white/80 text-xs font-semibold tracking-widest uppercase">FY25 APAC</span>
+        </div>
+      </div>
+
+      {/* ═══════════════════════����══════════════════
+          RIGHT PANEL — typography (50%)
+      ══════════════════════════════════════════ */}
+      <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 md:px-14 xl:px-20 py-24 lg:py-0 order-1 lg:order-2">
+
+        {/* Ambient amber glow behind text */}
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[100px] pointer-events-none" />
+
+        {/* Top expanding rule — grows from left toward right */}
+        <div
+          className="absolute top-0 right-0 h-[3px] bg-gradient-to-l from-amber-400 via-yellow-300/70 to-transparent"
+          style={{ width: visible ? "80%" : "0%", transition: `width 1.4s ${ease} 0.1s` }}
+        />
+
+        {/* Eyebrow */}
+        <div
+          className="flex items-center gap-3 mb-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(14px)",
+            transition: `opacity 0.7s ease 0.25s, transform 0.7s ease 0.25s`,
+          }}
+        >
+          <Award className="w-4 h-4 text-amber-400 flex-shrink-0" />
+          <p className="text-amber-400 text-xs font-semibold tracking-[0.4em] uppercase">
+            {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
+          </p>
+          <div className="h-px flex-1 bg-amber-400/20" />
+        </div>
+
+        {/* "WINNER" — giant display word slides up from clip */}
+        <div className="overflow-hidden mb-3">
+          <p
+            className="font-black text-amber-400 leading-[0.85] tracking-tighter select-none"
+            style={{
+              fontSize: "clamp(5rem, 14vw, 11rem)",
+              transform: visible ? "translateY(0)" : "translateY(105%)",
+              transition: `transform 1.1s ${ease} 0.35s`,
+            }}
+          >
+            WINNER
+          </p>
+        </div>
+
+        {/* Expanding divider under WINNER */}
+        <div
+          className="h-[2px] bg-gradient-to-r from-amber-400/50 to-transparent mb-8 rounded-full"
+          style={{ width: visible ? "100%" : "0%", transition: `width 1.1s ${ease} 0.75s` }}
+        />
+
+        {/* Award name — two lines, clip reveal */}
+        <div className="overflow-hidden mb-2">
+          <h2
+            className="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight"
+            style={{
+              transform: visible ? "translateY(0)" : "translateY(80%)",
+              transition: `transform 1s ${ease} 0.65s`,
+            }}
+          >
+            ASEAN Rising Star
+          </h2>
+        </div>
+        <div className="overflow-hidden mb-10">
+          <h3
+            className="text-3xl md:text-4xl xl:text-5xl font-bold text-sky-400 leading-tight"
+            style={{
+              transform: visible ? "translateY(0)" : "translateY(80%)",
+              transition: `transform 1s ${ease} 0.8s`,
+            }}
+          >
+            Partner of the Year
+          </h3>
+        </div>
+
+        {/* Description */}
+        <p
+          className="text-slate-400 text-base md:text-lg leading-relaxed max-w-md mb-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(16px)",
+            transition: `opacity 0.9s ease 1s, transform 0.9s ease 1s`,
+          }}
+        >
+          {lang === "en"
+            ? "Recognized by Salesforce for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
+            : "ได้รับการยอมรับจาก Salesforce สำหรับการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+        </p>
+
+        {/* Credential pills */}
+        <div
+          className="flex flex-wrap gap-3"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(12px)",
+            transition: `opacity 0.8s ease 1.15s, transform 0.8s ease 1.15s`,
+          }}
+        >
+          {[
+            { label: "Salesforce Partner", icon: "★" },
+            { label: "FY25 APAC", icon: "◆" },
+            { label: "ASEAN Region", icon: "●" },
+          ].map((pill) => (
+            <div
+              key={pill.label}
+              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
+            >
+              <span className="text-amber-400 text-xs">{pill.icon}</span>
+              <span className="text-white/70 text-sm font-semibold">{pill.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom rule */}
+        <div
+          className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-sky-500/50 to-transparent"
+          style={{ width: visible ? "70%" : "0%", transition: `width 1.3s ${ease} 0.4s` }}
+        />
+      </div>
+
+
+
+    </section>
+  )
 }
 
 function HeroSection({ title, subtitle }: { title: string; subtitle: string }) {
@@ -382,13 +561,12 @@ export default function AboutPage() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link
-                  href="/service/crm"
-                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                <button
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1 cursor-default"
                 >
                   {t.nav.service}
                   <ChevronDown className="w-4 h-4" />
-                </Link>
+                </button>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                     <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
@@ -482,53 +660,7 @@ export default function AboutPage() {
       <HeroSection title={t.hero.title} subtitle={t.hero.subtitle} />
 
       {/* ASEAN Rising Star Award Section */}
-      <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
-        {/* Static background accent */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.4),transparent_60%)]" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Award Title */}
-            <div className="text-center mb-12">
-              <div className="inline-block mb-6 px-6 py-2 bg-white/10 rounded-full border border-white/20">
-                <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">
-                  {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                <span className="text-yellow-300">WINNER</span>
-              </h2>
-              <p className="text-xl md:text-3xl font-bold text-white/90 mb-4">
-                ASEAN Rising Star Partner of the Year
-              </p>
-              <div className="flex items-center justify-center gap-2 text-white/60">
-                <Award className="w-4 h-4" />
-                <span className="text-base">FY25 APAC Partner of the Year</span>
-              </div>
-            </div>
-
-            {/* Award Image — no animations */}
-            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-                alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            {/* Additional Info */}
-            <div className="text-center mt-10">
-              <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-                {lang === "en"
-                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
-                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด��เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AwardSection lang={lang} />
 
       {/* Salesforce Certification Badges Section */}
       <section className="bg-white py-20">
@@ -643,7 +775,7 @@ export default function AboutPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
-                  {t.nav.services.slice(0, 4).map((service, idx) => (
+                  {t.nav.services.map((service, idx) => (
                     <li key={`service${idx}`}>
                       <Link href={service.href} className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
