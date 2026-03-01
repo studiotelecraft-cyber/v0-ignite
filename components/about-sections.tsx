@@ -218,17 +218,17 @@ export function CoreValuesSection({
             className="flex-shrink-0 flex justify-center lg:justify-start"
             style={fadeUp(bodyVisible, 0.05)}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-80 h-80 md:w-[460px] md:h-[460px]">
               {/* Outer ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-cyan-200 scale-[1.08]" />
+              <div className="absolute inset-0 rounded-full border-2 border-cyan-200 scale-[1.07]" />
               {/* Dashed orbit ring */}
               <div
-                className="absolute inset-0 rounded-full border border-dashed border-blue-300/50 scale-[1.18]"
+                className="absolute inset-0 rounded-full border border-dashed border-blue-300/50 scale-[1.15]"
                 style={{ animation: "spin 30s linear infinite" }}
               />
-              {/* Accent dot */}
-              <div className="absolute top-2 right-6 w-3 h-3 rounded-full bg-amber-400 shadow-md shadow-amber-400/40" />
-              <div className="absolute bottom-6 left-2 w-2 h-2 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/40" />
+              {/* Accent dots */}
+              <div className="absolute top-3 right-8 w-4 h-4 rounded-full bg-amber-400 shadow-md shadow-amber-400/40" />
+              <div className="absolute bottom-8 left-3 w-3 h-3 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/40" />
               {/* Circle image */}
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl shadow-blue-200/60 ring-4 ring-cyan-100">
                 <img
