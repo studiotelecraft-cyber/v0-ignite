@@ -194,7 +194,7 @@ const translations = {
     },
     cta: {
       title: "พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณ?",
-      subtitle: "มาพูดคุยกันว่าเราจะช่วยคุณบรรลุเป้าหมายได้อย่างไร",
+      subtitle: "มาพูดคุยกันว่าเราจะช่วยคุณ��รรลุเป้าหมายได้อย่างไร",
       button: "ติดต่อเรา",
     },
     contactUs: {
@@ -220,154 +220,179 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
     if (!el) return
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     )
     observer.observe(el)
     return () => observer.disconnect()
   }, [])
 
+  const ease = "cubic-bezier(0.22,1,0.36,1)"
+
   return (
-    <section ref={ref} className="relative overflow-hidden bg-slate-950">
+    <section ref={ref} className="relative overflow-hidden bg-slate-950 min-h-screen flex flex-col justify-center">
 
-      {/* Dot grid texture */}
+      {/* ── Full-bleed award image as background ── */}
+      <div className="absolute inset-0">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center opacity-20"
+        />
+        {/* Dark vignette overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/60" />
+      </div>
+
+      {/* ── Ambient glows ── */}
+      <div className="absolute top-0 left-1/4 w-[700px] h-[700px] rounded-full bg-amber-500/8 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-sky-600/8 blur-[100px] pointer-events-none" />
+
+      {/* ── Top rule ── */}
       <div
-        className="absolute inset-0 opacity-[0.035]"
-        style={{ backgroundImage: "radial-gradient(circle, #7dd3fc 1px, transparent 1px)", backgroundSize: "38px 38px" }}
+        className="absolute top-0 left-0 h-[3px] bg-gradient-to-r from-amber-400 via-yellow-300/80 to-transparent"
+        style={{ width: visible ? "60%" : "0%", transition: `width 1.4s ${ease} 0.1s` }}
       />
 
-      {/* Amber glow — top left */}
-      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
-      {/* Blue glow — bottom right */}
-      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-sky-600/10 blur-3xl pointer-events-none" />
+      {/* ── Content ── */}
+      <div className="container mx-auto max-w-7xl px-6 py-28 relative z-10">
 
-      {/* Top expanding rule */}
-      <div
-        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-amber-400 via-yellow-300 to-transparent"
-        style={{
-          width: visible ? "55%" : "0%",
-          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.1s",
-        }}
-      />
-
-      <div className="container mx-auto max-w-7xl px-6 py-24 relative z-10">
-
-        {/* — Top row: eyebrow + year badge — */}
+        {/* Eyebrow row */}
         <div
-          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-16"
+          className="flex items-center gap-4 mb-12"
           style={{
             opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s",
+            transform: visible ? "translateY(0)" : "translateY(16px)",
+            transition: `opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s`,
           }}
         >
-          <p className="text-amber-400 text-xs font-semibold tracking-[0.35em] uppercase">
-            {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
+          <Award className="w-5 h-5 text-amber-400 flex-shrink-0" />
+          <p className="text-amber-400 text-xs font-semibold tracking-[0.4em] uppercase">
+            {lang === "en" ? "Award Winner · FY25 APAC Partner of the Year" : "ผู้ได้รับรางวัล · FY25 APAC Partner of the Year"}
           </p>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-            <Award className="w-4 h-4 text-amber-400" />
-            <span className="text-white/60 text-xs font-semibold tracking-wider uppercase">FY25 APAC Partner of the Year</span>
-          </div>
         </div>
 
-        {/* — Main layout: giant text left + image right — */}
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+        {/* Main two-column grid */}
+        <div className="grid lg:grid-cols-[1fr_440px] gap-16 xl:gap-24 items-center">
 
-          {/* Left: typography block */}
+          {/* ── Left: typographic hero ── */}
           <div>
-            {/* "WINNER" — enormous display word */}
-            <div
-              className="overflow-hidden mb-4"
-              style={{
-                opacity: visible ? 1 : 0,
-                transition: "opacity 0.1s ease 0.3s",
-              }}
-            >
+
+            {/* "WINNER" display word — slides up from clip */}
+            <div className="overflow-hidden mb-2">
               <p
-                className="font-black text-amber-400 leading-none tracking-tighter"
+                className="font-black text-amber-400 leading-[0.85] tracking-tighter select-none"
                 style={{
-                  fontSize: "clamp(5rem, 18vw, 14rem)",
-                  transform: visible ? "translateY(0)" : "translateY(110%)",
-                  transition: "transform 1s cubic-bezier(0.22,1,0.36,1) 0.3s",
+                  fontSize: "clamp(5.5rem, 20vw, 15rem)",
+                  transform: visible ? "translateY(0)" : "translateY(100%)",
+                  transition: `transform 1.1s ${ease} 0.3s`,
                 }}
               >
                 WINNER
               </p>
             </div>
 
-            {/* Award name */}
+            {/* Expanding amber underline */}
             <div
-              className="overflow-hidden mb-8"
-              style={{
-                opacity: visible ? 1 : 0,
-                transition: "opacity 0.1s ease 0.55s",
-              }}
-            >
-              <h2
-                className="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight text-balance"
-                style={{
-                  transform: visible ? "translateY(0)" : "translateY(60px)",
-                  transition: "transform 1s cubic-bezier(0.22,1,0.36,1) 0.55s",
-                }}
-              >
-                ASEAN Rising Star<br />
-                <span className="text-sky-400">Partner of the Year</span>
-              </h2>
-            </div>
-
-            {/* Divider */}
-            <div
-              className="h-px bg-white/10 mb-8"
+              className="h-1 bg-amber-400/30 mb-8 rounded-full"
               style={{
                 width: visible ? "100%" : "0%",
-                transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.75s",
+                transition: `width 1.2s ${ease} 0.7s`,
               }}
             />
 
+            {/* Award title */}
+            <div className="overflow-hidden mb-4">
+              <h2
+                className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight"
+                style={{
+                  transform: visible ? "translateY(0)" : "translateY(80%)",
+                  transition: `transform 1s ${ease} 0.6s`,
+                }}
+              >
+                ASEAN Rising Star
+              </h2>
+            </div>
+            <div className="overflow-hidden mb-10">
+              <h3
+                className="text-3xl md:text-4xl xl:text-5xl font-bold text-sky-400 leading-tight"
+                style={{
+                  transform: visible ? "translateY(0)" : "translateY(80%)",
+                  transition: `transform 1s ${ease} 0.75s`,
+                }}
+              >
+                Partner of the Year
+              </h3>
+            </div>
+
             {/* Description */}
             <p
-              className="text-slate-400 text-lg leading-relaxed max-w-lg"
+              className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl mb-12"
               style={{
                 opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(16px)",
-                transition: "opacity 0.9s ease 0.85s, transform 0.9s ease 0.85s",
+                transform: visible ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.9s ease 0.95s, transform 0.9s ease 0.95s`,
               }}
             >
               {lang === "en"
-                ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
-                : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด่เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+                ? "Recognized by Salesforce for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
+                : "ได้รับการยอมรับจาก Salesforce สำหรับการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
             </p>
+
+            {/* Credential pills */}
+            <div
+              className="flex flex-wrap gap-3"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(16px)",
+                transition: `opacity 0.8s ease 1.1s, transform 0.8s ease 1.1s`,
+              }}
+            >
+              {[
+                { label: "Salesforce Partner", icon: "★" },
+                { label: "FY25 APAC", icon: "◆" },
+                { label: "ASEAN Region", icon: "●" },
+              ].map((pill) => (
+                <div
+                  key={pill.label}
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
+                >
+                  <span className="text-amber-400 text-xs">{pill.icon}</span>
+                  <span className="text-white/70 text-sm font-semibold tracking-wide">{pill.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: award image */}
+          {/* ── Right: award image card ── */}
           <div
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateY(0) scale(1)" : "translateY(40px) scale(0.97)",
-              transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.45s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.45s",
+              transform: visible ? "translateY(0) scale(1)" : "translateY(50px) scale(0.96)",
+              transition: `opacity 1.1s ${ease} 0.5s, transform 1.1s ${ease} 0.5s`,
             }}
           >
-            {/* Amber border glow frame */}
-            <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-amber-400/60 via-yellow-300/20 to-sky-500/30 shadow-2xl shadow-amber-500/10">
-              <div className="rounded-2xl overflow-hidden">
+            {/* Gold gradient border frame */}
+            <div className="rounded-3xl p-[2px] bg-gradient-to-br from-amber-400 via-yellow-300/40 to-sky-500/40 shadow-2xl shadow-amber-500/20">
+              <div className="rounded-[22px] overflow-hidden bg-slate-900">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
+                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
                   className="w-full h-auto object-cover"
                 />
               </div>
             </div>
+            {/* Glow beneath card */}
+            <div className="mx-auto mt-4 w-3/4 h-8 bg-amber-400/20 blur-2xl rounded-full" />
           </div>
 
         </div>
       </div>
 
-      {/* Bottom rule */}
+      {/* ── Bottom rule ── */}
       <div
         className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-sky-500/60 via-sky-400/20 to-transparent"
-        style={{
-          width: visible ? "40%" : "0%",
-          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.5s",
-        }}
+        style={{ width: visible ? "45%" : "0%", transition: `width 1.4s ${ease} 0.4s` }}
       />
     </section>
   )
