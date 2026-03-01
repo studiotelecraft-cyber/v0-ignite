@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริ���",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -514,13 +514,13 @@ export default function Home() {
             </div>
 
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Side - Mascot */}
+              {/* Left Side - Mission Image */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="relative">
+                <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/images/robot-mascot.png"
-                    alt="IGNITE Mascot"
-                    className="w-[350px] md:w-[450px] lg:w-[500px] object-contain animate-float"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-x1g1uy37oNf2CcPw1Q47o2PPcFlJC6.png"
+                    alt="Team presenting Company Mission on a whiteboard"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
