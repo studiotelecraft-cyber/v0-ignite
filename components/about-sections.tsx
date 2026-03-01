@@ -120,21 +120,21 @@ export function OurMissionSection({
                 className={`group relative flex flex-col p-7 rounded-2xl bg-slate-900 border border-slate-800 ${c.border} hover:border-opacity-100 hover:shadow-2xl transition-all duration-500 cursor-default overflow-hidden`}
                 style={fadeUp(cardsVisible, 0.1 + i * 0.12)}
               >
-                {/* Top-right glow accent */}
-                <div className={`absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gradient-to-br ${c.grad} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-2xl`} />
-
-                {/* Icon badge */}
-                <div className={`w-13 h-13 w-[52px] h-[52px] rounded-2xl bg-gradient-to-br ${c.grad} flex items-center justify-center mb-5 shadow-lg ${c.shadow} group-hover:scale-110 transition-transform duration-300`}>
-                  {c.icon}
-                </div>
+                {/* Number — top right (absolute, declared first so DOM order is consistent) */}
+                <span className={`absolute top-5 right-5 text-sm font-black leading-none select-none bg-gradient-to-br ${c.grad} bg-clip-text text-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
 
                 {/* Thin top rule */}
                 <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${c.grad} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} />
 
-                {/* Number — top right */}
-                <span className={`absolute top-5 right-5 text-sm font-black leading-none select-none bg-gradient-to-br ${c.grad} bg-clip-text text-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                {/* Top-right glow accent */}
+                <div className={`absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gradient-to-br ${c.grad} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-2xl`} />
+
+                {/* Icon badge */}
+                <div className={`w-[52px] h-[52px] rounded-2xl bg-gradient-to-br ${c.grad} flex items-center justify-center mb-5 shadow-lg ${c.shadow} group-hover:scale-110 transition-transform duration-300`}>
+                  {c.icon}
+                </div>
 
                 <h3 className="text-white font-bold text-base leading-snug mb-3 flex-1">{feat.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{feat.desc}</p>
