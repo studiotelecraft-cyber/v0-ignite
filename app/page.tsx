@@ -143,7 +143,7 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ ���พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ �����พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
       cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได��จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใ��้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -643,13 +643,12 @@ export default function Home() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link
-                  href="/service/crm"
-                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                <button
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1 cursor-default"
                 >
                   {t.nav.service}
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
-                </Link>
+                </button>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                     <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
