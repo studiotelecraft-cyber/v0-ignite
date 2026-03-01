@@ -232,23 +232,54 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
     <section ref={ref} className="relative overflow-hidden bg-slate-950 min-h-screen flex flex-col lg:flex-row">
 
       {/* ══════════════════════════════════════════
-          LEFT PANEL — full-height image (50%)
+          LEFT PANEL — tech background + award image (50%)
       ══════════════════════════════════════════ */}
       <div
-        className="relative w-full lg:w-1/2 min-h-[420px] lg:min-h-screen overflow-hidden order-2 lg:order-1"
+        className="relative w-full lg:w-1/2 min-h-[520px] lg:min-h-screen overflow-hidden order-2 lg:order-1 flex items-center justify-center"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? "translateX(0)" : "translateX(-40px)",
           transition: `opacity 1.2s ${ease} 0.4s, transform 1.2s ${ease} 0.4s`,
         }}
       >
+        {/* Tech background layer */}
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-          alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
-          className="absolute inset-0 w-full h-full object-contain object-center p-8"
+          src="/images/award-bg.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Subtle right-edge feather into text panel */}
-        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-950 to-transparent" />
+        {/* Dark overlay to keep text panel readable */}
+        <div className="absolute inset-0 bg-slate-950/55" />
+        {/* Amber focal glow */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[420px] h-[420px] rounded-full bg-amber-500/10 blur-[90px]" />
+        </div>
+        {/* Fine dot-grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{ backgroundImage: "radial-gradient(circle, #fbbf24 1px, transparent 1px)", backgroundSize: "32px 32px" }}
+        />
+
+        {/* Award certificate — centered, contained */}
+        <div
+          className="relative z-10 w-full h-full flex items-center justify-center p-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "scale(1)" : "scale(0.96)",
+            transition: `opacity 0.9s ${ease} 0.8s, transform 0.9s ${ease} 0.8s`,
+          }}
+        >
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+            alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
+            className="w-full max-w-sm md:max-w-md object-contain drop-shadow-2xl"
+            style={{ filter: "drop-shadow(0 0 40px rgba(251,191,36,0.18))" }}
+          />
+        </div>
+
+        {/* Right-edge feather into text panel */}
+        <div className="absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-slate-950 to-transparent" />
 
         {/* Floating FY25 badge */}
         <div
@@ -265,7 +296,7 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
 
       {/* ═══════════════════════������══════════════════
           RIGHT PANEL — typography (50%)
-      ══════════════════════════════════════════ */}
+      ════════════��═════════════════════════════ */}
       <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 md:px-14 xl:px-20 py-24 lg:py-0 order-1 lg:order-2">
 
         {/* Ambient amber glow behind text */}
