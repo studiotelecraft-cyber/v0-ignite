@@ -151,7 +151,7 @@ const translations = {
       paragraph1:
         "Lead to Cash เปลี่ยนแปลงการจัดการรายได้โดยการสร้างระบบเอกภาพที่เชื่อมต่อขั้นตอนทั้งหมดของวงจรชีวิตลูกค้า ตั้งแต่การคัดกรองการขายจนถึงการสร้างใบเสนอราคา การจัดการคำสั่งซื้อ การเรียกเก็บเงิน และการเก็บเงิน ทุกขั้นตอนได้รับการปรับให้เหมาะสมและทำอัตโนมัติภายในแพลตฟอร์มเดียว",
       paragraph2:
-        "ด้วยการรวม Salesforce CPQ ความสามารถในการจัดการคำสั่งซื้อ และการเรียกเก็บเงิน Lead to Cash จึงกำจัดระบบที่แตกแยกและกระบวนการด้วยตนเอง ทีมขายของคุณจึงทำงานได้เร็วขึ้นด้วยใบเสนอราคาที่แม่นยำ ทีมดำเนินงานของคุณตอบสนองคำสั่งซื้อได้โดยไม่ล่าช้า และทีมการเงินของคุณรับรู้รายได้ได้อย่างแม่นยำและทันท่วงที",
+        "ด้วยการรวม Salesforce CPQ ความสามารถในการจัดการคำสั่งซื้อ และการเรียกเก็บเงิน Lead to Cash จึงกำจัดระบบที่แตกแยกและกระบวนการด้วยตนเอง ทีมขายของคุณจึงทำงานได้เร็วขึ้นด้วยใบเสนอราคาที่แม่นยำ ทีมดำเนินงานของคุณตอบสนองคำสั่งซื้อได้โดยไม่ล่าช้า และทีมการเงินของคุณรับรู้รายได้ได้อย��างแม่นยำและทันท่วงที",
     },
     contact: {
       title: "ติดต่อเรา",
@@ -640,28 +640,33 @@ export default function LeadToCashPage() {
                 </div>
               </div>
 
-              {/* Services */}
+              {/* Our Consult & Services */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/service/crm" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.crm}
+                    <Link href="/service/lead-to-cash-mgn" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Lead to Cash (Order) Management" : "การจัดการ Lead to Cash (Order)"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/field-sales" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Field Sales Execution" : "การดำเนินการขายภาคสนาม"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/customer-360" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Customer 360 Data Consolidation" : "การรวมข้อมูลลูกค้า 360 องศา"}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.callCenter}
+                      {lang === "en" ? "Next Gen. Customer Service Centre" : "ศูนย์บริการลูกค้ายุคใหม่"}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/marketing" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.marketing}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service/data-management" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.dataManagement}
+                    <Link href="/service/salesforce-manage-service" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Salesforce Manage Service" : "บริการจัดการ Salesforce"}
                     </Link>
                   </li>
                 </ul>
