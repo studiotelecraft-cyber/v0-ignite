@@ -245,7 +245,7 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
           alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover object-left"
         />
         {/* Right-edge feather so image blends into the text panel */}
         <div className="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/10 to-transparent" />
@@ -265,7 +265,7 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
         </div>
       </div>
 
-      {/* ══════════════════════════════════════════
+      {/* ═══════════════════════��══════════════════
           RIGHT PANEL — typography (50%)
       ══════════════════════════════════════════ */}
       <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 md:px-14 xl:px-20 py-24 lg:py-0 order-1 lg:order-2">
