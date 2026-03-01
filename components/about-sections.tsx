@@ -131,13 +131,13 @@ export function OurMissionSection({
                 {/* Thin top rule */}
                 <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${c.grad} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-t-2xl`} />
 
-                <h3 className="text-white font-bold text-base leading-snug mb-3 flex-1">{feat.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{feat.desc}</p>
-
-                {/* Number */}
-                <span className="absolute bottom-5 right-6 text-6xl font-black text-slate-800 leading-none select-none">
+                {/* Number — top right */}
+                <span className={`absolute top-5 right-5 text-sm font-black leading-none select-none bg-gradient-to-br ${c.grad} bg-clip-text text-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
+
+                <h3 className="text-white font-bold text-base leading-snug mb-3 flex-1">{feat.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{feat.desc}</p>
               </div>
             )
           })}
