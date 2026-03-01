@@ -353,13 +353,13 @@ export default function AboutPage() {
       <section 
         className="h-screen relative overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: `url('/images/backgroud.jpg')`,
+          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dISWCW2e9A6i4rthbOJJSKxjzooFbK.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
+        <div className="absolute inset-0 bg-slate-900/50" />
         <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
           <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
