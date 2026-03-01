@@ -143,7 +143,7 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ ���พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
       cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
@@ -216,14 +216,14 @@ const translations = {
       subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการราระบบ CRM ของคุณ",
       firstName: "ชื่อ - นามสกุล",
       email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
+      organization: "ชื่ออง���ร์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -237,6 +237,213 @@ const translations = {
       download: "ดาวน์โหลดเลย",
     },
   },
+}
+
+const SERVICES = [
+  {
+    key: "leadToCash" as const,
+    href: "/service/lead-to-cash-mgn",
+    img: "/images/design-mode/SalesSolutionIMG_001.jpg",
+    color: "from-sky-500 to-blue-600",
+  },
+  {
+    key: "fieldSales" as const,
+    href: "/service/field-sales",
+    img: "/images/design-mode/MarketingIMG_001.jpg",
+    color: "from-cyan-500 to-sky-600",
+  },
+  {
+    key: "customer360" as const,
+    href: "/service/customer-360",
+    img: "/images/datamanagement.jpg",
+    color: "from-blue-600 to-indigo-600",
+  },
+  {
+    key: "customerService" as const,
+    href: "/service/customer-services-centre",
+    img: "/images/design-mode/callcenter.png",
+    color: "from-sky-400 to-cyan-600",
+  },
+  {
+    key: "salesforceManage" as const,
+    href: "/service/salesforce-manage-service",
+    img: "/images/design-mode/SalesSolutionIMG_001.jpg",
+    color: "from-blue-500 to-sky-400",
+  },
+]
+
+function ServiceCard({
+  service,
+  idx,
+  techData,
+}: {
+  service: (typeof SERVICES)[number]
+  idx: number
+  techData: { title: string; tagline: string; desc: string }
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+  const reversed = idx % 2 !== 0
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.15 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(48px)",
+        transition: `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${idx * 0.1}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${idx * 0.1}s`,
+      }}
+    >
+      <Link href={service.href} className="block group">
+        <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} min-h-[400px] overflow-hidden`}>
+
+          {/* Image panel */}
+          <div className="relative w-full lg:w-[52%] overflow-hidden min-h-[280px]">
+            <img
+              src={service.img}
+              alt={techData.title}
+              className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            {/* dark gradient toward content */}
+            <div className={`absolute inset-0 bg-gradient-to-${reversed ? "l" : "r"} from-transparent via-transparent to-slate-950/60`} />
+            {/* top gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-transparent to-transparent" />
+
+            {/* large index watermark */}
+            <span className="absolute top-6 left-6 text-[80px] font-black leading-none text-white/10 select-none">
+              {String(idx + 1).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Content panel */}
+          <div className="relative flex-1 bg-slate-900 flex flex-col justify-center px-10 py-12 lg:px-14">
+            {/* Accent top edge */}
+            <div className={`absolute top-0 ${reversed ? "right-0" : "left-0"} w-1 h-full bg-gradient-to-b ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+            {/* Number pill */}
+            <div className={`inline-flex items-center gap-2 mb-6 w-fit`}>
+              <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
+                <span className="text-white text-xs font-bold">{String(idx + 1).padStart(2, "0")}</span>
+              </div>
+              <span className="text-sky-400/60 text-xs font-semibold tracking-[0.2em] uppercase">
+                {idx === 0 ? "Revenue" : idx === 1 ? "Sales" : idx === 2 ? "Data" : idx === 3 ? "Service" : "Platform"}
+              </span>
+            </div>
+
+            <h3 className={`text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight group-hover:text-sky-300 transition-colors duration-300 text-balance`}>
+              {techData.title}
+            </h3>
+            <p className="text-amber-400 font-semibold text-base mb-4 leading-snug">
+              {techData.tagline}
+            </p>
+            <p className="text-slate-400 leading-relaxed text-sm lg:text-base mb-8">
+              {techData.desc}
+            </p>
+
+            {/* CTA */}
+            <div className="flex items-center gap-3">
+              <span className="text-sky-400 text-sm font-semibold tracking-wide group-hover:text-white transition-colors duration-300">
+                Learn More
+              </span>
+              <div className={`h-px bg-sky-500/40 group-hover:bg-white/40 transition-all duration-500`}
+                style={{ width: "32px" }}
+              />
+              <svg
+                className="w-4 h-4 text-sky-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </div>
+  )
+}
+
+type TechKey = "leadToCash" | "fieldSales" | "customer360" | "customerService" | "salesforceManage"
+
+function TechSection({ t }: { t: typeof translations["en"] }) {
+  const headerRef = useRef<HTMLDivElement>(null)
+  const [headerVisible, setHeaderVisible] = useState(false)
+
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setHeaderVisible(true) },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section className="bg-slate-950 overflow-hidden">
+      {/* Header */}
+      <div
+        ref={headerRef}
+        className="relative py-20 px-6 text-center"
+      >
+        {/* subtle dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "radial-gradient(circle, #7dd3fc 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+        />
+        <p
+          className="text-amber-400 text-xs font-semibold tracking-[0.3em] uppercase mb-5 relative z-10"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            transform: headerVisible ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
+          }}
+        >
+          Our Services
+        </p>
+        <h2
+          className="text-5xl md:text-6xl font-bold text-white text-balance relative z-10"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            transform: headerVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s, transform 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s",
+          }}
+        >
+          {t.tech.title}
+        </h2>
+        <div
+          className="mx-auto mt-6 h-[2px] bg-gradient-to-r from-transparent via-sky-500 to-transparent relative z-10"
+          style={{
+            width: headerVisible ? "160px" : "0px",
+            transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.4s",
+          }}
+        />
+      </div>
+
+      {/* Service cards stacked */}
+      <div className="divide-y divide-slate-800/60">
+        {SERVICES.map((service, idx) => (
+          <ServiceCard
+            key={service.key}
+            service={service}
+            idx={idx}
+            techData={t.tech[service.key as TechKey]}
+          />
+        ))}
+      </div>
+    </section>
+  )
 }
 
 function VisionBanner({ lang }: { lang: "en" | "th" }) {
@@ -649,116 +856,7 @@ export default function Home() {
         <VisionBanner lang={lang} />
 
         {/* Technology Solutions Section */}
-        <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
-          <div className="container mx-auto max-w-7xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-6 text-balance">
-              {t.tech.title}
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-16 rounded-full" />
-
-            <div className="space-y-8">
-              {/* Lead to Cash Management */}
-              <Link href="/service/lead-to-cash-mgn" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
-                        alt="Lead to Cash Management"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.leadToCash.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.leadToCash.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.leadToCash.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Field Sales Execution */}
-              <Link href="/service/field-sales" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/MarketingIMG_001.jpg"
-                        alt="Field Sales Execution"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.fieldSales.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.fieldSales.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.fieldSales.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Customer 360 Data Consolidation */}
-              <Link href="/service/customer-360" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/datamanagement.jpg"
-                        alt="Customer 360"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customer360.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customer360.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customer360.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Next Gen Customer Service Centre */}
-              <Link href="/service/customer-services-centre" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/callcenter.png"
-                        alt="Customer Service Centre"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customerService.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customerService.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customerService.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Salesforce Manage Service */}
-              <Link href="/service/salesforce-manage-service" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
-                        alt="Salesforce Manage Service"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.salesforceManage.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.salesforceManage.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.salesforceManage.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TechSection t={t} />
 
         {/* Partners Section */}
         <section className="py-20 px-6 overflow-hidden">
