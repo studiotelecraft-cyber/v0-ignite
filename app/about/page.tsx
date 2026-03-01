@@ -353,7 +353,7 @@ export default function AboutPage() {
       <section 
         className="h-screen relative overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dISWCW2e9A6i4rthbOJJSKxjzooFbK.png')`,
+          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
