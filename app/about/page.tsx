@@ -194,7 +194,7 @@ const translations = {
     },
     cta: {
       title: "พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณ?",
-      subtitle: "มาพูดคุยกันว่าเราจะ���่วยคุณ�����รลุเป้าหมายได้อย่างไร",
+      subtitle: "มาพูดคุยกันว่าเราจะ����่วยคุณ�����รลุเป้าหมายได้อย่างไร",
       button: "ติดต่อเรา",
     },
     contactUs: {
@@ -265,7 +265,7 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
         </div>
       </div>
 
-      {/* ═══════════════════════��══════════════════
+      {/* ═══════════════════════����══════════════════
           RIGHT PANEL — typography (50%)
       ══════════════════════════════════════════ */}
       <div className="relative z-10 flex flex-col justify-center w-full lg:w-1/2 px-8 md:px-14 xl:px-20 py-24 lg:py-0 order-1 lg:order-2">
@@ -561,13 +561,12 @@ export default function AboutPage() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link
-                  href="/service/crm"
-                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                <button
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1 cursor-default"
                 >
                   {t.nav.service}
                   <ChevronDown className="w-4 h-4" />
-                </Link>
+                </button>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                     <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
@@ -776,7 +775,7 @@ export default function AboutPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold text-white mb-6">{t.contactUs.servicesTitle}</h3>
                 <ul className="space-y-3">
-                  {t.nav.services.slice(0, 4).map((service, idx) => (
+                  {t.nav.services.map((service, idx) => (
                     <li key={`service${idx}`}>
                       <Link href={service.href} className="text-white/90 hover:text-white transition-colors font-medium flex items-center gap-3 group">
                         <span className="w-2 h-2 rounded-full bg-white/70 group-hover:bg-white group-hover:scale-125 transition-all" />
