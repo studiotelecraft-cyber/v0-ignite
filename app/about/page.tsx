@@ -211,6 +211,168 @@ const translations = {
   },
 }
 
+function AwardSection({ lang }: { lang: "en" | "th" }) {
+  const ref = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.15 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section ref={ref} className="relative overflow-hidden bg-slate-950">
+
+      {/* Dot grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.035]"
+        style={{ backgroundImage: "radial-gradient(circle, #7dd3fc 1px, transparent 1px)", backgroundSize: "38px 38px" }}
+      />
+
+      {/* Amber glow — top left */}
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
+      {/* Blue glow — bottom right */}
+      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full bg-sky-600/10 blur-3xl pointer-events-none" />
+
+      {/* Top expanding rule */}
+      <div
+        className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-amber-400 via-yellow-300 to-transparent"
+        style={{
+          width: visible ? "55%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.1s",
+        }}
+      />
+
+      <div className="container mx-auto max-w-7xl px-6 py-24 relative z-10">
+
+        {/* — Top row: eyebrow + year badge — */}
+        <div
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-16"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s",
+          }}
+        >
+          <p className="text-amber-400 text-xs font-semibold tracking-[0.35em] uppercase">
+            {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
+          </p>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+            <Award className="w-4 h-4 text-amber-400" />
+            <span className="text-white/60 text-xs font-semibold tracking-wider uppercase">FY25 APAC Partner of the Year</span>
+          </div>
+        </div>
+
+        {/* — Main layout: giant text left + image right — */}
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+          {/* Left: typography block */}
+          <div>
+            {/* "WINNER" — enormous display word */}
+            <div
+              className="overflow-hidden mb-4"
+              style={{
+                opacity: visible ? 1 : 0,
+                transition: "opacity 0.1s ease 0.3s",
+              }}
+            >
+              <p
+                className="font-black text-amber-400 leading-none tracking-tighter"
+                style={{
+                  fontSize: "clamp(5rem, 18vw, 14rem)",
+                  transform: visible ? "translateY(0)" : "translateY(110%)",
+                  transition: "transform 1s cubic-bezier(0.22,1,0.36,1) 0.3s",
+                }}
+              >
+                WINNER
+              </p>
+            </div>
+
+            {/* Award name */}
+            <div
+              className="overflow-hidden mb-8"
+              style={{
+                opacity: visible ? 1 : 0,
+                transition: "opacity 0.1s ease 0.55s",
+              }}
+            >
+              <h2
+                className="text-3xl md:text-4xl xl:text-5xl font-bold text-white leading-tight text-balance"
+                style={{
+                  transform: visible ? "translateY(0)" : "translateY(60px)",
+                  transition: "transform 1s cubic-bezier(0.22,1,0.36,1) 0.55s",
+                }}
+              >
+                ASEAN Rising Star<br />
+                <span className="text-sky-400">Partner of the Year</span>
+              </h2>
+            </div>
+
+            {/* Divider */}
+            <div
+              className="h-px bg-white/10 mb-8"
+              style={{
+                width: visible ? "100%" : "0%",
+                transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.75s",
+              }}
+            />
+
+            {/* Description */}
+            <p
+              className="text-slate-400 text-lg leading-relaxed max-w-lg"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "translateY(0)" : "translateY(16px)",
+                transition: "opacity 0.9s ease 0.85s, transform 0.9s ease 0.85s",
+              }}
+            >
+              {lang === "en"
+                ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
+                : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด่เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+            </p>
+          </div>
+
+          {/* Right: award image */}
+          <div
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0) scale(1)" : "translateY(40px) scale(0.97)",
+              transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.45s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.45s",
+            }}
+          >
+            {/* Amber border glow frame */}
+            <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-amber-400/60 via-yellow-300/20 to-sky-500/30 shadow-2xl shadow-amber-500/10">
+              <div className="rounded-2xl overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Bottom rule */}
+      <div
+        className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-sky-500/60 via-sky-400/20 to-transparent"
+        style={{
+          width: visible ? "40%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.5s",
+        }}
+      />
+    </section>
+  )
+}
+
 function HeroSection({ title, subtitle }: { title: string; subtitle: string }) {
   const [mounted, setMounted] = useState(false)
 
@@ -482,53 +644,7 @@ export default function AboutPage() {
       <HeroSection title={t.hero.title} subtitle={t.hero.subtitle} />
 
       {/* ASEAN Rising Star Award Section */}
-      <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
-        {/* Static background accent */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.4),transparent_60%)]" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Award Title */}
-            <div className="text-center mb-12">
-              <div className="inline-block mb-6 px-6 py-2 bg-white/10 rounded-full border border-white/20">
-                <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">
-                  {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                <span className="text-yellow-300">WINNER</span>
-              </h2>
-              <p className="text-xl md:text-3xl font-bold text-white/90 mb-4">
-                ASEAN Rising Star Partner of the Year
-              </p>
-              <div className="flex items-center justify-center gap-2 text-white/60">
-                <Award className="w-4 h-4" />
-                <span className="text-base">FY25 APAC Partner of the Year</span>
-              </div>
-            </div>
-
-            {/* Award Image — no animations */}
-            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-                alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            {/* Additional Info */}
-            <div className="text-center mt-10">
-              <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-                {lang === "en"
-                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
-                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด��เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AwardSection lang={lang} />
 
       {/* Salesforce Certification Badges Section */}
       <section className="bg-white py-20">
