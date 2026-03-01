@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Phone, ArrowRight } from 'lucide-react'
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
@@ -147,7 +150,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "บริการจัดการ Salesforce เปลี่ยนวิธีการที่องค์กรดูแลและพัฒนาแพลตฟอร์ม Salesforce ของตนโดยการให้การสนับสนุนจากผู้เชี่ยวชาญโดยไม่มีค่าใช้จ่ายในการสร้างทีมภายใน บริการครอบคลุมของเรารวมถึงการตรวจสอบระบบเชิงรุก การตรวจสุขภาพเป็นประจำ การฝึกอบรมผู้ใช้ และการให้คำปรึกษาเชิงกลยุทธ์เพื่อให้แน่ใจว่าสภาพแวดล้อม Salesforce ของคุณสอดคล้องกับวัตถุประสงค์ทางธุรกิจ",
+        "บริการจัดการ Salesforce เปลี่ยนวิธีการที่องค์กรดูแลและพัฒนาแพลตฟอร์ม Salesforce ของตนโดยการให้การสนับสนุนจากผู้เชี่ยวชาญโดยไม่มีค่าใช้จ่ายในการสร้างทีมภายใน บริการครอบคลุมของเรารวมถึงการตรวจสอบระบบเชิงรุก การตรวจสุขภาพเป็นประจำ การฝึกอบรมผู้ใช้ และการให้คำปรึกษาเชิงกลยุทธ์เพื่อให้แน่ใจว่าสภาพแวดล้อม Salesforce ของคุณสอดคล้องกับวัตถุปร��สงค์ทางธุรกิจ",
       paragraph2:
         "นอกเหนือจากการสนับสนุนประจำวัน บริการจัดการของเรารวมถึงการปรับปร��งอย่างต่อเนื่อง การปรับปรุงคุณสมบัติ การจัดการการบูรณาการ และการจัดการการเผยแพร่ เราทำงานเป็นส่วนขยายของทีมของคุณ เข้าใจกระบวนการทางธุรกิจของคุณและแนะนำการปรับปรุงที่ขับเคลื่อนประสิทธิภาพและการนำไปใช้ วิธีการหุ้นส่วนนี้ช่วยให้แพลตฟอร์ม Salesforce ของคุณพัฒนาไปพร้อมกับธุรกิจของคุณ เพิ่ม ROI และความพึงพอใจของผู้ใช้สูงสุด",
     },
@@ -177,7 +180,7 @@ const translations = {
     scheduleModal: {
       title: "จองการเรียกปรึกษาเชิงกลยุทธ์ฟรี 30 นาที",
       subtitle: "พูดคุยเกี่ยวกับความท้าทายในการสนับสนุน Salesforce ของคุณและค้นพบว่าบริการจัดการสามารถช่วยได้อย่างไร",
-      projectLabel: "อธิบายความต้องการโครงการของคุณ",
+      projectLabel: "อธิบายความต้องการโครงการ��องคุณ",
       projectPlaceholder: "อธิบายควา��ต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
       emailLabel: "อีเมลบริษัท",
@@ -339,39 +342,124 @@ export default function SalesforceManagedServicePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact-us" className="py-24 px-6 bg-white">
+      {/* Contact & Booking Section */}
+      <section id="contact-us" className="py-20 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">{t.contact.title}</h2>
-            <div className="h-1.5 w-32 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full" />
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t.contact.title}</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
+            {/* Left Side - Contact Information */}
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-blue-600" />
+              {/* Contact Detail Cards */}
+              <div className="grid gap-6">
+                <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
+                      <a href={`tel:${t.contact.phone}`} className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                        {t.contact.phone}
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-600">{t.contact.phone}</p>
+
+                <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100 hover:border-cyan-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/30">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                      <a href={`mailto:${t.contact.email}`} className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                        {t.contact.email}
+                      </a>
+                    </div>
+                  </div>
                 </div>
+
+                <div className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
+                      <p className="text-gray-700 leading-relaxed">{t.contact.address}</p>
+                      <p className="text-gray-800 text-sm mt-2 font-bold">{t.contact.hours}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Our Consult & Services */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
+                <ul className="space-y-3">
+                  <li>
+                    <Link href="/service/lead-to-cash-mgn" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Lead to Cash (Order) Management" : "การจัดการ Lead to Cash (Order)"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/field-sales" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Field Sales Execution" : "การดำเนินการขายภาคสนาม"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/customer-360" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Customer 360 Data Consolidation" : "การรวมข้อมูลลูกค้า 360 องศา"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Next Gen. Customer Service Centre" : "ศูนย์บริการลูกค้ายุคใหม่"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/salesforce-manage-service" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Salesforce Manage Service" : "บริการจัดการ Salesforce"}
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-10 text-white">
-              <h3 className="text-3xl font-bold mb-4">{lang === "en" ? "Ready to get started?" : "พร้อมที่จะเริ่มต้นหรือยัง?"}</h3>
-              <p className="text-blue-100 mb-8 text-lg">
-                {lang === "en" 
-                  ? "Contact our Salesforce experts today to discuss how managed services can transform your Salesforce experience."
-                  : "ติดต่อผู้เชี่ยวชาญ Salesforce ของเราวันนี้เพื่อพูดคุยว่าบริการจัดการสามารถเปลี่ยนประสบการณ์ Salesforce ของคุณได้อย่างไร"}
+            {/* Right Side - Booking Form */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                {lang === "en" ? "Schedule Your Strategy Call" : "จองเรียกปรึกษาเชิงกลยุทธ์ของคุณ"}
+              </h3>
+              <p className="text-gray-600 mb-8">
+                {lang === "en" ? "Get expert advice on Salesforce Managed Services" : "รับคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับบริการจัดการ Salesforce"}
               </p>
-              <Button onClick={() => setScheduleModalOpen(true)} size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 py-6 text-lg font-bold">
-                {t.nav.schedule}
-              </Button>
+
+              <div className="space-y-5">
+                <div>
+                  <Label htmlFor="name" className="text-gray-900 font-semibold">{lang === "en" ? "Your Name" : "ชื่อของคุณ"}</Label>
+                  <Input id="name" placeholder={lang === "en" ? "John Doe" : "ชื่อ-นามสกุล"} className="mt-2 rounded-lg" />
+                </div>
+                <div>
+                  <Label htmlFor="email" className="text-gray-900 font-semibold">{lang === "en" ? "Company Email" : "อีเมลบริษัท"}</Label>
+                  <Input id="email" type="email" placeholder="company@example.com" className="mt-2 rounded-lg" />
+                </div>
+                <div>
+                  <Label htmlFor="company" className="text-gray-900 font-semibold">{lang === "en" ? "Company Name" : "ชื่อบริษัท"}</Label>
+                  <Input id="company" placeholder={lang === "en" ? "Your Company" : "บริษัทของคุณ"} className="mt-2 rounded-lg" />
+                </div>
+                <div>
+                  <Label htmlFor="message" className="text-gray-900 font-semibold">{lang === "en" ? "Project Needs" : "ความต้องการโครงการ"}</Label>
+                  <Textarea id="message" placeholder={lang === "en" ? "Tell us about your needs..." : "บอกเราเกี่ยวกับความต้องการของคุณ..."} className="mt-2 rounded-lg" rows={4} />
+                </div>
+                <Button onClick={() => setScheduleModalOpen(true)} className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-6 text-lg font-semibold transition-all">
+                  {lang === "en" ? "Schedule Call" : "จองการติดต่อ"}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

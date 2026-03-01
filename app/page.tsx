@@ -1,12 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Users, Headphones, Zap, BarChart3, Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react"
+import { Lightbulb, Wrench, ShieldCheck, TrendingUp, Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
@@ -37,20 +37,20 @@ const translations = {
     },
     features: {
       feature1: {
-        title: "Build stronger customer relationships",
-        desc: "Centralize your customer data and improve your sales efficiency. Works on computers, mobile, and tablets.",
+        title: "Help businesses make better decisions through technology",
+        desc: "We bring the right technology to the right problem — so your team can act with clarity and confidence.",
       },
       feature2: {
-        title: "Connect with customers 24/7",
-        desc: "Deliver excellent customer service, increase customer satisfaction, and boost customer loyalty.",
+        title: "Turn ideas into practical, working solutions",
+        desc: "We don't just consult — we build. Every engagement ends with something real, live, and used by your people.",
       },
       feature3: {
-        title: "Automate your sales and marketing",
-        desc: "Enhance your marketing efficiency, build brand awareness, foster customer relationships, and increase sales.",
+        title: "Stay beyond go-live to ensure real adoption",
+        desc: "Go-live is just the beginning. We stay close to make sure your team actually embraces and benefits from the solution.",
       },
       feature4: {
-        title: "Unlock the power of your data",
-        desc: "Make more precise business decisions using insights from analyzing existing data.",
+        title: "Grow alongside the organizations we serve",
+        desc: "We measure our success by yours. As your business evolves, we evolve with you — long-term, trusted partners.",
       },
     },
     tech: {
@@ -143,26 +143,26 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ �����พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
       cta1: "��ัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
     features: {
       feature1: {
-        title: "สร้างความสัมพันธ์กับลูกค้าให้แน่นแฟ้นยิ่งขึ้น",
-        desc: "รวม�����ูนย์ข้อมูลลูกค้าของคุณและปรับปรุงประสิทธิภาพการขายของคุณ สามารถใช้งานได้ทั้งค��มพิวเตอร์ มือถือ และแท็บเล็ต",
+        title: "ช่วยธุรกิจตัดสินใจได้ดีขึ้นด้วยเทคโนโลยี",
+        desc: "เรานำเทคโนโลยีที่เหมาะสมมาแก้ปัญหาที่ถูกต้อง เพื่อให้ทีมของคุณดำเนินงานได้อย่างมั่นใจและชัดเจน",
       },
       feature2: {
-        title: "เชื่อมต่อกับลูกค้า 24/7",
-        desc: "มอบการบริการลูกค้าที่เป็นเลิศ เพิ่มความพึงพอใจของลูกค้า และเพิ่มความภักดีของลูกค้า",
+        title: "เปลี่ยนไอเดียให้กลายเป็นโซลูชันที่ใช้งานได้จริง",
+        desc: "เราไม่ได้แค่ให้คำปรึกษา — เราสร้างสิ่งที่ใช้งานได้จริง ทุกโครงการจบด้วยผลลัพธ์ที่ทีมของคุณใช้งานได้จริง",
       },
       feature3: {
-        title: "ทำใ��้การขายและการตลาดของคุณเป็นอัตโนมัติ",
-        desc: "ปรับปรุงความประสิทธิภาพในการทำการการตลาดของคุณ สร้างการรับรู้ของแบรนด์ สร้างความสัมพันธ์ที่ดีให้กับลูกค้า และเพิ่มยอดขาย",
+        title: "ดูแลต่อเนื่องหลัง Go-live เพื่อให้เกิดการใช้งานจริง",
+        desc: "การเปิดตัวระบบเป็นแค่จุดเริ่มต้น เราอยู่เคียงข้างเพื่อให้แน่ใจว่าทีมของคุณใช้ประโยชน์จากโซลูชันได้อย่างเต็มที่",
       },
       feature4: {
-        title: "ปลดล็อกพลังของข้อมูลของคุณ",
-        desc: "ให้การตัดสินใจทางธุรกิจแม่นยำยิ่งขึ้น โดยใช้ข้อมูลเชิงลึกจากการวิเคราะห์ข้อมูลที่มีอยู่",
+        title: "เติบโตไปพร้อมกับองค์กรที่เราดูแล",
+        desc: "เราวัดความสำเร็จของเราจากความสำเร็จของคุณ เมื่อธุรกิจของคุณพัฒนา เราพัฒนาไปด้วย — พันธมิตรระยะยาวที่ไว้วางใจได้",
       },
     },
     tech: {
@@ -183,7 +183,7 @@ const translations = {
         desc: "ทำลายอุปสรรคข้อมูลและรับมุมมองลูกค้าแบบครบวงจร โซลูชัน Customer 360 ของเรารวมข้อมูลจากทุกจุดสัมผัส ช่วยให้สามารถสร้างประสบการณ์ที่เป็นส่วนตัวและการตัดสินใจอย่างมีข้อมูล",
       },
       customerService: {
-        title: "ศูนย์บริการลูกค้ายุคใหม่",
+        title: "��ูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
         desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มี��วามสุขและภักดีมากขึ้น",
       },
@@ -216,14 +216,14 @@ const translations = {
       subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการราระบบ CRM ของคุณ",
       firstName: "ชื่อ - นามสกุล",
       email: "อีเมล์",
-      organization: "ชื่อองกร์กร",
+      organization: "ชื่ออง���ร์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที���ใ��้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -237,6 +237,354 @@ const translations = {
       download: "ดาวน์โหลดเลย",
     },
   },
+}
+
+const SERVICES = [
+  {
+    key: "leadToCash" as const,
+    href: "/service/lead-to-cash-mgn",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A%20close-up%2C%20perspective%20shot%20of%20a%20massive%2C%20transparent%20_Minority%20Report_%20style%20glass%20control%20screen.%20The%20display%20shows%20a%20unified%20L2C%20dashboard.%20The%20left%20panel%20shows%20_Marketing%20Metrics%2C_%20the%20middl-13GE68dKByHSqRCBbgbQO5wEZZMATm.jpg",
+    color: "from-sky-500 to-blue-600",
+  },
+  {
+    key: "fieldSales" as const,
+    href: "/service/field-sales",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20Perfect%20Shelf_%20A%20wide-angle%2C%20cinematic%20shot%20of%20a%20Professional%20Thai%20retail%20sales%20representative%20in%20a%20branded%20polo%20shirt%20using%20a%20tablet%20to%20audit%20a%20perfectly%20organized%20grocery%20shelf.%20Bright%2C%20nat-UpfXk7oAjNNqyEtxdxtnSXI9S5jWTb.jpg",
+    color: "from-cyan-500 to-sky-600",
+  },
+  {
+    key: "customer360" as const,
+    href: "/service/customer-360",
+    img: "/images/datamanagement.jpg",
+    color: "from-blue-600 to-indigo-600",
+  },
+  {
+    key: "customerService" as const,
+    href: "/service/customer-services-centre",
+    img: "/images/design-mode/callcenter.png",
+    color: "from-sky-400 to-cyan-600",
+  },
+  {
+    key: "salesforceManage" as const,
+    href: "/service/salesforce-manage-service",
+    img: "/images/design-mode/SalesSolutionIMG_001.jpg",
+    color: "from-blue-500 to-sky-400",
+  },
+]
+
+function ServiceCard({
+  service,
+  idx,
+  techData,
+}: {
+  service: (typeof SERVICES)[number]
+  idx: number
+  techData: { title: string; tagline: string; desc: string }
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+  const reversed = idx % 2 !== 0
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.15 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(48px)",
+        transition: `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${idx * 0.1}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${idx * 0.1}s`,
+      }}
+    >
+      <Link href={service.href} className="block group">
+        <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"} min-h-[400px] overflow-hidden`}>
+
+          {/* Image panel */}
+          <div className="relative w-full lg:w-[52%] overflow-hidden min-h-[280px]">
+            <img
+              src={service.img}
+              alt={techData.title}
+              className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            {/* dark gradient toward content */}
+            <div className={`absolute inset-0 bg-gradient-to-${reversed ? "l" : "r"} from-transparent via-transparent to-slate-950/60`} />
+            {/* top gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-transparent to-transparent" />
+
+            {/* large index watermark */}
+            <span className="absolute top-6 left-6 text-[80px] font-black leading-none text-white/10 select-none">
+              {String(idx + 1).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Content panel */}
+          <div className="relative flex-1 bg-slate-900 flex flex-col justify-center px-10 py-12 lg:px-14">
+            {/* Accent top edge */}
+            <div className={`absolute top-0 ${reversed ? "right-0" : "left-0"} w-1 h-full bg-gradient-to-b ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+            {/* Number pill */}
+            <div className={`inline-flex items-center gap-2 mb-6 w-fit`}>
+              <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
+                <span className="text-white text-xs font-bold">{String(idx + 1).padStart(2, "0")}</span>
+              </div>
+              <span className="text-sky-400/60 text-xs font-semibold tracking-[0.2em] uppercase">
+                {idx === 0 ? "Revenue" : idx === 1 ? "Sales" : idx === 2 ? "Data" : idx === 3 ? "Service" : "Platform"}
+              </span>
+            </div>
+
+            <h3 className={`text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight group-hover:text-sky-300 transition-colors duration-300 text-balance`}>
+              {techData.title}
+            </h3>
+            <p className="text-amber-400 font-semibold text-base mb-4 leading-snug">
+              {techData.tagline}
+            </p>
+            <p className="text-slate-400 leading-relaxed text-sm lg:text-base mb-8">
+              {techData.desc}
+            </p>
+
+            {/* CTA */}
+            <div className="flex items-center gap-3">
+              <span className="text-sky-400 text-sm font-semibold tracking-wide group-hover:text-white transition-colors duration-300">
+                Learn More
+              </span>
+              <div className={`h-px bg-sky-500/40 group-hover:bg-white/40 transition-all duration-500`}
+                style={{ width: "32px" }}
+              />
+              <svg
+                className="w-4 h-4 text-sky-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </div>
+  )
+}
+
+type TechKey = "leadToCash" | "fieldSales" | "customer360" | "customerService" | "salesforceManage"
+
+function TechSection({ t }: { t: typeof translations["en"] }) {
+  const headerRef = useRef<HTMLDivElement>(null)
+  const [headerVisible, setHeaderVisible] = useState(false)
+
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setHeaderVisible(true) },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section className="bg-slate-950 overflow-hidden">
+      {/* Header */}
+      <div
+        ref={headerRef}
+        className="relative py-20 px-6 text-center"
+      >
+        {/* subtle dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "radial-gradient(circle, #7dd3fc 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+        />
+        <p
+          className="text-amber-400 text-xs font-semibold tracking-[0.3em] uppercase mb-5 relative z-10"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            transform: headerVisible ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s",
+          }}
+        >
+          Our Services
+        </p>
+        <h2
+          className="text-5xl md:text-6xl font-bold text-white text-balance relative z-10"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            transform: headerVisible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s, transform 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s",
+          }}
+        >
+          {t.tech.title}
+        </h2>
+        <div
+          className="mx-auto mt-6 h-[2px] bg-gradient-to-r from-transparent via-sky-500 to-transparent relative z-10"
+          style={{
+            width: headerVisible ? "160px" : "0px",
+            transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.4s",
+          }}
+        />
+      </div>
+
+      {/* Service cards stacked */}
+      <div className="divide-y divide-slate-800/60">
+        {SERVICES.map((service, idx) => (
+          <ServiceCard
+            key={service.key}
+            service={service}
+            idx={idx}
+            techData={t.tech[service.key as TechKey]}
+          />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function VisionBanner({ lang }: { lang: "en" | "th" }) {
+  const ref = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.25 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const lines =
+    lang === "th"
+      ? [
+          { text: "เป็นที่ปรึกษาด้านเทคโนโลยีที่", accent: false },
+          { text: "ไว้วางใจได้", accent: true },
+          { text: "ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน", accent: false },
+          { text: "โซลูชันที่รอบคอบ", accent: true },
+        ]
+      : [
+          { text: "To be the", accent: false },
+          { text: "trusted", accent: true },
+          { text: "technology advisor that ignites", accent: false },
+          { text: "sustainable growth", accent: true },
+          { text: "through thoughtful solutions", accent: false },
+        ]
+
+  return (
+    <section
+      ref={ref}
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-slate-950 px-6 py-24"
+    >
+      {/* Background: dark image overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-slate-950/80" />
+        {/* subtle blue sweep */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-950/60 via-transparent to-cyan-950/30" />
+      </div>
+
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{ backgroundImage: 'radial-gradient(circle, #93c5fd 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+      />
+
+      {/* Horizontal rule top */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-sky-500 via-cyan-400 to-transparent"
+        style={{
+          transform: visible ? 'scaleX(1)' : 'scaleX(0)',
+          transition: 'transform 1s cubic-bezier(0.22,1,0.36,1)',
+        }}
+      />
+
+      {/* Content */}
+      <div className="container mx-auto max-w-5xl relative z-10 text-center">
+
+        {/* Label */}
+        <p
+          className="text-amber-400 text-xs font-semibold tracking-[0.3em] uppercase mb-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(12px)',
+            transition: 'opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s',
+          }}
+        >
+          {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
+        </p>
+
+        {/* Animated lines */}
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] text-balance">
+          {lines.map((line, i) => (
+            <span
+              key={i}
+              className="inline"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0)' : 'translateY(32px)',
+                transition: `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${0.25 + i * 0.15}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${0.25 + i * 0.15}s`,
+                display: 'inline',
+              }}
+            >
+              {line.accent ? (
+                <span className="text-amber-400">{line.text}</span>
+              ) : (
+                <span className="text-sky-300">{line.text} </span>
+              )}
+              {line.accent && i < lines.length - 1 && <span className="text-sky-300"> </span>}
+            </span>
+          ))}
+        </h2>
+
+        {/* Bottom accent bar */}
+        <div className="flex items-center justify-center gap-3 mt-14">
+          <div
+            className="h-px bg-sky-600/40"
+            style={{
+              width: visible ? '80px' : '0px',
+              transition: 'width 1s cubic-bezier(0.22,1,0.36,1) 0.9s',
+            }}
+          />
+          <div
+            className="w-2 h-2 rounded-full bg-amber-400"
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'scale(1)' : 'scale(0)',
+              transition: 'opacity 0.5s ease 1.1s, transform 0.5s cubic-bezier(0.34,1.56,0.64,1) 1.1s',
+            }}
+          />
+          <div
+            className="h-px bg-sky-600/40"
+            style={{
+              width: visible ? '80px' : '0px',
+              transition: 'width 1s cubic-bezier(0.22,1,0.36,1) 0.9s',
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Horizontal rule bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[2px] origin-right bg-gradient-to-l from-amber-500/60 via-amber-400/30 to-transparent"
+        style={{
+          transform: visible ? 'scaleX(1)' : 'scaleX(0)',
+          transition: 'transform 1s cubic-bezier(0.22,1,0.36,1) 0.3s',
+        }}
+      />
+    </section>
+  )
 }
 
 export default function Home() {
@@ -295,13 +643,12 @@ export default function Home() {
                 onMouseEnter={() => setServiceDropdownOpen(true)}
                 onMouseLeave={() => setServiceDropdownOpen(false)}
               >
-                <Link
-                  href="/service/crm"
-                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                <button
+                  className="text-white/90 hover:text-white transition-colors flex items-center gap-1 cursor-default"
                 >
                   {t.nav.service}
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
-                </Link>
+                </button>
                 {serviceDropdownOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
                     <div className="w-[480px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
@@ -503,181 +850,12 @@ export default function Home() {
       </section>
 
       <div className="bg-white">
-        {/* Features Section */}
-        <section id="service" className="py-20 px-6 overflow-hidden">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                {lang === "en" ? "What we do" : "สิ่งที่เราทำ"}
-              </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full" />
-            </div>
 
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Side - Mascot */}
-              <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="relative">
-                  <img
-                    src="/images/robot-mascot.png"
-                    alt="IGNITE Mascot"
-                    className="w-[350px] md:w-[450px] lg:w-[500px] object-contain animate-float"
-                  />
-                </div>
-              </div>
-
-              {/* Right Side - Service Cards */}
-              <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
-                {/* Feature 1 - CRM */}
-                <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature1.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature1.desc}</p>
-                </div>
-
-                {/* Feature 2 - Call Center */}
-                <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
-                    <Headphones className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature2.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature2.desc}</p>
-                </div>
-
-                {/* Feature 3 - Marketing */}
-                <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature3.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature3.desc}</p>
-                </div>
-
-                {/* Feature 4 - Data Management */}
-                <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
-                    <BarChart3 className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature4.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature4.desc}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Vision Banner Section */}
+        <VisionBanner lang={lang} />
 
         {/* Technology Solutions Section */}
-        <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
-          <div className="container mx-auto max-w-7xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-6 text-balance">
-              {t.tech.title}
-            </h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-16 rounded-full" />
-
-            <div className="space-y-8">
-              {/* Lead to Cash Management */}
-              <Link href="/service/lead-to-cash-mgn" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
-                        alt="Lead to Cash Management"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.leadToCash.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.leadToCash.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.leadToCash.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Field Sales Execution */}
-              <Link href="/service/field-sales" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/MarketingIMG_001.jpg"
-                        alt="Field Sales Execution"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.fieldSales.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.fieldSales.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.fieldSales.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Customer 360 Data Consolidation */}
-              <Link href="/service/customer-360" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/datamanagement.jpg"
-                        alt="Customer 360"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customer360.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customer360.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customer360.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Next Gen Customer Service Centre */}
-              <Link href="/service/customer-services-centre" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/callcenter.png"
-                        alt="Customer Service Centre"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.customerService.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.customerService.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.customerService.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Salesforce Manage Service */}
-              <Link href="/service/salesforce-manage-service" className="block">
-                <div className="group rounded-3xl bg-white border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-80 overflow-hidden">
-                      <img
-                        src="/images/design-mode/SalesSolutionIMG_001.jpg"
-                        alt="Salesforce Manage Service"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-10 flex flex-col justify-center">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">{t.tech.salesforceManage.title}</h3>
-                      <p className="text-xl font-semibold text-gray-900 mb-4">{t.tech.salesforceManage.tagline}</p>
-                      <p className="text-gray-700 leading-relaxed text-lg">{t.tech.salesforceManage.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <TechSection t={t} />
 
         {/* Partners Section */}
         <section className="py-20 px-6 overflow-hidden">

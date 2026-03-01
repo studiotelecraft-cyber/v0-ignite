@@ -147,7 +147,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อตัวแทนส���วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
+        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อ���ัวแทนส���วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
         "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
@@ -176,7 +176,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จร���ง",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่���ช้ได้จร���ง",
       projectLabel: "อธิบายความ���้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้��งการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -630,28 +630,33 @@ export default function FieldSalesPage() {
                 </div>
               </div>
 
-              {/* Services */}
+              {/* Our Consult & Services */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/service/crm" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.crm}
+                    <Link href="/service/lead-to-cash-mgn" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Lead to Cash (Order) Management" : "การจัดการ Lead to Cash (Order)"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/field-sales" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Field Sales Execution" : "การดำเนินการขายภาคสนาม"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/customer-360" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Customer 360 Data Consolidation" : "การรวมข้อมูลลูกค้า 360 องศา"}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.callCenter}
+                      {lang === "en" ? "Next Gen. Customer Service Centre" : "ศูนย์บริการลูกค้ายุคใหม่"}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/marketing" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.marketing}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service/data-management" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.dataManagement}
+                    <Link href="/service/salesforce-manage-service" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Salesforce Manage Service" : "บริการจัดการ Salesforce"}
                     </Link>
                   </li>
                 </ul>
@@ -681,7 +686,7 @@ export default function FieldSalesPage() {
 
                 <div>
                   <Label htmlFor="message" className="text-gray-900 font-semibold">{lang === "en" ? "Project Needs" : "ความต้องการโครงการ"}</Label>
-                  <Textarea id="message" placeholder={lang === "en" ? "Tell us about your needs..." : "บอกเราเกี่ยวกับความต้องการของคุณ..."} className="mt-2 rounded-lg" rows={4} />
+                  <Textarea id="message" placeholder={lang === "en" ? "Tell us about your needs..." : "บอกเราเกี่ยวกับความต้องการของค��ณ..."} className="mt-2 rounded-lg" rows={4} />
                 </div>
 
                 <Button onClick={() => setScheduleModalOpen(true)} className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-6 text-lg font-semibold transition-all">

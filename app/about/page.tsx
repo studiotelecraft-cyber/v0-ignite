@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles } from 'lucide-react'
+import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles, Wrench, ShieldCheck } from 'lucide-react'
+import { OurMissionSection, CoreValuesSection } from '@/components/about-sections'
 import { Button } from "@/components/ui/button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Input } from "@/components/ui/input"
@@ -35,27 +36,53 @@ const translations = {
       title: "Our Mission",
       description: "We empower businesses to unlock their full potential by delivering tailored CRM and automation solutions that drive growth, enhance customer relationships, and streamline operations.",
     },
+    features: {
+      feature1: {
+        title: "Help businesses make better decisions through technology",
+        desc: "We bring the right technology to the right problem — so your team can act with clarity and confidence.",
+      },
+      feature2: {
+        title: "Turn ideas into practical, working solutions",
+        desc: "We don't just consult — we build. Every engagement ends with something real, live, and used by your people.",
+      },
+      feature3: {
+        title: "Stay beyond go-live to ensure real adoption",
+        desc: "Go-live is just the beginning. We stay close to make sure your team actually embraces and benefits from the solution.",
+      },
+      feature4: {
+        title: "Grow alongside the organizations we serve",
+        desc: "We measure our success by yours. As your business evolves, we evolve with you — long-term, trusted partners.",
+      },
+    },
     vision: {
       title: "Our Vision",
       description: "To be the leading provider of customer-centric technology solutions that transform how businesses connect with their customers and achieve sustainable success.",
     },
     values: {
-      title: "Our Core Values",
+      title: "Ignite's Core Value",
       value1: {
-        title: "Innovation",
-        desc: "We continuously seek new and better ways to solve complex business challenges through cutting-edge technology.",
+        title: "Client Success is First",
+        desc: "We create real outcomes for our clients' businesses.",
       },
       value2: {
-        title: "Customer Success",
-        desc: "Your success is our success. We are committed to delivering solutions that drive measurable results for your business.",
+        title: "Think Beyond the Solution",
+        desc: "We think beyond the obvious for more sustainable choices.",
       },
       value3: {
-        title: "Excellence",
-        desc: "We maintain the highest standards in everything we do, from solution design to implementation and support.",
+        title: "Ownership & Accountability",
+        desc: "We take responsibility as if it were our own business.",
       },
       value4: {
-        title: "Partnership",
-        desc: "We build long-term relationships based on trust, transparency, and mutual growth with our clients.",
+        title: "Professional with Heart",
+        desc: "We work with expertise, sincerity, and genuine care.",
+      },
+      value5: {
+        title: "Integrity & Trust",
+        desc: "We stand firm in honesty and long-term reliability.",
+      },
+      value6: {
+        title: "People Grow, Company Grows",
+        desc: "We believe people's growth is the foundation of our company.",
       },
     },
     team: {
@@ -107,27 +134,53 @@ const translations = {
       title: "พันธกิจของเรา",
       description: "เราเสริมพลังให้ธุรกิจปลดล็อกศักยภาพสูงสุด ด้วยการส่งมอบโซลูชัน CRM และระบบอัตโนมัติที่ออกแบบเฉพาะ เพื่อขับเคลื่อนการเติบโตร การสร้างความสัมพันธ์กับลูกค้า และปรับปรุงการดำเนินงาน",
     },
+    features: {
+      feature1: {
+        title: "ช่วยธุรกิจตัดสินใจได้ดีขึ้นด้วยเทคโนโลยี",
+        desc: "เรานำเทคโนโลยีที่เหมาะสมมาแก้ปัญหาที่ถูกต้อง เพื่อให้ทีมของคุณดำเนินงานได้อย่างมั่นใจและชัดเจน",
+      },
+      feature2: {
+        title: "เปลี่ยนไอเดียให้กลายเป็นโซลูชันที่ใช้งานได้จริง",
+        desc: "เราไม่ได้แค่ให้คำปรึกษา — เราสร้างสิ่งที่ใช้งานได้จริง ทุกโครงการจบด้วยผลลัพธ์ที่ทีมของคุณใช้งานได้จริง",
+      },
+      feature3: {
+        title: "ดูแลต่อเนื่องหลัง Go-live เพื่อให้เกิดการใช้งานจริง",
+        desc: "การเปิดตัวระบบเป็นแค่จุดเริ่มต้น เราอยู่เคียงข้างเพื่อให้แน่ใจว่าทีมของคุณใช้ประโยชน์จากโซลูชันได้อย่างเต็มที่",
+      },
+      feature4: {
+        title: "เติบโตไปพร้อมกับองค์กรที่เราดูแล",
+        desc: "เราวัดความสำเร็จของเราจากความสำเร็จของคุณ เมื่อธุรกิจของคุณพัฒนา เราพัฒนาไปด้วย — พันธมิตรระยะยาวที่ไว้วางใจได้",
+      },
+    },
     vision: {
       title: "วิสัยทัศน์ของเรา",
-      description: "เป็นผู้ให้บริการชั้นนำด้านโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลาง เพื่อเปลี่ยนแปลงวิธีที่ธุรกิจเชื่อมต่อกับลูกค้าและบรรลุความสำเร็จอย่างยั่งยืน",
+      description: "เป็นผู้ให้บริการชั้นนำด้านโซลูชันเทค��นโลยีที่เน้นลูกค้าเป็นศูนย์กลาง เพื่อเปลี่ยนแปลงวิธีที่ธุรกิจเชื่อมต่อกับลูกค้าและบรรลุความสำเร็จอย่างยั่งยืน",
     },
     values: {
-      title: "คุณค่าหลักของเรา",
+      title: "คุณค่าหลักของ Ignite",
       value1: {
-        title: "นวัตกรรม",
-        desc: "เราแสวงหาวิธีใหม่ๆ ที่ดีกว่าอยู่เสมอในการแก้ปัญหาทางธุรกิจที่ซับซ้อนด้วยเทคโนโลยีล้ำสมัย",
+        title: "Client Success is First",
+        desc: "เราสร้างผลลัพธ์ที่เกิดขึ้นจริงกับธุรกิจของลูกค้า",
       },
       value2: {
-        title: "ความสำเร็จของลูกค้า",
-        desc: "ความสำเร็จของคุณคือความสำเร็จของเรา เรามุ่งมั่นส่งมอบโซลูชันที่สร้างผลลัพธ์ที่วัดได้สำหรับธุรกิจของคุณ",
+        title: "Think Beyond the Solution",
+        desc: "เราคิดโลกกว่าโจทย์ เพื่อทางเลือกที่ยิ่งยืนกว่า",
       },
       value3: {
-        title: "ความเป็นเลิศ",
-        desc: "เรารักษามาตรฐานสูงสุดในทุกสิ่งที่เราทำ ตั้งแต่การออกแบบโซลูชันไปจนถึงการนำไปใช้แ������ะการสนับสนุน",
+        title: "Ownership & Accountability",
+        desc: "เรารับผิดชอบงานเหมือนเป็นธุรกิจของเราเอง",
       },
       value4: {
-        title: "ความเป็นพันธมิตร",
-        desc: "เราสร้างความสัมพันธ์ระยะยาวบนพื้นฐานของความไว้วางใจ ความโปร่งใส และการเติบโตร่วมกันกับลูกค้า",
+        title: "Professional with Heart",
+        desc: "เราทำงานอย่างมืออาชีพ พร้อมความจริงใจและความเคารพ",
+      },
+      value5: {
+        title: "Integrity & Trust",
+        desc: "เรายึดมั่นในความซื่อสัตย์และความเชื่อมั่นระยะยาว",
+      },
+      value6: {
+        title: "People Grow, Company Grows",
+        desc: "เราเชื่อว่าการเติบโตของคน คือรากฐานของบริษัท",
       },
     },
     team: {
@@ -156,6 +209,134 @@ const translations = {
       bookingFormSubtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการระบบ CRM ของคุณ",
     },
   },
+}
+
+function HeroSection({ title, subtitle }: { title: string; subtitle: string }) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 80)
+    return () => clearTimeout(t)
+  }, [])
+
+  const subtitleLines = subtitle.split("\n\n")
+
+  return (
+    <section
+      className="h-screen relative overflow-hidden flex items-center justify-center"
+      style={{
+        backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Layered overlays */}
+      <div className="absolute inset-0 bg-slate-950/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
+
+      {/* Expanding top rule */}
+      <div
+        className="absolute top-0 left-0 h-[3px] bg-gradient-to-r from-sky-500 via-cyan-400 to-transparent"
+        style={{
+          width: mounted ? "60%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.2s",
+        }}
+      />
+
+      {/* Content */}
+      <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
+
+        {/* Eyebrow label */}
+        <p
+          className="text-sky-400 text-xs font-semibold tracking-[0.35em] uppercase mb-8"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? "translateY(0)" : "translateY(16px)",
+            transition: "opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s",
+          }}
+        >
+          Ignite Idea Co., Ltd.
+        </p>
+
+        {/* Main title — split into characters for dramatic reveal */}
+        <h1
+          className="font-black text-white leading-none tracking-tight mb-10 text-balance"
+          style={{
+            fontSize: "clamp(4rem, 14vw, 11rem)",
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? "translateY(0) scale(1)" : "translateY(40px) scale(0.96)",
+            transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.45s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.45s",
+          }}
+        >
+          <span className="text-white">{title.split(" ").slice(0, 2).join(" ")}</span>
+          {title.split(" ").length > 2 && (
+            <>
+              {" "}
+              <span
+                className="text-sky-400"
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(30px)",
+                  transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.6s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.6s",
+                  display: "inline-block",
+                }}
+              >
+                {title.split(" ").slice(2).join(" ")}
+              </span>
+            </>
+          )}
+        </h1>
+
+        {/* Divider */}
+        <div
+          className="mx-auto mb-10 h-[2px] bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"
+          style={{
+            width: mounted ? "200px" : "0px",
+            transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.8s",
+          }}
+        />
+
+        {/* Subtitle paragraphs */}
+        <div className="space-y-4 max-w-3xl mx-auto">
+          {subtitleLines.map((line, i) => (
+            <p
+              key={i}
+              className="text-lg md:text-xl text-blue-100/80 leading-relaxed"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.9s ease ${0.9 + i * 0.15}s, transform 0.9s ease ${0.9 + i * 0.15}s`,
+              }}
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {/* Expanding bottom rule */}
+      <div
+        className="absolute bottom-0 right-0 h-[3px] bg-gradient-to-l from-amber-500/50 via-amber-400/20 to-transparent"
+        style={{
+          width: mounted ? "40%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.5s",
+        }}
+      />
+
+      {/* Scroll indicator */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        style={{
+          opacity: mounted ? 1 : 0,
+          transition: "opacity 0.8s ease 1.4s",
+        }}
+      >
+        <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
+        <ChevronDown className="w-5 h-5 text-white/50 animate-bounce" />
+      </div>
+    </section>
+  )
 }
 
 export default function AboutPage() {
@@ -298,168 +479,54 @@ export default function AboutPage() {
 
       <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
 
-      <section 
-        className="h-screen relative overflow-hidden flex items-center justify-center"
-        style={{
-          backgroundImage: `url('/images/backgroud.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-blue-950/70 to-purple-950/80" />
-        <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
-          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
-          
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-white/70" />
-        </div>
-      </section>
-
-      {/* Vision Section */}
-      <section className="relative py-28 px-6 overflow-hidden bg-white">
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]"
-          style={{ backgroundImage: 'radial-gradient(circle, #1d4ed8 1px, transparent 1px)', backgroundSize: '32px 32px' }}
-        />
-        {/* Blue accent line top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
-
-        <div className="container mx-auto max-w-5xl relative z-10">
-          {/* Label */}
-          <div className="flex items-center gap-3 mb-10">
-            <div className="h-px w-12 bg-amber-500" />
-            <span className="text-amber-500 text-lg font-semibold tracking-widest uppercase">
-              {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
-            </span>
-          </div>
-
-          {/* Main statement */}
-          <div className="mb-12">
-            {lang === "th" ? (
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
-                <span className="text-sky-500">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">ไว้วางใจได้</span>
-                <span className="text-sky-500"> ที่จุดประกายการเติบโตอย่างยั่งยืนผ่าน</span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4"> โซลูชันที่รอบคอบ</span>
-              </h2>
-            ) : (
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-balance">
-                <span className="text-sky-500">To be the </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">trusted</span>
-                <span className="text-sky-500"> technology advisor that ignites sustainable growth through </span>
-                <span className="text-amber-500 underline decoration-amber-500 decoration-4 underline-offset-4">thoughtful solutions</span>
-              </h2>
-            )}
-          </div>
-
-          {/* Divider */}
-          <div className="flex items-center gap-4 mb-10">
-            <div className="h-px flex-1 bg-gradient-to-r from-sky-200 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-sky-400" />
-            <div className="h-px flex-1 bg-gradient-to-l from-sky-200 to-transparent" />
-          </div>
-
-          {/* Supporting stats / pillars */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                label: lang === "th" ? "ความไว้วางใจ" : "Trusted",
-                desc: lang === "th" ? "สร้างความสัมพันธ์ระยะยาวกับลูกค้าบนพื้นฐานของความโปร่งใสและความซื่อสัตย์" : "Building long-term client relationships founded on transparency and integrity",
-                color: "border-sky-500",
-                textColor: "text-sky-600",
-              },
-              {
-                label: lang === "th" ? "เทคโนโลยี" : "Technology",
-                desc: lang === "th" ? "นำเทคโนโลยีล้ำสมัยมาประยุกต์ใช้ให้เกิดผลลัพธ์ทางธุรกิจที่จริงจัง" : "Applying cutting-edge technology to deliver meaningful business outcomes",
-                color: "border-blue-600",
-                textColor: "text-blue-700",
-              },
-              {
-                label: lang === "th" ? "การเติบโตอย่างยั่งยืน" : "Sustainable Growth",
-                desc: lang === "th" ? "ผลักดันความสำเร็จที่ยั่งยืนผ่านโซลูชันที่รอบคอบและผ่านการพิสูจน์แล้ว" : "Driving enduring success through thoughtful, proven solutions",
-                color: "border-amber-500",
-                textColor: "text-amber-600",
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className={`border-l-4 ${item.color} pl-5 py-4 bg-slate-50 rounded-r-xl hover:shadow-md transition-shadow duration-300`}
-              >
-                <p className={`text-lg font-bold mb-1 ${item.textColor}`}>{item.label}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Blue accent line bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-600" />
-      </section>
+      <HeroSection title={t.hero.title} subtitle={t.hero.subtitle} />
 
       {/* ASEAN Rising Star Award Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
-        {/* Animated Background Patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)] animate-pulse" />
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
+        {/* Static background accent */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.4),transparent_60%)]" />
         </div>
 
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
             {/* Award Title */}
             <div className="text-center mb-12">
-              <div className="inline-block mb-6 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                <span className="text-white/90 text-sm font-semibold tracking-wider uppercase">
-                  {lang === "en" ? "Award Winner" : "ผู้ได้รั���รางวัล"}
+              <div className="inline-block mb-6 px-6 py-2 bg-white/10 rounded-full border border-white/20">
+                <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">
+                  {lang === "en" ? "Award Winner" : "ผู้ได้รับรางวัล"}
                 </span>
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent drop-shadow-2xl">
-                  WINNER
-                </span>
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                <span className="text-yellow-300">WINNER</span>
               </h2>
-              <p className="text-2xl md:text-4xl font-bold text-white/90 mb-4 drop-shadow-lg">
+              <p className="text-xl md:text-3xl font-bold text-white/90 mb-4">
                 ASEAN Rising Star Partner of the Year
               </p>
-              <div className="flex items-center justify-center gap-2 text-white/70">
-                <Award className="w-5 h-5" />
-                <span className="text-lg">FY25 APAC Partner of the Year</span>
+              <div className="flex items-center justify-center gap-2 text-white/60">
+                <Award className="w-4 h-4" />
+                <span className="text-base">FY25 APAC Partner of the Year</span>
               </div>
             </div>
 
-            {/* Award Image Container with Scroll Animation */}
-            <div className="relative group">
-              {/* Glowing Border Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
-              
-              {/* Award Image */}
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
-                  alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            {/* Award Image — no animations */}
+            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
+                alt="ASEAN Rising Star Partner of the Year - Ignite Idea"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Additional Info */}
-            <div className="text-center mt-12">
-              <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                {lang === "en" 
-                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region." 
-                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โดดเด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
+            <div className="text-center mt-10">
+              <p className="text-white/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+                {lang === "en"
+                  ? "Recognized for exceptional growth and innovation in delivering customer-centric technology solutions across the ASEAN region."
+                  : "ได้รับการยอมรับในด้านการเติบโตและนวัตกรรมที่โด��เด่นในการส่งมอบโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลางทั่วภูมิภาคอาเซียน"}
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-white/50" />
         </div>
       </section>
 
@@ -474,71 +541,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
-              {t.values.title}
-            </h2>
-            <div className="h-2 w-40 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto rounded-full shadow-lg" />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {Object.entries(t.values)
-              .filter(([key]) => key.startsWith("value"))
-              .map(([key, value], index) => {
-                const icons = [
-                  <Lightbulb className="w-10 h-10" />,
-                  <TrendingUp className="w-10 h-10" />,
-                  <Award className="w-10 h-10" />,
-                  <Heart className="w-10 h-10" />
-                ]
-                const gradients = [
-                  "from-blue-500 to-cyan-500",
-                  "from-purple-500 to-pink-500",
-                  "from-orange-500 to-yellow-500",
-                  "from-green-500 to-teal-500"
-                ]
-                
-                return (
-                  <div 
-                    key={key}
-                    className="group animate-fade-in"
-                    style={{ animationDelay: `${index * 0.15}s` }}
-                  >
-                    <div className="relative h-full p-10 rounded-3xl bg-white/90 backdrop-blur-xl border-2 border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
-                      {/* Gradient overlay on hover */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`} />
-                      
-                      {/* Icon container */}
-                      <div className="flex items-start gap-6 relative z-10">
-                        <div className={`flex-shrink-0 w-24 h-24 rounded-2xl bg-gradient-to-br ${gradients[index]} flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                          {icons[index]}
-                        </div>
-                        
-                        {/* Content */}
-                        <div className="flex-1 pt-2">
-                          <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
-                            {value.title}
-                          </h3>
-                          <p className="text-lg text-gray-700 leading-relaxed">
-                            {value.desc}
-                          </p>
-                        </div>
-                      </div>
-                      
-                      {/* Decorative corner accent */}
-                      <div className={`absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl ${gradients[index]} opacity-5 group-hover:opacity-10 rounded-tl-[100px] transition-opacity duration-500`} />
-                    </div>
-                  </div>
-                )
-              })}
-          </div>
-        </div>
-      </section>
+      <OurMissionSection t={t} />
+
+      <CoreValuesSection lang={lang} values={t.values} />
 
       {/* Why Choose Us */}
       

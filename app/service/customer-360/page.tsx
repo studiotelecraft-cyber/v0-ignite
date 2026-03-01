@@ -142,7 +142,7 @@ const translations = {
       title: "เหมาะสำหรับ",
       items: [
         "วิสาหกิจที่มีข้อมูลลูกค้าแตกกระจาย",
-        "องค์กรที่มุ่งเน้นไปที่การปรับแต่งและการวิเคราะห์",
+        "องค์กรที่มุ่งเน้นไปที่การปรับ��ต่งและการวิเคราะห์",
       ],
     },
     detailsSection: {
@@ -155,12 +155,12 @@ const translations = {
       title: "ติดต่อเรา",
       phone: "02-1243295",
       email: "contact@ignite-idea.com",
-      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
+      address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพ��หานคร 10310",
       hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
       crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
-      marketing: "ระบบการตล��ดอัตโนมัติ",
+      marketing: "ร��บบการตล��ดอัตโนมัติ",
       dataManagement: "การจัดการข้อมูล",
       partners: "พันธมิตรผลิตภัณฑ์ของเรา",
     },
@@ -505,28 +505,33 @@ export default function Customer360Page() {
                 </div>
               </div>
 
-              {/* Services */}
+              {/* Our Consult & Services */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.services}</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link href="/service/crm" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.crm}
+                    <Link href="/service/lead-to-cash-mgn" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Lead to Cash (Order) Management" : "การจัดการ Lead to Cash (Order)"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/field-sales" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Field Sales Execution" : "การดำเนินการขายภาคสนาม"}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/service/customer-360" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Customer 360 Data Consolidation" : "การรวมข้อมูลลูกค้า 360 องศา"}
                     </Link>
                   </li>
                   <li>
                     <Link href="/service/customer-services-centre" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.callCenter}
+                      {lang === "en" ? "Next Gen. Customer Service Centre" : "ศูนย์บริการลูกค้ายุคใหม่"}
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/marketing" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.marketing}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service/data-management" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
-                      {t.contact.dataManagement}
+                    <Link href="/service/salesforce-manage-service" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+                      {lang === "en" ? "Salesforce Manage Service" : "บริการจัดการ Salesforce"}
                     </Link>
                   </li>
                 </ul>
