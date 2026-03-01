@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles, Wrench, ShieldCheck } from 'lucide-react'
 import { OurMissionSection, CoreValuesSection } from '@/components/about-sections'
@@ -211,6 +211,134 @@ const translations = {
   },
 }
 
+function HeroSection({ title, subtitle }: { title: string; subtitle: string }) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 80)
+    return () => clearTimeout(t)
+  }, [])
+
+  const subtitleLines = subtitle.split("\n\n")
+
+  return (
+    <section
+      className="h-screen relative overflow-hidden flex items-center justify-center"
+      style={{
+        backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Layered overlays */}
+      <div className="absolute inset-0 bg-slate-950/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20" />
+
+      {/* Expanding top rule */}
+      <div
+        className="absolute top-0 left-0 h-[3px] bg-gradient-to-r from-sky-500 via-cyan-400 to-transparent"
+        style={{
+          width: mounted ? "60%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.2s",
+        }}
+      />
+
+      {/* Content */}
+      <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
+
+        {/* Eyebrow label */}
+        <p
+          className="text-sky-400 text-xs font-semibold tracking-[0.35em] uppercase mb-8"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? "translateY(0)" : "translateY(16px)",
+            transition: "opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s",
+          }}
+        >
+          Ignite Idea Co., Ltd.
+        </p>
+
+        {/* Main title — split into characters for dramatic reveal */}
+        <h1
+          className="font-black text-white leading-none tracking-tight mb-10 text-balance"
+          style={{
+            fontSize: "clamp(4rem, 14vw, 11rem)",
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? "translateY(0) scale(1)" : "translateY(40px) scale(0.96)",
+            transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.45s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.45s",
+          }}
+        >
+          <span className="text-white">{title.split(" ").slice(0, 2).join(" ")}</span>
+          {title.split(" ").length > 2 && (
+            <>
+              {" "}
+              <span
+                className="text-sky-400"
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(30px)",
+                  transition: "opacity 1s cubic-bezier(0.22,1,0.36,1) 0.6s, transform 1s cubic-bezier(0.22,1,0.36,1) 0.6s",
+                  display: "inline-block",
+                }}
+              >
+                {title.split(" ").slice(2).join(" ")}
+              </span>
+            </>
+          )}
+        </h1>
+
+        {/* Divider */}
+        <div
+          className="mx-auto mb-10 h-[2px] bg-gradient-to-r from-transparent via-sky-500/60 to-transparent"
+          style={{
+            width: mounted ? "200px" : "0px",
+            transition: "width 1s cubic-bezier(0.22,1,0.36,1) 0.8s",
+          }}
+        />
+
+        {/* Subtitle paragraphs */}
+        <div className="space-y-4 max-w-3xl mx-auto">
+          {subtitleLines.map((line, i) => (
+            <p
+              key={i}
+              className="text-lg md:text-xl text-blue-100/80 leading-relaxed"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(20px)",
+                transition: `opacity 0.9s ease ${0.9 + i * 0.15}s, transform 0.9s ease ${0.9 + i * 0.15}s`,
+              }}
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {/* Expanding bottom rule */}
+      <div
+        className="absolute bottom-0 right-0 h-[3px] bg-gradient-to-l from-amber-500/50 via-amber-400/20 to-transparent"
+        style={{
+          width: mounted ? "40%" : "0%",
+          transition: "width 1.2s cubic-bezier(0.22,1,0.36,1) 0.5s",
+        }}
+      />
+
+      {/* Scroll indicator */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        style={{
+          opacity: mounted ? 1 : 0,
+          transition: "opacity 0.8s ease 1.4s",
+        }}
+      >
+        <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
+        <ChevronDown className="w-5 h-5 text-white/50 animate-bounce" />
+      </div>
+    </section>
+  )
+}
+
 export default function AboutPage() {
   const { lang, setLang } = useLanguage()
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
@@ -351,25 +479,7 @@ export default function AboutPage() {
 
       <FloatingChatButton onClick={() => setScheduleModalOpen(true)} />
 
-      <section 
-        className="h-screen relative overflow-hidden flex items-center justify-center"
-        style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-slate-900/50" />
-        <div className="container mx-auto max-w-6xl text-center relative z-10 px-6">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-2xl animate-fade-in">{t.hero.title}</h1>
-          <p className="text-xl md:text-2xl text-blue-100/90 drop-shadow-lg leading-relaxed max-w-5xl mx-auto whitespace-pre-line">{t.hero.subtitle}</p>
-          
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-white/70" />
-        </div>
-      </section>
+      <HeroSection title={t.hero.title} subtitle={t.hero.subtitle} />
 
       {/* ASEAN Rising Star Award Section */}
       <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24">
