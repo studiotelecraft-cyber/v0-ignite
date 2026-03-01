@@ -121,7 +121,7 @@ export function OurMissionSection({
                 style={fadeUp(cardsVisible, 0.1 + i * 0.12)}
               >
                 {/* Number — top right (absolute, declared first so DOM order is consistent) */}
-                <span className={`absolute top-4 right-4 w-[52px] h-[52px] flex items-center justify-center text-2xl font-black leading-none select-none bg-gradient-to-br ${c.grad} bg-clip-text text-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300`}>
+                <span className={`absolute top-4 right-4 w-[52px] h-[52px] flex items-center justify-center text-2xl font-black leading-none select-none text-sky-400 opacity-70 group-hover:opacity-100 transition-opacity duration-300`}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
