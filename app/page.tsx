@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริ�������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -237,6 +237,147 @@ const translations = {
       download: "ดาวน์โหลดเลย",
     },
   },
+}
+
+function VisionBanner({ lang }: { lang: "en" | "th" }) {
+  const ref = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.25 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const lines =
+    lang === "th"
+      ? [
+          { text: "เป็นที่ปรึกษาด้านเทคโนโลยีที่", accent: false },
+          { text: "ไว้วางใจได้", accent: true },
+          { text: "ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน", accent: false },
+          { text: "โซลูชันที่รอบคอบ", accent: true },
+        ]
+      : [
+          { text: "To be the", accent: false },
+          { text: "trusted", accent: true },
+          { text: "technology advisor that ignites", accent: false },
+          { text: "sustainable growth", accent: true },
+          { text: "through thoughtful solutions", accent: false },
+        ]
+
+  return (
+    <section
+      ref={ref}
+      className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-slate-950 px-6 py-24"
+    >
+      {/* Background: dark image overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Picture1-kc0NxcsyQQ3z4NnP7Dd1EyJxWqQBDz.jpg"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-slate-950/80" />
+        {/* subtle blue sweep */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-950/60 via-transparent to-cyan-950/30" />
+      </div>
+
+      {/* Dot grid */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{ backgroundImage: 'radial-gradient(circle, #93c5fd 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+      />
+
+      {/* Horizontal rule top */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-sky-500 via-cyan-400 to-transparent"
+        style={{
+          transform: visible ? 'scaleX(1)' : 'scaleX(0)',
+          transition: 'transform 1s cubic-bezier(0.22,1,0.36,1)',
+        }}
+      />
+
+      {/* Content */}
+      <div className="container mx-auto max-w-5xl relative z-10 text-center">
+
+        {/* Label */}
+        <p
+          className="text-amber-400 text-xs font-semibold tracking-[0.3em] uppercase mb-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(12px)',
+            transition: 'opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s',
+          }}
+        >
+          {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
+        </p>
+
+        {/* Animated lines */}
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] text-balance">
+          {lines.map((line, i) => (
+            <span
+              key={i}
+              className="inline"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0)' : 'translateY(32px)',
+                transition: `opacity 0.8s cubic-bezier(0.22,1,0.36,1) ${0.25 + i * 0.15}s, transform 0.8s cubic-bezier(0.22,1,0.36,1) ${0.25 + i * 0.15}s`,
+                display: 'inline',
+              }}
+            >
+              {line.accent ? (
+                <span className="text-amber-400">{line.text}</span>
+              ) : (
+                <span className="text-sky-300">{line.text} </span>
+              )}
+              {line.accent && i < lines.length - 1 && <span className="text-sky-300"> </span>}
+            </span>
+          ))}
+        </h2>
+
+        {/* Bottom accent bar */}
+        <div className="flex items-center justify-center gap-3 mt-14">
+          <div
+            className="h-px bg-sky-600/40"
+            style={{
+              width: visible ? '80px' : '0px',
+              transition: 'width 1s cubic-bezier(0.22,1,0.36,1) 0.9s',
+            }}
+          />
+          <div
+            className="w-2 h-2 rounded-full bg-amber-400"
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'scale(1)' : 'scale(0)',
+              transition: 'opacity 0.5s ease 1.1s, transform 0.5s cubic-bezier(0.34,1.56,0.64,1) 1.1s',
+            }}
+          />
+          <div
+            className="h-px bg-sky-600/40"
+            style={{
+              width: visible ? '80px' : '0px',
+              transition: 'width 1s cubic-bezier(0.22,1,0.36,1) 0.9s',
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Horizontal rule bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[2px] origin-right bg-gradient-to-l from-amber-500/60 via-amber-400/30 to-transparent"
+        style={{
+          transform: visible ? 'scaleX(1)' : 'scaleX(0)',
+          transition: 'transform 1s cubic-bezier(0.22,1,0.36,1) 0.3s',
+        }}
+      />
+    </section>
+  )
 }
 
 export default function Home() {
@@ -504,36 +645,8 @@ export default function Home() {
 
       <div className="bg-white">
 
-        {/* Vision Section */}
-        <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{ backgroundImage: 'radial-gradient(circle, #60a5fa 1px, transparent 1px)', backgroundSize: '36px 36px' }}
-          />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="container mx-auto max-w-4xl relative z-10 text-center">
-            <p className="text-amber-400 text-sm font-semibold tracking-[0.2em] uppercase mb-8">
-              {lang === "th" ? "วิสัยทัศน์ของ Ignite" : "Ignite's Vision"}
-            </p>
-            {lang === "th" ? (
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
-                <span className="text-sky-400">เป็นที่ปรึกษาด้านเทคโนโลยีที่ </span>
-                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">ไว้วางใจได้</span>
-                <span className="text-sky-400"> ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน</span>
-                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4"> โซลูชันที่รอบคอบ</span>
-              </h2>
-            ) : (
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] text-balance">
-                <span className="text-sky-400">To be the </span>
-                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">trusted</span>
-                <span className="text-sky-400"> technology advisor that ignites sustainable growth through </span>
-                <span className="text-amber-400 underline decoration-amber-400 decoration-[3px] underline-offset-4">thoughtful solutions</span>
-              </h2>
-            )}
-            <div className="mt-12 mx-auto w-16 h-1 rounded-full bg-amber-400" />
-          </div>
-        </section>
+        {/* Vision Banner Section */}
+        <VisionBanner lang={lang} />
 
         {/* Technology Solutions Section */}
         <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
