@@ -67,7 +67,7 @@ export function OurMissionSection({
   return (
     <section className="relative bg-slate-950">
       {/* ── Full-width image banner ── */}
-      <div ref={bannerRef} className="relative h-[520px] md:h-[600px] overflow-hidden">
+      <div ref={bannerRef} className="relative h-[520px] md:h-[600px] overflow-hidden" suppressHydrationWarning>
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-x1g1uy37oNf2CcPw1Q47o2PPcFlJC6.png"
           alt="Team presenting Company Mission on a whiteboard"
@@ -119,6 +119,7 @@ export function OurMissionSection({
                 key={c.key}
                 className={`group relative flex flex-col p-7 rounded-2xl bg-slate-900 border border-slate-800 ${c.border} hover:border-opacity-100 hover:shadow-2xl transition-all duration-500 cursor-default overflow-hidden`}
                 style={fadeUp(cardsVisible, 0.1 + i * 0.12)}
+                suppressHydrationWarning
               >
                 {/* Number — top right (absolute, declared first so DOM order is consistent) */}
                 <span className={`absolute top-4 right-4 w-[52px] h-[52px] flex items-center justify-center text-2xl font-black leading-none select-none text-sky-400 opacity-70 group-hover:opacity-100 transition-opacity duration-300`}>
