@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที��ใ��้ได��จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที���ใ��้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -243,7 +243,7 @@ const SERVICES = [
   {
     key: "leadToCash" as const,
     href: "/service/lead-to-cash-mgn",
-    img: "/images/design-mode/SalesSolutionIMG_001.jpg",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A%20close-up%2C%20perspective%20shot%20of%20a%20massive%2C%20transparent%20_Minority%20Report_%20style%20glass%20control%20screen.%20The%20display%20shows%20a%20unified%20L2C%20dashboard.%20The%20left%20panel%20shows%20_Marketing%20Metrics%2C_%20the%20middl-13GE68dKByHSqRCBbgbQO5wEZZMATm.jpg",
     color: "from-sky-500 to-blue-600",
   },
   {
