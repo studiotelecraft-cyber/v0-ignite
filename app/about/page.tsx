@@ -263,7 +263,7 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
 
         {/* Award certificate — centered, contained */}
         <div
-          className="relative z-10 w-full h-full flex items-center justify-center p-10"
+          className="relative z-10 w-full h-full flex items-center justify-center p-4"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "scale(1)" : "scale(0.96)",
@@ -273,8 +273,8 @@ function AwardSection({ lang }: { lang: "en" | "th" }) {
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FY25%20APAC%20POTY%20Rising%20Star%20Winner%20-AppExchange%20listing-%20Ignite-YmGFZ1KKK3qGDCkWFkazfZ0hIRmHrL.jpg"
             alt="ASEAN Rising Star Partner of the Year - Ignite Idea Co., Ltd."
-            className="w-full max-w-sm md:max-w-md object-contain drop-shadow-2xl"
-            style={{ filter: "drop-shadow(0 0 40px rgba(251,191,36,0.18))" }}
+            className="w-full max-w-xl md:max-w-2xl object-contain drop-shadow-2xl"
+            style={{ filter: "drop-shadow(0 0 60px rgba(251,191,36,0.25))" }}
           />
         </div>
 
@@ -942,7 +942,7 @@ export default function AboutPage() {
                   </Label>
                   <Textarea
                     id="project"
-                    placeholder={lang === "en" ? "Describe your project need here..." : "��ธิบายความต้องการโครงการของคุณที่นี่..."}
+                    placeholder={lang === "en" ? "Describe your project need here..." : "���ธิบายความต้องการโครงการของคุณที่นี่..."}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400 text-lg"
                     rows={3}
                   />
