@@ -183,7 +183,7 @@ const translations = {
         desc: "ทำลายอุปสรรคข้อมูลและรับมุมมองลูกค้าแบบครบวงจร โซลูชัน Customer 360 ของเรารวมข้อมูลจากทุกจุดสัมผัส ช่วยให้สามารถสร้างประสบการณ์ที่เป็นส่วนตัวและการตัดสินใจอย่างมีข้อมูล",
       },
       customerService: {
-        title: "ศูนย์บริการลูกค้ายุคใหม่",
+        title: "��ูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
         desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มี��วามสุขและภักดีมากขึ้น",
       },
@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริ�����",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริ�������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -503,66 +503,6 @@ export default function Home() {
       </section>
 
       <div className="bg-white">
-        {/* Features Section */}
-        <section id="service" className="relative overflow-hidden flex flex-col lg:flex-row items-stretch">
-
-          {/* Left: full-height image panel */}
-          <div className="relative w-full lg:w-[42%] min-h-[320px] flex-shrink-0 self-stretch">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-x1g1uy37oNf2CcPw1Q47o2PPcFlJC6.png"
-              alt="Team presenting Company Mission on a whiteboard"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Right: header + cards */}
-          <div className="flex-1 py-20 px-8 lg:px-12 xl:px-16 bg-white">
-            <div className="mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                {lang === "en" ? "Our Mission" : "พันธกิจของเรา"}
-              </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full" />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Feature 1 */}
-              <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                  <Lightbulb className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature1.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature1.desc}</p>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
-                  <Wrench className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature2.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature2.desc}</p>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature3.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature3.desc}</p>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature4.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature4.desc}</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Vision Section */}
         <section className="relative py-24 px-6 overflow-hidden bg-slate-900">
