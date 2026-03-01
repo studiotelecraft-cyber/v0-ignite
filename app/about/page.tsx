@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles } from 'lucide-react'
+import { Menu, X, ChevronDown, Users, Target, Award, Heart, Phone, Mail, MapPin, Shield, Lock, Eye, Lightbulb, TrendingUp, Zap, CheckCircle, UserCheck, Sparkles, Wrench, ShieldCheck } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Input } from "@/components/ui/input"
@@ -34,6 +34,24 @@ const translations = {
     mission: {
       title: "Our Mission",
       description: "We empower businesses to unlock their full potential by delivering tailored CRM and automation solutions that drive growth, enhance customer relationships, and streamline operations.",
+    },
+    features: {
+      feature1: {
+        title: "Help businesses make better decisions through technology",
+        desc: "We bring the right technology to the right problem — so your team can act with clarity and confidence.",
+      },
+      feature2: {
+        title: "Turn ideas into practical, working solutions",
+        desc: "We don't just consult — we build. Every engagement ends with something real, live, and used by your people.",
+      },
+      feature3: {
+        title: "Stay beyond go-live to ensure real adoption",
+        desc: "Go-live is just the beginning. We stay close to make sure your team actually embraces and benefits from the solution.",
+      },
+      feature4: {
+        title: "Grow alongside the organizations we serve",
+        desc: "We measure our success by yours. As your business evolves, we evolve with you — long-term, trusted partners.",
+      },
     },
     vision: {
       title: "Our Vision",
@@ -115,9 +133,27 @@ const translations = {
       title: "พันธกิจของเรา",
       description: "เราเสริมพลังให้ธุรกิจปลดล็อกศักยภาพสูงสุด ด้วยการส่งมอบโซลูชัน CRM และระบบอัตโนมัติที่ออกแบบเฉพาะ เพื่อขับเคลื่อนการเติบโตร การสร้างความสัมพันธ์กับลูกค้า และปรับปรุงการดำเนินงาน",
     },
+    features: {
+      feature1: {
+        title: "ช่วยธุรกิจตัดสินใจได้ดีขึ้นด้วยเทคโนโลยี",
+        desc: "เรานำเทคโนโลยีที่เหมาะสมมาแก้ปัญหาที่ถูกต้อง เพื่อให้ทีมของคุณดำเนินงานได้อย่างมั่นใจและชัดเจน",
+      },
+      feature2: {
+        title: "เปลี่ยนไอเดียให้กลายเป็นโซลูชันที่ใช้งานได้จริง",
+        desc: "เราไม่ได้แค่ให้คำปรึกษา — เราสร้างสิ่งที่ใช้งานได้จริง ทุกโครงการจบด้วยผลลัพธ์ที่ทีมของคุณใช้งานได้จริง",
+      },
+      feature3: {
+        title: "ดูแลต่อเนื่องหลัง Go-live เพื่อให้เกิดการใช้งานจริง",
+        desc: "การเปิดตัวระบบเป็นแค่จุดเริ่มต้น เราอยู่เคียงข้างเพื่อให้แน่ใจว่าทีมของคุณใช้ประโยชน์จากโซลูชันได้อย่างเต็มที่",
+      },
+      feature4: {
+        title: "เติบโตไปพร้อมกับองค์กรที่เราดูแล",
+        desc: "เราวัดความสำเร็จของเราจากความสำเร็จของคุณ เมื่อธุรกิจของคุณพัฒนา เราพัฒนาไปด้วย — พันธมิตรระยะยาวที่ไว้วางใจได้",
+      },
+    },
     vision: {
       title: "วิสัยทัศน์ของเรา",
-      description: "เป็นผู้ให้บริการชั้นนำด้านโซลูชันเทคโนโลยีที่เน้นลูกค้าเป็นศูนย์กลาง เพื่อเปลี่ยนแปลงวิธีที่ธุรกิจเชื่อมต่อกับลูกค้าและบรรลุความสำเร็จอย่างยั่งยืน",
+      description: "เป็นผู้ให้บริการชั้นนำด้านโซลูชันเทค��นโลยีที่เน้นลูกค้าเป็นศูนย์กลาง เพื่อเปลี่ยนแปลงวิธีที่ธุรกิจเชื่อมต่อกับลูกค้าและบรรลุความสำเร็จอย่างยั่งยืน",
     },
     values: {
       title: "คุณค่าหลักของ Ignite",
@@ -391,6 +427,62 @@ export default function AboutPage() {
             alt="Salesforce Certifications"
             className="w-full h-auto"
           />
+        </div>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className="relative overflow-hidden flex flex-col lg:flex-row items-stretch">
+        {/* Left: full-height image panel */}
+        <div className="relative w-full lg:w-[42%] min-h-[320px] flex-shrink-0 self-stretch">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-x1g1uy37oNf2CcPw1Q47o2PPcFlJC6.png"
+            alt="Team presenting Company Mission on a whiteboard"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Right: header + cards */}
+        <div className="flex-1 py-20 px-8 lg:px-12 xl:px-16 bg-white">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t.mission.title}
+            </h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                <Lightbulb className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature1.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature1.desc}</p>
+            </div>
+
+            <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
+                <Wrench className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature2.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature2.desc}</p>
+            </div>
+
+            <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature3.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature3.desc}</p>
+            </div>
+
+            <div className="group relative p-8 rounded-2xl bg-white border-2 border-gray-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.features.feature4.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm">{t.features.feature4.desc}</p>
+            </div>
+          </div>
         </div>
       </section>
 
