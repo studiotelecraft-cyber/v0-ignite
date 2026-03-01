@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใ��้ได��จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที��ใ��้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -249,7 +249,7 @@ const SERVICES = [
   {
     key: "fieldSales" as const,
     href: "/service/field-sales",
-    img: "/images/design-mode/MarketingIMG_001.jpg",
+    img: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20Perfect%20Shelf_%20A%20wide-angle%2C%20cinematic%20shot%20of%20a%20Professional%20Thai%20retail%20sales%20representative%20in%20a%20branded%20polo%20shirt%20using%20a%20tablet%20to%20audit%20a%20perfectly%20organized%20grocery%20shelf.%20Bright%2C%20nat-UpfXk7oAjNNqyEtxdxtnSXI9S5jWTb.jpg",
     color: "from-cyan-500 to-sky-600",
   },
   {
