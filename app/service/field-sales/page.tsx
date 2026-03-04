@@ -147,7 +147,7 @@ const translations = {
     },
     detailsSection: {
       paragraph1:
-        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเชื่อมต่อ���ัวแทนส���วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
+        "Field Sales Execution เปลี่ยน��ิธีการทำงานของทีมขายในภาคสนามโดยการให้แพลตฟอร์มที่มุ่งเน้นไปที่มือถือซึ่งเ��ื่อมต่อ���ัวแทนส���วนหน้า��ะหว่างข้อมูลธุรกิจที่สำคัญ สารละลายทำลายกำแพงระหว่างสำ��ักงานใหญ่และการดำเนินงานภาคสนาม ช่วยให้สามารถทำงานร่วมกันแบบเรียลไทม์และการตัดสินใจโดยยึดตามเงื่อนไขตลาดปัจจุบัน",
       paragraph2:
         "ด้วยการรวม Consumer Goods Cloud Retail Execution ความสามารถในการปรับเส้นทางให้เหมาะสม และการวิเคราะห์มือถือ Field Sales Execution ช่วยให้บริษัทเพิ่มความครอบคลุมของอาณาเขต เพิ่มความถี่ของการมีส่วนร่วมกับลูกค้า และขับเคลื่อนอัตราการชนะที่สูงขึ้น ทีมภาคสนามกลายเป็นที่มีประสิทธิภาพ ผลิตภาพ และสามารถมองเห็นได้ชัดเจนเกี่ยวกับเมตริกประสิทธิภาพและขั้นตอนการทำงานอัตโนมัติ",
     },
@@ -176,7 +176,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขท���่���ช้ได้จร���ง",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขท�����่���ช้ได้จร���ง",
       projectLabel: "อธิบายความ���้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้��งการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -228,7 +228,7 @@ export default function FieldSalesPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>IGNITE IDEA</div>
+              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>Ignite Idea</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

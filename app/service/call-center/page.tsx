@@ -156,7 +156,7 @@ const translations = {
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
-      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      crm: "การ��ัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
       marketing: "ระบบการตลาดอัตโนมัติ",
       dataManagement: "การจัดการข้อมูล",
@@ -226,7 +226,7 @@ export default function CallCenterPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>Ignite Idea</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

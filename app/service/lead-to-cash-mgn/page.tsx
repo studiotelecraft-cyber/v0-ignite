@@ -230,7 +230,7 @@ export default function LeadToCashPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>IGNITE IDEA</div>
+              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>Ignite Idea</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
