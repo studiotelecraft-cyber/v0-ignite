@@ -230,7 +230,7 @@ export default function LeadToCashPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>IGNITE IDEA</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
@@ -700,7 +700,7 @@ export default function LeadToCashPage() {
                 </div>
 
                 <Button onClick={() => setScheduleModalOpen(true)} className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-6 text-lg font-semibold transition-all">
-                  {lang === "en" ? "Schedule Call" : "จองการติดต่อ"}
+                  {lang === "en" ? "Schedule Call" : "จอ��การติดต่อ"}
                 </Button>
               </div>
             </div>

@@ -206,9 +206,7 @@ export default function ResourcesPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className={`text-xl font-bold transition-colors ${
-                isDarkBg ? 'text-white' : 'text-gray-900'
-              }`}>IGNITE IDEA</div>
+              <div className={`text-xl font-black tracking-wide transition-colors`} style={{ fontFamily: 'var(--font-nunito)', color: isDarkBg ? 'white' : '#111827' }}>IGNITE IDEA</div>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">

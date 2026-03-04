@@ -991,11 +991,7 @@ export default function BlogPostPage() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className={`text-xl font-bold transition-colors ${
-                isDarkBg 
-                  ? 'text-white' 
-                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent'
-              }`}>
+              <div className="text-xl font-black tracking-wide transition-colors" style={{ fontFamily: 'var(--font-nunito)', color: isDarkBg ? 'white' : '#111827' }}>
                 IGNITE IDEA
               </div>
             </Link>

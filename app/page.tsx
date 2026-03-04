@@ -223,7 +223,7 @@ const translations = {
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที���ใ��้ได��จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที����ใ��้ได��จร����������",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
@@ -630,7 +630,7 @@ export default function Home() {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+              <div className="text-xl font-black text-white tracking-wide" style={{ fontFamily: 'var(--font-nunito)' }}>IGNITE IDEA</div>
             </div>
 
             {/* Desktop Menu */}
