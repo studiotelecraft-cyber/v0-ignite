@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, type FormEvent } from "react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
@@ -117,6 +117,10 @@ const translations = {
       nameLabel: "Your name",
       emailLabel: "Company Email",
       submit: "Submit",
+      submitting: "Submitting...",
+      success: "Thanks! We'll be in touch shortly.",
+      error: "Something went wrong. Please try again.",
+      validation: "Please fill in all fields with a valid email.",
     },
     caseStudyModal: {
       title: "Download Case Study",
@@ -143,8 +147,8 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ �����พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
-      cta1: "��ัดที่ปรึกษา",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจให้เติบโตเร็วยิ่งขึ้น",
+      cta1: "นัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
     features: {
@@ -227,8 +231,12 @@ const translations = {
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "������เมล���ริษัท",
+      emailLabel: "อีเมลบริษัท",
       submit: "ส่ง",
+      submitting: "กำลังส่ง...",
+      success: "ขอบคุณ! เราจะติดต่อกลับโดยเร็วที่สุด",
+      error: "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง",
+      validation: "กรุณากรอกข้อมูลให้ครบและใช้อีเมลที่ถูกต้อง",
     },
     caseStudyModal: {
       title: "ดาวน์โหลดเคสสตัดดี้",
@@ -596,6 +604,61 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const t = translations[lang]
+
+  const [scheduleForm, setScheduleForm] = useState({ project: "", name: "", email: "" })
+  const [scheduleStatus, setScheduleStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [scheduleMessage, setScheduleMessage] = useState<string>("")
+
+  const resetScheduleForm = () => {
+    setScheduleForm({ project: "", name: "", email: "" })
+    setScheduleStatus("idle")
+    setScheduleMessage("")
+  }
+
+  const handleScheduleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (scheduleStatus === "submitting") return
+
+    const project = scheduleForm.project.trim()
+    const name = scheduleForm.name.trim()
+    const email = scheduleForm.email.trim()
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+
+    if (!project || !name || !emailValid) {
+      setScheduleStatus("error")
+      setScheduleMessage(t.scheduleModal.validation)
+      return
+    }
+
+    setScheduleStatus("submitting")
+    setScheduleMessage("")
+
+    try {
+      const res = await fetch("/api/schedule-call", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ project, name, email, lang }),
+      })
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+
+      if (!res.ok || !data.ok) {
+        setScheduleStatus("error")
+        setScheduleMessage(data.error || t.scheduleModal.error)
+        return
+      }
+
+      setScheduleStatus("success")
+      setScheduleMessage(t.scheduleModal.success)
+      setScheduleForm({ project: "", name: "", email: "" })
+      setTimeout(() => {
+        setScheduleModalOpen(false)
+        setTimeout(resetScheduleForm, 300)
+      }, 1500)
+    } catch {
+      setScheduleStatus("error")
+      setScheduleMessage(t.scheduleModal.error)
+    }
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -1081,7 +1144,13 @@ export default function Home() {
       </div>
 
       {/* Schedule Modal */}
-      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+      <Dialog
+        open={scheduleModalOpen}
+        onOpenChange={(open) => {
+          setScheduleModalOpen(open)
+          if (!open) resetScheduleForm()
+        }}
+      >
         <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -1102,16 +1171,21 @@ export default function Home() {
                   {t.scheduleModal.subtitle}
                 </DialogDescription>
               </DialogHeader>
-              <div className="space-y-4 mt-6">
+              <form onSubmit={handleScheduleSubmit} className="space-y-4 mt-6" noValidate>
                 <div className="space-y-2">
                   <Label htmlFor="project" className="text-gray-900 font-semibold">
                     {t.scheduleModal.projectLabel}
                   </Label>
                   <Textarea
                     id="project"
+                    name="project"
+                    required
+                    value={scheduleForm.project}
+                    onChange={(e) => setScheduleForm((f) => ({ ...f, project: e.target.value }))}
                     placeholder={t.scheduleModal.projectPlaceholder}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
                     rows={3}
+                    disabled={scheduleStatus === "submitting"}
                   />
                 </div>
                 <div className="space-y-2">
@@ -1120,8 +1194,13 @@ export default function Home() {
                   </Label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
+                    required
+                    value={scheduleForm.name}
+                    onChange={(e) => setScheduleForm((f) => ({ ...f, name: e.target.value }))}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                    disabled={scheduleStatus === "submitting"}
                   />
                 </div>
                 <div className="space-y-2">
@@ -1130,14 +1209,33 @@ export default function Home() {
                   </Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
+                    required
+                    value={scheduleForm.email}
+                    onChange={(e) => setScheduleForm((f) => ({ ...f, email: e.target.value }))}
                     className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                    disabled={scheduleStatus === "submitting"}
                   />
                 </div>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.scheduleModal.submit}
+                {scheduleMessage && (
+                  <p
+                    role={scheduleStatus === "error" ? "alert" : "status"}
+                    className={`text-sm font-medium ${
+                      scheduleStatus === "success" ? "text-green-600" : "text-red-600"
+                    }`}
+                  >
+                    {scheduleMessage}
+                  </p>
+                )}
+                <Button
+                  type="submit"
+                  disabled={scheduleStatus === "submitting"}
+                  className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {scheduleStatus === "submitting" ? t.scheduleModal.submitting : t.scheduleModal.submit}
                 </Button>
-              </div>
+              </form>
             </div>
           </div>
         </DialogContent>
