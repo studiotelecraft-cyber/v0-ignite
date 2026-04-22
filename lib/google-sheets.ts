@@ -28,9 +28,12 @@ async function getAccessToken(): Promise<string> {
   const signingInput = `${encode(header)}.${encode(payload)}`
 
   const keyData = rawKey
-    .replace("-----BEGIN PRIVATE KEY-----", "")
-    .replace("-----END PRIVATE KEY-----", "")
-    .replace(/\n/g, "")
+    .replace(/-----BEGIN PRIVATE KEY-----/g, "")
+    .replace(/-----END PRIVATE KEY-----/g, "")
+    .replace(/\\n/g, "")   // remove literal backslash-n (from env var strings)
+    .replace(/\n/g, "")    // remove actual newlines (from multiline strings)
+    .replace(/\r/g, "")    // remove carriage returns
+    .replace(/\s/g, "")    // remove any remaining whitespace
     .trim()
 
   const binaryKey = Buffer.from(keyData, "base64")
