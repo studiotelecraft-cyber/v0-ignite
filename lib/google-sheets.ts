@@ -5,8 +5,11 @@ const SERVICE_ACCOUNT_EMAIL = "ignite-google-sheet@just-terminus-474803-a7.iam.g
 const PRIVATE_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDzCObYJvQQaKaQ5cPdhOs94xjTQnIjLpi4mdq6NT7w71zdg/kmd72iKdITaiB0sS22Q86F7EinuwURWGddHITybf1ZD+KZxaJ3lEu0xPVLn8AvCLL7JmBJl79oufFhC7CIwt7an2QZEiDjztoaycm3mEv69Vx+MsHGP9sgbEIWySNSX4HxvD/Uu/G/XmjrUiGu8W3X749Vll8L4Uz9V13Kl4dNtAg9k9FonZbEHQaJdnyZTYhAwJqAE0POWrxWlBX2B6wUMFvaLba4DigCyErMVFKKPrtnplwq2SVIXLvyMAGnVzj7Sapbo+1Zhrgpp1m/kjLbGvizhjpOFXNgDJwlAgMBAAECggEAZ43Y8qvyXZWBt4a3RMmQhJ+hoc6TnIsLtsiTqrjqVzXef2JuxGXL7u9b3DrhlmcyP5G3y1eJA7ML7z6YWFPBEB0ukIbUukm8NrCA64bqr+zjMgdGX/4Tk/ftLn3gLEYTU8qYs1WsDIStb/Pg+f4WDbz+TvHCFeGhsEvgHfoS1OrNmwP4jwMF3SQPWhGYebtc4H+9ewKIctSH0D/5mrxIjj9+Z2qcrNE5G7v1VqEzuceyZ9K98b0mkIJsbLjl8Fw5JfDaOYwK9ttRobOjvMDr8Fn59Uisy0gTFA1x0kylg8vwaBj91I0xn7R1kU04CQHwOVN8mjxWFwigBhi3Itj4dwKBgQD/Zl+BYAVEdLgX/JP6pmJMlusWhHDPwcpWmeGfft2IU8yNWmj+Ez/Cz+EKinhJ5wBT4Cmc2ew6U9EZ6it3vTRzNLRdRBLJh3QHtSJC2dTmRwEqKzi6u9QTfhZCPBFPFUASNNyh2FtS5vkka/Zx5dK/SxusUdcdCPJSnzuKmZ94KwKBgQDzmxdCespeL7BZCtgDGOk55a89ev+B4Xu1vyHQhE/mD8fsE3ievFm2zuzqTCXb4ek7vujyV3E9Rxqr7q5Qj0lsuHEEl8pMLcx2v+vFgN/kmKD3/3f9i94EMLQkYuv5G115NmTiH+WJi2buGOVgxLAt80uxd9bA6qSQet8aMBE7wKBgQDVr6C+zUj68rFImHJzZ5ydOjQtndgJa7nQZWWqHepacsqVhgyMcCyL4YQHXr2wD49tngMTEh4c2x37kbqWr35f2bwCwL77UNKa1El7J2iC1uu5jXokepzBRmB3QGy2/y+hTAtBepVGMqxHdfE3cLO4i632qm7SAzdEO6gEme4cCwKBgQDglAATd6QMxKYs0IRoBpUsnQS7ByN6l2c3HGeOFgyaqb3DdAflPvruP0HGlkDovxIH1G5ozCCaZeW2rR7VH63DjW/5FH7KOHEK8zx4KzE6cLeFoAAqcok8hSc0pJlEpLAM2deD3XjR8YxmXMzhzx6AsHHmRuEsxOqBP2hbHy7x3QKBgQDwT4o/4X8kosQXw/nvGCnEuRwVUkc3KUGC+rZ2DX8G1D6kNVJN419J+wv9N83nRWwYPhKEqsXv40cUEgq18N16+kkqU3+sTBmJ/GxZeng0HyBTCCHqXRHLxSnp0EcyHuaza0jYJ9/sc/gyQtxAipIcLH6VCU+TnTKkmwOXtO0H1w==\n-----END PRIVATE KEY-----"
 
 async function getAccessToken(): Promise<string> {
+  const { createSign } = await import("node:crypto")
+
   const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || SERVICE_ACCOUNT_EMAIL
-  const rawKey = process.env.GOOGLE_PRIVATE_KEY || PRIVATE_KEY
+  // Normalise key: support both literal \n sequences (env vars) and real newlines
+  const rawKey = (process.env.GOOGLE_PRIVATE_KEY || PRIVATE_KEY).replace(/\\n/g, "\n")
 
   const now = Math.floor(Date.now() / 1000)
   const header = { alg: "RS256", typ: "JWT" }
@@ -18,41 +21,20 @@ async function getAccessToken(): Promise<string> {
     exp: now + 3600,
   }
 
-  const encode = (obj: object) =>
+  const b64url = (obj: object) =>
     Buffer.from(JSON.stringify(obj))
       .toString("base64")
       .replace(/=/g, "")
       .replace(/\+/g, "-")
       .replace(/\//g, "_")
 
-  const signingInput = `${encode(header)}.${encode(payload)}`
+  const signingInput = `${b64url(header)}.${b64url(payload)}`
 
-  const keyData = rawKey
-    .replace(/-----BEGIN PRIVATE KEY-----/g, "")
-    .replace(/-----END PRIVATE KEY-----/g, "")
-    .replace(/\\n/g, "")   // remove literal backslash-n (from env var strings)
-    .replace(/\n/g, "")    // remove actual newlines (from multiline strings)
-    .replace(/\r/g, "")    // remove carriage returns
-    .replace(/\s/g, "")    // remove any remaining whitespace
-    .trim()
-
-  const binaryKey = Buffer.from(keyData, "base64")
-
-  const cryptoKey = await crypto.subtle.importKey(
-    "pkcs8",
-    binaryKey,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["sign"]
-  )
-
-  const signature = await crypto.subtle.sign(
-    "RSASSA-PKCS1-v1_5",
-    cryptoKey,
-    Buffer.from(signingInput)
-  )
-
-  const sig = Buffer.from(signature)
+  // Use Node.js createSign — accepts PEM directly, no manual base64 stripping needed
+  const signer = createSign("RSA-SHA256")
+  signer.update(signingInput)
+  const sig = signer
+    .sign(rawKey)
     .toString("base64")
     .replace(/=/g, "")
     .replace(/\+/g, "-")
