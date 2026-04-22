@@ -7,9 +7,8 @@ const PRIVATE_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAA
 async function getAccessToken(): Promise<string> {
   const { createSign } = await import("node:crypto")
 
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || SERVICE_ACCOUNT_EMAIL
-  // Normalise key: support both literal \n sequences (env vars) and real newlines
-  const rawKey = (process.env.GOOGLE_PRIVATE_KEY || PRIVATE_KEY).replace(/\\n/g, "\n")
+  const email = SERVICE_ACCOUNT_EMAIL
+  const rawKey = PRIVATE_KEY
 
   const now = Math.floor(Date.now() / 1000)
   const header = { alg: "RS256", typ: "JWT" }
