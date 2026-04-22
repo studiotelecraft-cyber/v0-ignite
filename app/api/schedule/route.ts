@@ -82,7 +82,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Name and email are required" }, { status: 400 })
     }
 
+    console.log("[v0] GOOGLE_SERVICE_ACCOUNT_EMAIL:", process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL ?? "NOT SET")
+    console.log("[v0] GOOGLE_PRIVATE_KEY set:", !!process.env.GOOGLE_PRIVATE_KEY)
+    console.log("[v0] GOOGLE_PRIVATE_KEY starts with:", process.env.GOOGLE_PRIVATE_KEY?.slice(0, 40))
+
     const accessToken = await getAccessToken()
+    console.log("[v0] Access token obtained successfully")
 
     const dateTime = new Date().toLocaleString("th-TH", {
       timeZone: "Asia/Bangkok",
@@ -109,12 +114,14 @@ export async function POST(req: Request) {
 
     if (!appendRes.ok) {
       const err = await appendRes.text()
+      console.log("[v0] Google Sheets API error response:", err)
       throw new Error(`Google Sheets API error: ${err}`)
     }
 
+    console.log("[v0] Row appended to Google Sheets successfully")
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error("[schedule] Error writing to Google Sheets:", err)
+    console.error("[v0] Error writing to Google Sheets:", err)
     return NextResponse.json({ error: "Failed to submit. Please try again." }, { status: 500 })
   }
 }
