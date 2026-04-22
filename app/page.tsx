@@ -11,6 +11,7 @@ import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { useLanguage } from "@/context/language-context"
+import { BookingForm } from "@/components/booking-form"
 
 const translations = {
   en: {
@@ -1040,68 +1041,7 @@ export default function Home() {
 
               {/* Right Side - Booking Form (3 columns) */}
               <div className="lg:col-span-3">
-                <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl border border-gray-200 h-full">
-                  <div className="mb-8">
-                    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
-                      {t.booking.title}
-                    </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed">{t.booking.subtitle}</p>
-                  </div>
-
-                  <form className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <div className="space-y-2">
-                        <Label htmlFor="name" className="text-gray-900 font-semibold text-base">
-                          {t.booking.firstName}
-                        </Label>
-                        <Input
-                          id="name"
-                          placeholder={t.booking.firstName}
-                          className="h-12 border-2 border-gray-200 focus:border-blue-400 rounded-xl bg-gray-50 focus:bg-white transition-all"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-gray-900 font-semibold text-base">
-                          {t.booking.email}
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder={t.booking.email}
-                          className="h-12 border-2 border-gray-200 focus:border-blue-400 rounded-xl bg-gray-50 focus:bg-white transition-all"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="organization" className="text-gray-900 font-semibold text-base">
-                        {t.booking.organization}
-                      </Label>
-                      <Input
-                        id="organization"
-                        placeholder={t.booking.organization}
-                        className="h-12 border-2 border-gray-200 focus:border-blue-400 rounded-xl bg-gray-50 focus:bg-white transition-all"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="text-gray-900 font-semibold text-base">
-                        {t.booking.message}
-                      </Label>
-                      <Textarea
-                        id="message"
-                        placeholder={t.booking.message}
-                        rows={5}
-                        className="border-2 border-gray-200 focus:border-blue-400 rounded-xl resize-none bg-gray-50 focus:bg-white transition-all"
-                      />
-                    </div>
-                    <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border-2 border-gray-200">
-                      <Label className="text-gray-900 font-bold text-lg">{t.booking.captcha}</Label>
-                      <Input className="max-w-[120px] h-12 border-2 border-gray-300 focus:border-blue-400 rounded-xl" />
-                    </div>
-                    <Button className="w-full md:w-auto bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-gray-900 font-bold text-lg px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                      {t.booking.submit} →
-                    </Button>
-                  </form>
-                </div>
+                <BookingForm labels={t.booking} variant="white" />
               </div>
             </div>
           </div>

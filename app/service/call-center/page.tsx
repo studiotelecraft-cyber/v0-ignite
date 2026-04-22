@@ -11,6 +11,7 @@ import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useLanguage } from "@/context/language-context"
+import { BookingForm } from "@/components/booking-form"
 
 const translations = {
   en: {
@@ -156,7 +157,7 @@ const translations = {
       address: "เลขที่ 9 อาคารจี ทาวเวอร์ แกรนด์พระราม9 ชั้นที่ 31 ห้องเลขที่ T01 ถนนพระราม 9 แขวงห้วยขวาง เขตห้วยขวาง กรุงเทพมหานคร 10310",
       hours: "จันทร์-ศุกร์: 9:00 น. – 18:00 น.",
       services: "บริการและการปรึกษาของเรา",
-      crm: "การจัดการความสัมพันธ์ลูกค้า (CRM)",
+      crm: "การ��ัดการความสัมพันธ์ลูกค้า (CRM)",
       callCenter: "ระบบศูนย์สายด่วน",
       marketing: "ระบบการตลาดอัตโนมัติ",
       dataManagement: "การจัดการข้อมูล",
@@ -547,40 +548,7 @@ export default function CallCenterPage() {
             </div>
 
             {/* Right Side - Booking Form */}
-            <div className="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-400 p-10 md:p-12 rounded-3xl shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{t.booking.title}</h2>
-              <p className="text-white/90 mb-8 leading-relaxed">{t.booking.subtitle}</p>
-
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    placeholder={t.booking.firstName}
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
-                  <Input
-                    placeholder={t.booking.email}
-                    type="email"
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
-                </div>
-                <Input
-                  placeholder={t.booking.organization}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                />
-                <Textarea
-                  placeholder={t.booking.message}
-                  rows={5}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 resize-none rounded-xl shadow-sm"
-                />
-                <div className="flex items-center gap-4">
-                  <Label className="text-white font-semibold text-lg">{t.booking.captcha}</Label>
-                  <Input className="bg-white border-0 text-gray-900 max-w-[120px] h-12 rounded-xl shadow-sm" />
-                </div>
-                <Button className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.booking.submit} →
-                </Button>
-              </form>
-            </div>
+            <BookingForm labels={t.booking} variant="gradient" />
           </div>
         </div>
       </section>
