@@ -116,7 +116,11 @@ const translations = {
       projectPlaceholder: "Describe your project need here...",
       nameLabel: "Your name",
       emailLabel: "Company Email",
+      companyLabel: "Company Name",
       submit: "Submit",
+      submitting: "Submitting...",
+      successMessage: "Thank you! We'll be in touch soon.",
+      errorMessage: "Failed to submit. Please try again.",
     },
     caseStudyModal: {
       title: "Download Case Study",
@@ -143,8 +147,8 @@ const translations = {
     hero: {
       title: "เข้าใจลูกค้าของคุณได้ดีขึ้น",
       subtitle:
-        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ �����พื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจ���ห้เติบโตเร็วยิ่งขึ้น",
-      cta1: "��ัดที่ปรึกษา",
+        "เพิ่มประสิทธิภาพการวางระบบ CRM ของคุณด้วยคำแนะนำจากผู้เชี่ยวชาญ เพื่อการตัดสินใจที่เฉียบคม และขับเคลื่อนธุรกิจให้เติบโตเร็วยิ่งขึ้น",
+      cta1: "นัดที่ปรึกษา",
       cta2: "ดาวน์โหลดเคสสตัดดี้",
     },
     features: {
@@ -183,9 +187,9 @@ const translations = {
         desc: "ทำลายอุปสรรคข้อมูลและรับมุมมองลูกค้าแบบครบวงจร โซลูชัน Customer 360 ของเรารวมข้อมูลจากทุกจุดสัมผัส ช่วยให้สามารถสร้างประสบการณ์ที่เป็นส่วนตัวและการตัดสินใจอย่างมีข้อมูล",
       },
       customerService: {
-        title: "��ูนย์บริการลูกค้ายุคใหม่",
+        title: "ศูนย์บริการลูกค้ายุคใหม่",
         tagline: "มอบบริการที่เหนือความคาดหมาย",
-        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มี��วามสุขและภักดีมากขึ้น",
+        desc: "พลิกโฉมการสนับสนุนลูกค้าด้วยศูนย์บริการยุคใหม่ของเรา จัดการทุกการติดต่อจากแพลตฟอร์มอัจฉริยะเดียว และแก้ไขปัญหาได้เร็วขึ้นเพื่อสร้างลูกค้าที่มีความสุขและภักดีมากขึ้น",
       },
       salesforceManage: {
         title: "บริการจัดการ Salesforce",
@@ -213,27 +217,31 @@ const translations = {
     },
     booking: {
       title: "จองคำปรึกษา",
-      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาในการรับฟังปัญหาในการราระบบ CRM ของคุณ",
+      subtitle: "ทีมผู้เชี่ยวชาญด้าน CRM ของเราพร้อมให้บริการในการรับฟังปัญหาและวางระบบ CRM ของคุณ",
       firstName: "ชื่อ - นามสกุล",
       email: "อีเมล์",
-      organization: "ชื่ออง���ร์กร",
+      organization: "ชื่อองค์กร",
       message: "ข้อความ",
       captcha: "13 + 15 =",
       submit: "นัดที่ปรึกษา",
     },
     scheduleModal: {
       title: "รับสิทธิ์ปรึกษาฟรี 30 นาที",
-      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที���ใ��้ได��จร����������",
+      subtitle: "ปรึกษาปัญหาและค้นหาแนวทางแก้ไขที่ใช้ได้จริง",
       projectLabel: "อธิบายความต้องการโครงการของคุณ",
       projectPlaceholder: "อธิบายความต้องการโครงการของคุณที่นี่...",
       nameLabel: "ชื่อของคุณ",
-      emailLabel: "������เมล���ริษัท",
+      emailLabel: "อีเมลบริษัท",
+      companyLabel: "ชื่อบริษัท",
       submit: "ส่ง",
+      submitting: "กำลังส่ง...",
+      successMessage: "ขอบคุณ! เราจะติดต่อกลับเร็วๆ นี้",
+      errorMessage: "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง",
     },
     caseStudyModal: {
       title: "ดาวน์โหลดเคสสตัดดี้",
       nameLabel: "ชื่อ",
-      emailLabel: "���ีเมลบริษัท",
+      emailLabel: "อีเมลบริษัท",
       download: "ดาวน์โหลดเลย",
     },
   },
@@ -591,6 +599,33 @@ export default function Home() {
   const { lang, setLang } = useLanguage()
   const [scheduleModalOpen, setScheduleModalOpen] = useState(false)
   const [caseStudyModalOpen, setCaseStudyModalOpen] = useState(false)
+  const [scheduleForm, setScheduleForm] = useState({ name: "", email: "", companyName: "", message: "" })
+  const [scheduleStatus, setScheduleStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+
+  const handleScheduleSubmit = async () => {
+    if (!scheduleForm.name || !scheduleForm.email) return
+    setScheduleStatus("submitting")
+    try {
+      const res = await fetch("/api/schedule", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(scheduleForm),
+      })
+      if (!res.ok) throw new Error("Request failed")
+      setScheduleStatus("success")
+      setScheduleForm({ name: "", email: "", companyName: "", message: "" })
+    } catch {
+      setScheduleStatus("error")
+    }
+  }
+
+  const handleScheduleOpenChange = (open: boolean) => {
+    setScheduleModalOpen(open)
+    if (!open) {
+      setScheduleStatus("idle")
+      setScheduleForm({ name: "", email: "", companyName: "", message: "" })
+    }
+  }
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -1081,7 +1116,7 @@ export default function Home() {
       </div>
 
       {/* Schedule Modal */}
-      <Dialog open={scheduleModalOpen} onOpenChange={setScheduleModalOpen}>
+      <Dialog open={scheduleModalOpen} onOpenChange={handleScheduleOpenChange}>
         <DialogContent className="sm:max-w-4xl backdrop-blur-xl bg-gradient-to-br from-white via-blue-50 to-cyan-50 border-2 border-blue-200 text-gray-900 overflow-hidden p-0 max-h-[90vh]">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="md:col-span-1 h-[400px] md:h-auto overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -1103,40 +1138,73 @@ export default function Home() {
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4 mt-6">
-                <div className="space-y-2">
-                  <Label htmlFor="project" className="text-gray-900 font-semibold">
-                    {t.scheduleModal.projectLabel}
-                  </Label>
-                  <Textarea
-                    id="project"
-                    placeholder={t.scheduleModal.projectPlaceholder}
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                    rows={3}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-gray-900 font-semibold">
-                    {t.scheduleModal.nameLabel}
-                  </Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-gray-900 font-semibold">
-                    {t.scheduleModal.emailLabel}
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
-                  />
-                </div>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.scheduleModal.submit}
-                </Button>
+                {scheduleStatus === "success" ? (
+                  <div className="py-8 text-center text-green-600 font-semibold text-lg">
+                    {t.scheduleModal.successMessage}
+                  </div>
+                ) : (
+                  <>
+                    <div className="space-y-2">
+                      <Label htmlFor="schedule-name" className="text-gray-900 font-semibold">
+                        {t.scheduleModal.nameLabel}
+                      </Label>
+                      <Input
+                        id="schedule-name"
+                        type="text"
+                        value={scheduleForm.name}
+                        onChange={(e) => setScheduleForm((f) => ({ ...f, name: e.target.value }))}
+                        className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="schedule-email" className="text-gray-900 font-semibold">
+                        {t.scheduleModal.emailLabel}
+                      </Label>
+                      <Input
+                        id="schedule-email"
+                        type="email"
+                        value={scheduleForm.email}
+                        onChange={(e) => setScheduleForm((f) => ({ ...f, email: e.target.value }))}
+                        className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="schedule-company" className="text-gray-900 font-semibold">
+                        {t.scheduleModal.companyLabel}
+                      </Label>
+                      <Input
+                        id="schedule-company"
+                        type="text"
+                        value={scheduleForm.companyName}
+                        onChange={(e) => setScheduleForm((f) => ({ ...f, companyName: e.target.value }))}
+                        className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="schedule-message" className="text-gray-900 font-semibold">
+                        {t.scheduleModal.projectLabel}
+                      </Label>
+                      <Textarea
+                        id="schedule-message"
+                        placeholder={t.scheduleModal.projectPlaceholder}
+                        value={scheduleForm.message}
+                        onChange={(e) => setScheduleForm((f) => ({ ...f, message: e.target.value }))}
+                        className="bg-white border-2 border-gray-200 focus:border-blue-400 text-gray-900 placeholder:text-gray-400"
+                        rows={3}
+                      />
+                    </div>
+                    {scheduleStatus === "error" && (
+                      <p className="text-red-500 text-sm">{t.scheduleModal.errorMessage}</p>
+                    )}
+                    <Button
+                      onClick={handleScheduleSubmit}
+                      disabled={scheduleStatus === "submitting" || !scheduleForm.name || !scheduleForm.email}
+                      className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-60"
+                    >
+                      {scheduleStatus === "submitting" ? t.scheduleModal.submitting : t.scheduleModal.submit}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
