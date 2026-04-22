@@ -31,14 +31,9 @@ async function getAccessToken(): Promise<string> {
 
   // Import private key and sign
   const keyData = privateKey
-    .replace(/-----BEGIN PRIVATE KEY-----/g, "")
-    .replace(/-----END PRIVATE KEY-----/g, "")
-    .replace(/\\n/g, "")
-    .replace(/\n/g, "")
-    .replace(/\r/g, "")
-    .replace(/\s+/g, "")
-    .trim()
-  console.log("[v0] keyData length:", keyData.length, "| first 20:", keyData.slice(0, 20))
+    .replace("-----BEGIN PRIVATE KEY-----", "")
+    .replace("-----END PRIVATE KEY-----", "")
+    .replace(/\s/g, "")
   const binaryKey = Buffer.from(keyData, "base64")
 
   const cryptoKey = await crypto.subtle.importKey(
