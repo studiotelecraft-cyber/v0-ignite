@@ -33,7 +33,8 @@ async function getAccessToken(): Promise<string> {
   const keyData = privateKey
     .replace("-----BEGIN PRIVATE KEY-----", "")
     .replace("-----END PRIVATE KEY-----", "")
-    .replace(/\s/g, "")
+    .replace(/\n/g, "")  // Remove only actual newlines, not all whitespace
+  console.log("[v0] keyData length:", keyData.length, "| first 20:", keyData.slice(0, 20))
   const binaryKey = Buffer.from(keyData, "base64")
 
   const cryptoKey = await crypto.subtle.importKey(
