@@ -1,0 +1,113 @@
+const SHEET_ID = "1u4ASVURWErzFzJZ20cZF_h1Pc4mZkrEjw8oLx4IAtlw"
+const SHEET_RANGE = "Sheet1!A:E"
+
+const SERVICE_ACCOUNT_EMAIL = "ignite-google-sheet@just-terminus-474803-a7.iam.gserviceaccount.com"
+const PRIVATE_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDzCObYJvQQaKaQ5cPdhOs94xjTQnIjLpi4mdq6NT7w71zdg/kmd72iKdITaiB0sS22Q86F7EinuwURWGddHITybf1ZD+KZxaJ3lEu0xPVLn8AvCLL7JmBJl79oufFhC7CIwt7an2QZEiDjztoaycm3mEv69Vx+MsHGP9sgbEIWySNSX4HxvD/Uu/G/XmjrUiGu8W3X749Vll8L4Uz9V13Kl4dNtAg9k9FonZbEHQaJdnyZTYhAwJqAE0POWrxWlBX2B6wUMFvaLba4DigCyErMVFKKPrtnplwq2SVIXLvyMAGnVzj7Sapbo+1Zhrgpp1m/kjLbGvizhjpOFXNgDJwlAgMBAAECggEAZ43Y8qvyXZWBt4a3RMmQhJ+hoc6TnIsLtsiTqrjqVzXef2JuxGXL7u9b3DrhlmcyP5G3y1eJA7ML7z6YWFPBEB0ukIbUukm8NrCA64bqr+zjMgdGX/4Tk/ftLn3gLEYTU8qYs1WsDIStb/Pg+f4WDbz+TvHCFeGhsEvgHfoS1OrNmwP4jwMF3SQPWhGYebtc4H+9ewKIctSH0D/5mrxIjj9+Z2qcrNE5G7v1VqEzuceyZ9K98b0mkIJsbLjl8Fw5JfDaOYwK9ttRobOjvMDr8Fn59Uisy0gTFA1x0kylg8vwaBj91I0xn7R1kU04CQHwOVN8mjxWFwigBhi3Itj4dwKBgQD/Zl+BYAVEdLgX/JP6pmJMlusWhHDPwcpWmeGfft2IU8yNWmj+Ez/Cz+EKinhJ5wBT4Cmc2ew6U9EZ6it3vTRzNLRdRBLJh3QHtSJC2dTmRwEqKzi6u9QTfhZCPBFPFUASNNyh2FtS5vkka/Zx5dK/SxusUdcdCPJSnzuKmZ94KwKBgQDzmxdCespeL7BZCtgDGOk55a89ev+B4Xu1vyHQhE/mD8fsE3ievFm2zuzqTCXb4ek7vujyV3E9Rxqr7q5Qj0lsuHEEl8pMLcx2v+vFgN/kmKD3/3f9i94EMLQkYuv5G115NmTiH+WJi2buGOVgxLAt80uxd9bA6qSQet8aMBE7wKBgQDVr6C+zUj68rFImHJzZ5ydOjQtndgJa7nQZWWqHepacsqVhgyMcCyL4YQHXr2wD49tngMTEh4c2x37kbqWr35f2bwCwL77UNKa1El7J2iC1uu5jXokepzBRmB3QGy2/y+hTAtBepVGMqxHdfE3cLO4i632qm7SAzdEO6gEme4cCwKBgQDglAATd6QMxKYs0IRoBpUsnQS7ByN6l2c3HGeOFgyaqb3DdAflPvruP0HGlkDovxIH1G5ozCCaZeW2rR7VH63DjW/5FH7KOHEK8zx4KzE6cLeFoAAqcok8hSc0pJlEpLAM2deD3XjR8YxmXMzhzx6AsHHmRuEsxOqBP2hbHy7x3QKBgQDwT4o/4X8kosQXw/nvGCnEuRwVUkc3KUGC+rZ2DX8G1D6kNVJN419J+wv9N83nRWwYPhKEqsXv40cUEgq18N16+kkqU3+sTBmJ/GxZeng0HyBTCCHqXRHLxSnp0EcyHuaza0jYJ9/sc/gyQtxAipIcLH6VCU+TnTKkmwOXtO0H1w==\n-----END PRIVATE KEY-----"
+
+async function getAccessToken(): Promise<string> {
+  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || SERVICE_ACCOUNT_EMAIL
+  const rawKey = process.env.GOOGLE_PRIVATE_KEY || PRIVATE_KEY
+
+  const now = Math.floor(Date.now() / 1000)
+  const header = { alg: "RS256", typ: "JWT" }
+  const payload = {
+    iss: email,
+    scope: "https://www.googleapis.com/auth/spreadsheets",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600,
+  }
+
+  const encode = (obj: object) =>
+    Buffer.from(JSON.stringify(obj))
+      .toString("base64")
+      .replace(/=/g, "")
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+
+  const signingInput = `${encode(header)}.${encode(payload)}`
+
+  const keyData = rawKey
+    .replace("-----BEGIN PRIVATE KEY-----", "")
+    .replace("-----END PRIVATE KEY-----", "")
+    .replace(/\n/g, "")
+    .trim()
+
+  const binaryKey = Buffer.from(keyData, "base64")
+
+  const cryptoKey = await crypto.subtle.importKey(
+    "pkcs8",
+    binaryKey,
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false,
+    ["sign"]
+  )
+
+  const signature = await crypto.subtle.sign(
+    "RSASSA-PKCS1-v1_5",
+    cryptoKey,
+    Buffer.from(signingInput)
+  )
+
+  const sig = Buffer.from(signature)
+    .toString("base64")
+    .replace(/=/g, "")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+
+  const jwt = `${signingInput}.${sig}`
+
+  const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: jwt,
+    }),
+  })
+
+  if (!tokenRes.ok) {
+    const err = await tokenRes.text()
+    throw new Error(`Failed to get access token: ${err}`)
+  }
+
+  const { access_token } = await tokenRes.json()
+  return access_token
+}
+
+export async function appendToSheet(
+  name: string,
+  email: string,
+  companyName: string,
+  message: string
+): Promise<void> {
+  const accessToken = await getAccessToken()
+
+  const dateTime = new Date().toLocaleString("th-TH", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+
+  const appendRes = await fetch(
+    `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(SHEET_RANGE)}:append?valueInputOption=USER_ENTERED`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        values: [[name, email, companyName ?? "", message ?? "", dateTime]],
+      }),
+    }
+  )
+
+  if (!appendRes.ok) {
+    const err = await appendRes.text()
+    throw new Error(`Google Sheets API error: ${err}`)
+  }
+}

@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error("[schedule] Error:", err)
+    console.error("[booking] Error:", err)
     return NextResponse.json({ error: "Failed to submit. Please try again." }, { status: 500 })
   }
 }

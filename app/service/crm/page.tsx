@@ -11,6 +11,7 @@ import Link from "next/link"
 import { FloatingCallButton } from "@/components/floating-call-button"
 import { FloatingChatButton } from "@/components/floating-chat-button"
 import { useLanguage } from "@/context/language-context"
+import { BookingForm } from "@/components/booking-form"
 
 const translations = {
   en: {
@@ -596,40 +597,7 @@ export default function CRMPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-400 p-10 md:p-12 rounded-3xl shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">{t.booking.title}</h2>
-              <p className="text-white/90 mb-8 leading-relaxed">{t.booking.subtitle}</p>
-
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    placeholder={t.booking.firstName}
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
-                  <Input
-                    placeholder={t.booking.email}
-                    type="email"
-                    className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                  />
-                </div>
-                <Input
-                  placeholder={t.booking.organization}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 h-12 rounded-xl shadow-sm"
-                />
-                <Textarea
-                  placeholder={t.booking.message}
-                  rows={5}
-                  className="bg-white border-0 text-gray-900 placeholder:text-gray-500 resize-none rounded-xl shadow-sm"
-                />
-                <div className="flex items-center gap-4">
-                  <Label className="text-white font-semibold text-lg">{t.booking.captcha}</Label>
-                  <Input className="bg-white border-0 text-gray-900 max-w-[120px] h-12 rounded-xl shadow-sm" />
-                </div>
-                <Button className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                  {t.booking.submit}
-                </Button>
-              </form>
-            </div>
+            <BookingForm labels={t.booking} variant="gradient" />
           </div>
         </div>
       </section>
