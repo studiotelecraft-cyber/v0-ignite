@@ -34,9 +34,8 @@ ipIcLH6VCU+TnTKkmwOXtO0H1w==
 -----END PRIVATE KEY-----`
 
 async function getAccessToken(): Promise<string> {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || FALLBACK_EMAIL
-  const rawKey = process.env.GOOGLE_PRIVATE_KEY || FALLBACK_KEY
-  const privateKey = rawKey.replace(/\\n/g, "\n")
+  const email = FALLBACK_EMAIL
+  const privateKey = FALLBACK_KEY
 
   const now = Math.floor(Date.now() / 1000)
   const header = { alg: "RS256", typ: "JWT" }
