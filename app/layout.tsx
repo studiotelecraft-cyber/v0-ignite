@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import localFont from 'next/font/local'
-import { Nunito } from 'next/font/google'
+
 import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "@/context/language-context"
 import "./globals.css"
@@ -18,9 +18,8 @@ const sarabun = localFont({
   display: 'swap',
 })
 
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['900'],
+const nunito = localFont({
+  src: '../public/fonts/Nunito/Nunito-Black.ttf',
   variable: '--font-nunito',
   display: 'swap',
 })
