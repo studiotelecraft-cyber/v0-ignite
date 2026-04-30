@@ -113,11 +113,11 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
-              className={`transition-colors ${
+              className={`transition-colors px-3 py-2 ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
-              } ${currentPath === '/' ? 'font-semibold' : ''}`}
+              } ${currentPath === '/' ? 'font-black border-2 border-double' : ''}`}
             >
               {t.home}
             </Link>
