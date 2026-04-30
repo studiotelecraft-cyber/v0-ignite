@@ -94,7 +94,7 @@
 
 @theme {
   --font-sans: var(--font-nunito), var(--font-sarabun), ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-nunito: var(--font-nunito);
+
   --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
