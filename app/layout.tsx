@@ -17,6 +17,12 @@ const sarabun = localFont({
   display: 'swap',
 })
 
+const nunito = localFont({
+  src: '../public/fonts/Nunito-Black.ttf',
+  variable: '--font-nunito',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: "Ignite Idea - ปลดล็อกศักยภาพองค์กรด้วยนวัตกรรมแห่งอนาคต",
   description:
@@ -44,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
+      <body className={`${lexend.variable} ${sarabun.variable} ${nunito.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
