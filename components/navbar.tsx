@@ -99,22 +99,25 @@ export function Navbar() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-            <div className={`text-xl font-bold transition-colors ${
-              isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
-            }`}>
-              IGNITE IDEA
+            <img src="/images/ignite-logo.png" alt="Ignite Idea" className="h-12 w-12" />
+            <div
+              className={`text-xl transition-colors ${
+                isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
+              }`}
+              style={{ fontFamily: 'var(--font-nunito)', fontWeight: 900, textTransform: 'none' }}
+            >
+              Ignite Idea
             </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
-              className={`transition-colors ${
+              className={`transition-colors px-3 py-2 font-black ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
-              } ${currentPath === '/' ? 'font-semibold' : ''}`}
+              } ${currentPath === '/' ? 'border-2 border-double' : ''}`}
             >
               {t.home}
             </Link>
@@ -125,11 +128,11 @@ export function Navbar() {
             >
               <button
                 onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
-                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-[inherit] text-base ${
+                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-black text-base ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
-              } ${currentPath.startsWith('/service') ? 'font-semibold' : ''}`}>
+              }`}>
                 {t.service}
                 <ChevronDown className={`w-4 h-4 transition-transform ${serviceDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -174,21 +177,21 @@ export function Navbar() {
             </div>
             <Link 
               href="/resources" 
-              className={`transition-colors ${
+              className={`transition-colors font-black ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
-              } ${currentPath === '/resources' ? 'font-semibold' : ''}`}
+              }`}
             >
               {t.resources}
             </Link>
             <Link 
               href="/about" 
-              className={`transition-colors ${
+              className={`transition-colors font-black ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
-              } ${currentPath === '/about' ? 'font-semibold' : ''}`}
+              }`}
             >
               {t.about}
             </Link>

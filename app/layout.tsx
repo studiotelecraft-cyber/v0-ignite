@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import localFont from 'next/font/local'
+
 import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "@/context/language-context"
 import "./globals.css"
@@ -14,6 +15,12 @@ const lexend = localFont({
 const sarabun = localFont({
   src: '../public/fonts/Sarabun-Regular.ttf',
   variable: '--font-sarabun',
+  display: 'swap',
+})
+
+const nunito = localFont({
+  src: '../public/fonts/Nunito/Nunito-Black.ttf',
+  variable: '--font-nunito',
   display: 'swap',
 })
 
@@ -44,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${sarabun.variable} font-sans antialiased`}>
+      <body className={`${lexend.variable} ${sarabun.variable} ${nunito.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>
