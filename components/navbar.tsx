@@ -99,11 +99,11 @@ export function Navbar() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
+            <img src="/images/ignite-logo.png" alt="Ignite Idea" className="h-12 w-12" />
             <div className={`text-xl font-bold transition-colors ${
               isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
             }`}>
-              IGNITE IDEA
+              Ignite Idea
             </div>
           </Link>
 
