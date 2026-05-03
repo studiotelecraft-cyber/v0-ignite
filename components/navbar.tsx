@@ -104,7 +104,7 @@ export function Navbar() {
               className={`text-xl transition-colors ${
                 isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
               }`}
-              style={{ fontFamily: 'var(--font-nunito)', fontWeight: 900, textTransform: 'none' }}
+              style={{ fontFamily: 'var(--font-nunito)', textTransform: 'none' }}
             >
               Ignite Idea
             </div>
