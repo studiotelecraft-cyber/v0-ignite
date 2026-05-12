@@ -473,18 +473,18 @@ function VisionBanner({ lang }: { lang: "en" | "th" }) {
   const lines =
     lang === "th"
       ? [
-          { text: "เป็นที่ปรึกษาด้านเทคโนโลยีที่", accent: false },
-          { text: "ไว้วางใจได้", accent: true },
-          { text: "ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน", accent: false },
-          { text: "โซลูชันที่รอบคอบ", accent: true },
-        ]
+        { text: "เป็นที่ปรึกษาด้านเทคโนโลยีที่", accent: false },
+        { text: "ไว้วางใจได้", accent: true },
+        { text: "ที่จุดประกายการเติบโตอย่างยั่งยืน ผ่าน", accent: false },
+        { text: "โซลูชันที่รอบคอบ", accent: true },
+      ]
       : [
-          { text: "To be the", accent: false },
-          { text: "trusted", accent: true },
-          { text: "technology advisor that ignites", accent: false },
-          { text: "sustainable growth", accent: true },
-          { text: "through thoughtful solutions", accent: false },
-        ]
+        { text: "To be the", accent: false },
+        { text: "trusted", accent: true },
+        { text: "technology advisor that ignites", accent: false },
+        { text: "sustainable growth", accent: true },
+        { text: "through thoughtful solutions", accent: false },
+      ]
 
   return (
     <section
@@ -657,16 +657,15 @@ export default function Home() {
       <FloatingCallButton onClick={() => setScheduleModalOpen(true)} text={t.nav.schedule} />
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
-          isScrolled ? "bg-blue-900/90 border-blue-800/10" : "bg-white/10 border-white/10"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${isScrolled ? "bg-blue-900/90 border-blue-800/10" : "bg-white/10 border-white/10"
+          }`}
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center gap-3">
               <img src="/images/ignite-logo.png" alt="IGNITE IDEA" className="h-12 w-12" />
-              <div className="text-xl font-bold text-white">IGNITE IDEA</div>
+              <div className="text-xl font-bold text-white">Ignite Idea</div>
             </div>
 
             {/* Desktop Menu */}
@@ -731,17 +730,15 @@ export default function Home() {
               <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm rounded-full p-1">
                 <button
                   onClick={() => setLang("th")}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    lang === "th" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
-                  }`}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${lang === "th" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
+                    }`}
                 >
                   TH
                 </button>
                 <button
                   onClick={() => setLang("en")}
-                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    lang === "en" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
-                  }`}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all ${lang === "en" ? "bg-white text-blue-600 shadow-md" : "text-white/70 hover:text-white"
+                    }`}
                 >
                   EN
                 </button>
