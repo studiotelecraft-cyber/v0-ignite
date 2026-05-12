@@ -100,14 +100,21 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
             <img src="/images/ignite-logo.png" alt="Ignite Idea" className="h-12 w-12" />
-            <div
+            <span
               className={`text-xl transition-colors ${
                 isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
               }`}
-              style={{ fontFamily: 'var(--font-nunito)', textTransform: 'none' }}
+              style={{
+                fontFamily: "'Nunito', var(--font-nunito), sans-serif",
+                fontWeight: 900,
+                textTransform: 'none',
+                fontVariant: 'normal',
+                fontVariantCaps: 'normal',
+                letterSpacing: 'normal',
+              }}
             >
-              Ignite Idea
-            </div>
+              {'Ignite Idea'}
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
