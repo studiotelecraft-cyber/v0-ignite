@@ -105,12 +105,9 @@ export function Navbar() {
                 isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
               }`}
               style={{
-                fontFamily: "'Nunito', var(--font-nunito), sans-serif",
+                fontFamily: "'Nunito', sans-serif",
                 fontWeight: 900,
                 textTransform: 'none',
-                fontVariant: 'normal',
-                fontVariantCaps: 'normal',
-                letterSpacing: 'normal',
               }}
             >
               {'Ignite Idea'}
