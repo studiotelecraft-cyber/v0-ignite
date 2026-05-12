@@ -101,16 +101,12 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <img src="/images/ignite-logo.png" alt="Ignite Idea" className="h-12 w-12" />
             <span
-              className={`text-xl transition-colors ${
+              className={`text-xl font-bold transition-colors ${
                 isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
               }`}
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontWeight: 900,
-                textTransform: 'none',
-              }}
+              style={{ fontFamily: "'Nunito', sans-serif" }}
             >
-              {'Ignite Idea'}
+              Ignite Idea
             </span>
           </Link>
 
