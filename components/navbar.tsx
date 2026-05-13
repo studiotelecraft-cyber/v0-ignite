@@ -113,7 +113,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
-              className={`transition-colors px-3 py-2 font-black ${
+              className={`transition-colors px-3 py-2 font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -128,7 +128,7 @@ export function Navbar() {
             >
               <button
                 onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
-                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-black text-base ${
+                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-bold text-base ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -177,7 +177,7 @@ export function Navbar() {
             </div>
             <Link 
               href="/resources" 
-              className={`transition-colors font-black ${
+              className={`transition-colors font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -187,7 +187,7 @@ export function Navbar() {
             </Link>
             <Link 
               href="/about" 
-              className={`transition-colors font-black ${
+              className={`transition-colors font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
