@@ -6,11 +6,6 @@ import { Analytics } from "@vercel/analytics/react"
 import { LanguageProvider } from "@/context/language-context"
 import "./globals.css"
 
-const lexend = localFont({
-  src: '../public/fonts/Lexend-VariableFont_wght.ttf',
-  variable: '--font-lexend',
-  display: 'swap',
-})
 
 const sarabun = localFont({
   src: '../public/fonts/Sarabun-Regular.ttf',
@@ -51,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${sarabun.variable} ${nunito.variable} font-sans antialiased`}>
+      <body className={`${sarabun.variable} ${nunito.variable} font-sans antialiased`}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

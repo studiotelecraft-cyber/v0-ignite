@@ -101,23 +101,19 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <img src="/images/ignite-logo.png" alt="Ignite Idea" className="h-12 w-12" />
             <span
-              className={`text-xl transition-colors ${
+              className={`text-xl font-bold transition-colors ${
                 isDarkBg || isScrolled ? 'text-white' : 'text-gray-900'
               }`}
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontWeight: 900,
-                textTransform: 'none',
-              }}
+              style={{ fontFamily: "'Nunito', sans-serif" }}
             >
-              {'Ignite Idea'}
+              Ignite Idea
             </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
-              className={`transition-colors px-3 py-2 font-black ${
+              className={`transition-colors px-3 py-2 font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -132,7 +128,7 @@ export function Navbar() {
             >
               <button
                 onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
-                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-black text-base ${
+                className={`transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-bold text-base ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -181,7 +177,7 @@ export function Navbar() {
             </div>
             <Link 
               href="/resources" 
-              className={`transition-colors font-black ${
+              className={`transition-colors font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
@@ -191,7 +187,7 @@ export function Navbar() {
             </Link>
             <Link 
               href="/about" 
-              className={`transition-colors font-black ${
+              className={`transition-colors font-bold ${
                 isDarkBg || isScrolled
                   ? 'text-blue-100 hover:text-white' 
                   : 'text-gray-700 hover:text-blue-600'
